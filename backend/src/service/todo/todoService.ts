@@ -2,6 +2,7 @@ import { Todo } from '../../db';
 import { ITodoRepository } from '../../repository';
 import { todoSchema } from './schema';
 import { ValidationError } from 'joi';
+import logger from '../../logger';
 
 export interface ITodoService {
   getTodos(): Promise<Todo[]>;
@@ -20,6 +21,7 @@ export class TodoService implements ITodoService {
       const value = await todoSchema.validateAsync(todo);
     } catch (error) {
       if (error instanceof ValidationError) {
+        logger.error(error);
         const { details } = error;
         const errorMessage = details.map(ve => ve.message);
         return { status: 'Error', message: errorMessage };
