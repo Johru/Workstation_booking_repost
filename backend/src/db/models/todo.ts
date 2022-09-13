@@ -14,6 +14,6 @@ export class Todo {
   @Column('datetime')
   dueDate?: Date;
 
-  @Column('boolean')
+  @Column({ type: 'boolean', default: false })
   isDone?: boolean;
 }
