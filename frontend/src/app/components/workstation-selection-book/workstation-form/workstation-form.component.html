@@ -1,5 +1,5 @@
 <div>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" >
     <mat-label>Choose a date</mat-label>
     <input matInput [matDatepicker]="picker">
     <mat-hint>MM/DD/YYYY</mat-hint>
@@ -7,8 +7,5 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </div>
-<div class="floor">
-<div class="workstation">
-  <input class="seat" type="radio"> 
-</div>
-</div>
+<show-seats [seats]="seatList"></show-seats>
+<!--<book-button>-->

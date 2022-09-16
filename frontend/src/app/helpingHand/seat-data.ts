@@ -1,28 +1,8 @@
 import { Seat } from "./seat";
 
 export const SEATS: Seat[] = [
-  {id:1, ws_id:1},
-  {id:1, ws_id:1},
-  {id:1, ws_id:1},
-  {id:1, ws_id:1},
-  {id:1, ws_id:2},
-  {id:2, ws_id:2},
-  {id:3, ws_id:2},
-  {id:4, ws_id:2},
-  {id:1, ws_id:3},
-  {id:2, ws_id:3},
-  {id:3, ws_id:3},
-  {id:4, ws_id:3},
-  {id:1, ws_id:4},
-  {id:2, ws_id:4},
-  {id:3, ws_id:4},
-  {id:4, ws_id:4},
-  {id:1, ws_id:5},
-  {id:2, ws_id:5},
-  {id:3, ws_id:5},
-  {id:4, ws_id:5},
-  {id:1, ws_id:6},
-  {id:2, ws_id:6},
-  {id:3, ws_id:6},
-  {id:4, ws_id:6},
-]
+  {id:1, res_date: null, user_name: null },
+  {id:2, res_date: null, user_name: null },
+  {id:3, res_date: '2022-09-16', user_name: 'Tomas'},
+  {id:4, res_date: null, user_name: null }
+];

@@ -1,0 +1,4 @@
+<workstation-tab (selectedWorkstation)="onSelection($event)" [wsList]="workstations"></workstation-tab>
+<div *ngIf="showForm()">
+  <workstation-form [selectedWS]="selectedWs"></workstation-form>
+</div>

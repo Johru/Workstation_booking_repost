@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WorkstationFormComponent } from './components/workstation-form/workstation-form.component';
+import { WorkstationFormComponent } from './components/workstation-selection-book/workstation-form/workstation-form.component';
+import { WorkstationSelectionBookComponent } from './components/workstation-selection-book/workstation-selection-book.component';
 
 const routes: Routes = [
-  {path: 'wstation', component: WorkstationFormComponent},
+  {path: 'wstation', component: WorkstationSelectionBookComponent, 
+   children: [
+    {path: ':id',component:WorkstationFormComponent}
+  ]},
   {path: '', redirectTo: '/wstation',pathMatch: 'full'}
 ];
 
