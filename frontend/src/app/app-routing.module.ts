@@ -4,18 +4,12 @@ import { WorkstationFormComponent } from './components/workstation-selection-boo
 import { WorkstationSelectionBookComponent } from './components/workstation-selection-book/workstation-selection-book.component';
 
 const routes: Routes = [
-  {path: 'wstation', component: WorkstationSelectionBookComponent, 
-   children: [
-    {path: ':id',component:WorkstationFormComponent}
-  ]},
-  {path: '', redirectTo: '/wstation',pathMatch: 'full'}
+  { path: 'wstation', component: WorkstationSelectionBookComponent },
+  { path: '', redirectTo: '/wstation', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    
-],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

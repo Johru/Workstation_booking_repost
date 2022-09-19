@@ -1,0 +1,38 @@
+button{
+  width: 33.3%;
+  margin:0px;
+  padding: 0px;
+  height: 50%;
+  background-color: #99d98c;
+  justify-content: center;
+  box-sizing: border-box;
+  max-height: 49%;
+  min-height: 49%;
+  outline: none;
+  border: 0.5px solid black;
+}
+button:disabled{
+  background-color: #e5383b;
+  color:black;
+}
+button p {
+  position: relative;
+  padding: 0px 10px;
+  margin: 0px;
+}
+button:not([disabled]):hover{
+  filter: brightness(120%);
+  cursor: pointer;
+}
+button:not([disabled]):hover p::after{
+  content:"Book Now!"
+}
+.checked{
+  background-color: orange;
+}
+.checked p::after{
+  content: "Selected";
+}
+.checked:hover p::after{
+  content: "Unselect a seat"!important;
+}

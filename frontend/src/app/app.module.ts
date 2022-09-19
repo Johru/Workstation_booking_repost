@@ -13,8 +13,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,7 @@ import { MatInputModule } from '@angular/material/input';
     WorkstationFormComponent,
     WorkstationTabComponent,
     WorkstationSelectionBookComponent,
-    ShowSeatsComponent
+    ShowSeatsComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,11 +30,10 @@ import { MatInputModule } from '@angular/material/input';
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
   ],
-  providers: [
-    MatDatepickerModule,
-  ],
-  bootstrap: [AppComponent]
+  providers: [MatDatepickerModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
