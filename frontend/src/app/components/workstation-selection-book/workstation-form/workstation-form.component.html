@@ -9,7 +9,7 @@
       <mat-form-field appearance="fill">
         <mat-label>Choose a date</mat-label>
         <input
-          (change)="onChange($event)"
+          (dateChange)="onChange($event)"
           matInput
           [matDatepicker]="picker"
           [(ngModel)]="planModel.start_time"
@@ -21,7 +21,16 @@
     </div>
   </div>
   <div class="right" *ngIf="seatList">
-    <show-seats [seats]="seatList"></show-seats>
+    <show-seats
+      (selectedSeat)="onSelect($event)"
+      [seats]="seatList"
+    ></show-seats>
   </div>
 </div>
-<button class="bookButton" (click)="makeReservation()">Book</button>
+<button
+  [disabled]="disabledButton"
+  class="bookButton"
+  (click)="makeReservation()"
+>
+  Book
+</button>

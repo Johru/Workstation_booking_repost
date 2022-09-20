@@ -13,7 +13,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ConfirmModalComponent } from './components/workstation-selection-book/confirm-modal/confirm-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     WorkstationTabComponent,
     WorkstationSelectionBookComponent,
     ShowSeatsComponent,
+    ConfirmModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent],

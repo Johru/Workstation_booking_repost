@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Seat } from 'src/app/helpingHand/seat';
-import { __classPrivateFieldSet } from 'tslib';
 
 @Component({
   selector: 'show-seats',
@@ -9,9 +8,7 @@ import { __classPrivateFieldSet } from 'tslib';
 })
 export class ShowSeatsComponent implements OnInit {
   @Input() seats?: Seat[];
-  //output selected
-
-  status: boolean = false;
+  @Output() selectedSeat = new EventEmitter<number>();
 
   constructor() {}
 
@@ -45,6 +42,11 @@ export class ShowSeatsComponent implements OnInit {
         button.classList.remove('checked');
       });
       target.classList.add('checked');
+    }
+    if (target.classList.contains('checked')) {
+      this.selectedSeat.emit(target.value);
+    } else {
+      this.selectedSeat.emit(0);
     }
   }
 }

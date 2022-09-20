@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Reservation } from 'src/app/helpingHand/reservation';
 import { Seat } from 'src/app/helpingHand/seat';
 import { WorkstationService } from 'src/app/services/workstation.service';
 
@@ -10,11 +11,15 @@ import { WorkstationService } from 'src/app/services/workstation.service';
 export class WorkstationFormComponent implements OnInit {
   @Input() selectedWS?: number | string;
   @Input() seatList?: Seat[];
-  //seat is coming from the child
-  //output seat
-  //output date
+  @Input() selectedSeat?: number;
+  @Input() wsIdAndName?: { id: string | number; name: string };
+
+  @Output() reservation = new EventEmitter<Reservation>();
 
   planModel: any = { start_time: new Date() };
+  selectedDate?: Date;
+  confirmed: boolean = false;
+  disabledButton: boolean = true;
 
   constructor(private wsService: WorkstationService) {}
 
@@ -28,10 +33,29 @@ export class WorkstationFormComponent implements OnInit {
 
   onChange(e: any) {
     this.getSeats();
-    console.log(this.seatList);
+    this.selectedDate = e.target.value;
   }
 
-  makeReservation() {}
+  makeReservation() {
+    const date = new Date(
+      this.planModel.start_time.getTime() -
+        this.planModel.start_time.getTimezoneOffset() * 60000
+    )
+      .toISOString()
+      .split('T')[0];
+    this.reservation!.emit({
+      seat_id: this.selectedSeat!,
+      res_date: date,
+      user_id: 1, //change when user will be set up
+    });
+  }
 
-  //click method on book button send data with the service
+  onSelect(selected: number) {
+    if (selected == 0) {
+      this.disabledButton = true;
+    } else {
+      this.selectedSeat = selected;
+      this.disabledButton = false;
+    }
+  }
 }

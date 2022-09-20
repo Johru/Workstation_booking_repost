@@ -1,7 +1,7 @@
 <h2>Workstation:</h2>
-<select (change)="onChange($event)">
+<select (change)="onChange($event)" [(ngModel)]="value">
   <option value="default">Select a workstation</option>
-  <option *ngFor="let ws of wsList" value="{{ ws.id }}" ng>
+  <option *ngFor="let ws of wsList" value="{{ ws.id }}">
     {{ ws.name }}
   </option>
 </select>
