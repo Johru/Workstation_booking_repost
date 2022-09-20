@@ -1,2 +1,4 @@
 export { appDataSource } from './connection';
-export { Todo } from './models/todo';
+// export { Todo } from './models/todo';
+export { Workstation } from './models/workstation';
+export { Seat } from './models/seat';
