@@ -11,6 +11,7 @@
         <input
           (dateChange)="onChange($event)"
           matInput
+          [min]="minDate"
           [matDatepicker]="picker"
           [(ngModel)]="planModel.start_time"
         />

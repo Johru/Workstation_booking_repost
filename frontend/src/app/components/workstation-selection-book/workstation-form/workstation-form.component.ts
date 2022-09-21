@@ -20,11 +20,13 @@ export class WorkstationFormComponent implements OnInit {
   selectedDate?: Date;
   confirmed: boolean = false;
   disabledButton: boolean = true;
+  minDate: Date = new Date();
 
   constructor(private wsService: WorkstationService) {}
 
   ngOnInit(): void {
     this.getSeats();
+    console.log(this.minDate);
   }
 
   getSeats(): void {
