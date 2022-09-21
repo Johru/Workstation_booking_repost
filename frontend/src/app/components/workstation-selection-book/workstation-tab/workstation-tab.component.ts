@@ -3,6 +3,7 @@ import {
   EventEmitter,
   Input,
   OnInit,
+  OnChanges,
   Output,
   SimpleChanges,
 } from '@angular/core';
@@ -13,7 +14,7 @@ import { IWorkstation } from 'src/app/helpingHand/iworkstation';
   templateUrl: './workstation-tab.component.html',
   styleUrls: ['./workstation-tab.component.css'],
 })
-export class WorkstationTabComponent implements OnInit {
+export class WorkstationTabComponent implements OnInit, OnChanges {
   @Input() wsList?: IWorkstation[];
   @Output() selectedWorkstation = new EventEmitter<{
     id: string | number;
@@ -26,15 +27,14 @@ export class WorkstationTabComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.canceledOnTab = false;
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes['canceledOnTab'].currentValue);
+    console.log(changes);
     if (this.canceledOnTab) {
       this.resetOnCancel(changes['canceledOnTab'].currentValue);
     }
+
     console.log(this.canceledOnTab);
   }
 
@@ -50,16 +50,16 @@ export class WorkstationTabComponent implements OnInit {
   }
 
   resetOnCancel(cancel: boolean): void {
-    console.log(cancel);
-    console.log(this.canceledOnTab);
     if (cancel) {
+      console.log(this.canceledOnTab);
+
       this.value = 'default';
       this.selectedWorkstation!.emit({
         id: this.value,
         name: 'Select a Workstation',
       });
-      this.canceledOnTab = false;
     }
+    this.canceledOnTab = !this.canceledOnTab;
   }
 }
 

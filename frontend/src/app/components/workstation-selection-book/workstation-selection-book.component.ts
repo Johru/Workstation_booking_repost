@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { IWorkstation } from 'src/app/helpingHand/iworkstation';
 import { WorkstationService } from 'src/app/services/workstation.service';
 
@@ -19,7 +18,7 @@ export class WorkstationSelectionBookComponent implements OnInit {
   wsIdAndName?: { id: number | string; name: string };
   reservationData?: any;
 
-  constructor(private wsService: WorkstationService, private router: Router) {}
+  constructor(private wsService: WorkstationService) {}
 
   ngOnInit(): void {
     this.getWsList();
@@ -64,9 +63,10 @@ export class WorkstationSelectionBookComponent implements OnInit {
 
   onCancel(e: boolean) {
     if (e) {
+      console.log(e);
       this.canceled = e;
-      this.showReservation();
     }
+    this.showReservation();
   }
   onConfirm(e: boolean) {
     if (e) {
