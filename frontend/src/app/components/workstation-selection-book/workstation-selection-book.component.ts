@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterContentChecked,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+} from '@angular/core';
 import { IWorkstation } from 'src/app/helpingHand/iworkstation';
 import { WorkstationService } from 'src/app/services/workstation.service';
 
@@ -7,7 +12,9 @@ import { WorkstationService } from 'src/app/services/workstation.service';
   templateUrl: './workstation-selection-book.component.html',
   styleUrls: ['./workstation-selection-book.component.css'],
 })
-export class WorkstationSelectionBookComponent implements OnInit {
+export class WorkstationSelectionBookComponent
+  implements OnInit, AfterContentChecked
+{
   workstations?: IWorkstation[];
 
   selectedWs: string | number = 'default';
@@ -18,10 +25,17 @@ export class WorkstationSelectionBookComponent implements OnInit {
   wsIdAndName?: { id: number | string; name: string };
   reservationData?: any;
 
-  constructor(private wsService: WorkstationService) {}
+  constructor(
+    private wsService: WorkstationService,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.getWsList();
+  }
+
+  ngAfterContentChecked(): void {
+    this.cd.detectChanges();
   }
 
   getWsList() {
@@ -63,14 +77,18 @@ export class WorkstationSelectionBookComponent implements OnInit {
 
   onCancel(e: boolean) {
     if (e) {
-      console.log(e);
       this.canceled = e;
     }
     this.showReservation();
   }
+
   onConfirm(e: boolean) {
     if (e) {
       this.confirmed = e;
     }
+  }
+
+  canceledOnTab(e: boolean) {
+    this.canceled = e;
   }
 }

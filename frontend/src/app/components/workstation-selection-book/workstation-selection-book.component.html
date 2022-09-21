@@ -1,6 +1,6 @@
 <workstation-tab
   (selectedWorkstation)="onSelection($event)"
-  [canceledOnTab]="canceled"
+  [(canceledOnTab)]="canceled"
   [wsList]="workstations"
 ></workstation-tab>
 <div *ngIf="showForm()">

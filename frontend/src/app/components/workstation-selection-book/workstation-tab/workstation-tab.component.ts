@@ -22,6 +22,7 @@ export class WorkstationTabComponent implements OnInit, OnChanges {
   }>();
 
   @Input() canceledOnTab?: boolean;
+  @Output() canceledOnTabChange = new EventEmitter<boolean>();
 
   value: string | number = 'default';
 
@@ -30,12 +31,9 @@ export class WorkstationTabComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
     if (this.canceledOnTab) {
       this.resetOnCancel(changes['canceledOnTab'].currentValue);
     }
-
-    console.log(this.canceledOnTab);
   }
 
   onChange(e: any): void {
@@ -51,16 +49,13 @@ export class WorkstationTabComponent implements OnInit, OnChanges {
 
   resetOnCancel(cancel: boolean): void {
     if (cancel) {
-      console.log(this.canceledOnTab);
-
       this.value = 'default';
       this.selectedWorkstation!.emit({
         id: this.value,
         name: 'Select a Workstation',
       });
     }
-    this.canceledOnTab = !this.canceledOnTab;
+    this.canceledOnTab = false;
+    this.canceledOnTabChange.emit(this.canceledOnTab);
   }
 }
-
-//second cancel does nothing first one works

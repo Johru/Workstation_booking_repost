@@ -28,6 +28,7 @@ export class ShowSeatsComponent implements OnInit {
       return true;
     }
   }
+
   checkSeat(e: any) {
     const isItTaken = e.target?.classList.contains('isItTaken');
     let target = e.target;

@@ -26,7 +26,6 @@ export class WorkstationFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSeats();
-    console.log(this.minDate);
   }
 
   getSeats(): void {
