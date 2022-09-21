@@ -1,2 +1,2 @@
 export { appDataSource } from './connection';
-export { Todo } from './models/todo';
+export { SeatTable } from './models/seat';

@@ -1,5 +1,5 @@
 import { appDataSource } from '../db';
-import { Todo } from '../db';
+import { Todo } from '../db/models/todo';
 
 export interface ITodoRepository {
   findAllTodos(): Promise<Todo[]>;
@@ -8,6 +8,7 @@ export interface ITodoRepository {
 
 export class TodoRepository implements ITodoRepository {
   async findAllTodos(): Promise<Todo[]> {
+    console.log('repo: ' + appDataSource.getRepository(Todo).find());
     return appDataSource.getRepository(Todo).find();
   }
 

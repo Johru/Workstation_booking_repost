@@ -1,4 +1,4 @@
-import { Todo } from '../../db';
+import { Todo } from '../../db/models/todo';
 import { ITodoRepository } from '../../repository';
 import { todoSchema } from './schema';
 import { ValidationError } from 'joi';

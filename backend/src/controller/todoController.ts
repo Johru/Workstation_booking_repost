@@ -1,4 +1,4 @@
-import { Todo } from 'db';
+import { Todo } from 'db/models/todo';
 import { Router } from 'express';
 import { ITodoService } from '../service';
 
