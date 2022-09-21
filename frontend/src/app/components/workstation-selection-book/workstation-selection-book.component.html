@@ -10,16 +10,18 @@
   ></workstation-form>
 </div>
 <div *ngIf="showing">
-  <confirm-modal
-    *ngIf="!confirmed"
-    (editEmitter)="onEdit($event)"
-    (cancelEmitter)="onCancel($event)"
-    (confirmEmitter)="onConfirm($event)"
-    [resData]="reservationData"
-  ></confirm-modal>
-  <div class="confirmed">
-    <h2 *ngIf="confirmed">Reservation Confirmed</h2>
-    <!--ADD ROUTE TO SOME COMPONENT-->
-    <a routerLink="/">Go Home</a>
+  <div class="modalBackground">
+    <confirm-modal
+      *ngIf="!confirmed"
+      (editEmitter)="onEdit($event)"
+      (cancelEmitter)="onCancel($event)"
+      (confirmEmitter)="onConfirm($event)"
+      [resData]="reservationData"
+    ></confirm-modal>
+    <div class="confirmed" *ngIf="confirmed">
+      <h2>Reservation Confirmed</h2>
+      <!--ADD ROUTE TO SOME COMPONENT-->
+      <a routerLink="/">Go Home</a>
+    </div>
   </div>
 </div>
