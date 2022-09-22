@@ -53,9 +53,7 @@ CREATE TABLE `Reservation` (
 	`reservation_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	`user_id` INT NOT NULL,
 	`seat_id` INT NOT NULL,
-	`reservation_date` DATE NOT NULL,
-	`reservation_creation_date` DATE DEFAULT (curdate()),
-    `reservation_isconfirmed` BIT DEFAULT 0
+	`reservation_date` DATE NOT NULL
 );
 
 ALTER TABLE `Seat` ADD CONSTRAINT `Seat_fk0` FOREIGN KEY (`workstation_id`) REFERENCES `Workstation`(`workstation_id`);

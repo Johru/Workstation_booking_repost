@@ -24,9 +24,6 @@ export class ReservationTable {
   @Column({ type: 'date' })
   reservation_date?: Date;
 
-  @CreateDateColumn()
-  reservation_creation_date?: Date;
-
   @Column({
     name: 'reservation_isconfirmed',
     type: 'bit',

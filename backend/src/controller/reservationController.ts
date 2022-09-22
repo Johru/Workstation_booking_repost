@@ -1,9 +1,4 @@
-import app from '../app';
 import { Router } from 'express';
-import { SeatTable } from '../db/models/seat';
-import { SeatRepository } from '../repository/seatRepository';
-import { appDataSource } from '../db/connection';
-import { SeatService } from '../service/seatService';
 import { ReservationService } from '../service/reservation/reservationService';
 
 export class ReservationController {
