@@ -24,7 +24,15 @@ export class ReservationRepository {
       .addSelect(['user.user_name'])
       .getMany();
   }
-  async sendNewReservation(body: any): Promise<ReservationTable> {
+
+  async displayResForUser(body: number): Promise<ReservationTable[]> {
+    return appDataSource
+      .getRepository(ReservationTable)
+      .createQueryBuilder('reservation')
+      .where('reservation.user_id = :id', { id: body })
+      .getMany();
+  }
+  async addNewReservation(body: any): Promise<ReservationTable> {
     const resSave = new ReservationTable();
     resSave.user_id = body.userId;
     resSave.seat_id = body.seatId;
@@ -33,7 +41,7 @@ export class ReservationRepository {
     return appDataSource.getRepository(ReservationTable).save(resSave);
   }
 
-  async deleteReservation(body: any): Promise<any> {
+  async deleteReservation(body: number): Promise<any> {
     return appDataSource
       .createQueryBuilder()
       .delete()

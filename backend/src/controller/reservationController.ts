@@ -15,13 +15,18 @@ export class ReservationController {
       console.log('/reservation/date endpoint accessed');
       const workstationId = req.query.workstationId;
       const reservationDate = req.query.reservationDate;
-      console.log('controller: ' + workstationId + '/' + reservationDate);
       res.json(
         await reservationService.showReservationForDay(
           workstationId,
           reservationDate
         )
       );
+    });
+
+    this._router.get('/reservation/user/:id', async (req: any, res: any) => {
+      console.log('/reservation/user/:id endpoint accessed');
+
+      res.json(await reservationService.displayResForUser(req.params.id));
     });
 
     this._router.post('/reservation/new', async (req: any, res: any) => {

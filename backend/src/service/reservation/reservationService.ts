@@ -16,9 +16,12 @@ export class ReservationService {
   }
 
   addNewReservation(body: any): Promise<ReservationTable> {
-    return this.reservationRepository.sendNewReservation(body);
+    return this.reservationRepository.addNewReservation(body);
   }
-  deleteReservation(body: any): Promise<any> {
+  deleteReservation(body: number): Promise<any> {
     return this.reservationRepository.deleteReservation(body);
+  }
+  displayResForUser(body: number): Promise<ReservationTable[]> {
+    return this.reservationRepository.displayResForUser(body);
   }
 }
