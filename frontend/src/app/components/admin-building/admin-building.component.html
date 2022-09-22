@@ -10,12 +10,12 @@
   </button>
 </div>
 <div class="buildingSelector">
-  <button (click)="goLeft()">&#60;</button>
-  <div class="cards">
+  <button (click)="scrollLeft()">&#60;</button>
+  <div #cardContent class="cards">
     <building-card
       *ngFor="let building of buildingList"
       [building]="building!"
     ></building-card>
   </div>
-  <button (click)="goRight()">&#62;</button>
+  <button (click)="scrollRight()">&#62;</button>
 </div>

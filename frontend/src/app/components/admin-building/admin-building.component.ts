@@ -1,13 +1,7 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChange,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
 import { BuildingService } from 'src/app/services/building.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'admin-building',
@@ -18,8 +12,12 @@ export class AdminBuildingComponent implements OnInit {
   buildingList?: Building[];
   value?: string;
   cityList?: any;
+  checkvalue: number = 5;
 
-  constructor(private bs: BuildingService) {}
+  @ViewChild('cardContent', { read: ElementRef })
+  public cardContent!: ElementRef<any>;
+
+  constructor(private bs: BuildingService, private vps: ViewportScroller) {}
 
   ngOnInit(): void {
     this.getCities();
@@ -37,6 +35,17 @@ export class AdminBuildingComponent implements OnInit {
   onChange(e: any) {
     this.getBuildings();
   }
-  goLeft() {}
-  goRight() {}
+
+  public scrollRight(): void {
+    this.cardContent.nativeElement.scrollTo({
+      left: this.cardContent.nativeElement.scrollLeft + 300,
+      behavior: 'smooth',
+    });
+  }
+  public scrollLeft() {
+    this.cardContent.nativeElement.scrollTo({
+      left: this.cardContent.nativeElement.scrollLeft - 300,
+      behavior: 'smooth',
+    });
+  }
 }
