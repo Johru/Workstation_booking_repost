@@ -7,9 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminBuildingComponent } from './components/admin-building/admin-building.component';
 import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-panel.component';
 
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [AppComponent, AdminBuildingComponent, AdminNavPanelComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

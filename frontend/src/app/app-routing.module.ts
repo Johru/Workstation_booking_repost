@@ -5,10 +5,9 @@ import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-p
 
 const routes: Routes = [
   {
-    path: '/admin',
+    path: 'admin',
     component: AdminNavPanelComponent,
-    outlet: 'adminRouter',
-    children: [{ path: '/building', component: AdminBuildingComponent }],
+    children: [{ path: 'buildings', component: AdminBuildingComponent }],
   },
 ];
 

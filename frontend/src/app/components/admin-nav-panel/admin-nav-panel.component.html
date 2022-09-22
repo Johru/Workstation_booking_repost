@@ -1,2 +1,15 @@
-<p>admin-nav-panel works!</p>
+<div class="navPanel">
+  <div class="left">
+    <h1 routerLink="/admin">Admin Land</h1>
+  </div>
+  <div class="center">
+    <button mat-button routerLink="/admin/buildings">Buildings</button>
+    <button mat-button>Users</button>
+    <button mat-button>Bookings</button>
+  </div>
+  <div class="right">
+    <button mat-raised-button routerLink="/">Main Page</button>
+    <button mat-raised-button>Sign Out</button>
+  </div>
+</div>
 <router-outlet></router-outlet>
