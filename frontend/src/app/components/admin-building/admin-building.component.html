@@ -1,1 +1,21 @@
-<p>admin-building works!</p>
+<div class="buildingHeader">
+  <h2>Choose another city</h2>
+  <select (change)="onChange($event)" [(ngModel)]="value">
+    <option *ngFor="let city of cityList; let i = index" [value]="city.city">
+      {{ city.city }}
+    </option>
+  </select>
+  <button mat-raised-button routerLink="/admin/create/building">
+    Create Building
+  </button>
+</div>
+<div class="buildingSelector">
+  <button (click)="goLeft()">&#60;</button>
+  <div class="cards">
+    <building-card
+      *ngFor="let building of buildingList"
+      [building]="building!"
+    ></building-card>
+  </div>
+  <button (click)="goRight()">&#62;</button>
+</div>

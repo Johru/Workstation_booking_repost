@@ -1,0 +1,50 @@
+.buildingHeader{
+  display: flex;
+  gap:30px;
+}
+.buildingHeader h2{
+  margin: 25px 200px 5px;
+  font-size: 30px;
+}
+.buildingHeader select,.buildingHeader button{
+  width: 300px;
+  font-size: 20px;
+  margin:25px 50px;
+}
+.buildingHeader button:hover {
+  background-color: #dedede;
+}
+.buildingSelector{
+  width: 100%!;
+  height:400px;
+  margin-top: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding:0px;
+  box-sizing: border-box;
+  display: flex;
+
+}
+.buildingSelector button{
+  width:50px;
+  font-size: 40px;
+  font-weight: 100;
+}
+.cards{
+  margin:0px 20px;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  gap:25px;
+  overflow: hidden;
+  align-items: center;
+}
+building-card{
+  width: 16.9vw;
+  height: 98%;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  padding: 0px 20px;
+  border:1px solid black;
+}
