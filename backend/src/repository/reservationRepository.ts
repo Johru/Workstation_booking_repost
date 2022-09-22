@@ -2,9 +2,11 @@ import { ReservationTable } from '../db/models/reservation';
 import { appDataSource, SeatTable } from '../db';
 
 export class ReservationRepository {
-  async bigJoin(body: any): Promise<ReservationTable[]> {
-    const workstationId = body.workstationId;
-    const resevationDate = body.reservationDate;
+  async bigJoin(
+    workstationId: number,
+    reservationDate: string
+  ): Promise<ReservationTable[]> {
+    console.log('repo: ' + workstationId + '/' + reservationDate);
     return appDataSource
       .getRepository(SeatTable)
       .createQueryBuilder('seat')
@@ -13,7 +15,7 @@ export class ReservationRepository {
         'reservation',
         'reservation.reservation_date = :date',
         {
-          date: resevationDate,
+          date: reservationDate,
         }
       )
       .addSelect(['reservation.reservation_date'])
@@ -29,5 +31,16 @@ export class ReservationRepository {
     resSave.reservation_date = body.reservationDate;
 
     return appDataSource.getRepository(ReservationTable).save(resSave);
+  }
+
+  async deleteReservation(body: any): Promise<any> {
+    return appDataSource
+      .createQueryBuilder()
+      .delete()
+      .from(ReservationTable)
+      .where('reservation_id=:reservationId', {
+        reservationId: body,
+      })
+      .execute();
   }
 }

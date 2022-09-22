@@ -11,21 +11,33 @@ export class ReservationController {
   outputArray: any[] = [];
 
   constructor(private reservationService: ReservationService) {
-    this._router.post('/reservation/date', async (req: any, res: any) => {
-      console.log('get /reservation/date endpoint accessed');
-      const body = req.body;
-      res.json(await reservationService.showReservationForDay(body));
+    this._router.get('/reservation/date', async (req: any, res: any) => {
+      console.log('/reservation/date endpoint accessed');
+      const workstationId = req.query.workstationId;
+      const reservationDate = req.query.reservationDate;
+      console.log('controller: ' + workstationId + '/' + reservationDate);
+      res.json(
+        await reservationService.showReservationForDay(
+          workstationId,
+          reservationDate
+        )
+      );
     });
 
     this._router.post('/reservation/new', async (req: any, res: any) => {
-      console.log('post /reservation/new endpoint accessed');
+      console.log('/reservation/new endpoint accessed');
       const body = req.body;
       res.json(await reservationService.addNewReservation(body));
     });
 
-    this._router.delete('/reservation', async (req: any, res: any) => {
-      console.log('delete /reservation endpoint accessed');
-    });
+    this._router.delete(
+      '/reservation/delete/:id',
+      async (req: any, res: any) => {
+        console.log('/reservation/delete endpoint accessed');
+        const body = req.params.id;
+        res.json(await reservationService.deleteReservation(body));
+      }
+    );
   }
 
   get router(): Router {
