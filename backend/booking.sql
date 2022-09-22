@@ -1,7 +1,6 @@
 CREATE DATABASE booking;
 USE booking;
-drop database booking;
-drop table reservation;
+
 CREATE TABLE `User` (
 	`user_id` INT NOT NULL AUTO_INCREMENT,
 	`user_name` varchar(255) NOT NULL,
