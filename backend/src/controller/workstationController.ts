@@ -40,7 +40,6 @@ export class WorkstationController {
     });
   }
 
-
   get router(): Router {
     return this._router;
   }
