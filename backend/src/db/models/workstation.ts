@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Binary } from 'typeorm';
+import { BoolBitTransformer } from './transformer';
 
 @Entity()
 export class Workstation {
@@ -11,6 +12,6 @@ export class Workstation {
   @Column('text')
   workstation_name?: string;
 
-  @Column({ type: 'boolean', default: true })
-  workstation_isactive?: boolean;
+  @Column({ name:'workstation_isactive', type: 'bit', transformer: new BoolBitTransformer})
+  workstation_isactive?: boolean = true;
 }
