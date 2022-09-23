@@ -1,37 +1,37 @@
 import { appDataSource } from '../db';
-import { Floor } from '../db';
+import { FloorTable } from '../db';
 import { Response, Request } from 'express';
 
 export interface IFloorRepository {
-  findAllFloors(): Promise<Floor[]>;
-  saveFloor(floor: Floor): Promise<Floor>;
-  updateFloor(id: number, floor:Floor): Promise<Floor>;
-  deleteFloor(id: number):Promise<Floor[]>;
+  findAllFloors(): Promise<FloorTable[]>;
+  saveFloor(floor: FloorTable): Promise<FloorTable>;
+  updateFloor(id: number, floor:FloorTable): Promise<FloorTable>;
+  deleteFloor(id: number):Promise<FloorTable[]>;
 
 }
 
 export class FloorRepository implements IFloorRepository {
-  async findAllFloors(): Promise<Floor[]> {
-    return appDataSource.getRepository(Floor).find();
+  async findAllFloors(): Promise<FloorTable[]> {
+    return appDataSource.getRepository(FloorTable).find();
   }
 
-  async saveFloor(floor: Floor): Promise<Floor> {
-    const floorToSave = new Floor();
+  async saveFloor(floor: FloorTable): Promise<FloorTable> {
+    const floorToSave = new FloorTable();
     floorToSave.building_id = floor.building_id;
     floorToSave.floor_name = floor.floor_name;
     floorToSave.floor_capacity = floor.floor_capacity;
     floorToSave.floor_plan = floor.floor_plan;
 
-    return appDataSource.getRepository(Floor).save(floorToSave);
+    return appDataSource.getRepository(FloorTable).save(floorToSave);
   }
 
-  async updateFloor(id: number, floor: Floor): Promise<Floor> {
-    var floorUpdate = await appDataSource.getRepository(Floor).find({
+  async updateFloor(id: number, floor: FloorTable): Promise<FloorTable> {
+    var floorUpdate = await appDataSource.getRepository(FloorTable).find({
         where: {
           floor_id: id,
         },
       });
-      var floorToSave: Floor = {};
+      var floorToSave: FloorTable = {};
       floorUpdate.map(v => {
         floorToSave = v;
       });
@@ -40,16 +40,16 @@ export class FloorRepository implements IFloorRepository {
       floorToSave.floor_capacity = floor.floor_capacity;
       floorToSave.floor_plan = floor.floor_plan;
      
-      return appDataSource.getRepository(Floor).save(floorToSave);
+      return appDataSource.getRepository(FloorTable).save(floorToSave);
   }
 
-  async deleteFloor(id: number): Promise<Floor[]> {
-    var floorRemove = await appDataSource.getRepository(Floor).find({
+  async deleteFloor(id: number): Promise<FloorTable[]> {
+    var floorRemove = await appDataSource.getRepository(FloorTable).find({
       where: {
         floor_id: id,
       },
     });
-    return appDataSource.getRepository(Floor).remove(floorRemove)
+    return appDataSource.getRepository(FloorTable).remove(floorRemove)
 
   }
 }
