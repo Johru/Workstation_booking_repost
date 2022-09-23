@@ -2,8 +2,9 @@ import mysql from 'mysql';
 import { DataSource } from 'typeorm';
 
 // import { Todo } from './models/todo';
-import { Floor } from './models/floor'
+import { FloorTable } from './models/floor'
 import config from '../config';
+import { BuildingTable } from './models/building';
 
 export const appDataSource = new DataSource({
   type: 'mysql',
@@ -12,7 +13,7 @@ export const appDataSource = new DataSource({
   username: config.mysql.user,
   password: config.mysql.password,
   database: process.env.DB_DATABASE,
-  entities: [Floor],
+  entities: [FloorTable, BuildingTable],
   logging: false,
   synchronize: true,
 });

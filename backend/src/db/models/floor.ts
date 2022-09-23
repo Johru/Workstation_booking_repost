@@ -1,19 +1,22 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {Entity,Column,PrimaryGeneratedColumn,ManyToOne,JoinColumn,} from 'typeorm';
+import { BuildingTable } from './building';
 
-@Entity()
-export class Floor {
+@Entity('floor')
+export class FloorTable {
   @PrimaryGeneratedColumn()
   floor_id?: number;
 
-  @Column('number')
+  @Column()
   building_id?: number;
 
-  @Column('text')
+  @Column()
   floor_name?: string;
-
-  @Column('datetime')
+  @Column()
   floor_capacity?: number;
-
-  @Column('text')
+  @Column()
   floor_plan?: string;
+
+  @ManyToOne(() => BuildingTable, building => building.floor)
+  @JoinColumn({ name: 'building_id' })
+  building?: BuildingTable;
 }
