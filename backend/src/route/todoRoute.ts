@@ -1,14 +1,14 @@
-import { TodoController } from '../controller';
-import { Router } from 'express';
-import { TodoRepository } from '../repository';
-import { TodoService } from '../service';
+// import { TodoController } from '../controller';
+// import { Router } from 'express';
+// import { TodoRepository } from '../repository';
+// import { TodoService } from '../service';
 
-const router = Router();
+// const router = Router();
 
-const todoRepository = new TodoRepository();
-const todoService = new TodoService(todoRepository);
-const todoController = new TodoController(todoService);
+// const todoRepository = new TodoRepository();
+// const todoService = new TodoService(todoRepository);
+// const todoController = new TodoController(todoService);
 
-router.use('/api', todoController.router);
+// router.use('/api', todoController.router);
 
-export { router };
+// export { router };
