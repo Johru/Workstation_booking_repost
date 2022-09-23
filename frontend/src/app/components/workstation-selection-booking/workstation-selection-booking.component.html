@@ -5,7 +5,7 @@
 ></workstation-tab>
 <div *ngIf="showForm()">
   <workstation-form
-    [selectedWS]="selectedWorkstation"
+    [selectedWorkstationOnTab]="selectedWorkstation"
     (reservation)="onBookClick($event)"
   ></workstation-form>
 </div>

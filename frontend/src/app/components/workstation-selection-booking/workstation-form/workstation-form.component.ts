@@ -9,7 +9,7 @@ import { WorkstationService } from 'src/app/services/workstation.service';
   styleUrls: ['./workstation-form.component.css'],
 })
 export class WorkstationFormComponent implements OnInit {
-  @Input() selectedWS?: number | string;
+  @Input() selectedWorkstationOnTab?: number | string;
   @Input() seatList?: Seat[];
   @Input() selectedSeat?: number;
   @Input() wsIdAndName?: { id: string | number; name: string };

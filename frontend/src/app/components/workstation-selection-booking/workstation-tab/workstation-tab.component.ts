@@ -14,7 +14,7 @@ import { IWorkstation } from 'src/app/helpingHand/iworkstation';
   templateUrl: './workstation-tab.component.html',
   styleUrls: ['./workstation-tab.component.css'],
 })
-export class WorkstationTabComponent implements OnInit, OnChanges {
+export class WorkstationTabComponent implements OnChanges {
   @Input() workstationList?: IWorkstation[];
   @Output() selectedWorkstation = new EventEmitter<{
     id: number;
@@ -29,8 +29,6 @@ export class WorkstationTabComponent implements OnInit, OnChanges {
   workstationName?: string;
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.canceledOnTab) {
