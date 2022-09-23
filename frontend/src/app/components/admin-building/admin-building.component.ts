@@ -36,14 +36,14 @@ export class AdminBuildingComponent implements OnInit {
 
   public scrollRight(): void {
     this.cardContent.nativeElement.scrollTo({
-      left: this.cardContent.nativeElement.scrollLeft + 300,
+      left: this.cardContent.nativeElement.scrollLeft + 238,
       behavior: 'smooth',
     });
   }
 
   public scrollLeft() {
     this.cardContent.nativeElement.scrollTo({
-      left: this.cardContent.nativeElement.scrollLeft - 300,
+      left: this.cardContent.nativeElement.scrollLeft - 238,
       behavior: 'smooth',
     });
   }

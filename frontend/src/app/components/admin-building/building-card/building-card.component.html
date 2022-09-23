@@ -1,16 +1,20 @@
 <div
   class="wrapper"
-  (mouseenter)="mouseOverCard = true"
-  (mouseleave)="mouseOverCard = false"
+  (mouseenter)="toggleCardInfo()"
+  (mouseleave)="toggleCardInfo()"
 >
   <div class="card">
     <div class="info">
-      <p>{{ building.name }}</p>
-      <p>{{ building.address }}</p>
-      <p>{{ building.levels }} floors</p>
-      <p>{{ building.seats }} seats</p>
+      <div>
+        <p>{{ building.name }}</p>
+        <p>{{ building.address }}</p>
+      </div>
+      <div *ngIf="mouseOverCard" [@fadeInOut]>
+        <p>{{ building.levels }} floors</p>
+        <p>{{ building.seats }} seats</p>
+      </div>
     </div>
-    <div *ngIf="mouseOverCard" class="action">
+    <div *ngIf="mouseOverCard" [@fadeInOut] class="action">
       <!--add reroutes-->
       <button mat-raised-button>Edit Bookings</button>
       <button mat-raised-button>Edit Workstations</button>

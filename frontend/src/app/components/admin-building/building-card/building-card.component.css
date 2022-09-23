@@ -9,25 +9,23 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 25px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.236);
-  justify-content: center;
+  justify-content: flex-end;
   gap:30px;
   color: white;
 }
 
-.action {
-  justify-self: flex-end;
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  gap:10px;
+.card:hover{
+  background-color: rgba(255, 255, 255, 0.236);
+  transition: background-color 0.5s ease;
 }
 
-.action button {
-  width: 100%;
+.action {
+  display: flex;
+  flex-direction: column;
+  gap:2px;
 }
 
 .action button:hover {
@@ -37,12 +35,4 @@
 .info {
   text-align: center;
   font-size: 20px;
-  justify-self: start;
-}
-
-.default {
-  background-color:#898585;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
 }

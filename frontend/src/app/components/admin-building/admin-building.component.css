@@ -1,24 +1,24 @@
-.buildingHeader {
+.building-header {
   display: flex;
   gap:30px;
 }
 
-.buildingHeader h2 {
-  margin: 25px 200px 5px;
+.building-header h2 {
+  margin: 25px 0px 5px 200px;
   font-size: 30px;
 }
 
-.buildingHeader select,.buildingHeader button{
+.building-header select,.building-header button{
   width: 300px;
   font-size: 20px;
   margin:25px 50px;
 }
 
-.buildingHeader button:hover {
+.building-header button:hover {
   background-color: #dedede;
 }
 
-.buildingSelector {
+.building-selector {
   height:350px;
   margin-top: 5%;
   margin-left: 8%;
@@ -28,7 +28,7 @@
   display: flex;
 }
 
-.buildingSelector button {
+.building-selector button {
   width:3%;
   font-size: 40px;
   font-weight: 100;
@@ -45,11 +45,9 @@
 }
 
 building-card {
-  width:17.1%;
+  width:19.2%;
   height: 98%;
-  display: block;
+  display: flex;
   position: relative;
   flex-shrink: 0;
-  padding: 0px 1%;
-  border:1px solid black;
 }

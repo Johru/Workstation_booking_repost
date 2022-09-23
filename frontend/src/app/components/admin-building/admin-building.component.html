@@ -1,4 +1,4 @@
-<div class="buildingHeader">
+<div class="building-header">
   <h2>Choose another city</h2>
   <select (change)="onChange()" [(ngModel)]="selectedCityValue">
     <option *ngFor="let city of cityList; let i = index" [value]="city.city">
@@ -9,7 +9,7 @@
     Create Building
   </button>
 </div>
-<div class="buildingSelector">
+<div class="building-selector">
   <button (click)="scrollLeft()">&#60;</button>
   <div #cardContent class="cards">
     <building-card
