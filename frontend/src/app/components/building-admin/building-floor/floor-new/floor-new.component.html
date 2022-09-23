@@ -1,0 +1,10 @@
+<form [formGroup]="newFloorForm" (ngSubmit)="onSubmit()">
+	<label for="floorId">floor id: </label>
+	<input type="text" name="floorId" id="floorId" formControlName="floor_id">
+	<br>
+	<label for="nameOfFloor">floor name: </label>
+	<input type="text" name="nameOfFloor" id="nameOfFloor" formControlName="floor_name">
+	<button type="submit">Add floor</button>
+
+</form>
+

@@ -1,0 +1,63 @@
+<div class="newBuildingContainer">
+<form [formGroup]="newBuildingForm" (ngSubmit)="onSubmit()">
+	<div>
+		<h3>New building</h3>
+		<label for="buildingId">id: </label>
+		<input type="text" name="buildingId" id="buildingId" formControlName="building_id">
+		<br>
+		<label for="nameOfBuilding">name: </label>
+		<input type="text" name="nameOfBuilding" id="nameOfBuilding" [(ngModel)]="nameOfBuilding" formControlName="building_name">
+		<br>
+		<label for="zipCode">postal code:</label>
+		<input type="text" name="zipCode" id="zipCode" [(ngModel)]="zipCode" formControlName="building_zip">
+		<br>
+		<label for="state">state:</label>
+		<input type="text" name="state" id="state" formControlName="building_state">
+		<br>
+		<label for="city">city:</label>
+		<input type="text" name="city" id="city" formControlName="building_city">
+		<br>
+		<label for="adress">adress:</label>
+		<input type="text" name="adress" id="adress" formControlName="building_address">
+		<br>
+    <label for="buildingImage">image:</label>
+		<input type="text" name="buildingImage" id="buildingImage" >
+		<br>		
+		<a routerLink="floor"><button type="submit" [disabled]="!nameOfBuilding || !zipCode">Create</button></a>
+		<button type="submit" routerLink="/buildings">Cancel</button>
+		
+    <br>
+    
+	</div>
+</form>
+<br>
+<br>
+</div>
+
+<building-list></building-list>
+
+
+
+<!-- <div>
+	<h3>Edit building</h3>
+	<label for="nameOfBuilding">name: </label>
+	<input type="text" name="nameOfBuilding" id="nameOfBuilding" placeholder={{buildingsDatabase[0].building_name}} formControlName="reservation_id">
+	<br>
+	<label for="postalCode">postal code:</label>
+	<input type="text" name="postalCode" id="postalCode" placeholder={{buildingsDatabase[0].building_zip}} formControlName="user_id">
+	<br>
+	<label for="state">state:</label>
+	<input type="text" name="state" id="state" placeholder={{buildingsDatabase[0].building_state}} formControlName="seat_id">
+	<br>
+	<label for="city">city:</label>
+	<input type="text" name="city" id="city" placeholder={{buildingsDatabase[0].building_city}} formControlName="reservation_date">
+	<br>
+	<label for="adress">adress:</label>
+	<input type="text" name="adress" id="adress" placeholder={{buildingsDatabase[0].building_address}} formControlName="reservation_creation_date">
+	<br>
+	<label for="buildingImage">image:</label>
+	<input type="text" name="buildingImage" id="buildingImage" formControlName="reservation_creation_date">
+	<br>
+	<button type="submit">Create</button><button type="submit">Cancel</button>
+	<br>
+	<button>Edit workstations</button> -->
