@@ -1,16 +1,16 @@
 <workstation-tab
   (selectedWorkstation)="onSelection($event)"
   [(canceledOnTab)]="canceled"
-  [wsList]="workstations"
+  [workstationList]="workstations"
 ></workstation-tab>
 <div *ngIf="showForm()">
   <workstation-form
-    [selectedWS]="selectedWs"
-    (reservation)="onSubmit($event)"
+    [selectedWS]="selectedWorkstation"
+    (reservation)="onBookClick($event)"
   ></workstation-form>
 </div>
-<div *ngIf="showing">
-  <div class="modalBackground">
+<div *ngIf="modalVisibility">
+  <div class="modal-background">
     <confirm-modal
       *ngIf="!confirmed"
       (editEmitter)="onEdit($event)"

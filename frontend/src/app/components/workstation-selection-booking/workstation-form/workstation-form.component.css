@@ -1,24 +1,29 @@
-.formSelector{
+.form-selector {
   margin:25px;
   display: flex;
 }
-.left{
+
+.left {
   display: flex;
   width: 40%;
 }
-.leftLeft{
+
+.left-side-of-left-panel {
   width:40%;
 }
-.leftLeft h2{
+
+.left-side-of-left-panel h2 {
   padding: 10px;
   color:rgb(72, 72, 72);
   font-size: 15px;
 }
-.leftLeft p{
+
+.left-side-of-left-panel p {
   font-size: 25px;
   padding: 15px;
 }
-.right{
+
+.right {
   margin:0px 20px;
   width:50%;
   height:auto;
@@ -27,10 +32,12 @@
   border: 1px solid black;
   overflow-y: scroll;
 }
-show-seats{
+
+seats {
   width: 100%;
 }
-.bookButton{
+
+.book-button {
   float:right;
   margin:10px 250px;
   height:40px;

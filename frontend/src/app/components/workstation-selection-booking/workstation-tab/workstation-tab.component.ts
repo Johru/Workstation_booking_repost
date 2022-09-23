@@ -15,16 +15,18 @@ import { IWorkstation } from 'src/app/helpingHand/iworkstation';
   styleUrls: ['./workstation-tab.component.css'],
 })
 export class WorkstationTabComponent implements OnInit, OnChanges {
-  @Input() wsList?: IWorkstation[];
+  @Input() workstationList?: IWorkstation[];
   @Output() selectedWorkstation = new EventEmitter<{
-    id: string | number;
+    id: number;
     name: string;
   }>();
 
   @Input() canceledOnTab?: boolean;
   @Output() canceledOnTabChange = new EventEmitter<boolean>();
 
-  value: string | number = 'default';
+  selectedValue: number = 0;
+  defaultSelectionText: string = 'Select a workstation';
+  workstationName?: string;
 
   constructor() {}
 
@@ -36,23 +38,31 @@ export class WorkstationTabComponent implements OnInit, OnChanges {
     }
   }
 
-  onChange(e: any): void {
-    let value = e.target.value;
-    if (e.target.value == 'default') {
-      value = 0;
+  onChangeSelection(): void {
+    if (this.selectedValue == 0) {
+      this.selectedWorkstation!.emit({
+        id: 0,
+        name: this.defaultSelectionText,
+      });
+    } else {
+      this.selectedWorkstation!.emit({
+        id: this.selectedValue,
+        name: this.getWorkstationName(this.selectedValue as number)!,
+      });
     }
-    this.selectedWorkstation!.emit({
-      id: e.target.value,
-      name: e.target.options[value].text,
-    });
+  }
+
+  getWorkstationName(id: number): string | undefined {
+    return this.workstationList?.find((workstation) => workstation.id == id)
+      ?.name;
   }
 
   resetOnCancel(cancel: boolean): void {
     if (cancel) {
-      this.value = 'default';
+      this.selectedValue = 0;
       this.selectedWorkstation!.emit({
-        id: this.value,
-        name: 'Select a Workstation',
+        id: this.selectedValue,
+        name: this.defaultSelectionText,
       });
     }
     this.canceledOnTab = false;

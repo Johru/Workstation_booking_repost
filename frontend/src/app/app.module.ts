@@ -6,11 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //components
 import { AppComponent } from './app.component';
-import { WorkstationFormComponent } from './components/workstation-selection-book/workstation-form/workstation-form.component';
-import { WorkstationTabComponent } from './components/workstation-selection-book/workstation-tab/workstation-tab.component';
-import { WorkstationSelectionBookComponent } from './components/workstation-selection-book/workstation-selection-book.component';
-import { ShowSeatsComponent } from './components/workstation-selection-book/show-seats/show-seats.component';
-import { ConfirmModalComponent } from './components/workstation-selection-book/confirm-modal/confirm-modal.component';
+import { WorkstationFormComponent } from './components/workstation-selection-booking/workstation-form/workstation-form.component';
+import { WorkstationTabComponent } from './components/workstation-selection-booking/workstation-tab/workstation-tab.component';
+import { WorkstationSelectionBookingComponent } from './components/workstation-selection-booking/workstation-selection-booking.component';
+import { SeatsComponent } from './components/workstation-selection-booking/seats/seats.component';
+import { ConfirmModalComponent } from './components/workstation-selection-booking/confirm-modal/confirm-modal.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -22,8 +22,8 @@ import { MatInputModule } from '@angular/material/input';
     AppComponent,
     WorkstationFormComponent,
     WorkstationTabComponent,
-    WorkstationSelectionBookComponent,
-    ShowSeatsComponent,
+    WorkstationSelectionBookingComponent,
+    SeatsComponent,
     ConfirmModalComponent,
   ],
   imports: [

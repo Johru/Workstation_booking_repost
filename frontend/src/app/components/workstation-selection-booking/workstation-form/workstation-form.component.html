@@ -1,6 +1,6 @@
-<div class="formSelector">
+<div class="form-selector">
   <div class="left">
-    <div class="leftLeft">
+    <div class="left-side-of-left-panel">
       <h2>Select Date</h2>
       <p>{{ planModel.start_time.toString().slice(0, 3) }}</p>
       <p>{{ planModel.start_time.toString().slice(3, 11) }}</p>
@@ -22,15 +22,12 @@
     </div>
   </div>
   <div class="right" *ngIf="seatList">
-    <show-seats
-      (selectedSeat)="onSelect($event)"
-      [seats]="seatList"
-    ></show-seats>
+    <seats (selectedSeat)="onSelect($event)" [seats]="seatList"></seats>
   </div>
 </div>
 <button
   [disabled]="disabledButton"
-  class="bookButton"
+  class="book-button"
   (click)="makeReservation()"
 >
   Book

@@ -1,14 +1,16 @@
-h1{
+h1{ 
   margin:20px;
   font-size: 40px;
   font-weight: bold;
 }
-.division{
+
+.confirm-card {
   position: relative;
   display:flex;
   justify-content: space-between;
 }
-.left{
+
+.left {
   width:50%;
   font-size: 25px;
   margin:40px;
@@ -16,17 +18,20 @@ h1{
   border-right: 1px solid black;
   display: flex;
 }
-.values{
+
+.values {
   padding-left: 40px;
 }
-.right{
+
+.right {
   display:flex;
   flex-direction: column;
   gap:20px;
   margin-right: 150px;
   justify-content: center;
 }
-.right button{
+
+.right button {
   width:120px;
   height:40px;
   font-size: 20px;

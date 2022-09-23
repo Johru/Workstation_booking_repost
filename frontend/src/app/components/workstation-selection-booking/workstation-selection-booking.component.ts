@@ -5,25 +5,24 @@ import {
   OnInit,
 } from '@angular/core';
 import { IWorkstation } from 'src/app/helpingHand/iworkstation';
+import { Reservation } from 'src/app/helpingHand/reservation';
 import { WorkstationService } from 'src/app/services/workstation.service';
 
 @Component({
   selector: 'workstation-selection-book',
-  templateUrl: './workstation-selection-book.component.html',
-  styleUrls: ['./workstation-selection-book.component.css'],
+  templateUrl: './workstation-selection-booking.component.html',
+  styleUrls: ['./workstation-selection-booking.component.css'],
 })
-export class WorkstationSelectionBookComponent
+export class WorkstationSelectionBookingComponent
   implements OnInit, AfterContentChecked
 {
   workstations?: IWorkstation[];
-
-  selectedWs: string | number = 'default';
-  showing: boolean = false;
+  selectedWorkstation: number = 0;
+  modalVisibility: boolean = false;
   confirmed?: boolean;
   canceled: boolean = false;
-
-  wsIdAndName?: { id: number | string; name: string };
-  reservationData?: any;
+  workstationIdAndName?: { id: number | string; name: string };
+  reservationData?: Reservation;
 
   constructor(
     private wsService: WorkstationService,
@@ -43,29 +42,31 @@ export class WorkstationSelectionBookComponent
   }
 
   showForm() {
-    return this.selectedWs === 'default' ? false : true;
+    return this.selectedWorkstation === 0 ? false : true;
   }
+
   showReservation() {
-    this.showing = !this.showing;
+    this.modalVisibility = !this.modalVisibility;
   }
+
   confirmReservation() {
     this.confirmed = !this.confirmed;
   }
 
-  onSelection(e: { id: string | number; name: string }) {
-    this.selectedWs = e.id;
-    this.wsIdAndName = {
+  onSelection(e: { id: number; name: string }) {
+    this.selectedWorkstation = e.id;
+    this.workstationIdAndName = {
       id: e.id,
       name: e.name,
     };
   }
 
-  onSubmit(e: any) {
+  onBookClick(e: Reservation) {
     this.reservationData = e;
     this.reservationData.place = 'Input from parent';
     this.reservationData.building = 'Input from parent';
     this.reservationData.floor = 'Input from parent';
-    this.reservationData.workstation = this.wsIdAndName?.name;
+    this.reservationData.workstation = this.workstationIdAndName?.name;
     this.showReservation();
   }
 
@@ -78,8 +79,8 @@ export class WorkstationSelectionBookComponent
   onCancel(e: boolean) {
     if (e) {
       this.canceled = e;
+      this.showReservation();
     }
-    this.showReservation();
   }
 
   onConfirm(e: boolean) {

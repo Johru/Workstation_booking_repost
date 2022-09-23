@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowSeatsComponent } from './show-seats.component';
+import { SeatsComponent } from './seats.component';
 
-describe('ShowSeatsComponent', () => {
-  let component: ShowSeatsComponent;
-  let fixture: ComponentFixture<ShowSeatsComponent>;
+describe('SeatsComponent', () => {
+  let component: SeatsComponent;
+  let fixture: ComponentFixture<SeatsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ShowSeatsComponent],
+      declarations: [SeatsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ShowSeatsComponent);
+    fixture = TestBed.createComponent(SeatsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
