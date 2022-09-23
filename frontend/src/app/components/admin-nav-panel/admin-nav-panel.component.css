@@ -1,4 +1,4 @@
-.navPanel{
+.nav-panel {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -7,25 +7,29 @@
   margin:0;
   box-sizing: border-box;
 }
-.left{
+.left {
   margin:30px;
   width: 33.333%;
 }
-.left h1{
+
+.left h1 {
   cursor: pointer;
   padding-left: 60px;
   font-size: 30px;
 }
-.center, .right{
+
+.center, .right {
   margin: 30px;
   display: flex;
   gap:10px;
   width: 33.333%;
 }
-.center{
+
+.center {
   display: flex;
   justify-content: center;
 }
+
 .center button {
   border:none;
   border-radius: 15px;
@@ -35,13 +39,16 @@
   outline: none;
   cursor: pointer;
 }
-.right{
+
+.right {
   display: flex;
   justify-content: flex-end;
 }
-.right button{
+
+.right button {
   font-size: 20px;
 }
-.right button:hover{
+
+.right button:hover {
   background-color: #cccccc ;
 }

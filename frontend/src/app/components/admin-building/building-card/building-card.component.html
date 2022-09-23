@@ -1,14 +1,20 @@
-<div class="card">
-  <div class="info">
-    <p>{{ building.name }}</p>
-    <p>{{ building.address }}</p>
-    <p>{{ building.levels }} levels</p>
-    <p>{{ building.seats }} seats</p>
-  </div>
-  <div class="action">
-    <!--add reroutes-->
-    <button mat-raised-button>Edit Floors</button>
-    <button mat-raised-button>Edit Workstations</button>
-    <button mat-raised-button>Edit Building</button>
+<div
+  class="wrapper"
+  (mouseenter)="mouseOverCard = true"
+  (mouseleave)="mouseOverCard = false"
+>
+  <div *ngIf="mouseOverCard" class="card">
+    <div class="info">
+      <p>{{ building.name }}</p>
+      <p>{{ building.address }}</p>
+      <p>{{ building.levels }} floors</p>
+      <p>{{ building.seats }} seats</p>
+    </div>
+    <div class="action">
+      <!--add reroutes-->
+      <button mat-raised-button>Edit Bookings</button>
+      <button mat-raised-button>Edit Workstations</button>
+      <button mat-raised-button>Edit Building</button>
+    </div>
   </div>
 </div>

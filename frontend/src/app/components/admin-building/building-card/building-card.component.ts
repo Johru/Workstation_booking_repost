@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
 
 @Component({
@@ -6,9 +6,12 @@ import { Building } from 'src/app/helpingHand/buidling';
   templateUrl: './building-card.component.html',
   styleUrls: ['./building-card.component.css'],
 })
-export class BuildingCardComponent implements OnInit {
+export class BuildingCardComponent {
   @Input() building!: Building;
+  mouseOverCard: boolean = false;
   constructor() {}
 
-  ngOnInit(): void {}
+  changeView(e: any) {
+    this.mouseOverCard = e.type == 'mouseenter' ? true : false;
+  }
 }

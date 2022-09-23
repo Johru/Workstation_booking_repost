@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
 import { BuildingService } from 'src/app/services/building.service';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'admin-building',
@@ -10,29 +9,28 @@ import { ViewportScroller } from '@angular/common';
 })
 export class AdminBuildingComponent implements OnInit {
   buildingList?: Building[];
-  value?: string;
+  selectedCityValue?: string;
   cityList?: any;
-  checkvalue: number = 5;
 
   @ViewChild('cardContent', { read: ElementRef })
   public cardContent!: ElementRef<any>;
-
-  constructor(private bs: BuildingService, private vps: ViewportScroller) {}
+  constructor(private bs: BuildingService) {}
 
   ngOnInit(): void {
     this.getCities();
-    this.value = this.cityList[0].city;
+    this.selectedCityValue = this.cityList[0].city;
     this.getBuildings();
   }
 
   getCities() {
     this.cityList = this.bs.getCityList();
   }
+
   getBuildings() {
     this.buildingList = this.bs.getBuildings();
   }
 
-  onChange(e: any) {
+  onChange() {
     this.getBuildings();
   }
 
@@ -42,6 +40,7 @@ export class AdminBuildingComponent implements OnInit {
       behavior: 'smooth',
     });
   }
+
   public scrollLeft() {
     this.cardContent.nativeElement.scrollTo({
       left: this.cardContent.nativeElement.scrollLeft - 300,

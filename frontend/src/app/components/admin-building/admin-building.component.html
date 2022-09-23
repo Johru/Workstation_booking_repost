@@ -1,6 +1,6 @@
 <div class="buildingHeader">
   <h2>Choose another city</h2>
-  <select (change)="onChange($event)" [(ngModel)]="value">
+  <select (change)="onChange()" [(ngModel)]="selectedCityValue">
     <option *ngFor="let city of cityList; let i = index" [value]="city.city">
       {{ city.city }}
     </option>
