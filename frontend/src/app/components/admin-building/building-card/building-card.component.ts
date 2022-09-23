@@ -9,9 +9,6 @@ import { Building } from 'src/app/helpingHand/buidling';
 export class BuildingCardComponent {
   @Input() building!: Building;
   mouseOverCard: boolean = false;
-  constructor() {}
 
-  changeView(e: any) {
-    this.mouseOverCard = e.type == 'mouseenter' ? true : false;
-  }
+  constructor() {}
 }
