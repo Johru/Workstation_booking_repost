@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { router } from './route/todoRoute';
+import { router } from './route/floorRoute';
 import requestLogger from './middlewares/request-logger';
 import errorLogger from './middlewares/error-logger';
 
