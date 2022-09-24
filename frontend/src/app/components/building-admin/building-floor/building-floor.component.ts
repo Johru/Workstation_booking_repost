@@ -13,6 +13,7 @@ import { BuildingService } from 'src/app/services/admin-edit/building.service';
 })
 export class BuildingFloorComponent implements OnInit {
 
+ 
   buildings: Building[] = []
   floors: Floor[] = [];
   workstations: Workstation[] = [];
@@ -25,6 +26,7 @@ export class BuildingFloorComponent implements OnInit {
     this.getFloor();
     this.getWorkstation();
      console.log(this.floors)
+    
   }
 
   getFloor(): void {

@@ -14,8 +14,8 @@ import { BuildingFloorComponent } from './components/building-admin/building-flo
 import { BuildingsAdminMainComponent } from './components/building-admin/buildings-admin-main/buildings-admin-main.component';
 import { FloorListComponent } from './components/building-admin/building-floor/floor-list/floor-list.component';
 import { FloorNewComponent } from './components/building-admin/building-floor/floor-new/floor-new.component';
-import { WorkstationEmptyComponent } from './components/building-admin/building-floor/floor-list/workstation-empty/workstation-empty.component';
 import { WorkstationManagementComponent } from './components/building-admin/building-floor/floor-list/workstation-management/workstation-management.component';
+import { WorkstationPreviewInputComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-input/workstation-preview-input.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +26,8 @@ import { WorkstationManagementComponent } from './components/building-admin/buil
     BuildingFloorComponent,
     BuildingsAdminMainComponent,
     FloorListComponent,
-    FloorNewComponent,
-    WorkstationEmptyComponent,
-    WorkstationManagementComponent
+    FloorNewComponent,  
+    WorkstationManagementComponent, WorkstationPreviewInputComponent
   ],
   imports: [
     BrowserModule,

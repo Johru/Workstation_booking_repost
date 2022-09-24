@@ -1,13 +1,13 @@
 <div class="addFloorContainer">
 	<div class="nameOfBuilding">Building name: {{buildings[0].building_name}}</div>
-	<br>	
+	<br>
 	<floor-new (newFloorEvent)="addFloor($event)"></floor-new>
 	<button type="button" routerLink="/buildings">Cancel</button>
 </div>
 <br>
 <floor-list [floorList]="floors" [workstationList]="workstations"></floor-list>
 
-
-<p class="noFloorsSign">There are currently no floors in this buidilng.</p>
-
+<div *ngIf="!floors.length">
+	<p class="noFloorsSign">There are currently no floors in this buidilng.</p>
+</div>
 <workstation-management></workstation-management>
