@@ -4,11 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
 import { BuildingsAdminMainComponent } from './components/building-admin/buildings-admin-main/buildings-admin-main.component';
+import { WorkstationManagementComponent } from './components/building-admin/building-floor/floor-list/workstation-management/workstation-management.component';
 
 const routes: Routes = [] = [
-  { path: 'buildings', component: BuildingsAdminMainComponent}, // for testing purpose
+  { path: 'buildings', component: BuildingsAdminMainComponent }, // for testing purpose
   { path: 'edit/building', component: BuildingDashboardComponent },
-  { path: 'edit/building/floor', component: BuildingFloorComponent }
+  {
+    path: 'edit/building/floor',
+    component: BuildingFloorComponent,
+    children: [
+      { path: 'management', component: WorkstationManagementComponent }
+    ]
+  }
 ]
 
 // {

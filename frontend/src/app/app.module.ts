@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { WorkstationPreviewInputComponent } from './components/building-admin/bu
     BuildingsAdminMainComponent,
     FloorListComponent,
     FloorNewComponent,  
-    WorkstationManagementComponent, WorkstationPreviewInputComponent
+    WorkstationManagementComponent, 
+    WorkstationPreviewInputComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { WorkstationPreviewInputComponent } from './components/building-admin/bu
     ReactiveFormsModule,
     MatExpansionModule,
     MatSelectModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

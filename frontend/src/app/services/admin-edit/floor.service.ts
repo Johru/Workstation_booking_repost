@@ -25,4 +25,10 @@ export class FloorService {
   addFloor(floor: Floor): void {
     FLOORS.push(floor);
   }
+
+  addWorkstation(workstation: Workstation): void {
+    WORKSTATIONS.push(workstation);
+  }
+
+
 }

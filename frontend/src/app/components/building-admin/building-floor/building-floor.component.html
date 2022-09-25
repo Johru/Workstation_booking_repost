@@ -5,9 +5,9 @@
 	<button type="button" routerLink="/buildings">Cancel</button>
 </div>
 <br>
-<floor-list [floorList]="floors" [workstationList]="workstations"></floor-list>
+<floor-list [floorList]="floors"></floor-list>
 
 <div *ngIf="!floors.length">
 	<p class="noFloorsSign">There are currently no floors in this buidilng.</p>
 </div>
-<workstation-management></workstation-management>
+

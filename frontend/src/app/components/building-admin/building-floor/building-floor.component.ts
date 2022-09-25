@@ -26,7 +26,8 @@ export class BuildingFloorComponent implements OnInit {
     this.getFloor();
     this.getWorkstation();
      console.log(this.floors)
-    
+     console.log(this.floors.values)
+   
   }
 
   getFloor(): void {

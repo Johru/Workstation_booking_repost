@@ -1,28 +1,28 @@
-<div *ngFor="let floor of floorList; let i = index;">
-	<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+<div *ngFor="let floor of floorList; let i = index;">	
+	<mat-expansion-panel #mep="matExpansionPanel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
 		<mat-expansion-panel-header>
 			<mat-panel-title>
-				<span>Floor name: {{floor.floor_name}}</span>
+				<span>Floor name: {{floor.floor_name}} </span>
 			</mat-panel-title>
 			<!-- <ng-container *ngFor="let workstation of workstationList"> -->
-				<mat-panel-description >
-					<span>nr. of workstations /</span>
-					<span>nr. of seats</span>
-					<!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
-				</mat-panel-description>
+			<mat-panel-description>
+				<span >{{floor.workstations.length}} workstations </span>
+				<span>/ seats</span>
+
+			
+				<!-- <span>/ {{floor.workstations[i].seats}} seats</span> -->
+
+
+				<!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+			</mat-panel-description>
 			<!-- </ng-container> -->
 		</mat-expansion-panel-header>
-		<div>
-			<form>
-				<label for="workstationName">Name:</label>
-				<input type="text" name="workstationName" id="workstationName">
-				<br>
-				<label for="seatsNumber">Number of seats:</label>
-				<input type="text" name="seatsNumber" id="seatsNumber">
-				<br>
-				<button type="submit">Add workstation</button>									
-			</form>
-			<button>Cancel</button>	
-		</div>
+		
+		<workstation-management [workstationList]="workstations" *ngIf="floor.workstations.length"></workstation-management>
+		<br>
+		<br>
+		<workstation-preview-input (newWorkstationEvent)="addWorkstation($event)"></workstation-preview-input>
+
+		
 	</mat-expansion-panel>
 </div>

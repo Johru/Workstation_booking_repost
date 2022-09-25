@@ -1,5 +1,6 @@
 export interface Workstation {
-  workstation_id: number;
+  floor_id: number;
   workstation_name: string;
+  seats: number;
   // workstation_status: boolean;
 }

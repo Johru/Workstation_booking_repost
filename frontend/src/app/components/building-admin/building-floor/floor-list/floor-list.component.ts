@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Floor } from 'src/app/help-files/floor-interface';
 import { Workstation } from 'src/app/help-files/workstation-interface';
+import { FloorService } from 'src/app/services/admin-edit/floor.service';
 
 
 @Component({
@@ -10,16 +12,35 @@ import { Workstation } from 'src/app/help-files/workstation-interface';
 })
 export class FloorListComponent implements OnInit {
 
-  panelOpenState = false;
+  floors: Floor[] = [];
+  workstations: Workstation[] = [];
+
+  panelOpenState = false;  
 
   @Input() floorList?: Floor[];
   @Input() workstationList?: Workstation[];
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(private floorService: FloorService) { }
+
+  ngOnInit(): void {  
+    this.getFloor();   
+     console.log(this.floors)
+     console.log(this.floors.values)
+     this.getWorkstation();
+   
   }
 
-  
+  getFloor(): void {
+    this.floors = this.floorService.getFloor();   
+  }
+
+  addWorkstation(newWorkstation: Workstation) {
+    this.floorService.addWorkstation(newWorkstation);
+  }
+
+  getWorkstation(): void {
+    this.workstations = this.floorService.getWorkstation();
+  }
 
 }

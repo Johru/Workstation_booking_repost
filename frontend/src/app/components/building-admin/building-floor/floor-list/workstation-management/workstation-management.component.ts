@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Floor } from 'src/app/help-files/floor-interface';
+
+import { Workstation } from 'src/app/help-files/workstation-interface';
 
 
 @Component({
@@ -7,12 +11,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workstation-management.component.css']
 })
 export class WorkstationManagementComponent implements OnInit {
+ 
+  @Input() floorList?: Floor[];
 
-  selected = 'None';
+  @Input() workstationList?: Workstation[];
 
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
 }
