@@ -3,6 +3,7 @@ import { ReservationService } from '../service/reservation/reservationService';
 
 export class ReservationController {
   private readonly _router: Router = Router();
+  outputArray: any[] = [];
 
   constructor(private reservationService: ReservationService) {
     this._router.get('/reservation/:id/date', async (req: any, res: any) => {

@@ -34,6 +34,16 @@ export class BuildingRepository {
 
     return appDataSource.getRepository(BuildingTable).save(resSave);
   }
+
+  async updateBuilding(body: any, id: number): Promise<any> {
+    return appDataSource.getRepository(BuildingTable).update(id, {
+      building_name: body.buildingName,
+      building_address: body.buildingAddress,
+      building_zip: body.buildingZip,
+      building_city: body.buildingCity,
+      building_image: body.buildingImage,
+    });
+  }
   async deleteBuilding(id: number): Promise<any> {
     return appDataSource
       .createQueryBuilder()

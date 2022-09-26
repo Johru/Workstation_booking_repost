@@ -19,6 +19,10 @@ export class BuildingService {
   addNewBuilding(body: any): Promise<BuildingTable> {
     return this.buildingRepository.addNewBuilding(body);
   }
+
+  updateBuilding(body: any, id: number): Promise<any> {
+    return this.buildingRepository.updateBuilding(body, id);
+  }
   deleteBuilding(id: number): Promise<BuildingTable> {
     return this.buildingRepository.deleteBuilding(id);
   }
