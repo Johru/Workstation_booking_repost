@@ -11,9 +11,9 @@ export class AdminBuildingComponent implements OnInit {
   buildingList?: Building[];
   selectedCityValue?: string;
   cityList?: any;
-
   @ViewChild('cardContent', { read: ElementRef })
-  public cardContent!: ElementRef<any>;
+  cardContent!: ElementRef<any>;
+
   constructor(private bs: BuildingService) {}
 
   ngOnInit(): void {
