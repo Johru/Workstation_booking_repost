@@ -1,8 +1,11 @@
 import { DataSource } from 'typeorm';
 import config from '../config';
+import { BuildingTable } from './models/building';
+import { FloorTable } from './models/floor';
 import { ReservationTable } from './models/reservation';
 import { SeatTable } from './models/seat';
 import { UserTable } from './models/user';
+import { WorkstationTable } from './models/workstation';
 
 export const appDataSource = new DataSource({
   type: 'mysql',
@@ -11,8 +14,14 @@ export const appDataSource = new DataSource({
   username: config.mysql.user,
   password: config.mysql.password,
   database: config.mysql.database,
-  // database: 'booking',
-  entities: [SeatTable, ReservationTable, UserTable],
+  entities: [
+    SeatTable,
+    ReservationTable,
+    UserTable,
+    BuildingTable,
+    FloorTable,
+    WorkstationTable,
+  ],
   logging: false,
   synchronize: true,
 });

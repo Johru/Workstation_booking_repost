@@ -23,18 +23,10 @@ export class ReservationTable {
   @Column({ type: 'date' })
   reservation_date?: Date;
 
-  @Column({
-    name: 'reservation_isconfirmed',
-    type: 'bit',
-    default: false,
-    transformer: new BoolBitTransformer(),
-  })
-  reservation_isconfirmed?: boolean;
-
-  @ManyToOne(() => SeatTable, seat => seat.reservation)
+  @ManyToOne(() => SeatTable, seat => seat.reservation, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'seat_id' })
   seat?: SeatTable;
-  @ManyToOne(() => UserTable, user => user.reservation)
+  @ManyToOne(() => UserTable, user => user.reservation, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'user_id' })
   user?: UserTable;
 }

@@ -9,9 +9,9 @@ export class BuildingTable {
   @Column()
   building_name?: string;
   @Column()
-  building_adress?: string;
+  building_address?: string;
   @Column()
-  building_zip?: number;
+  building_zip?: string;
   @Column()
   building_city?: string;
   @Column()

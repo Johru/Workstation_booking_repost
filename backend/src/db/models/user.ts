@@ -11,7 +11,7 @@ export class UserTable {
   user_name?: string;
 
   @Column()
-  seat_login?: string;
+  user_login?: string;
 
   @Column()
   user_password?: string;
@@ -22,6 +22,7 @@ export class UserTable {
   @Column({
     name: 'user_isadmin',
     type: 'bit',
+    default: false,
     transformer: new BoolBitTransformer(),
   })
   readonly user_isadmin?: boolean;
