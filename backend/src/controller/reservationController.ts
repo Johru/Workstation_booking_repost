@@ -6,9 +6,9 @@ export class ReservationController {
   outputArray: any[] = [];
 
   constructor(private reservationService: ReservationService) {
-    this._router.get('/reservation/date', async (req: any, res: any) => {
+    this._router.get('/reservation/:id/date', async (req: any, res: any) => {
       console.log('/reservation/date endpoint accessed');
-      const workstationId = req.query.workstationId;
+      const workstationId = req.params.id;
       const reservationDate = req.query.reservationDate;
       res.json(
         await reservationService.showReservationForDay(
