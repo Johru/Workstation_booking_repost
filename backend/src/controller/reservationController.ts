@@ -18,7 +18,7 @@ export class ReservationController {
       );
     });
 
-    this._router.get('/reservation/user/:id', async (req: any, res: any) => {
+    this._router.get('/reservation/:id/user', async (req: any, res: any) => {
       console.log('/reservation/user/:id endpoint accessed');
 
       res.json(await reservationService.displayResForUser(req.params.id));
@@ -31,7 +31,7 @@ export class ReservationController {
     });
 
     this._router.delete(
-      '/reservation/delete/:id',
+      '/reservation/:id/delete',
       async (req: any, res: any) => {
         console.log('/reservation/delete endpoint accessed');
         const body = req.params.id;
