@@ -17,6 +17,7 @@ import { FloorListComponent } from './components/building-admin/building-floor/f
 import { FloorNewComponent } from './components/building-admin/building-floor/floor-new/floor-new.component';
 import { WorkstationManagementComponent } from './components/building-admin/building-floor/floor-list/workstation-management/workstation-management.component';
 import { WorkstationPreviewInputComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-input/workstation-preview-input.component';
+import { WorkstationCrossroadComponent } from './components/building-admin/building-floor/floor-list/workstation-crossroad/workstation-crossroad.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,10 @@ import { WorkstationPreviewInputComponent } from './components/building-admin/bu
     BuildingFloorComponent,
     BuildingsAdminMainComponent,
     FloorListComponent,
-    FloorNewComponent,  
-    WorkstationManagementComponent, 
-    WorkstationPreviewInputComponent
+    FloorNewComponent,
+    WorkstationManagementComponent,
+    WorkstationPreviewInputComponent,
+    WorkstationCrossroadComponent
   ],
   imports: [
     BrowserModule,

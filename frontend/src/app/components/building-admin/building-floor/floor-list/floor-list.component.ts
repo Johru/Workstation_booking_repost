@@ -25,8 +25,7 @@ export class FloorListComponent implements OnInit {
 
   ngOnInit(): void {  
     this.getFloor();   
-     console.log(this.floors)
-     console.log(this.floors.values)
+     console.log(this.floors);   
      this.getWorkstation();
    
   }
@@ -35,12 +34,17 @@ export class FloorListComponent implements OnInit {
     this.floors = this.floorService.getFloor();   
   }
 
-  addWorkstation(newWorkstation: Workstation) {
+  addWorkstation(newWorkstation: Workstation): void {
     this.floorService.addWorkstation(newWorkstation);
+    this.ngOnInit();
   }
 
   getWorkstation(): void {
     this.workstations = this.floorService.getWorkstation();
   }
+
+  // onChange(): void {
+  //   this.getWorkstation();
+  // }
 
 }

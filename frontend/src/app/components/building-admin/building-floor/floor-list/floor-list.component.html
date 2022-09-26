@@ -8,20 +8,19 @@
 			<mat-panel-description>
 				<span >{{floor.workstations.length}} workstations </span>
 				<span>/ seats</span>
-
 			
 				<!-- <span>/ {{floor.workstations[i].seats}} seats</span> -->
-
 
 				<!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
 			</mat-panel-description>
 			<!-- </ng-container> -->
 		</mat-expansion-panel-header>
 		
-		<workstation-management [workstationList]="workstations" *ngIf="floor.workstations.length"></workstation-management>
+		<workstation-management [floorList]="floors" [workstationList]="workstations" *ngIf="floor.workstations.length"></workstation-management>
+		<!-- <router-outlet ></router-outlet> -->
 		<br>
 		<br>
-		<workstation-preview-input (newWorkstationEvent)="addWorkstation($event)"></workstation-preview-input>
+		<workstation-preview-input [input]="mep" (newWorkstationEvent)="addWorkstation($event)"></workstation-preview-input>
 
 		
 	</mat-expansion-panel>
