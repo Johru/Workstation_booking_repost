@@ -5,10 +5,10 @@ import { Response, Request } from 'express';
 
 export interface IWorkstationRepository {
   findAllWorkstations(): Promise<WorkstationTable[]>;
-  findAllWorkstationsOnFloor(id: number): Promise<WorkstationTable[]>;
+  findAllWorkstationsOnFloor(floorId: number): Promise<WorkstationTable[]>;
   saveWorkstation(workstation: WorkstationTable): Promise<WorkstationTable>;
-  updateWorkstation(id: number, workstation: WorkstationTable):Promise<WorkstationTable>;
-  deleteWorkstation(id: number):Promise<WorkstationTable[]>;
+  updateWorkstation(workstationId: number, workstation: WorkstationTable):Promise<WorkstationTable>;
+  deleteWorkstation(workstationId: number):Promise<WorkstationTable[]>;
 }
 
 export class WorkstationRepository implements IWorkstationRepository {
@@ -16,10 +16,10 @@ export class WorkstationRepository implements IWorkstationRepository {
     return appDataSource.getRepository(WorkstationTable).find();
   }
 
-  async findAllWorkstationsOnFloor(id: number): Promise<WorkstationTable[]> {
+  async findAllWorkstationsOnFloor(floorId: number): Promise<WorkstationTable[]> {
     return appDataSource.getRepository(WorkstationTable).find({
       where: {
-        floor_id: id,
+        floor_id: floorId,
       },
     });
   }
@@ -34,10 +34,10 @@ export class WorkstationRepository implements IWorkstationRepository {
     return appDataSource.getRepository(WorkstationTable).save(workstationToSave);
   }
 
-  async updateWorkstation(id: number, workstation: WorkstationTable): Promise<WorkstationTable> {
+  async updateWorkstation(workstationId: number, workstation: WorkstationTable): Promise<WorkstationTable> {
     var workstationUpdate = await appDataSource.getRepository(WorkstationTable).find({
       where: {
-        workstation_id: id,
+        workstation_id: workstationId,
       },
     });
     var workstationToSave: WorkstationTable = {};
@@ -52,10 +52,10 @@ export class WorkstationRepository implements IWorkstationRepository {
     return appDataSource.getRepository(WorkstationTable).save(workstationToSave);
   }
 
-  async deleteWorkstation(id: number): Promise<WorkstationTable[]> {
+  async deleteWorkstation(workstationId: number): Promise<WorkstationTable[]> {
     var workstationRemove = await appDataSource.getRepository(WorkstationTable).find({
       where: {
-        workstation_id: id,
+        workstation_id: workstationId,
       },
     });
     return appDataSource.getRepository(WorkstationTable).remove(workstationRemove)

@@ -12,30 +12,30 @@ export class WorkstationController {
   constructor(private workstationService: IWorkstationService) {
 
     // Show all workstations
-    this._router.get('/workstation', async (req: Request, res: Response) => {
+    this._router.get('/workstation/showall', async (req: Request, res: Response) => {
       res.status(200).json(await this.workstationService.getWorkstations());
     });
 
 
     // Show all workstations base on floor id
-    this._router.get('/workstation/:id', async (req: Request, res: Response) => {
+    this._router.get('/workstation/:floorId/showonfloor', async (req: Request, res: Response) => {
       res.status(200).json(await this.workstationService.showWorkstation( req, res));
     });
 
    // create wworkstation  
-    this._router.post('/workstation', async (req: Request, res: Response) => {
+    this._router.post('/workstation/create', async (req: Request, res: Response) => {
       const workstation: WorkstationTable = req.body as WorkstationTable;
       res.status(200).json(await this.workstationService.createWorkstation(workstation));
     });
 
     // update workstation
-    this._router.put('/workstation/:id', async (req: Request, res: Response) => {
+    this._router.put('/workstation/:workstationId/Update', async (req: Request, res: Response) => {
       res.status(200).json(await this.workstationService.updatedWorkstation(req,res))
     });
 
 
     //  delete workstation
-    this._router.delete('/workstation/:id', async (req, res) => {
+    this._router.delete('/workstation/:workstationId', async (req, res) => {
       res.status(200).json(await this.workstationService.deletedWorkstation(req,res))
     });
   }

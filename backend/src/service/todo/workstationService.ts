@@ -23,8 +23,8 @@ export class WorkstationService implements IWorkstationService {
   }
 
   async showWorkstation(req: Request, res: Response): Promise<WorkstationTable[]> {
-    var id = parseInt(req.params.id, 10);
-    return await this.workstationRepository.findAllWorkstationsOnFloor(id);
+    var floorId = parseInt(req.params.floorId, 10);
+    return await this.workstationRepository.findAllWorkstationsOnFloor(floorId);
   }
 
   async createWorkstation(
@@ -65,9 +65,9 @@ export class WorkstationService implements IWorkstationService {
         return { status: 'Error', message: errorMessage };
       }
     }
-    var id = parseInt(req.params.id, 10);
+    var workstationId = parseInt(req.params.id, 10);
     const newWorkstation = await this.workstationRepository.updateWorkstation(
-    id,workstation
+      workstationId,workstation
     );
 
     return {
