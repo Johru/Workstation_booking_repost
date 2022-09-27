@@ -27,6 +27,14 @@ export class UserTable {
   })
   readonly user_isadmin?: boolean;
 
+  @Column({
+    name: 'user_isblocked',
+    type: 'bit',
+    default: false,
+    transformer: new BoolBitTransformer(),
+  })
+  readonly user_isblocked?: boolean;
+
   @OneToMany(() => ReservationTable, reservation => reservation.user)
   reservation?: ReservationTable[];
 }

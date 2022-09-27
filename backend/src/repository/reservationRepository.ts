@@ -30,6 +30,8 @@ export class ReservationRepository {
       .getRepository(ReservationTable)
       .createQueryBuilder('reservation')
       .where('reservation.user_id = :id', { id: body })
+      .leftJoin('reservation.seat', 'seat')
+      .addSelect(['seat.seat_id'])
       .getMany();
   }
   async addNewReservation(body: any): Promise<ReservationTable> {

@@ -15,6 +15,8 @@ export class BuildingTable {
   @Column()
   building_city?: string;
   @Column()
+  building_country?: string;
+  @Column()
   building_image?: string;
 
   @OneToMany(() => FloorTable, floor => floor.building)
