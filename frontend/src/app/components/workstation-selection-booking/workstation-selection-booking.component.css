@@ -1,0 +1,54 @@
+workstation-tab {
+  display: flex;
+  justify-content: space-around;
+}
+
+confirm-modal {
+  z-index: 2;
+}
+
+confirm-modal, .confirmed {
+  border:none;
+  border-radius: 8px;
+  box-shadow: 1px 2px 7px 5px rgba(0,0,0,0.66);
+  -webkit-box-shadow: 1px 2px 7px 5px rgba(0,0,0,0.66);
+  -moz-box-shadow: 1px 2px 7px 5px rgba(0,0,0,0.66);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 60%;
+  height: 40%;
+  min-height: 400px;
+}
+
+.confirmed {
+  text-align: center;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.confirmed a {
+  color:black;
+  text-decoration: none;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+.modal-background {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top:0;
+  left:0;
+}

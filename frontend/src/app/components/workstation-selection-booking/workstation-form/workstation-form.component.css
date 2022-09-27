@@ -1,0 +1,45 @@
+.form-selector {
+  margin:25px;
+  display: flex;
+}
+
+.left {
+  display: flex;
+  width: 40%;
+}
+
+.left-side-of-left-panel {
+  width:40%;
+}
+
+.left-side-of-left-panel h2 {
+  padding: 10px;
+  color:rgb(72, 72, 72);
+  font-size: 15px;
+}
+
+.left-side-of-left-panel p {
+  font-size: 25px;
+  padding: 15px;
+}
+
+.right {
+  margin:0px 20px;
+  width:50%;
+  height:auto;
+  display:flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+seats {
+  width: 100%;
+}
+
+.book-button {
+  float:right;
+  margin:10px 250px;
+  height:40px;
+  width:150px;
+}
