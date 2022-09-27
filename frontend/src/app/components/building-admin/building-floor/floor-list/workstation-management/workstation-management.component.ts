@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
 
-import { Workstation } from 'src/app/help-files/workstation-interface';
+import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 
 
 @Component({
@@ -14,7 +14,8 @@ export class WorkstationManagementComponent implements OnInit {
  
   @Input() floorList?: Floor[];
 
-  @Input() workstationList?: Workstation[];
+
+  @Input() workstationList?: WorkstationInterface[];
 
   constructor() { }
 

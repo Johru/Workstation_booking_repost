@@ -1,45 +1,15 @@
 <div>
 	<span>Workstation: </span>
-	<!-- 	
-	<select  [(ngModel)]="selectedWorkstation">
-    <option *ngFor="let workstation of floorList; let i = index" [value]="workstation.floor_name">
-{{workstation.floor_name}}
-    </option>
-  </select> -->
-
 	<form>
 		<mat-form-field appearance="fill">
 			<mat-label>Select a workstation</mat-label>
 			<mat-select name="workstation">
-				<mat-option *ngFor="let workstation of floorList; let i = index;" [value]="workstation.workstations">
-					<span *ngFor="let name of workstation.workstations">{{name.workstation_name}}</span>  
-					<!-- add another ngFor -->
-				</mat-option>
-			</mat-select>
-		</mat-form-field>
-	</form>
-
-	<h4>Basic mat-select</h4>
-<mat-form-field appearance="fill">
-  <mat-label>Favorite food</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let workstation of floorList" [value]="workstation.floor_name">
-      {{workstation.floor_name}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-
-	<form>
-		<mat-form-field appearance="fill">
-			<mat-label>Select a workstation</mat-label>
-			<mat-select name="workstation">
-				<mat-option *ngFor="let workstation of workstationList; let i = index;" [value]="workstation.workstation_name[0]">
+				<mat-option *ngFor="let workstation of workstationList; let i = index;">
 					{{workstation.workstation_name}}
 				</mat-option>
 			</mat-select>
 		</mat-form-field>
 	</form>
-
 </div>
 <span>Number of seats: </span>
 <br>

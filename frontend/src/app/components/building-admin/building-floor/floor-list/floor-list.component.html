@@ -16,12 +16,12 @@
 			<!-- </ng-container> -->
 		</mat-expansion-panel-header>
 		
-		<workstation-management [floorList]="floors" [workstationList]="workstations" *ngIf="floor.workstations.length"></workstation-management>
-		<!-- <router-outlet ></router-outlet> -->
+		<workstation-management [workstationList]="floor.workstations" [floorList]="floors" *ngIf="floor.workstations.length"></workstation-management>
+		
 		<br>
 		<br>
-		<workstation-preview-input [input]="mep" (newWorkstationEvent)="addWorkstation($event)"></workstation-preview-input>
-
+		<workstation-preview-input [cancelButton]="mep"></workstation-preview-input>
+		<!-- <workstation-preview-input [input]="mep" (newWorkstationEvent)="addWorkstation($event)"></workstation-preview-input> -->
 		
 	</mat-expansion-panel>
 </div>

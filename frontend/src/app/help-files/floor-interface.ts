@@ -1,8 +1,4 @@
-interface WorkstationInterface {
-  // workstation_id: number;
-  workstation_name: string; 
-  seats: number;
-}
+import { WorkstationInterface } from "./workstation-interface"
 
 export interface Floor {
   floor_id: number;

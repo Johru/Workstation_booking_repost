@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Building } from 'src/app/help-files/buildind-interface';
 import { Floor } from 'src/app/help-files/floor-interface';
-import { Workstation } from 'src/app/help-files/workstation-interface';
 import { FloorService } from 'src/app/services/admin-edit/floor.service';
 import { BuildingService } from 'src/app/services/admin-edit/building.service';
 
@@ -15,35 +14,34 @@ export class BuildingFloorComponent implements OnInit {
 
  
   buildings: Building[] = []
-  floors: Floor[] = [];
-  workstations: Workstation[] = [];
+  floors: Floor[] = []; 
 
-  constructor(private floorService: FloorService, private workstationService: FloorService,
+  constructor(private floorService: FloorService,
    private buildingService: BuildingService) { }
 
   ngOnInit(): void {
     this.getBuilding();
     this.getFloor();
-    this.getWorkstation();
-     console.log(this.floors)
-     console.log(this.floors.values)
-   
+    // this.getWorkstation();
+     console.log(this.floors);   
   }
 
   getFloor(): void {
     this.floors = this.floorService.getFloor();   
   }
 
-  getWorkstation(): void {
-    this.workstations = this.workstationService.getWorkstation();   
-  }
+  // getWorkstation(): void {
+  //   this.workstations = this.workstationService.getWorkstation();   
+  // }
 
   getBuilding(): void {
     this.buildings = this.buildingService.getBuildings();
   }
 
   addFloor(newFloor: Floor) {
-    this.floorService.addFloor(newFloor);   
+    this.floorService.addFloor(newFloor);  
+    console.log('test') 
+    console.log(newFloor)
   }
 
 }

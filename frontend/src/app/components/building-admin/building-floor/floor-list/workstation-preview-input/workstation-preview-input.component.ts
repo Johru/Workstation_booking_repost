@@ -3,8 +3,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { MatExpansionPanel } from '@angular/material/expansion';
 
 import { Floor } from 'src/app/help-files/floor-interface';
-import { Workstation } from 'src/app/help-files/workstation-interface';
-// import { FloorService } from 'src/app/services/admin-edit/floor.service';
+// import { Workstation } from 'src/app/help-files/workstation-interface';
+import { FloorService } from 'src/app/services/admin-edit/floor.service';
 
 @Component({
   selector: 'workstation-preview-input',
@@ -13,45 +13,44 @@ import { Workstation } from 'src/app/help-files/workstation-interface';
 })
 export class WorkstationPreviewInputComponent implements OnInit {
 
-  newWorkstationForm = new FormGroup({
-    floor_id: new FormControl(),
-    workstation_name: new FormControl(),
+  newWorkstationForm = new FormGroup({ // error because thit part
+    // floor_id: new FormControl(),
+    workstations: new FormControl(),
     seats: new FormControl()
   })
 
-  workstation?: Workstation;
-  workstations: Workstation[] = [];
+  workstation!: Floor;
+  // workstations: Floor[] = [];
+ 
 
-  @Input() input?: MatExpansionPanel; // for CANCEL BUTTON
+  @Input() cancelButton?: MatExpansionPanel; // for CANCEL BUTTON
 
-  @Output() newWorkstationEvent = new EventEmitter<Workstation>();
+  // @Output() newWorkstationEvent = new EventEmitter<Floor>();
 
-  // constructor(private floorService: FloorService) { }
-  constructor() { }
+  constructor(private floorService: FloorService) { }
+
 
   onSubmit(): void {
-    this.workstation = {
-      floor_id: this.newWorkstationForm.value.floor_id,
-      workstation_name: this.newWorkstationForm.value.workstation_name,
-      seats: this.newWorkstationForm.value.seats
-    }
-    this.newWorkstationEvent.emit(this.workstation);
-    this.newWorkstationForm.reset();
-    console.log(this.workstation);
-    this.ngOnInit();
+    // this.workstation = { //rework
+    //   // floor_id: this.newWorkstationForm.value.floor_id,
+    //   workstations: this.newWorkstationForm.value.workstation_name,
+    //   seats: this.newWorkstationForm.value.seats
+    // }
+    // this.newWorkstationEvent.emit(this.workstation); // rework
+    // this.newWorkstationForm.reset(); //rework
+    // console.log(this.workstation); //rework
+    // this.ngOnInit();
   }
 
   ngOnInit(): void {
   }
 
-  fn() {
-    this.ngOnInit();
-    console.log('ok')
-}
 
   // getWorkstation(): void {
   //   this.workstations = this.floorService.getWorkstation();
   // }
+
+ 
 
     // onChange(): void {
     //   this.getWorkstation();
