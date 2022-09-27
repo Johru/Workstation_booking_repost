@@ -1,0 +1,17 @@
+.wrapper-users {
+  display: grid;
+  grid-template-columns: 1.5fr 5.5fr 1.5fr;
+  grid-template-rows: 1fr auto;
+}
+
+user-list {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+h1 {
+  grid-column: 2/3;
+  margin: 70px;
+  margin-left: -70px;
+  font-size: 40px;
+}

@@ -1,5 +1,61 @@
-<div>
-  <h2>{{ user.user_name }}</h2>
-  <h2>{{ user.res_count }} bookings</h2>
+<div class="wrapper">
+  <div class="default-tab">
+    <h2 class="user-name">{{ user.user_name }}</h2>
+    <h2 class="res-count">{{ user.res_count }} bookings</h2>
+    <div class="buttons">
+      <mat-slide-toggle
+        [color]="color"
+        title="{{ blockTitle }}"
+        [checked]="user.user_isBlocked"
+      ></mat-slide-toggle>
+      <span
+        class="material-icons"
+        style="transform: rotate(180deg)"
+        (click)="toggleInfo($event)"
+      >
+        arrow_circle_up
+      </span>
+    </div>
+  </div>
+  <div
+    *ngIf="displayUserInfo"
+    [@collapse]="displayUserInfo"
+    class="info-extension"
+  >
+    <div class="login">
+      <h3>{{ user.user_login }}</h3>
+    </div>
+    <div class="extension-buttons">
+      <div class="promote">
+        <p>promote to admin</p>
+        <mat-slide-toggle
+          [color]="color"
+          title="{{ blockTitle }}"
+          [checked]="user.user_isAdmin"
+        ></mat-slide-toggle>
+      </div>
+      <div class="block">
+        <p>{{ blockTitle }}</p>
+        <mat-slide-toggle
+          [color]="color"
+          title="{{ blockTitle }}"
+          [checked]="user.user_isBlocked"
+        ></mat-slide-toggle>
+      </div>
+      <div class="delete">
+        <p>delete user</p>
+        <button>X</button>
+      </div>
+    </div>
+    <div class="res-tab">
+      <h2>Show Reservations</h2>
+      <span
+        class="material-icons"
+        style="transform: rotate(180deg)"
+        (click)="toggleReservations($event)"
+      >
+        arrow_circle_up
+      </span>
+    </div>
+  </div>
 </div>
->

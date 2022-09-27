@@ -3,7 +3,7 @@ import { User } from './user';
 export const USERS: User[] = [
   {
     id: 1,
-    user_login: 'BulletStorm',
+    user_login: 'BrontoSaurus',
     user_name: 'Ferko Mrkvicka',
     user_isAdmin: false,
     user_isBlocked: false,
@@ -11,7 +11,7 @@ export const USERS: User[] = [
   },
   {
     id: 2,
-    user_login: 'Hordes_Fist',
+    user_login: 'Get_woke_Get_broke',
     user_name: 'Milan Lieskovsky',
     user_isAdmin: true,
     user_isBlocked: false,
@@ -27,7 +27,7 @@ export const USERS: User[] = [
   },
   {
     id: 4,
-    user_login: 'BrontoSaurus666',
+    user_login: 'Viva_la_Sonata',
     user_name: 'Max Beethoven',
     user_isAdmin: false,
     user_isBlocked: false,
@@ -35,7 +35,7 @@ export const USERS: User[] = [
   },
   {
     id: 5,
-    user_login: 'Get_woke_Get_broke',
+    user_login: 'Say_my_name',
     user_name: 'Robert Heisenberg',
     user_isAdmin: false,
     user_isBlocked: false,
@@ -43,7 +43,7 @@ export const USERS: User[] = [
   },
   {
     id: 6,
-    user_login: '4849845646asdasd',
+    user_login: 'Bullet_time',
     user_name: 'Julius Payne',
     user_isAdmin: false,
     user_isBlocked: false,
