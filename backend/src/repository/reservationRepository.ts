@@ -1,6 +1,5 @@
 import { ReservationTable } from '../db/models/reservation';
 import { appDataSource, SeatTable } from '../db';
-import logger from '../logger';
 import { Success } from './success';
 
 export class ReservationRepository {

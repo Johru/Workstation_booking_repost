@@ -1,6 +1,3 @@
-import { ValidationError } from 'joi';
-import logger from '../../logger';
-
 import { ReservationRepository } from '../../repository/reservationRepository';
 import { ReservationTable } from '../../db/models/reservation';
 import { Success } from '../../repository/success';
