@@ -1,4 +1,4 @@
-import { Workstation } from '../../db';
+import { WorkstationTable } from '../../db';
 // import { ITodoRepository } from '../../repository';
 import { IWorkstationRepository } from '../../repository';
 // import { todoSchema } from './schema';
@@ -8,9 +8,9 @@ import { ValidationError } from 'joi';
 import logger from '../../logger';
 
 export interface IWorkstationService {
-  getWorkstations(): Promise<Workstation[]>;
-  showWorkstation(req: Request, res: Response): Promise<Workstation[]>;
-  createWorkstation(workstation: Workstation): Promise<{ status: string; message: string[] }>;
+  getWorkstations(): Promise<WorkstationTable[]>;
+  showWorkstation(req: Request, res: Response): Promise<WorkstationTable[]>;
+  createWorkstation(workstation: WorkstationTable): Promise<{ status: string; message: string[] }>;
   updatedWorkstation(req: Request,res: Response): Promise<{ status: string; message: string[] }>;
   deletedWorkstation(req: Request, res: Response): Promise<{status: string; message: string[]}>;
 }
@@ -18,17 +18,17 @@ export interface IWorkstationService {
 export class WorkstationService implements IWorkstationService {
   constructor(private workstationRepository: IWorkstationRepository) {}
 
-  async getWorkstations(): Promise<Workstation[]> {
+  async getWorkstations(): Promise<WorkstationTable[]> {
     return await this.workstationRepository.findAllWorkstations();
   }
 
-  async showWorkstation(req: Request, res: Response): Promise<Workstation[]> {
+  async showWorkstation(req: Request, res: Response): Promise<WorkstationTable[]> {
     var id = parseInt(req.params.id, 10);
     return await this.workstationRepository.findAllWorkstationsOnFloor(id);
   }
 
   async createWorkstation(
-    workstation: Workstation
+    workstation: WorkstationTable
   ): Promise<{ status: string; message: string[] }> {
     try {
       const value = await workstationSchema.validateAsync(workstation);
@@ -54,7 +54,7 @@ export class WorkstationService implements IWorkstationService {
   }
 
   async updatedWorkstation(req: Request,res: Response): Promise<{ status: string; message: string[] }> {
-    const workstation: Workstation = req.body as Workstation;
+    const workstation: WorkstationTable = req.body as WorkstationTable;
     try {
       const value = await workstationSchema.validateAsync(workstation);
     } catch (error) {
@@ -79,7 +79,7 @@ export class WorkstationService implements IWorkstationService {
   }
 
   async deletedWorkstation(req: Request,res: Response): Promise<{status: string; message: string[]}> {
-    const workstation: Workstation = req.body as Workstation;
+    const workstation: WorkstationTable = req.body as WorkstationTable;
     try {
       const value = await workstationSchema.validateAsync(workstation);
     } catch (error) {

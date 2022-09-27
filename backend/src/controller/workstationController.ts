@@ -3,7 +3,7 @@ import { Router, Response, Request } from 'express';
 import { resourceLimits } from 'worker_threads';
 
 import { IWorkstationService } from '../service';
-import { Workstation } from '../db/models/workstation';
+import { WorkstationTable } from '../db/models/workstation';
 import { equal } from 'joi';
 
 export class WorkstationController {
@@ -24,7 +24,7 @@ export class WorkstationController {
 
    // create wworkstation  
     this._router.post('/workstation', async (req: Request, res: Response) => {
-      const workstation: Workstation = req.body as Workstation;
+      const workstation: WorkstationTable = req.body as WorkstationTable;
       res.status(200).json(await this.workstationService.createWorkstation(workstation));
     });
 

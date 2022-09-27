@@ -3,7 +3,7 @@ import { Router, Response, Request } from 'express';
 import { resourceLimits } from 'worker_threads';
 
 import { ISeatService } from '../service';
-import { Seat } from '../db/models/seat';
+import { SeatTable } from '../db/models/seat';
 
 
 export class SeatController {
@@ -17,7 +17,7 @@ export class SeatController {
     });
     // create seat seat
     this._router.post('/seat', async (req: Request, res: Response) => {
-      const seat: Seat = req.body as Seat;
+      const seat: SeatTable = req.body as SeatTable;
       res.status(200).json(await this.seatService.createSeat(seat));
     });
 

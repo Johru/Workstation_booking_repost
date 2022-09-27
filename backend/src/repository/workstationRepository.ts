@@ -1,46 +1,46 @@
 import { appDataSource } from '../db';
-import { Workstation } from '../db';
+import { WorkstationTable } from '../db';
 
 import { Response, Request } from 'express';
 
 export interface IWorkstationRepository {
-  findAllWorkstations(): Promise<Workstation[]>;
-  findAllWorkstationsOnFloor(id: number): Promise<Workstation[]>;
-  saveWorkstation(workstation: Workstation): Promise<Workstation>;
-  updateWorkstation(id: number, workstation: Workstation):Promise<Workstation>;
-  deleteWorkstation(id: number):Promise<Workstation[]>;
+  findAllWorkstations(): Promise<WorkstationTable[]>;
+  findAllWorkstationsOnFloor(id: number): Promise<WorkstationTable[]>;
+  saveWorkstation(workstation: WorkstationTable): Promise<WorkstationTable>;
+  updateWorkstation(id: number, workstation: WorkstationTable):Promise<WorkstationTable>;
+  deleteWorkstation(id: number):Promise<WorkstationTable[]>;
 }
 
 export class WorkstationRepository implements IWorkstationRepository {
-  async findAllWorkstations(): Promise<Workstation[]> {
-    return appDataSource.getRepository(Workstation).find();
+  async findAllWorkstations(): Promise<WorkstationTable[]> {
+    return appDataSource.getRepository(WorkstationTable).find();
   }
 
-  async findAllWorkstationsOnFloor(id: number): Promise<Workstation[]> {
-    return appDataSource.getRepository(Workstation).find({
+  async findAllWorkstationsOnFloor(id: number): Promise<WorkstationTable[]> {
+    return appDataSource.getRepository(WorkstationTable).find({
       where: {
         floor_id: id,
       },
     });
   }
 
-  async saveWorkstation(workstation: Workstation): Promise<Workstation> {
-    const workstationToSave = new Workstation();
+  async saveWorkstation(workstation: WorkstationTable): Promise<WorkstationTable> {
+    const workstationToSave = new WorkstationTable();
     workstationToSave.floor_id = workstation.floor_id;
     workstationToSave.workstation_name = workstation.workstation_name;
     if(workstation.hasOwnProperty('workstation_isactive')){
       workstationToSave.workstation_isactive = workstation.workstation_isactive
     }
-    return appDataSource.getRepository(Workstation).save(workstationToSave);
+    return appDataSource.getRepository(WorkstationTable).save(workstationToSave);
   }
 
-  async updateWorkstation(id: number, workstation: Workstation): Promise<Workstation> {
-    var workstationUpdate = await appDataSource.getRepository(Workstation).find({
+  async updateWorkstation(id: number, workstation: WorkstationTable): Promise<WorkstationTable> {
+    var workstationUpdate = await appDataSource.getRepository(WorkstationTable).find({
       where: {
         workstation_id: id,
       },
     });
-    var workstationToSave: Workstation = {};
+    var workstationToSave: WorkstationTable = {};
     workstationUpdate.map(v => {
       workstationToSave = v;
     });
@@ -49,16 +49,16 @@ export class WorkstationRepository implements IWorkstationRepository {
     if(workstation.hasOwnProperty('workstation_isactive')){
       workstationToSave.workstation_isactive = workstation.workstation_isactive
     }
-    return appDataSource.getRepository(Workstation).save(workstationToSave);
+    return appDataSource.getRepository(WorkstationTable).save(workstationToSave);
   }
 
-  async deleteWorkstation(id: number): Promise<Workstation[]> {
-    var workstationRemove = await appDataSource.getRepository(Workstation).find({
+  async deleteWorkstation(id: number): Promise<WorkstationTable[]> {
+    var workstationRemove = await appDataSource.getRepository(WorkstationTable).find({
       where: {
         workstation_id: id,
       },
     });
-    return appDataSource.getRepository(Workstation).remove(workstationRemove)
+    return appDataSource.getRepository(WorkstationTable).remove(workstationRemove)
 
   }
 
