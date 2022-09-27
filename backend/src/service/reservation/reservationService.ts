@@ -3,6 +3,7 @@ import logger from '../../logger';
 
 import { ReservationRepository } from '../../repository/reservationRepository';
 import { ReservationTable } from '../../db/models/reservation';
+import { Success } from '../../repository/success';
 
 export class ReservationService {
   constructor(public reservationRepository: ReservationRepository) {}
@@ -11,17 +12,19 @@ export class ReservationService {
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationTable[]> {
-    console.log('service: ' + workstationId + '/' + reservationDate);
-    return this.reservationRepository.bigJoin(workstationId, reservationDate);
+    return this.reservationRepository.showReservationForDay(
+      workstationId,
+      reservationDate
+    );
   }
 
-  addNewReservation(body: any): Promise<ReservationTable> {
-    return this.reservationRepository.addNewReservation(body);
+  addNewReservation(requestBody: ReservationTable): Promise<ReservationTable> {
+    return this.reservationRepository.addNewReservation(requestBody);
   }
-  deleteReservation(body: number): Promise<any> {
-    return this.reservationRepository.deleteReservation(body);
+  deleteReservation(reservationId: number): Promise<Success> {
+    return this.reservationRepository.deleteReservation(reservationId);
   }
-  displayResForUser(body: number): Promise<ReservationTable[]> {
-    return this.reservationRepository.displayResForUser(body);
+  displayReservationForUser(userId: number): Promise<ReservationTable[]> {
+    return this.reservationRepository.displayReservationForUser(userId);
   }
 }

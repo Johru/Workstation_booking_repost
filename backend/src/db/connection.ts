@@ -11,7 +11,6 @@ export const appDataSource = new DataSource({
   username: config.mysql.user,
   password: config.mysql.password,
   database: config.mysql.database,
-  // database: 'booking',
   entities: [SeatTable, ReservationTable, UserTable],
   logging: false,
   synchronize: true,

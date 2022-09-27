@@ -1,0 +1,25 @@
+2022-09-27 16:30:15:3015 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-09-27 16:43:54:4354 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-27 16:44:22:4422 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-27 16:44:36:4436 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-27 16:44:41:4441 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-27 16:44:46:4446 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-27 16:46:07:467 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:46:25:4625 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:46:32:4632 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:46:35:4635 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:46:36:4636 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:46:36:4636 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:46:37:4637 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:46:45:4645 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:50:32:5032 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:50:32:5032 [32minfo[39m: [32mDeleteResult { raw: [], affected: 0 }[39m
+2022-09-27 16:51:28:5128 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:51:28:5128 [32minfo[39m: [32m0[39m
+2022-09-27 16:53:48:5348 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 16:54:04:544 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 17:33:07:337 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 17:33:27:3327 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-27 18:06:46:646 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-27 18:07:26:726 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-09-27 18:08:05:85 [32minfo[39m: [32m/reservation/date endpoint accessed[39m

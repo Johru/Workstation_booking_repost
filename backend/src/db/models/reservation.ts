@@ -24,14 +24,6 @@ export class ReservationTable {
   @Column({ type: 'date' })
   reservation_date?: Date;
 
-  @Column({
-    name: 'reservation_isconfirmed',
-    type: 'bit',
-    default: false,
-    transformer: new BoolBitTransformer(),
-  })
-  reservation_isconfirmed?: boolean;
-
   @ManyToOne(() => SeatTable, seat => seat.reservation)
   @JoinColumn({ name: 'seat_id' })
   seat?: SeatTable;

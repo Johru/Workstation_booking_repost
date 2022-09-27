@@ -1,12 +1,13 @@
 import { ReservationTable } from '../db/models/reservation';
 import { appDataSource, SeatTable } from '../db';
+import logger from '../logger';
+import { Success } from './success';
 
 export class ReservationRepository {
-  async bigJoin(
+  async showReservationForDay(
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationTable[]> {
-    console.log('repo: ' + workstationId + '/' + reservationDate);
     return appDataSource
       .getRepository(SeatTable)
       .createQueryBuilder('seat')
@@ -25,24 +26,26 @@ export class ReservationRepository {
       .getMany();
   }
 
-  async displayResForUser(body: number): Promise<ReservationTable[]> {
+  async displayReservationForUser(userId: number): Promise<ReservationTable[]> {
     return appDataSource
       .getRepository(ReservationTable)
       .createQueryBuilder('reservation')
-      .where('reservation.user_id = :id', { id: body })
+      .where('reservation.user_id = :id', { id: userId })
       .getMany();
   }
-  async addNewReservation(body: any): Promise<ReservationTable> {
+  async addNewReservation(
+    requestBody: ReservationTable
+  ): Promise<ReservationTable> {
     const resSave = new ReservationTable();
-    resSave.user_id = body.userId;
-    resSave.seat_id = body.seatId;
-    resSave.reservation_date = body.reservationDate;
+    resSave.user_id = requestBody.user_id;
+    resSave.seat_id = requestBody.seat_id;
+    resSave.reservation_date = requestBody.reservation_date;
 
     return appDataSource.getRepository(ReservationTable).save(resSave);
   }
 
-  async deleteReservation(body: number): Promise<any> {
-    return appDataSource
+  async deleteReservation(body: number): Promise<Success> {
+    const deletion = await appDataSource
       .createQueryBuilder()
       .delete()
       .from(ReservationTable)
@@ -50,5 +53,11 @@ export class ReservationRepository {
         reservationId: body,
       })
       .execute();
+
+    if (deletion.affected == 0) {
+      return { success: 'no' };
+    } else {
+      return { success: 'yes' };
+    }
   }
 }
