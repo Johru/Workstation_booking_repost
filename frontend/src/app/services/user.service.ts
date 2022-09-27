@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ADMINRESERVATIONLIST } from '../helpingHand/admin-reservation';
 import { USERS } from '../helpingHand/user-data';
 
 @Injectable({
@@ -9,5 +10,9 @@ export class UserService {
 
   getUsers() {
     return USERS;
+  }
+
+  getReservations() {
+    return ADMINRESERVATIONLIST;
   }
 }

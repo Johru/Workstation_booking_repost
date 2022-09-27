@@ -1,0 +1,15 @@
+<div *ngFor="let reservation of reservationList" class="reservation-wrapper">
+  <div class="left">
+    <p><b>Date:</b> {{ reservation.res_date }}</p>
+    <p><b>Place:</b> {{ reservation.building_address }}</p>
+    <p><b>Building:</b> {{ reservation.building_name }}</p>
+  </div>
+  <div class="center">
+    <p><b>Floor:</b> {{ reservation.floor_name }}</p>
+    <p><b>Workstation:</b> {{ reservation.workstation_name }}</p>
+    <p><b>SeatId:</b> {{ reservation.seat_id }}</p>
+  </div>
+  <div class="right">
+    <button value="{{ reservation.id }}">Delete</button>
+  </div>
+</div>

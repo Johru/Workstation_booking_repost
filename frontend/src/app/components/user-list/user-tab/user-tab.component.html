@@ -58,4 +58,8 @@
       </span>
     </div>
   </div>
+  <reservation-list
+    *ngIf="displayUserReservations"
+    [@collapse]="displayUserReservations"
+  ></reservation-list>
 </div>

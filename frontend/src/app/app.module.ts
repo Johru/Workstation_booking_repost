@@ -20,6 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReservationListComponent } from './components/user-list/reservation-list/reservation-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     WorkstationSelectionBookingComponent,
     SeatsComponent,
     ConfirmModalComponent,
+    ReservationListComponent,
   ],
   imports: [
     BrowserModule,

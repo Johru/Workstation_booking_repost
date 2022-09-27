@@ -38,6 +38,7 @@
 .info-extension {
   border-top: 1px solid black;
   height: auto;
+  overflow: hidden;
 }
 
 .extension-buttons {
@@ -77,4 +78,9 @@
 .material-icons {
   transition: transform 0.5s;
   cursor: pointer;
+}
+
+reservation-list {
+  overflow: hidden;
+  height: auto;
 }

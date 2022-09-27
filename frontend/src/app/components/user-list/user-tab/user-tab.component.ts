@@ -16,9 +16,9 @@ import { User } from 'src/app/helpingHand/user';
   animations: [
     trigger('collapse', [
       state('true', style({ height: AUTO_STYLE, visibility: AUTO_STYLE })),
-      state('false', style({ height: '0', visibility: 'hidden' })),
-      transition('false => true', animate(500 + 'ms ease-in')),
-      transition('true => false', animate(500 + 'ms ease-out')),
+      state('void', style({ height: '0px', visibility: 'hidden' })),
+      transition('void <=> true', animate(300 + 'ms ease-in')),
+      transition('true => void', animate(300 + 'ms ease-out')),
     ]),
   ],
 })
@@ -29,6 +29,7 @@ export class UserTabComponent implements OnInit {
   displayUserInfo: boolean = false;
   iconClass: string = 'material-icons';
   displayUserReservations: boolean = false;
+  isCollapsed: string = 'close';
 
   constructor() {}
 
@@ -37,13 +38,14 @@ export class UserTabComponent implements OnInit {
   toggleInfo(e: Event) {
     this.displayUserInfo = !this.displayUserInfo;
     this.rotateIcon(e, this.displayUserInfo);
-    console.log(this.displayUserInfo);
+    if (this.displayUserReservations) {
+      this.toggleReservations(e);
+    }
   }
 
   toggleReservations(e: Event) {
     this.displayUserReservations = !this.displayUserReservations;
     this.rotateIcon(e, this.displayUserReservations);
-    console.log(this.displayUserReservations);
   }
 
   rotateIcon(e: Event, displayValue: boolean) {
