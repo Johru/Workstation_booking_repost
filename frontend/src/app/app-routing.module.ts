@@ -8,7 +8,7 @@ import { BuildingsAdminMainComponent } from './components/building-admin/buildin
 const routes: Routes = [] = [
   { path: 'buildings', component: BuildingsAdminMainComponent }, // for testing purpose
   { path: 'edit/building', component: BuildingDashboardComponent },
-  { path: 'edit/building/floor', component: BuildingFloorComponent }
+  { path: 'edit/building/:id', component: BuildingFloorComponent }
 ]
 
 @NgModule({

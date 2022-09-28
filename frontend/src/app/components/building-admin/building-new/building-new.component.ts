@@ -10,8 +10,8 @@ import { Building } from 'src/app/help-files/buildind-interface';
 })
 export class BuildingNewComponent implements OnInit {
 
-  nameOfBuilding = "";
-  zipCode = "";
+  // nameOfBuilding = "";
+  // zipCode = "";
 
   newBuildingForm = new FormGroup({
     building_id: new FormControl(),
@@ -21,8 +21,10 @@ export class BuildingNewComponent implements OnInit {
     building_zip: new FormControl(),
     building_city: new FormControl()
   });
+  
 
   building!: Building;
+  getBuildingId?: number;
 
   @Output() newBuildingEvent = new EventEmitter<Building>();
 
@@ -37,6 +39,8 @@ export class BuildingNewComponent implements OnInit {
       building_zip: this.newBuildingForm.value.building_zip,
       building_city: this.newBuildingForm.value.building_city
     }
+    this.getBuildingId = this.building.building_id;
+    console.log(this.getBuildingId); //DELETE
     this.newBuildingEvent.emit(this.building);
     this.newBuildingForm.reset();
   }
@@ -44,4 +48,6 @@ export class BuildingNewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
+
