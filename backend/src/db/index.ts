@@ -1,4 +1,4 @@
 export { appDataSource } from './connection';
-export { SeatTable } from './models/seat';
-export { ReservationTable } from './models/reservation';
-export { UserTable } from './models/user';
+export { SeatEntity } from './entity/seatEntity';
+export { ReservationEntity } from './entity/reservationEntity';
+export { UserEntity } from './entity/userEntity';

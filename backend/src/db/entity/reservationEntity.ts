@@ -1,17 +1,14 @@
 import {
   Entity,
   Column,
-  CreateDateColumn,
   PrimaryGeneratedColumn,
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
-import { SeatTable } from './seat';
-import { UserTable } from './user';
-import { BoolBitTransformer } from './transformer';
+import { SeatEntity, UserEntity } from '../index';
 
 @Entity('reservation')
-export class ReservationTable {
+export class ReservationEntity {
   @PrimaryGeneratedColumn()
   reservation_id?: number;
 
@@ -24,10 +21,10 @@ export class ReservationTable {
   @Column({ type: 'date' })
   reservation_date?: Date;
 
-  @ManyToOne(() => SeatTable, seat => seat.reservation)
+  @ManyToOne(() => SeatEntity, seat => seat.reservation)
   @JoinColumn({ name: 'seat_id' })
-  seat?: SeatTable;
-  @ManyToOne(() => UserTable, user => user.reservation)
+  seat?: SeatEntity;
+  @ManyToOne(() => UserEntity, user => user.reservation)
   @JoinColumn({ name: 'user_id' })
-  user?: UserTable;
+  user?: UserEntity;
 }

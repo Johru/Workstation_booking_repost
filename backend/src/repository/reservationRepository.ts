@@ -1,14 +1,14 @@
-import { ReservationTable } from '../db/models/reservation';
-import { appDataSource, SeatTable } from '../db';
+import { appDataSource } from '../db';
 import { Success } from './success';
+import { ReservationEntity, SeatEntity } from '../db/index';
 
 export class ReservationRepository {
   async showReservationForDay(
     workstationId: number,
     reservationDate: string
-  ): Promise<ReservationTable[]> {
+  ): Promise<ReservationEntity[]> {
     return appDataSource
-      .getRepository(SeatTable)
+      .getRepository(SeatEntity)
       .createQueryBuilder('seat')
       .leftJoin(
         'seat.reservation',
@@ -25,29 +25,31 @@ export class ReservationRepository {
       .getMany();
   }
 
-  async displayReservationForUser(userId: number): Promise<ReservationTable[]> {
+  async displayReservationForUser(
+    userId: number
+  ): Promise<ReservationEntity[]> {
     return appDataSource
-      .getRepository(ReservationTable)
+      .getRepository(ReservationEntity)
       .createQueryBuilder('reservation')
       .where('reservation.user_id = :id', { id: userId })
       .getMany();
   }
   async addNewReservation(
-    requestBody: ReservationTable
-  ): Promise<ReservationTable> {
-    const resSave = new ReservationTable();
+    requestBody: ReservationEntity
+  ): Promise<ReservationEntity> {
+    const resSave = new ReservationEntity();
     resSave.user_id = requestBody.user_id;
     resSave.seat_id = requestBody.seat_id;
     resSave.reservation_date = requestBody.reservation_date;
 
-    return appDataSource.getRepository(ReservationTable).save(resSave);
+    return appDataSource.getRepository(ReservationEntity).save(resSave);
   }
 
   async deleteReservation(body: number): Promise<Success> {
     const deletion = await appDataSource
       .createQueryBuilder()
       .delete()
-      .from(ReservationTable)
+      .from(ReservationEntity)
       .where('reservation_id=:reservationId', {
         reservationId: body,
       })

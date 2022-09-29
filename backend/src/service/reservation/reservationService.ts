@@ -1,6 +1,5 @@
-import { ReservationRepository } from '../../repository/reservationRepository';
-import { ReservationTable } from '../../db/models/reservation';
-import { Success } from '../../repository/success';
+import { ReservationEntity } from '../../db/index';
+import { ReservationRepository, Success } from '../../repository/index';
 
 export class ReservationService {
   constructor(public reservationRepository: ReservationRepository) {}
@@ -8,20 +7,22 @@ export class ReservationService {
   showReservationForDay(
     workstationId: number,
     reservationDate: string
-  ): Promise<ReservationTable[]> {
+  ): Promise<ReservationEntity[]> {
     return this.reservationRepository.showReservationForDay(
       workstationId,
       reservationDate
     );
   }
 
-  addNewReservation(requestBody: ReservationTable): Promise<ReservationTable> {
+  addNewReservation(
+    requestBody: ReservationEntity
+  ): Promise<ReservationEntity> {
     return this.reservationRepository.addNewReservation(requestBody);
   }
   deleteReservation(reservationId: number): Promise<Success> {
     return this.reservationRepository.deleteReservation(reservationId);
   }
-  displayReservationForUser(userId: number): Promise<ReservationTable[]> {
+  displayReservationForUser(userId: number): Promise<ReservationEntity[]> {
     return this.reservationRepository.displayReservationForUser(userId);
   }
 }

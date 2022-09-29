@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import logger from '../logger';
-import { ReservationService } from '../service/reservation/reservationService';
+import { ReservationService } from '../service/index';
 
 export class ReservationController {
   private readonly _router: Router = Router();

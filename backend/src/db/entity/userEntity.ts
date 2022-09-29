@@ -1,9 +1,9 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { ReservationTable } from './reservation';
+import { ReservationEntity } from '../index';
 import { BoolBitTransformer } from './transformer';
 
 @Entity('user')
-export class UserTable {
+export class UserEntity {
   @PrimaryGeneratedColumn()
   user_id?: number;
 
@@ -26,6 +26,6 @@ export class UserTable {
   })
   readonly user_isadmin?: boolean;
 
-  @OneToMany(() => ReservationTable, reservation => reservation.user)
-  reservation?: ReservationTable[];
+  @OneToMany(() => ReservationEntity, reservation => reservation.user)
+  reservation?: ReservationEntity[];
 }
