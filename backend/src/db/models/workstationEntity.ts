@@ -1,4 +1,11 @@
-import {Entity,Column,PrimaryGeneratedColumn,ManyToOne,JoinColumn,OneToMany,} from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  JoinColumn,
+  OneToMany,
+} from 'typeorm';
 // import { BuildingEntity } from './buildingEntity';
 // import { FloorEntity } from './floorEntity';
 import { SeatEntity } from './seatEntity';
@@ -25,7 +32,6 @@ export class WorkstationEntity {
   // @ManyToOne(() => FloorEntity, floor => floor.workstation, {
   //   onDelete: 'CASCADE',
   // })
-
 
   // @OneToMany(() => SeatEntity, seat => seat.workstation)
   // seat?: SeatEntity[];
