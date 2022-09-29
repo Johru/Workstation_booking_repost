@@ -10,23 +10,16 @@
     <p><b>SeatId:</b> {{ reservation.seat_id }}</p>
   </div>
   <div class="right">
-    <button (click)="toggleDeleteModal()">Delete</button>
-  </div>
-  <div class="delete-modal-wrapper" *ngIf="successfullDelete">
-    <div class="delete-modal">
-      <h2>Delete reservation</h2>
-      <div class="confirm">
-        <h3>Are you sure you want to delete this reservation ?</h3>
-        <div class="modal-buttons">
-          <button
-            value="{{ reservation.id }}"
-            (click)="deleteReservation($event)"
-          >
-            Delete
-          </button>
-          <button (click)="toggleDeleteModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
+    <button
+      (click)="[toggleDeleteModal(), setTheReservationId(reservation.id)]"
+    >
+      Delete
+    </button>
   </div>
 </div>
+<delete-modal
+  *ngIf="confirmDelete"
+  [reservation]="selectedReservation"
+  (deleteReservationEmitter)="deleteReservation($event)"
+  (toggleModalEmitter)="toggleDeleteModal()"
+></delete-modal>

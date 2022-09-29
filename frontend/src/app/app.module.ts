@@ -21,6 +21,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReservationListComponent } from './components/user-list/reservation-list/reservation-list.component';
+import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ReservationListComponent } from './components/user-list/reservation-lis
     SeatsComponent,
     ConfirmModalComponent,
     ReservationListComponent,
+    DeleteModalComponent,
   ],
   imports: [
     BrowserModule,

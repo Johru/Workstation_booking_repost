@@ -61,9 +61,13 @@ export class UserTabComponent {
     this.confirmDelete = !this.confirmDelete;
   }
 
-  deleteUser(e: Event) {
-    let targetElement = e.target as HTMLInputElement;
-    let userId = parseInt(targetElement.value);
-    this.deleteUserEmitter!.emit(userId!);
+  onDeleteUser(e: number) {
+    this.deleteUserEmitter.emit(e);
+  }
+
+  onCancelModal(e: boolean) {
+    if (e) {
+      this.toggleDeleteModal();
+    }
   }
 }

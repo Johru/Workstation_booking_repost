@@ -10,7 +10,8 @@ import { WorkstationService } from 'src/app/services/workstation.service';
 })
 export class ReservationListComponent implements OnInit {
   reservationList?: AdminReservation[];
-  successfullDelete: boolean = false;
+  confirmDelete: boolean = false;
+  selectedReservation!: number;
 
   constructor(
     private userService: UserService,
@@ -25,14 +26,12 @@ export class ReservationListComponent implements OnInit {
     this.reservationList = this.userService.getReservations();
   }
 
-  deleteReservation(e: Event) {
-    let targetElement = e.target as HTMLInputElement;
-    let reservationId = parseInt(targetElement.value);
-    let result = this.reservationService.deleteReservation(reservationId);
+  deleteReservation(id: number) {
+    let result = this.reservationService.deleteReservation(id);
     if (result.success == 'yes') {
       this.toggleDeleteModal();
       this.reservationList = this.reservationList?.filter(
-        (res) => res.id != reservationId
+        (res) => res.id != id
       );
       return;
     }
@@ -41,6 +40,10 @@ export class ReservationListComponent implements OnInit {
   }
 
   toggleDeleteModal() {
-    this.successfullDelete = !this.successfullDelete;
+    this.confirmDelete = !this.confirmDelete;
+  }
+
+  setTheReservationId(id: number) {
+    this.selectedReservation = id;
   }
 }

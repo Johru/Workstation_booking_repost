@@ -21,7 +21,7 @@ export const ADMINRESERVATIONLIST: AdminReservation[] = [
   {
     id: 2,
     res_date: '2022-09-19',
-    building_name: 'Building 1',
+    building_name: 'Building 2',
     building_address: 'City, street 1',
     floor_name: 'first floor',
     workstation_name: 'HR',
@@ -30,7 +30,7 @@ export const ADMINRESERVATIONLIST: AdminReservation[] = [
   {
     id: 3,
     res_date: '2022-09-19',
-    building_name: 'Building 1',
+    building_name: 'Building 3',
     building_address: 'City, street 1',
     floor_name: 'first floor',
     workstation_name: 'HR',
@@ -39,7 +39,7 @@ export const ADMINRESERVATIONLIST: AdminReservation[] = [
   {
     id: 4,
     res_date: '2022-09-19',
-    building_name: 'Building 1',
+    building_name: 'Building 4',
     building_address: 'City, street 1',
     floor_name: 'first floor',
     workstation_name: 'HR',
@@ -48,7 +48,7 @@ export const ADMINRESERVATIONLIST: AdminReservation[] = [
   {
     id: 5,
     res_date: '2022-09-19',
-    building_name: 'Building 1',
+    building_name: 'Building 5',
     building_address: 'City, street 1',
     floor_name: 'first floor',
     workstation_name: 'HR',
