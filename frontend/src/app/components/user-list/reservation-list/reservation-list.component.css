@@ -3,6 +3,7 @@
   border-top: 1px solid black;
   margin: 0 50px;
 }
+
 .left,
 .center,
 .right {
@@ -10,13 +11,16 @@
   font-size: 20px;
   padding: 20px 20px;
 }
+
 .left p,
 .center p {
   margin: 20px 50px;
 }
+
 .right {
   display: grid;
 }
+
 .right button {
   align-self: end;
   justify-self: center;
@@ -31,4 +35,57 @@
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.delete-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.delete-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 50px;
+  width: 50%;
+  height: auto;
+  z-index: 3;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.delete-modal h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.delete-modal .confirm {
+  display: flex;
+  justify-content: space-around;
+}
+
+.delete-modal .confirm h3 {
+  font-size: 25px;
+}
+
+.modal-buttons {
+  gap: 20px;
+  display: flex;
+}
+
+.delete-modal .confirm button {
+  width: 100px;
+  height: 45px;
+  font-size: 25px;
 }

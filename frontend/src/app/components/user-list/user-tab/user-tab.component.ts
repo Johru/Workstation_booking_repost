@@ -6,7 +6,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/helpingHand/user';
 
 @Component({
@@ -15,25 +15,25 @@ import { User } from 'src/app/helpingHand/user';
   styleUrls: ['./user-tab.component.css'],
   animations: [
     trigger('collapse', [
-      state('true', style({ height: AUTO_STYLE, visibility: AUTO_STYLE })),
-      state('void', style({ height: '0px', visibility: 'hidden' })),
-      transition('void <=> true', animate(300 + 'ms ease-in')),
-      transition('true => void', animate(300 + 'ms ease-out')),
+      state('*', style({ height: AUTO_STYLE })),
+      state('void', style({ height: '0px' })),
+      transition('void => *', animate(300 + 'ms ease-in')),
+      transition('* => void', animate(300 + 'ms ease-out')),
     ]),
   ],
 })
-export class UserTabComponent implements OnInit {
+export class UserTabComponent {
   @Input() user!: User;
+  @Output() deleteUserEmitter = new EventEmitter<number>();
   color: string = 'primary';
   blockTitle?: string = 'Block / Unblock User';
   displayUserInfo: boolean = false;
   iconClass: string = 'material-icons';
   displayUserReservations: boolean = false;
   isCollapsed: string = 'close';
+  confirmDelete: boolean = false;
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   toggleInfo(e: Event) {
     this.displayUserInfo = !this.displayUserInfo;
@@ -55,5 +55,15 @@ export class UserTabComponent implements OnInit {
     } else {
       target.style.transform = '';
     }
+  }
+
+  toggleDeleteModal() {
+    this.confirmDelete = !this.confirmDelete;
+  }
+
+  deleteUser(e: Event) {
+    let targetElement = e.target as HTMLInputElement;
+    let userId = parseInt(targetElement.value);
+    this.deleteUserEmitter!.emit(userId!);
   }
 }

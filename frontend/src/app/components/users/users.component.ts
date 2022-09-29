@@ -19,4 +19,13 @@ export class UsersComponent implements OnInit {
   getUserList() {
     this.userList = this.userService.getUsers();
   }
+
+  onDeleteUser(e: number) {
+    let result = this.userService.deleteUser(e);
+    if (result.success == 'yes') {
+      this.userList = this.userList?.filter((user) => user.id != e);
+      return;
+    }
+    alert('Something is wrong, deletion of user was unsuccessfull.');
+  }
 }

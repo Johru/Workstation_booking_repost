@@ -15,4 +15,19 @@ export class UserService {
   getReservations() {
     return ADMINRESERVATIONLIST;
   }
+
+  promoteUserToAdmin() {}
+
+  demoteUserFromAdmin() {}
+
+  blockUser() {}
+
+  unBlockUser() {}
+
+  deleteUser(userId: number) {
+    const message = {
+      success: 'yes',
+    };
+    return message;
+  }
 }

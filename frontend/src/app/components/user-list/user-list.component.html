@@ -1,1 +1,5 @@
-<user-tab *ngFor="let user of userList" [user]="user"></user-tab>
+<user-tab
+  (deleteUserEmitter)="onDeleteUser($event)"
+  *ngFor="let user of userList"
+  [user]="user"
+></user-tab>

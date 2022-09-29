@@ -54,6 +54,17 @@
   display: flex;
   gap: 25px;
   font-size: 20px;
+  justify-content: center;
+}
+
+.promote p,
+.block p,
+.delete p {
+  margin: auto;
+}
+
+.delete button {
+  width: 60px;
 }
 
 .login {
@@ -83,4 +94,60 @@
 reservation-list {
   overflow: hidden;
   height: auto;
+}
+
+.reservation-list-wrapper {
+  overflow: hidden;
+}
+
+.delete-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.delete-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 50px;
+  width: 50%;
+  height: auto;
+  z-index: 3;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.delete-modal h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.delete-modal .confirm {
+  display: flex;
+  justify-content: space-around;
+}
+
+.delete-modal .confirm h3 {
+  font-size: 25px;
+}
+
+.modal-buttons {
+  gap: 20px;
+  display: flex;
+}
+
+.delete-modal .confirm button {
+  width: 100px;
+  height: 45px;
+  font-size: 25px;
 }

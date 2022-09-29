@@ -43,8 +43,8 @@
         ></mat-slide-toggle>
       </div>
       <div class="delete">
-        <p>delete user</p>
-        <button>X</button>
+        <p>Delete user</p>
+        <button (click)="toggleDeleteModal()">X</button>
       </div>
     </div>
     <div class="res-tab">
@@ -58,8 +58,29 @@
       </span>
     </div>
   </div>
-  <reservation-list
+  <div
+    class="reservation-list-wrapper"
     *ngIf="displayUserReservations"
     [@collapse]="displayUserReservations"
-  ></reservation-list>
+  >
+    <reservation-list></reservation-list>
+  </div>
+  <div class="delete-modal-wrapper" *ngIf="confirmDelete">
+    <div class="delete-modal">
+      <h2>Delete {{ user.user_name }}</h2>
+      <div class="confirm">
+        <h3>
+          Are you sure you want to delete {{ user.user_name }} /
+          {{ user.user_login }}
+          ?
+        </h3>
+        <div class="modal-buttons">
+          <button (click)="deleteUser($event)" value="{{ user.id }}">
+            Delete
+          </button>
+          <button (click)="toggleDeleteModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

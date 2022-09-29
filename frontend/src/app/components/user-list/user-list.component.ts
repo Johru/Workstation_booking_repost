@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { User } from 'src/app/helpingHand/user';
 
 @Component({
@@ -6,10 +6,13 @@ import { User } from 'src/app/helpingHand/user';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css'],
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent {
   @Input() userList?: User[];
+  @Output() deleteUserEmitter = new EventEmitter<number>();
 
   constructor() {}
 
-  ngOnInit(): void {}
+  onDeleteUser(e: number) {
+    this.deleteUserEmitter.emit(e);
+  }
 }
