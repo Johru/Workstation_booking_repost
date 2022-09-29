@@ -1,4 +1,4 @@
-import { WorkstationTable } from '../../db';
+import { WorkstationEntity } from '../../db';
 // import { ITodoRepository } from '../../repository';
 import { IWorkstationRepository } from '../../repository';
 // import { todoSchema } from './schema';
@@ -8,28 +8,26 @@ import { ValidationError } from 'joi';
 import logger from '../../logger';
 
 export interface IWorkstationService {
-  getWorkstations(): Promise<WorkstationTable[]>;
-  showWorkstation(req: Request, res: Response): Promise<WorkstationTable[]>;
-  createWorkstation(workstation: WorkstationTable): Promise<{ status: string; message: string[] }>;
+  getWorkstations(): Promise<WorkstationEntity[]>;
+  showWorkstationOnFloor(req: Request, res: Response): Promise<WorkstationEntity[]>;
+  createdWorkstation(workstation: WorkstationEntity): Promise<{ status: string; message: string[] }>;
   updatedWorkstation(req: Request,res: Response): Promise<{ status: string; message: string[] }>;
-  deletedWorkstation(req: Request, res: Response): Promise<{status: string; message: string[]}>;
+  deletedWorkstation(req: Request,res: Response): Promise<{ status: string; message: string[] }>;
 }
 
 export class WorkstationService implements IWorkstationService {
   constructor(private workstationRepository: IWorkstationRepository) {}
 
-  async getWorkstations(): Promise<WorkstationTable[]> {
+  async getWorkstations(): Promise<WorkstationEntity[]> {
     return await this.workstationRepository.findAllWorkstations();
   }
 
-  async showWorkstation(req: Request, res: Response): Promise<WorkstationTable[]> {
+  async showWorkstationOnFloor(req: Request,res: Response): Promise<WorkstationEntity[]> {
     var floorId = parseInt(req.params.floorId, 10);
     return await this.workstationRepository.findAllWorkstationsOnFloor(floorId);
   }
 
-  async createWorkstation(
-    workstation: WorkstationTable
-  ): Promise<{ status: string; message: string[] }> {
+  async createdWorkstation(workstation: WorkstationEntity): Promise<{ status: string; message: string[] }> {
     try {
       const value = await workstationSchema.validateAsync(workstation);
     } catch (error) {
@@ -53,8 +51,10 @@ export class WorkstationService implements IWorkstationService {
     };
   }
 
-  async updatedWorkstation(req: Request,res: Response): Promise<{ status: string; message: string[] }> {
-    const workstation: WorkstationTable = req.body as WorkstationTable;
+  async updatedWorkstation(req: Request,
+    res: Response
+  ): Promise<{ status: string; message: string[] }> {
+    const workstation: WorkstationEntity = req.body as WorkstationEntity;
     try {
       const value = await workstationSchema.validateAsync(workstation);
     } catch (error) {
@@ -67,7 +67,8 @@ export class WorkstationService implements IWorkstationService {
     }
     var workstationId = parseInt(req.params.id, 10);
     const newWorkstation = await this.workstationRepository.updateWorkstation(
-      workstationId,workstation
+      workstationId,
+      workstation
     );
 
     return {
@@ -78,8 +79,11 @@ export class WorkstationService implements IWorkstationService {
     };
   }
 
-  async deletedWorkstation(req: Request,res: Response): Promise<{status: string; message: string[]}> {
-    const workstation: WorkstationTable = req.body as WorkstationTable;
+  async deletedWorkstation(
+    req: Request,
+    res: Response
+  ): Promise<{ status: string; message: string[] }> {
+    const workstation: WorkstationEntity = req.body as WorkstationEntity;
     try {
       const value = await workstationSchema.validateAsync(workstation);
     } catch (error) {
@@ -91,15 +95,11 @@ export class WorkstationService implements IWorkstationService {
       }
     }
     var id = parseInt(req.params.id, 10);
-    await this.workstationRepository.deleteWorkstation(
-      id
-    );
+    await this.workstationRepository.deleteWorkstation(id);
 
     return {
       status: 'OK',
-      message: [
-        `Workstation is succesfully removed.`,
-      ],
+      message: [`Workstation is succesfully removed.`],
     };
   }
 }

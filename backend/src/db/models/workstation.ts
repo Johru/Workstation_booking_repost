@@ -5,7 +5,7 @@ import { SeatTable } from './seat';
 import { BoolBitTransformer } from './transformer';
 
 @Entity('workstation')
-export class WorkstationTable {
+export class WorkstationEntity {
   @PrimaryGeneratedColumn()
   workstation_id?: number;
 
