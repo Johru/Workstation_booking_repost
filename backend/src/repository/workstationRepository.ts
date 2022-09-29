@@ -1,7 +1,7 @@
 import { appDataSource } from '../db';
 import { WorkstationEntity } from '../db';
 import { Response, Request } from 'express';
-import { Success } from './Success';
+import { Success } from './success';
 
 
 export interface IWorkstationRepository {

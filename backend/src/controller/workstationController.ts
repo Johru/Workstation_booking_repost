@@ -1,7 +1,6 @@
 import { appDataSource } from '../db/connection';
 import { Router, Response, Request } from 'express';
 import { resourceLimits } from 'worker_threads';
-
 import { IWorkstationService } from '../service';
 import { WorkstationEntity } from '../db/models/workstationEntity';
 import { equal } from 'joi';
@@ -38,9 +37,9 @@ export class WorkstationController {
     this._router.delete('/workstation/:workstationId/Delete', async (req, res) => {
       var result = await this.workstationService.deletedWorkstation(req,res)
       if (result) {
-        res.status(200).json('HTTP OK success.')
+        res.status(200).json('success:yes')
       } else {
-        res.status(404).json('Record not found.')
+        res.status(404).json('success:no')
       }
      
     });

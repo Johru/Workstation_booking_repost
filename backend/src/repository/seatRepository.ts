@@ -1,10 +1,12 @@
+import { Success } from 'repository';
 import { appDataSource } from '../db';
+import { Response, Request } from 'express';
 import { SeatEntity } from '../db';
 
 export interface ISeatRepository {
   findAllSeats(): Promise<SeatEntity[]>;
   saveSeat(seat: SeatEntity): Promise<SeatEntity>;
-  deleteSeat(id: number): Promise<SeatEntity[]>;
+  deleteSeat(req: Request, res: Response): Promise<Success>;
 }
 
 export class SeatRepository implements ISeatRepository {
@@ -18,12 +20,19 @@ export class SeatRepository implements ISeatRepository {
     return appDataSource.getRepository(SeatEntity).save(seatToSave);
   }
 
-  async deleteSeat(id: number): Promise<SeatEntity[]> {
-    var seatRemove = await appDataSource.getRepository(SeatEntity).find({
-      where: {
-        seat_id: id,
-      },
-    });
-    return appDataSource.getRepository(SeatEntity).remove(seatRemove);
+  async deleteSeat(req: Request, res: Response): Promise<Success> {
+    var seatId = parseInt(req.params.seatId, 10);
+    var seatRemove = await appDataSource
+      .createQueryBuilder()
+      .delete()
+      .from(SeatEntity)
+      .where('seat_id =:seatId', { seatId: seatId })
+      .execute();
+
+    if (seatRemove.affected == 0) {
+      return { success: 'yes' };
+    } else {
+      return { success: 'no' };
+    }
   }
 }
