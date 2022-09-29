@@ -3,17 +3,17 @@ import { Success } from './success';
 import { ReservationEntity, SeatEntity } from '../db/index';
 
 interface IReservationRepository {
-  showReservationForDay(
+  showReservationForGivenDate(
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationEntity[]>;
   displayReservationForUser(userId: number): Promise<ReservationEntity[]>;
   addNewReservation(requestBody: ReservationEntity): Promise<ReservationEntity>;
-  deleteReservation(body: number): Promise<Success>;
+  deleteReservation(reservationId: number): Promise<Success>;
 }
 
 export class ReservationRepository implements IReservationRepository {
-  async showReservationForDay(
+  async showReservationForGivenDate(
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationEntity[]> {
@@ -55,13 +55,13 @@ export class ReservationRepository implements IReservationRepository {
     return appDataSource.getRepository(ReservationEntity).save(resSave);
   }
 
-  async deleteReservation(body: number): Promise<Success> {
+  async deleteReservation(reservationId: number): Promise<Success> {
     const deletion = await appDataSource
       .createQueryBuilder()
       .delete()
       .from(ReservationEntity)
       .where('reservation_id=:reservationId', {
-        reservationId: body,
+        reservationId: reservationId,
       })
       .execute();
 

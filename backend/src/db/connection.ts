@@ -1,6 +1,8 @@
 import { DataSource } from 'typeorm';
 import config from '../config';
-import { UserEntity, ReservationEntity, SeatEntity } from './index';
+import { SeatEntity } from './entity/seatEntity';
+import { ReservationEntity } from './entity/reservationEntity';
+import { UserEntity } from './entity/userEntity';
 
 export const appDataSource = new DataSource({
   type: 'mysql',

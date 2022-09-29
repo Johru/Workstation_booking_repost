@@ -4,11 +4,11 @@ import { ReservationRepository, Success } from '../../repository/index';
 export class ReservationService {
   constructor(public reservationRepository: ReservationRepository) {}
 
-  showReservationForDay(
+  showReservationForGivenDate(
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationEntity[]> {
-    return this.reservationRepository.showReservationForDay(
+    return this.reservationRepository.showReservationForGivenDate(
       workstationId,
       reservationDate
     );
