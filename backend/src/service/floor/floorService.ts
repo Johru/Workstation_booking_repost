@@ -83,9 +83,9 @@ export class FloorService implements IFloorService {
 
     return {
         status: 'OK',
-        message: [
-          `Floor is succesfully removed.`,
-        ],
+        message: 
+          [`Floor is succesfully removed.`],
+        
       };
 }
 
