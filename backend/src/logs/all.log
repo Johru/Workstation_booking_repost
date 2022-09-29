@@ -23,3 +23,12 @@
 2022-09-27 18:06:46:646 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
 2022-09-27 18:07:26:726 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
 2022-09-27 18:08:05:85 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-09-29 16:10:11:1011 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-29 16:12:06:126 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-29 16:12:43:1243 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-29 16:18:08:188 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-29 16:19:12:1912 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-29 16:20:16:2016 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-09-29 16:23:30:2330 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-09-29 16:28:02:282 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-09-29 16:29:26:2926 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
