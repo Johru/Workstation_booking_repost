@@ -28,13 +28,13 @@ export class WorkstationController {
     });
 
     // update workstation
-    this._router.put('/workstation/:workstationId/Update', async (req: Request, res: Response) => {
+    this._router.put('/workstation/:workstationId/update', async (req: Request, res: Response) => {
       res.status(200).json(await this.workstationService.updatedWorkstation(req,res))
     });
 
 
     //  delete workstation
-    this._router.delete('/workstation/:workstationId/Delete', async (req, res) => {
+    this._router.delete('/workstation/:workstationId/delete', async (req, res) => {
       var result = await this.workstationService.deletedWorkstation(req,res)
       if (result) {
         res.status(200).json('success:yes')
