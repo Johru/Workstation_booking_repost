@@ -1,5 +1,5 @@
-import { ReservationTable } from '../db/models/reservation';
-import { appDataSource, SeatTable } from '../db';
+import { ReservationTable } from '../db/entity/reservation';
+import { appDataSource, SeatTable } from '../db/index';
 
 export class ReservationRepository {
   async bigJoin(

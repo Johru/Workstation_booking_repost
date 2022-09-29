@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { FloorTable } from './floor';
 
 @Entity('building')
-export class BuildingTable {
+export class BuildingEntity {
   @PrimaryGeneratedColumn()
   building_id?: number;
 

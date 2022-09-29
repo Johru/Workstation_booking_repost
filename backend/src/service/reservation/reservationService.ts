@@ -2,7 +2,7 @@ import { ValidationError } from 'joi';
 import logger from '../../logger';
 
 import { ReservationRepository } from '../../repository/reservationRepository';
-import { ReservationTable } from '../../db/models/reservation';
+import { ReservationTable } from '../../db/entity/reservation';
 
 export class ReservationService {
   constructor(public reservationRepository: ReservationRepository) {}

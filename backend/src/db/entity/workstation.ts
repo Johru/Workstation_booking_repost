@@ -6,7 +6,7 @@ import {
   JoinColumn,
   OneToMany,
 } from 'typeorm';
-import { BuildingTable } from './building';
+
 import { FloorTable } from './floor';
 import { SeatTable } from './seat';
 import { BoolBitTransformer } from './transformer';

@@ -1,5 +1,5 @@
 import { appDataSource } from '../db';
-import { UserTable } from '../db/models/user';
+import { UserTable } from '../db/entity/user';
 
 export class UserRepository {
   async listUsers(): Promise<any[]> {

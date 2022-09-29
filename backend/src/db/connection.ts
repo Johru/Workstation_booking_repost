@@ -1,11 +1,11 @@
 import { DataSource } from 'typeorm';
 import config from '../config';
-import { BuildingTable } from './models/building';
-import { FloorTable } from './models/floor';
-import { ReservationTable } from './models/reservation';
-import { SeatTable } from './models/seat';
-import { UserTable } from './models/user';
-import { WorkstationTable } from './models/workstation';
+import { BuildingEntity } from './entity/buildingEntity';
+import { FloorTable } from './entity/floor';
+import { ReservationTable } from './entity/reservation';
+import { SeatTable } from './entity/seat';
+import { UserTable } from './entity/user';
+import { WorkstationTable } from './entity/workstation';
 
 export const appDataSource = new DataSource({
   type: 'mysql',
@@ -18,7 +18,7 @@ export const appDataSource = new DataSource({
     SeatTable,
     ReservationTable,
     UserTable,
-    BuildingTable,
+    BuildingEntity,
     FloorTable,
     WorkstationTable,
   ],

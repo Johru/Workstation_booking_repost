@@ -6,7 +6,7 @@ import {
   JoinColumn,
   OneToMany,
 } from 'typeorm';
-import { BuildingTable } from './building';
+import { BuildingEntity } from './buildingEntity';
 import { WorkstationTable } from './workstation';
 
 @Entity('floor')
@@ -24,11 +24,11 @@ export class FloorTable {
   @Column()
   floor_plan?: string;
 
-  @ManyToOne(() => BuildingTable, building => building.floor, {
+  @ManyToOne(() => BuildingEntity, building => building.floor, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'building_id' })
-  building?: BuildingTable;
+  building?: BuildingEntity;
 
   @OneToMany(() => WorkstationTable, workstation => workstation.floor)
   workstation?: WorkstationTable[];
