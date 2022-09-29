@@ -7,7 +7,7 @@ import {
   JoinColumn,
 } from 'typeorm';
 
-import { WorkstationTable } from './workstation';
+import { WorkstationEntity } from './workstationEntity';
 
 @Entity('seat')
 export class SeatTable {
@@ -17,9 +17,9 @@ export class SeatTable {
   @Column()
   workstation_id?: number;
 
-  @ManyToOne(() => WorkstationTable, workstation => workstation.seat, {
+  @ManyToOne(() => WorkstationEntity, workstation => workstation.seat, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'workstation_id' })
-  workstation?: WorkstationTable;
+  workstation?: WorkstationEntity;
 }

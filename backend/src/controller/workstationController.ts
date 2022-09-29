@@ -3,7 +3,7 @@ import { Router, Response, Request } from 'express';
 import { resourceLimits } from 'worker_threads';
 
 import { IWorkstationService } from '../service';
-import { WorkstationTable } from '../db/models/workstation';
+import { WorkstationEntity } from '../db/models/workstationEntity';
 import { equal } from 'joi';
 
 export class WorkstationController {
@@ -19,13 +19,13 @@ export class WorkstationController {
 
     // Show all workstations base on floor id
     this._router.get('/workstation/:floorId/showonfloor', async (req: Request, res: Response) => {
-      res.status(200).json(await this.workstationService.showWorkstation( req, res));
+      res.status(200).json(await this.workstationService.showWorkstationOnFloor( req, res));
     });
 
    // create wworkstation  
     this._router.post('/workstation/create', async (req: Request, res: Response) => {
-      const workstation: WorkstationTable = req.body as WorkstationTable;
-      res.status(200).json(await this.workstationService.createWorkstation(workstation));
+      const workstation: WorkstationEntity = req.body as WorkstationEntity;
+      res.status(200).json(await this.workstationService.createdWorkstation(workstation));
     });
 
     // update workstation

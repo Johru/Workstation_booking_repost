@@ -1,6 +1,6 @@
 import mysql from 'mysql';
 import { DataSource } from 'typeorm';
-import { WorkstationTable } from './models/workstation';
+import { WorkstationEntity } from './models/workstationEntity';
 // import { Todo } from './models/todo';
 import config from '../config';
 import { SeatTable } from './models/seat';
