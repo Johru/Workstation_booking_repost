@@ -2,7 +2,17 @@ import { appDataSource } from '../db';
 import { Success } from './success';
 import { ReservationEntity, SeatEntity } from '../db/index';
 
-export class ReservationRepository {
+interface IReservationRepository {
+  showReservationForDay(
+    workstationId: number,
+    reservationDate: string
+  ): Promise<ReservationEntity[]>;
+  displayReservationForUser(userId: number): Promise<ReservationEntity[]>;
+  addNewReservation(requestBody: ReservationEntity): Promise<ReservationEntity>;
+  deleteReservation(body: number): Promise<Success>;
+}
+
+export class ReservationRepository implements IReservationRepository {
   async showReservationForDay(
     workstationId: number,
     reservationDate: string

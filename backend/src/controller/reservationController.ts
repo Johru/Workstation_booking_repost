@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import logger from '../logger';
 import { ReservationService } from '../service/index';
 
@@ -6,17 +6,22 @@ export class ReservationController {
   private readonly _router: Router = Router();
 
   constructor(private reservationService: ReservationService) {
-    this._router.get('/reservation/:id/date', async (req: any, res: any) => {
-      logger.info('/reservation/date endpoint accessed');
-      const workstationId = req.params.id;
-      const reservationDate = req.query.reservation_date;
-      res.json(
-        await reservationService.showReservationForDay(
-          workstationId,
-          reservationDate
-        )
-      );
-    });
+    this._router.get(
+      '/reservation/:id/date',
+      async (req: any, res: Response) => {
+        logger.info('/reservation/date endpoint accessed');
+        const workstationId: number = parseInt(req.params.id);
+
+        const reservationDate: string = req.query.reservation_date;
+        console.log(Date.parse(req.query.reservation_date));
+        res.json(
+          await reservationService.showReservationForDay(
+            workstationId,
+            reservationDate
+          )
+        );
+      }
+    );
 
     this._router.get('/reservation/user/:id', async (req: any, res: any) => {
       logger.info('/reservation/user/:id endpoint accessed');
