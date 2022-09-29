@@ -35,8 +35,14 @@ export class WorkstationController {
 
 
     //  delete workstation
-    this._router.delete('/workstation/:workstationId', async (req, res) => {
-      res.status(200).json(await this.workstationService.deletedWorkstation(req,res))
+    this._router.delete('/workstation/:workstationId/Delete', async (req, res) => {
+      var result = await this.workstationService.deletedWorkstation(req,res)
+      if (result) {
+        res.status(200).json('HTTP OK success.')
+      } else {
+        res.status(404).json('Record not found.')
+      }
+     
     });
   }
 

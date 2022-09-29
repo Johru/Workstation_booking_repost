@@ -95,13 +95,13 @@ export class WorkstationService implements IWorkstationService {
   }
 
   async deletedWorkstation(req: Request, res: Response): Promise<Success> {
-    const workstation: WorkstationEntity = req.body as WorkstationEntity;
+  
     try {
-      var workstationId = parseInt(req.params.workstationId, 10);
-      await this.workstationRepository.deleteWorkstation(workstationId);
+      
+      await this.workstationRepository.deleteWorkstation(req,res);
+      return {success:"yes"} 
     } catch (error) {
-      return { success: 'no' };
+      return {success:"no"}
     }
-    return { success: 'yes' };
   }
 }

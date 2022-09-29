@@ -1,4 +1,4 @@
-import { SeatTable, WorkstationTable } from '../../db';
+import { SeatEntity, WorkstationEntity } from '../../db';
 // import { ITodoRepository } from '../../repository';
 import { ISeatRepository } from '../../repository';
 import { Response, Request } from 'express';
@@ -8,8 +8,8 @@ import { ValidationError } from 'joi';
 import logger from '../../logger';
 
 export interface ISeatService {
-  getSeats(): Promise<SeatTable[]>;
-  createSeat(seat: SeatTable): Promise<{ status: string; message: string[] }>;
+  getSeats(): Promise<SeatEntity[]>;
+  createSeat(seat: SeatEntity): Promise<{ status: string; message: string[] }>;
   createGivenNumberSeat(
     req: Request,
     res: Response
@@ -24,12 +24,12 @@ export class SeatService implements ISeatService {
   constructor(private seatRepository: ISeatRepository) {}
 
   // get all seats
-  async getSeats(): Promise<SeatTable[]> {
+  async getSeats(): Promise<SeatEntity[]> {
     return await this.seatRepository.findAllSeats();
   }
 
   // create single seat
-  async createSeat(seat: SeatTable): Promise<{ status: string; message: string[] }> {
+  async createSeat(seat: SeatEntity): Promise<{ status: string; message: string[] }> {
     try {
       const value = await seatSchema.validateAsync(seat);
     } catch (error) {
@@ -51,7 +51,7 @@ export class SeatService implements ISeatService {
 
   // create multiple seat
   async createGivenNumberSeat(req: Request,res: Response): Promise<{ status: string; message: string[] }> {
-    const seat: SeatTable = req.body as SeatTable;
+    const seat: SeatEntity = req.body as SeatEntity;
     try {
       const value = await seatSchema.validateAsync(seat);
     } catch (error) {
@@ -65,9 +65,9 @@ export class SeatService implements ISeatService {
 
     var numSeats = parseInt(req.params.seat, 10);
     for (let index = 0; index < numSeats; index++) {
-      const newSeat: SeatTable = {
+      const newSeat: SeatEntity = {
         workstation_id: seat.workstation_id,
-        workstation: new WorkstationTable
+      
       };
       await this.seatRepository.saveSeat(newSeat);
     }
@@ -80,7 +80,7 @@ export class SeatService implements ISeatService {
 
   // delete single seat
   async deleteSeat(req: Request,res: Response): Promise<{ status: string; message: string[] }> {
-    const seat: SeatTable = req.body as SeatTable;
+    const seat: SeatEntity = req.body as SeatEntity;
     try {
       const value = await seatSchema.validateAsync(seat);
     } catch (error) {

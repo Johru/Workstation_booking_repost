@@ -1,29 +1,29 @@
 import { appDataSource } from '../db';
-import { SeatTable } from '../db';
+import { SeatEntity } from '../db';
 
 export interface ISeatRepository {
-  findAllSeats(): Promise<SeatTable[]>;
-  saveSeat(seat: SeatTable): Promise<SeatTable>;
-  deleteSeat(id: number): Promise<SeatTable[]>;
+  findAllSeats(): Promise<SeatEntity[]>;
+  saveSeat(seat: SeatEntity): Promise<SeatEntity>;
+  deleteSeat(id: number): Promise<SeatEntity[]>;
 }
 
 export class SeatRepository implements ISeatRepository {
-  async findAllSeats(): Promise<SeatTable[]> {
-    return appDataSource.getRepository(SeatTable).find();
+  async findAllSeats(): Promise<SeatEntity[]> {
+    return appDataSource.getRepository(SeatEntity).find();
   }
 
-  async saveSeat(seat: SeatTable): Promise<SeatTable> {
-    const seatToSave = new SeatTable();
+  async saveSeat(seat: SeatEntity): Promise<SeatEntity> {
+    const seatToSave = new SeatEntity();
     seatToSave.workstation_id = seat.workstation_id;
-    return appDataSource.getRepository(SeatTable).save(seatToSave);
+    return appDataSource.getRepository(SeatEntity).save(seatToSave);
   }
 
-  async deleteSeat(id: number): Promise<SeatTable[]> {
-    var seatRemove = await appDataSource.getRepository(SeatTable).find({
+  async deleteSeat(id: number): Promise<SeatEntity[]> {
+    var seatRemove = await appDataSource.getRepository(SeatEntity).find({
       where: {
         seat_id: id,
       },
     });
-    return appDataSource.getRepository(SeatTable).remove(seatRemove);
+    return appDataSource.getRepository(SeatEntity).remove(seatRemove);
   }
 }

@@ -3,7 +3,9 @@ import { DataSource } from 'typeorm';
 import { WorkstationEntity } from './models/workstationEntity';
 // import { Todo } from './models/todo';
 import config from '../config';
-import { SeatTable } from './models/seat';
+import { SeatEntity } from './models/seatEntity';
+// import { BuildingEntity } from './models/buildingEntity';
+// import { FloorEntity } from './models/floorEntity';
 
 export const appDataSource = new DataSource({
   type: 'mysql',
@@ -12,7 +14,7 @@ export const appDataSource = new DataSource({
   username: config.mysql.user,
   password: config.mysql.password,
   database: process.env.DB_DATABASE,
-  entities: [WorkstationTable, SeatTable],
+  entities: [WorkstationEntity, SeatEntity],
   logging: false,
   synchronize: true,
 });
