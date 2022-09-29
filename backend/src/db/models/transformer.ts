@@ -1,4 +1,5 @@
 import { ValueTransformer } from 'typeorm';
+
 export class BoolBitTransformer implements ValueTransformer {
   // To db from typeorm
   to(value: boolean | null): Buffer | null {

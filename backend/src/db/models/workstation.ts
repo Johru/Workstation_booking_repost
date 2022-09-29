@@ -1,28 +1,33 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn, ManyToOne } from 'typeorm';
-import { BoolBitTransformer } from './transformer';
-import { SeatTable} from './seat';
+import {Entity,Column,PrimaryGeneratedColumn,ManyToOne,JoinColumn,OneToMany,} from 'typeorm';
+import { BuildingTable } from './building';
 import { FloorTable } from './floor';
-
+import { SeatTable } from './seat';
+import { BoolBitTransformer } from './transformer';
 
 @Entity('workstation')
 export class WorkstationTable {
-  [x: string]: any;
   @PrimaryGeneratedColumn()
   workstation_id?: number;
 
-  @Column('int')
+  @Column()
   floor_id?: number;
 
-  @Column('text')
+  @Column()
   workstation_name?: string;
+  @Column({
+    name: 'workstation_isactive',
+    type: 'bit',
+    default: true,
+    transformer: new BoolBitTransformer(),
+  })
+  workstation_isactive?: boolean;
 
-  @Column({ name:'workstation_isactive', type: 'bit', transformer: new BoolBitTransformer})
-  workstation_isactive?: boolean = true;
+  @ManyToOne(() => FloorTable, floor => floor.workstation, {
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn({ name: 'floor_id' })
+  floor?: FloorTable;
 
-
-  @ManyToOne(() => FloorTable, floor => floor.workstation)
-
-
-  @OneToMany(() => SeatTable, (seat) => seat.workstation)
+  @OneToMany(() => SeatTable, seat => seat.workstation)
   seat?: SeatTable[];
 }
