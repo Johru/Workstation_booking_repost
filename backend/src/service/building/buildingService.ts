@@ -1,6 +1,9 @@
 import { BuildingRepository, Success } from '../../repository';
 import { UpdateResult } from 'typeorm';
 import { BuildingEntity } from '../../db';
+import { buildingSchema } from './buildingSchema';
+import { ValidationError } from 'joi';
+import logger from '../../logger';
 
 export class BuildingService {
   constructor(public buildingRepository: BuildingRepository) {}
@@ -15,15 +18,42 @@ export class BuildingService {
   singleBuilding(buildingId: number): Promise<BuildingEntity | null> {
     return this.buildingRepository.singleBuilding(buildingId);
   }
-  addNewBuilding(requestBody: BuildingEntity): Promise<BuildingEntity> {
-    return this.buildingRepository.addNewBuilding(requestBody);
+  async addNewBuilding(requestBody: BuildingEntity): Promise<Success> {
+    try {
+      const requestDataValidation = await buildingSchema.validateAsync(
+        requestBody
+      );
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        logger.error(error);
+        return { success: 'no' };
+      }
+    }
+    const newBuilding = await this.buildingRepository.addNewBuilding(
+      requestBody
+    );
+    return { success: 'yes' };
   }
 
-  updateBuilding(
+  async updateBuilding(
     requestBody: BuildingEntity,
     id: number
-  ): Promise<UpdateResult> {
-    return this.buildingRepository.updateBuilding(requestBody, id);
+  ): Promise<Success> {
+    try {
+      const requestDataValidation = await buildingSchema.validateAsync(
+        requestBody
+      );
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        logger.error(error);
+        return { success: 'no' };
+      }
+    }
+    const updateABuilding = await this.buildingRepository.updateBuilding(
+      requestBody,
+      id
+    );
+    return { success: 'yes' };
   }
   deleteBuilding(id: number): Promise<Success> {
     return this.buildingRepository.deleteBuilding(id);
