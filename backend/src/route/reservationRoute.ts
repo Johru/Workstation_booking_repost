@@ -1,7 +1,7 @@
-import { ReservationController } from '../controller/index';
+import { ReservationController } from '../controller';
 import { Router } from 'express';
-import { ReservationService } from '../service/index';
-import { ReservationRepository } from '../repository/index';
+import { ReservationService } from '../service';
+import { ReservationRepository } from '../repository';
 
 const reservationRouter = Router();
 

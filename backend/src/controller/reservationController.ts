@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import logger from '../logger';
-import { ReservationService } from '../service/index';
+import { ReservationService } from '../service';
 
 export class ReservationController {
   private readonly _router: Router = Router();
@@ -13,7 +13,7 @@ export class ReservationController {
         const workstationId: number = req.params.id as unknown as number;
         const reservationDate: string = req.query.reservation_date as string;
         res.json(
-          await reservationService.showReservationForGivenDate(
+          await this.reservationService.showReservationForGivenDate(
             workstationId,
             reservationDate
           )
@@ -26,7 +26,9 @@ export class ReservationController {
       async (req: Request, res: Response) => {
         logger.info('/reservation/user/:id endpoint accessed');
         const userId = req.params.id as unknown as number;
-        res.json(await reservationService.displayReservationForUser(userId));
+        res.json(
+          await this.reservationService.displayReservationForUser(userId)
+        );
       }
     );
 
@@ -35,7 +37,7 @@ export class ReservationController {
       async (req: Request, res: Response) => {
         logger.info('/reservation/new endpoint accessed');
         const body = req.body;
-        res.json(await reservationService.addNewReservation(body));
+        res.json(await this.reservationService.addNewReservation(body));
       }
     );
 
@@ -44,7 +46,9 @@ export class ReservationController {
       async (req: Request, res: Response) => {
         logger.info('/reservation/delete endpoint accessed');
         const reservationId = req.params.id as unknown as number;
-        res.json(await reservationService.deleteReservation(reservationId));
+        res.json(
+          await this.reservationService.deleteReservation(reservationId)
+        );
       }
     );
   }

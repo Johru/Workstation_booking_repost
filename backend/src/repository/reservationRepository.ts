@@ -1,6 +1,6 @@
 import { appDataSource } from '../db';
 import { Success } from './success';
-import { ReservationEntity, SeatEntity } from '../db/index';
+import { ReservationEntity, SeatEntity } from '../db';
 
 interface IReservationRepository {
   showReservationForGivenDate(
@@ -44,6 +44,7 @@ export class ReservationRepository implements IReservationRepository {
       .where('reservation.user_id = :id', { id: userId })
       .getMany();
   }
+
   async addNewReservation(
     requestBody: ReservationEntity
   ): Promise<ReservationEntity> {
