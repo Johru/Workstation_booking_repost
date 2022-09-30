@@ -6,6 +6,10 @@ import { Success } from './success';
 export interface IUserRepository {
   listUsers(): Promise<UserEntity[]>;
   deleteUser(reservationId: number): Promise<Success>;
+  promoteUserToAdmin(userId: number): Promise<Success>;
+  demoteUserFromAdmin(userId: number): Promise<Success>;
+  blockUser(userId: number): Promise<Success>;
+  unblockUser(userId: number): Promise<Success>;
 }
 
 export class UserRepository implements IUserRepository {
