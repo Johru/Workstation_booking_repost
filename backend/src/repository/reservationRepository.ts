@@ -2,7 +2,7 @@ import { appDataSource } from '../db';
 import { Success } from './success';
 import { ReservationEntity, SeatEntity } from '../db';
 
-interface IReservationRepository {
+export interface IReservationRepository {
   showReservationForGivenDate(
     workstationId: number,
     reservationDate: string

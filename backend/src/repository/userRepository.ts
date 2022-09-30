@@ -1,7 +1,11 @@
 import { appDataSource } from '../db';
 import { UserEntity } from '../db';
 
-export class UserRepository {
+export interface IUserRepository {
+  listUsers(): Promise<UserEntity[]>;
+}
+
+export class UserRepository implements IUserRepository {
   async listUsers(): Promise<UserEntity[]> {
     return appDataSource
       .getRepository(UserEntity)

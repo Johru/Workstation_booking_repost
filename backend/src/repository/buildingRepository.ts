@@ -3,7 +3,16 @@ import { BuildingEntity } from '../db';
 import { appDataSource } from '../db';
 import { Success } from './success';
 
-export class BuildingRepository {
+export interface IBuildingRepository {
+  listCities(): Promise<BuildingEntity[]>;
+  listBuildings(): Promise<BuildingEntity[]>;
+  singleBuilding(buildingId: number): Promise<BuildingEntity | null>;
+  addNewBuilding(body: BuildingEntity): Promise<BuildingEntity>;
+  updateBuilding(body: BuildingEntity, id: number): Promise<UpdateResult>;
+  deleteBuilding(id: number): Promise<Success>;
+}
+
+export class BuildingRepository implements IBuildingRepository {
   async listCities(): Promise<BuildingEntity[]> {
     return appDataSource
       .getRepository(BuildingEntity)
