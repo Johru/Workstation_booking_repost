@@ -1,8 +1,8 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { FloorTable } from './floor';
+import { FloorEntity } from './floorEntity';
 
 @Entity('building')
-export class BuildingTable {
+export class BuildingEntity {
   @PrimaryGeneratedColumn()
   building_id?: number;
 
@@ -17,6 +17,7 @@ export class BuildingTable {
   @Column()
   building_image?: string;
 
-  @OneToMany(() => FloorTable, floor => floor.building)
-  floor?: FloorTable[];
+  @OneToMany(() => BuildingEntity, floor => floor.building_id)
+  floor?: BuildingEntity[];
+ 
 }

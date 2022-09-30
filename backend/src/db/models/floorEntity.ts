@@ -1,8 +1,8 @@
 import {Entity,Column,PrimaryGeneratedColumn,ManyToOne,JoinColumn,} from 'typeorm';
-import { BuildingTable } from './building';
+import { BuildingEntity } from './buildingEntity';
 
 @Entity('floor')
-export class FloorTable {
+export class FloorEntity {
   @PrimaryGeneratedColumn()
   floor_id?: number;
 
@@ -16,7 +16,7 @@ export class FloorTable {
   @Column()
   floor_plan?: string;
 
-  @ManyToOne(() => BuildingTable, building => building.floor)
+  @ManyToOne(() => BuildingEntity, building => building.floor)
   @JoinColumn({ name: 'building_id' })
-  building?: BuildingTable;
+  building?: BuildingEntity;
 }

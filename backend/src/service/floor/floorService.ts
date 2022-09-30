@@ -4,11 +4,11 @@ import { Response, Request } from 'express';
 import { floorSchema } from './floorschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
-import { FloorTable } from 'db';
+import { FloorEntity } from 'db';
 
 export interface IFloorService {
-  getFloors(): Promise<FloorTable[]>;
-  createFloor(floor: FloorTable): Promise<{ status: string; message: string[] }>;
+  getFloors(): Promise<FloorEntity[]>;
+  createFloor(floor: FloorEntity): Promise<{ status: string; message: string[] }>;
   updatedFloor(req: Request,res: Response): Promise<{ status: string; message: string[] }>;
   deletedFloor(req: Request, res: Response): Promise<{status: string; message: string[]}>;
 }
@@ -16,11 +16,11 @@ export interface IFloorService {
 export class FloorService implements IFloorService {
   constructor(private floorRepository: IFloorRepository) {}
 
-  async getFloors(): Promise<FloorTable[]> {
+  async getFloors(): Promise<FloorEntity[]> {
     return await this.floorRepository.findAllFloors();
   }
 
-  async createFloor(floor: FloorTable): Promise<{ status: string; message: string[] }> {
+  async createFloor(floor: FloorEntity): Promise<{ status: string; message: string[] }> {
     try {
       const value = await floorSchema.validateAsync(floor);
     } catch (error) {
@@ -41,7 +41,7 @@ export class FloorService implements IFloorService {
   }
 
   async updatedFloor(req: Request,res: Response): Promise<{ status: string; message: string[] }> {
-    const floor: FloorTable = req.body as FloorTable;
+    const floor: FloorEntity = req.body as FloorEntity;
     try {
       const value = await floorSchema.validateAsync(floor);
     } catch (error) {
@@ -52,9 +52,9 @@ export class FloorService implements IFloorService {
         return { status: 'Error', message: errorMessage };
       }
     }
-    var id = parseInt(req.params.id, 10);
+    var floorId = parseInt(req.params.floorId, 10);
     const newFloor = await this.floorRepository.updateFloor(
-    id,floor
+      floorId,floor
     );
 
     return {
@@ -67,7 +67,7 @@ export class FloorService implements IFloorService {
 
 
   async deletedFloor(req: Request,res: Response): Promise<{status: string; message: string[]}> {
-    const floor: FloorTable = req.body as FloorTable;
+    const floor: FloorEntity = req.body as FloorEntity;
     try {
       const value = await floorSchema.validateAsync(floor);
     } catch (error) {
@@ -78,8 +78,8 @@ export class FloorService implements IFloorService {
         return { status: 'Error', message: errorMessage };
       }
     }
-    var id = parseInt(req.params.id, 10);
-    await this.floorRepository.deleteFloor(id);
+    var floorId = parseInt(req.params.FloorId, 10);
+    await this.floorRepository.deleteFloor(floorId);
 
     return {
         status: 'OK',
