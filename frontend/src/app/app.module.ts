@@ -22,6 +22,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReservationListComponent } from './components/user-list/reservation-list/reservation-list.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { DeleteModalComponent } from './components/delete-modal/delete-modal.com
     FormsModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
+    MatTooltipModule,
+    MatButtonModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent],

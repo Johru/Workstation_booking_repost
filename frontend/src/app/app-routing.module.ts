@@ -4,9 +4,9 @@ import { UsersComponent } from './components/users/users.component';
 import { WorkstationSelectionBookingComponent } from './components/workstation-selection-booking/workstation-selection-booking.component';
 
 const routes: Routes = [
-  { path: 'admin/users', component: UsersComponent },
+  // users route will be a child of admin route on merge
+  { path: 'users', component: UsersComponent },
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
-  { path: '', redirectTo: '/admin/users', pathMatch: 'full' },
 ];
 
 @NgModule({

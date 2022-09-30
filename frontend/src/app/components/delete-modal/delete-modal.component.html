@@ -1,10 +1,14 @@
 <div class="delete-modal">
-  <h2>Delete {{ header() }}</h2>
+  <h2>Delete {{ setTheHeader() }}</h2>
   <div class="confirm">
-    <h3>Are you sure you want to delete {{ info() }} ?</h3>
+    <h3>Are you sure you want to delete {{ setTheInfo() }} ?</h3>
     <div class="modal-buttons">
-      <button (click)="delete(setTheId())">Delete</button>
-      <button (click)="toggleDeleteModal()">Cancel</button>
+      <button mat-raised-button color="warn" (click)="delete(setTheId())">
+        Delete
+      </button>
+      <button mat-raised-button color="primary" (click)="toggleDeleteModal()">
+        Cancel
+      </button>
     </div>
   </div>
 </div>

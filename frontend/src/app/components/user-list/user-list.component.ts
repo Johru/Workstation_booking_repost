@@ -12,7 +12,7 @@ export class UserListComponent {
 
   constructor() {}
 
-  onDeleteUser(e: number) {
-    this.deleteUserEmitter.emit(e);
+  onDeleteUser(id: number) {
+    this.deleteUserEmitter.emit(id);
   }
 }

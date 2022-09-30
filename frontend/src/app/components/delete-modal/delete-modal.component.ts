@@ -27,14 +27,14 @@ export class DeleteModalComponent {
     this.toggleModalEmitter.emit(true);
   }
 
-  header() {
+  setTheHeader() {
     if (this.user == undefined) {
       return `reservation id: ${this.reservation}`;
     }
     return `user ${this.user.user_name}`;
   }
 
-  info() {
+  setTheInfo() {
     if (this.user == undefined) {
       return `reservation with id: ${this.reservation}`;
     }

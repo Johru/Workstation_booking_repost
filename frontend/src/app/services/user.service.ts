@@ -16,13 +16,34 @@ export class UserService {
     return ADMINRESERVATIONLIST;
   }
 
-  promoteUserToAdmin() {}
+  //userId on these methods is not used but needed to make a req to BE
+  promoteUserToAdmin(userId: number) {
+    const message = {
+      success: 'yes',
+    };
+    return message;
+  }
 
-  demoteUserFromAdmin() {}
+  demoteUserFromAdmin(userId: number) {
+    const message = {
+      success: 'yes',
+    };
+    return message;
+  }
 
-  blockUser() {}
+  blockUser(userId: number) {
+    const message = {
+      success: 'yes',
+    };
+    return message;
+  }
 
-  unBlockUser() {}
+  unBlockUser(userId: number) {
+    const message = {
+      success: 'yes',
+    };
+    return message;
+  }
 
   deleteUser(userId: number) {
     const message = {

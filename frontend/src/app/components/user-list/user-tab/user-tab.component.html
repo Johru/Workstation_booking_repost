@@ -5,8 +5,10 @@
     <div class="buttons">
       <mat-slide-toggle
         [color]="color"
-        title="{{ blockTitle }}"
-        [checked]="user.user_isBlocked"
+        [(ngModel)]="isBlocked"
+        matTooltip="{{ blockTitle }}"
+        [matTooltipPosition]="'right'"
+        (click)="[blockUnblockUser(), setTheBlockTitle()]"
       ></mat-slide-toggle>
       <span
         class="material-icons"
@@ -27,24 +29,30 @@
     </div>
     <div class="extension-buttons">
       <div class="promote">
-        <p>promote to admin</p>
+        <p>{{ promoteTitle }}</p>
         <mat-slide-toggle
+          (click)="[promoteDemoteUser(), setThePromoteTitle()]"
           [color]="color"
-          title="{{ blockTitle }}"
-          [checked]="user.user_isAdmin"
+          matTooltip="{{ promoteTitle }}"
+          [matTooltipPosition]="'right'"
+          [(ngModel)]="isAdmin"
         ></mat-slide-toggle>
       </div>
       <div class="block">
         <p>{{ blockTitle }}</p>
         <mat-slide-toggle
+          (click)="[blockUnblockUser(), setTheBlockTitle()]"
           [color]="color"
-          title="{{ blockTitle }}"
-          [checked]="user.user_isBlocked"
+          matTooltip="{{ blockTitle }}"
+          [matTooltipPosition]="'right'"
+          [(ngModel)]="isBlocked"
         ></mat-slide-toggle>
       </div>
       <div class="delete">
         <p>Delete user</p>
-        <button (click)="toggleDeleteModal()">X</button>
+        <button mat-raised-button color="warn" (click)="toggleDeleteModal()">
+          X
+        </button>
       </div>
     </div>
     <div class="res-tab">
