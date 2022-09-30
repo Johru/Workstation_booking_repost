@@ -56,6 +56,7 @@ export class BuildingRepository implements IBuildingRepository {
       building_address: body.building_address,
       building_zip: body.building_zip,
       building_city: body.building_city,
+      building_country: body.building_country,
       building_image: body.building_image,
     });
   }
