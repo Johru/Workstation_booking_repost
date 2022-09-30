@@ -1,5 +1,3 @@
-import { ValidationError } from 'joi';
-import logger from '../../logger';
 import { ReservationEntity } from '../../db';
 import { ReservationRepository, Success } from '../../repository';
 

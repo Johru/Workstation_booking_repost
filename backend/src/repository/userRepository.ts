@@ -1,10 +1,10 @@
 import { appDataSource } from '../db';
-import { UserTable } from '../db/entity/user';
+import { UserEntity } from '../db';
 
 export class UserRepository {
-  async listUsers(): Promise<any[]> {
+  async listUsers(): Promise<UserEntity[]> {
     return appDataSource
-      .getRepository(UserTable)
+      .getRepository(UserEntity)
       .createQueryBuilder('user')
       .select([
         'user.user_id',

@@ -1,7 +1,6 @@
-import { ValidationError } from 'joi';
-import logger from '../../logger';
-import { BuildingRepository } from '../../repository/buildingRepository';
-import { BuildingEntity } from '../../db/entity/buildingEntity';
+import { BuildingRepository, Success } from '../../repository';
+import { UpdateResult } from 'typeorm';
+import { BuildingEntity } from '../../db';
 
 export class BuildingService {
   constructor(public buildingRepository: BuildingRepository) {}
@@ -16,14 +15,17 @@ export class BuildingService {
   singleBuilding(buildingId: number): Promise<BuildingEntity | null> {
     return this.buildingRepository.singleBuilding(buildingId);
   }
-  addNewBuilding(body: any): Promise<BuildingEntity> {
-    return this.buildingRepository.addNewBuilding(body);
+  addNewBuilding(requestBody: BuildingEntity): Promise<BuildingEntity> {
+    return this.buildingRepository.addNewBuilding(requestBody);
   }
 
-  updateBuilding(body: any, id: number): Promise<any> {
-    return this.buildingRepository.updateBuilding(body, id);
+  updateBuilding(
+    requestBody: BuildingEntity,
+    id: number
+  ): Promise<UpdateResult> {
+    return this.buildingRepository.updateBuilding(requestBody, id);
   }
-  deleteBuilding(id: number): Promise<BuildingEntity> {
+  deleteBuilding(id: number): Promise<Success> {
     return this.buildingRepository.deleteBuilding(id);
   }
 }

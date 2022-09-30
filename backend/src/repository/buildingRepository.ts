@@ -1,5 +1,7 @@
+import { UpdateResult } from 'typeorm';
 import { BuildingEntity } from '../db';
 import { appDataSource } from '../db';
+import { Success } from './success';
 
 export class BuildingRepository {
   async listCities(): Promise<BuildingEntity[]> {
@@ -24,28 +26,32 @@ export class BuildingRepository {
       .findOneBy({ building_id: buildingId });
   }
 
-  async addNewBuilding(body: any): Promise<BuildingEntity> {
+  async addNewBuilding(body: BuildingEntity): Promise<BuildingEntity> {
     const resSave = new BuildingEntity();
-    resSave.building_name = body.buildingName;
-    resSave.building_address = body.buildingAddress;
-    resSave.building_zip = body.buildingZip;
-    resSave.building_city = body.buildingCity;
-    resSave.building_image = body.buildingImage;
+    resSave.building_name = body.building_name;
+    resSave.building_address = body.building_address;
+    resSave.building_zip = body.building_zip;
+    resSave.building_city = body.building_city;
+    resSave.building_country = body.building_country;
+    resSave.building_image = body.building_image;
 
     return appDataSource.getRepository(BuildingEntity).save(resSave);
   }
 
-  async updateBuilding(body: any, id: number): Promise<any> {
+  async updateBuilding(
+    body: BuildingEntity,
+    id: number
+  ): Promise<UpdateResult> {
     return appDataSource.getRepository(BuildingEntity).update(id, {
-      building_name: body.buildingName,
-      building_address: body.buildingAddress,
-      building_zip: body.buildingZip,
-      building_city: body.buildingCity,
-      building_image: body.buildingImage,
+      building_name: body.building_name,
+      building_address: body.building_address,
+      building_zip: body.building_zip,
+      building_city: body.building_city,
+      building_image: body.building_image,
     });
   }
-  async deleteBuilding(id: number): Promise<any> {
-    return appDataSource
+  async deleteBuilding(id: number): Promise<Success> {
+    const deletion = await appDataSource
       .createQueryBuilder()
       .delete()
       .from(BuildingEntity)
@@ -53,5 +59,11 @@ export class BuildingRepository {
         buildingId: id,
       })
       .execute();
+
+    if (deletion.affected == 0) {
+      return { success: 'no' };
+    } else {
+      return { success: 'yes' };
+    }
   }
 }

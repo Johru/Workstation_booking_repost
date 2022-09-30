@@ -1,14 +1,15 @@
-import { Router } from 'express';
+import { Router, Response, Request } from 'express';
 import { UserService } from '../service';
+import logger from '../logger';
 
 export class UserController {
   private readonly _router: Router = Router();
 
   constructor(private userService: UserService) {
-    this._router.get('/user', async (req: any, res: any) => {
-      console.log('/user endpoint accessed');
+    this._router.get('/user', async (req: Request, res: Response) => {
+      logger.info('/user endpoint accessed');
 
-      res.json(await userService.listUsers());
+      res.json(await this.userService.listUsers());
     });
   }
 

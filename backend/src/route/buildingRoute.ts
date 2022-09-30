@@ -1,7 +1,7 @@
 import { BuildingController } from '../controller';
 import { Router } from 'express';
-import { BuildingRepository } from '../repository/buildingRepository';
-import { BuildingService } from '../service/building/buildingService';
+import { BuildingRepository } from '../repository';
+import { BuildingService } from '../service';
 
 const buildingRouter = Router();
 

@@ -45,3 +45,25 @@
 2022-09-29 18:13:54:1354 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
 2022-09-29 18:14:46:1446 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
 2022-09-29 18:16:30:1630 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-30 15:40:44:4044 [32minfo[39m: [32mLogger: Data source has been initialized.[39m
+2022-09-30 15:41:31:4131 [32minfo[39m: [32mLogger: Data source has been initialized.[39m
+2022-09-30 15:41:50:4150 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:42:11:4211 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-09-30 15:43:48:4348 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:44:37:4437 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:44:38:4438 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:45:15:4515 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:45:16:4516 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:47:21:4721 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:47:22:4722 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:48:36:4836 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:48:37:4837 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:49:46:4946 [32minfo[39m: [32m/building/delete/:id endpoint accessed[39m
+2022-09-30 15:50:28:5028 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:51:20:5120 [32minfo[39m: [32m/building/:id/edit endpoint accessed[39m
+2022-09-30 15:52:09:529 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:52:09:529 [32minfo[39m: [32m/building/:id/edit endpoint accessed[39m
+2022-09-30 15:53:22:5322 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-09-30 15:56:28:5628 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:56:29:5629 [32minfo[39m: [32m/building/edit/:id endpoint accessed[39m
+2022-09-30 15:59:15:5915 [32minfo[39m: [32m/user endpoint accessed[39m
