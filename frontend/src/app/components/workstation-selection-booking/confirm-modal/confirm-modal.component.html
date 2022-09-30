@@ -1,0 +1,26 @@
+<h1>Confirm Booking</h1>
+<div class="confirm-card">
+  <div class="left">
+    <div class="labels">
+      <p>Place:</p>
+      <p>Building:</p>
+      <p>Floor:</p>
+      <p>Workstation:</p>
+      <p>SeatId:</p>
+      <p>Date:</p>
+    </div>
+    <div class="values">
+      <p>{{ resData.place }}</p>
+      <p>{{ resData.building }}</p>
+      <p>{{ resData.floor }}</p>
+      <p>{{ resData.workstation }}</p>
+      <p>{{ resData.seat_id }}</p>
+      <p>{{ resData.res_date }}</p>
+    </div>
+  </div>
+  <div class="right">
+    <button (click)="confirmReservation()">Confirm</button>
+    <button (click)="editReservation()">Edit</button>
+    <button (click)="cancelReservation()">Cancel</button>
+  </div>
+</div>

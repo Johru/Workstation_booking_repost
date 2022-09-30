@@ -1,2 +1,2 @@
-export { ITodoRepository, TodoRepository } from './todoRepository';
-export { SeatRepository } from './seatRepository';
+export { ReservationRepository } from './reservationRepository';
+export { Success } from './success';

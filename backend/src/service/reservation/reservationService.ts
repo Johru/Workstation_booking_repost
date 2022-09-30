@@ -1,27 +1,38 @@
+<<<<<<< HEAD
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 
 import { ReservationRepository } from '../../repository/reservationRepository';
 import { ReservationTable } from '../../db/entity/reservation';
+=======
+import { ReservationEntity } from '../../db';
+import { ReservationRepository, Success } from '../../repository';
+>>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a
 
 export class ReservationService {
   constructor(public reservationRepository: ReservationRepository) {}
 
-  showReservationForDay(
+  showReservationForGivenDate(
     workstationId: number,
     reservationDate: string
-  ): Promise<ReservationTable[]> {
-    console.log('service: ' + workstationId + '/' + reservationDate);
-    return this.reservationRepository.bigJoin(workstationId, reservationDate);
+  ): Promise<ReservationEntity[]> {
+    return this.reservationRepository.showReservationForGivenDate(
+      workstationId,
+      reservationDate
+    );
   }
 
-  addNewReservation(body: any): Promise<ReservationTable> {
-    return this.reservationRepository.addNewReservation(body);
+  addNewReservation(
+    requestBody: ReservationEntity
+  ): Promise<ReservationEntity> {
+    return this.reservationRepository.addNewReservation(requestBody);
   }
-  deleteReservation(body: number): Promise<any> {
-    return this.reservationRepository.deleteReservation(body);
+
+  deleteReservation(reservationId: number): Promise<Success> {
+    return this.reservationRepository.deleteReservation(reservationId);
   }
-  displayResForUser(body: number): Promise<ReservationTable[]> {
-    return this.reservationRepository.displayResForUser(body);
+
+  displayReservationForUser(userId: number): Promise<ReservationEntity[]> {
+    return this.reservationRepository.displayReservationForUser(userId);
   }
 }

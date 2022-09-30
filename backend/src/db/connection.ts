@@ -1,11 +1,17 @@
 import { DataSource } from 'typeorm';
 import config from '../config';
+<<<<<<< HEAD
 import { BuildingEntity } from './entity/buildingEntity';
 import { FloorTable } from './entity/floor';
 import { ReservationTable } from './entity/reservation';
 import { SeatTable } from './entity/seat';
 import { UserTable } from './entity/user';
 import { WorkstationTable } from './entity/workstation';
+=======
+import { SeatEntity } from './entity/seatEntity';
+import { ReservationEntity } from './entity/reservationEntity';
+import { UserEntity } from './entity/userEntity';
+>>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a
 
 export const appDataSource = new DataSource({
   type: 'mysql',
@@ -14,6 +20,7 @@ export const appDataSource = new DataSource({
   username: config.mysql.user,
   password: config.mysql.password,
   database: config.mysql.database,
+<<<<<<< HEAD
   entities: [
     SeatTable,
     ReservationTable,
@@ -22,6 +29,9 @@ export const appDataSource = new DataSource({
     FloorTable,
     WorkstationTable,
   ],
+=======
+  entities: [SeatEntity, ReservationEntity, UserEntity],
+>>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a
   logging: false,
   synchronize: true,
 });

@@ -1,0 +1,7 @@
+<h2>Workstation:</h2>
+<select (change)="onChangeSelection()" [(ngModel)]="selectedValue">
+  <option value="0">{{ defaultSelectionText }}</option>
+  <option *ngFor="let ws of workstationList" value="{{ ws.id }}">
+    {{ ws.name }}
+  </option>
+</select>

@@ -8,6 +8,7 @@ CREATE TABLE `User` (
 	`user_password` varchar(255) NOT NULL,
 	`user_email` varchar(255) NOT NULL,
 	`user_isadmin` BIT NOT NULL DEFAULT 0,
+    `user_isblocked` BIT NOT NULL DEFAULT 0,
 	PRIMARY KEY (`user_id`)
 );
 
@@ -17,8 +18,8 @@ CREATE TABLE `Building` (
 	`building_id` INT NOT NULL AUTO_INCREMENT,
 	`building_name` varchar(255) NOT NULL,
 	`building_address` varchar(255) NOT NULL,
-	`building_state`  varchar(255) NOT NULL,
-	`building_zip`  integer NOT NULL,
+	`building_country`  varchar(255) NOT NULL,
+	`building_zip`  varchar(10) NOT NULL,
 	`building_city`  varchar(255) NOT NULL,
 	`building_image`  varchar(255) NOT NULL,
 	PRIMARY KEY (`building_id`)
