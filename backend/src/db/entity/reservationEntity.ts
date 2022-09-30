@@ -21,10 +21,14 @@ export class ReservationEntity {
   @Column({ type: 'date' })
   reservation_date?: Date;
 
-  @ManyToOne(() => SeatEntity, seat => seat.reservation)
+  @ManyToOne(() => SeatEntity, seat => seat.reservation, {
+    onDelete: 'CASCADE',
+  })
   @JoinColumn({ name: 'seat_id' })
   seat?: SeatEntity;
-  @ManyToOne(() => UserEntity, user => user.reservation)
+  @ManyToOne(() => UserEntity, user => user.reservation, {
+    onDelete: 'CASCADE',
+  })
   @JoinColumn({ name: 'user_id' })
   user?: UserEntity;
 }

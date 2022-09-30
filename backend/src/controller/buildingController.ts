@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { BuildingService } from 'service/building/buildingService';
+import { BuildingService } from '../service';
 
 export class BuildingController {
   private readonly _router: Router = Router();

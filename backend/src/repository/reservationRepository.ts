@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { ReservationTable } from '../db/entity/reservation';
-import { appDataSource, SeatTable } from '../db/index';
-=======
 import { appDataSource } from '../db';
 import { Success } from './success';
 import { ReservationEntity, SeatEntity } from '../db';
->>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a
 
 interface IReservationRepository {
   showReservationForGivenDate(
@@ -46,13 +41,7 @@ export class ReservationRepository implements IReservationRepository {
     return appDataSource
       .getRepository(ReservationEntity)
       .createQueryBuilder('reservation')
-<<<<<<< HEAD
-      .where('reservation.user_id = :id', { id: body })
-      .leftJoin('reservation.seat', 'seat')
-      .addSelect(['seat.seat_id'])
-=======
       .where('reservation.user_id = :id', { id: userId })
->>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a
       .getMany();
   }
 

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { UserService } from '../service/user/userService';
+import { UserService } from '../service';
 
 export class UserController {
   private readonly _router: Router = Router();

@@ -6,19 +6,6 @@ export class ReservationController {
   private readonly _router: Router = Router();
 
   constructor(private reservationService: ReservationService) {
-<<<<<<< HEAD
-    this._router.get('/reservation/:id/date', async (req: any, res: any) => {
-      console.log('/reservation/date endpoint accessed');
-      const workstationId = req.params.id;
-      const reservationDate = req.query.reservationDate;
-      res.json(
-        await reservationService.showReservationForDay(
-          workstationId,
-          reservationDate
-        )
-      );
-    });
-=======
     this._router.get(
       '/reservation/:id/date',
       async (req: Request, res: Response) => {
@@ -33,7 +20,6 @@ export class ReservationController {
         );
       }
     );
->>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a
 
     this._router.get(
       '/reservation/user/:id',
@@ -57,19 +43,13 @@ export class ReservationController {
 
     this._router.delete(
       '/reservation/:id/delete',
-<<<<<<< HEAD
-      async (req: any, res: any) => {
-        console.log('/reservation/delete endpoint accessed');
-        const body = req.params.id;
-        res.json(await reservationService.deleteReservation(body));
-=======
+
       async (req: Request, res: Response) => {
         logger.info('/reservation/delete endpoint accessed');
         const reservationId = req.params.id as unknown as number;
         res.json(
           await this.reservationService.deleteReservation(reservationId)
         );
->>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a
       }
     );
   }

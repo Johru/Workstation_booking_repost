@@ -6,11 +6,10 @@ import {
   JoinColumn,
   OneToMany,
 } from 'typeorm';
-import { BuildingEntity } from './buildingEntity';
-import { WorkstationTable } from './workstation';
+import { BuildingEntity, WorkstationEntity } from '../index';
 
 @Entity('floor')
-export class FloorTable {
+export class FloorEntity {
   @PrimaryGeneratedColumn()
   floor_id?: number;
 
@@ -30,6 +29,6 @@ export class FloorTable {
   @JoinColumn({ name: 'building_id' })
   building?: BuildingEntity;
 
-  @OneToMany(() => WorkstationTable, workstation => workstation.floor)
-  workstation?: WorkstationTable[];
+  @OneToMany(() => WorkstationEntity, workstation => workstation.floor)
+  workstation?: WorkstationEntity[];
 }

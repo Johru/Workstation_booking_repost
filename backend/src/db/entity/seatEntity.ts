@@ -1,5 +1,12 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { ReservationEntity } from '../index';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  ManyToOne,
+  JoinColumn,
+} from 'typeorm';
+import { ReservationEntity, WorkstationEntity } from '../index';
 
 @Entity('seat')
 export class SeatEntity {
@@ -11,4 +18,10 @@ export class SeatEntity {
 
   @OneToMany(() => ReservationEntity, reservation => reservation.seat)
   reservation?: ReservationEntity[];
+
+  @ManyToOne(() => WorkstationEntity, workstation => workstation.seat, {
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn({ name: 'workstation_id' })
+  workstation?: WorkstationEntity;
 }

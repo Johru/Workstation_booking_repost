@@ -1,4 +1,4 @@
-import { BuildingEntity } from '../db/entity/buildingEntity';
+import { BuildingEntity } from '../db';
 import { appDataSource } from '../db';
 
 export class BuildingRepository {

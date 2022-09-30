@@ -7,12 +7,12 @@ import {
   OneToMany,
 } from 'typeorm';
 
-import { FloorTable } from './floor';
-import { SeatTable } from './seat';
+import { FloorEntity, SeatEntity } from '../index';
+
 import { BoolBitTransformer } from './transformer';
 
 @Entity('workstation')
-export class WorkstationTable {
+export class WorkstationEntity {
   @PrimaryGeneratedColumn()
   workstation_id?: number;
 
@@ -29,12 +29,12 @@ export class WorkstationTable {
   })
   workstation_isactive?: boolean;
 
-  @ManyToOne(() => FloorTable, floor => floor.workstation, {
+  @ManyToOne(() => FloorEntity, floor => floor.workstation, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'floor_id' })
-  floor?: FloorTable;
+  floor?: FloorEntity;
 
-  @OneToMany(() => SeatTable, seat => seat.workstation)
-  seat?: SeatTable[];
+  @OneToMany(() => SeatEntity, seat => seat.workstation)
+  seat?: SeatEntity[];
 }

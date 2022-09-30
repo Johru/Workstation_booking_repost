@@ -27,7 +27,6 @@ export class UserEntity {
   })
   readonly user_isadmin?: boolean;
 
-<<<<<<<< HEAD:backend/src/db/entity/user.ts
   @Column({
     name: 'user_isblocked',
     type: 'bit',
@@ -36,10 +35,6 @@ export class UserEntity {
   })
   readonly user_isblocked?: boolean;
 
-  @OneToMany(() => ReservationTable, reservation => reservation.user)
-  reservation?: ReservationTable[];
-========
   @OneToMany(() => ReservationEntity, reservation => reservation.user)
   reservation?: ReservationEntity[];
->>>>>>>> 4226b1a64296bb5bfd38076fef0c8674c75a721a:backend/src/db/entity/userEntity.ts
 }
