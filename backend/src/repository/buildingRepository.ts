@@ -1,6 +1,7 @@
 import { UpdateResult } from 'typeorm';
 import { BuildingEntity } from '../db';
 import { appDataSource } from '../db';
+import { determineSuccess } from './determineSuccess';
 import { Success } from './success';
 
 export interface IBuildingRepository {
@@ -56,6 +57,7 @@ export class BuildingRepository implements IBuildingRepository {
       building_address: body.building_address,
       building_zip: body.building_zip,
       building_city: body.building_city,
+      building_country: body.building_country,
       building_image: body.building_image,
     });
   }
@@ -69,10 +71,6 @@ export class BuildingRepository implements IBuildingRepository {
       })
       .execute();
 
-    if (deletion.affected == 0) {
-      return { success: 'no' };
-    } else {
-      return { success: 'yes' };
-    }
+    return determineSuccess(deletion);
   }
 }

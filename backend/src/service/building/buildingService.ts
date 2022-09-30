@@ -1,5 +1,4 @@
 import { BuildingRepository, Success } from '../../repository';
-import { UpdateResult } from 'typeorm';
 import { BuildingEntity } from '../../db';
 import { buildingSchema } from './buildingSchema';
 import { ValidationError } from 'joi';
