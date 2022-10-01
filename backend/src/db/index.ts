@@ -1,2 +1,4 @@
 export { appDataSource } from './connection';
-export { Todo } from './models/todo';
+export { SeatEntity } from './entity/seatEntity';
+export { ReservationEntity } from './entity/reservationEntity';
+export { UserEntity } from './entity/userEntity';

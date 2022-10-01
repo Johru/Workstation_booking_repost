@@ -1,8 +1,8 @@
-import mysql from 'mysql';
 import { DataSource } from 'typeorm';
-
-import { Todo } from './models/todo';
 import config from '../config';
+import { SeatEntity } from './entity/seatEntity';
+import { ReservationEntity } from './entity/reservationEntity';
+import { UserEntity } from './entity/userEntity';
 
 export const appDataSource = new DataSource({
   type: 'mysql',
@@ -10,8 +10,8 @@ export const appDataSource = new DataSource({
   port: Number.parseInt(config.mysql.port!),
   username: config.mysql.user,
   password: config.mysql.password,
-  database: process.env.DB_DATABASE,
-  entities: [Todo],
+  database: config.mysql.database,
+  entities: [SeatEntity, ReservationEntity, UserEntity],
   logging: false,
   synchronize: true,
 });
