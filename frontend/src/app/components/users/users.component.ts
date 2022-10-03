@@ -20,10 +20,10 @@ export class UsersComponent implements OnInit {
     this.userList = this.userService.getUsers();
   }
 
-  onDeleteUser(e: number) {
-    let result = this.userService.deleteUser(e);
+  onDeleteUser(id: number) {
+    let result = this.userService.deleteUser(id);
     if (result.success == 'yes') {
-      this.userList = this.userList?.filter((user) => user.id != e);
+      this.userList = this.userList?.filter((user) => user.id != id);
       return;
     }
     alert('Something is wrong, deletion of user was unsuccessfull.');

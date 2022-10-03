@@ -104,72 +104,54 @@ export class UserTabComponent implements OnInit {
   //first switch/case is for block/unblock
   //second for successfull response or error
   blockUnblockUser() {
-    switch (this.isBlocked) {
-      case true:
-        let unblockResult = this.userService.unBlockUser(this.user.id);
-        switch (unblockResult.success) {
-          case 'yes':
-            this.user.user_isBlocked = !this.user.user_isBlocked;
-            this.isBlocked = !this.user.user_isBlocked;
-            //leaving the console log for easier testing, for now
-            console.log(`User ${this.user.user_name} unblocked`);
-            break;
-          case 'no':
-            this.isBlocked = !this.user.user_isBlocked;
-            alert('Something is wrong user was not unblocked.');
-            break;
-        }
-        return;
-      case false:
-        let blockResult = this.userService.blockUser(this.user.id);
-        switch (blockResult.success) {
-          case 'yes':
-            this.user.user_isBlocked = !this.user.user_isBlocked;
-            this.isBlocked = !this.user.user_isBlocked;
-            //leaving the console log for easier testing, for now
-            console.log(`User ${this.user.user_name} blocked`);
-            break;
-          case 'no':
-            this.isBlocked = !this.user.user_isBlocked;
-            alert('Something is wrong user was not blocked.');
-            break;
-        }
-        return;
+    if (this.isBlocked) {
+      const unblockResult = this.userService.unBlockUser(this.user.id);
+      this.resolveBlockUnblockUser(unblockResult.success, 'unblocked');
+      return;
+    } else {
+      const blockResult = this.userService.blockUser(this.user.id);
+      this.resolveBlockUnblockUser(blockResult.success, 'blocked');
+    }
+  }
+
+  resolveBlockUnblockUser(switchBlockResult: string, status: string) {
+    switch (switchBlockResult) {
+      case 'yes':
+        this.user.user_isBlocked = !this.user.user_isBlocked;
+        this.isBlocked = !this.user.user_isBlocked;
+        //leaving the console log for easier testing, for now
+        console.log(`User ${this.user.user_name} ${status}.`);
+        break;
+      case 'no':
+        this.isBlocked = !this.user.user_isBlocked;
+        alert(`Something is wrong user was not ${status}.`);
+        break;
     }
   }
 
   promoteDemoteUser() {
-    switch (this.isAdmin) {
-      case true:
-        let demoteResult = this.userService.demoteUserFromAdmin(this.user.id);
-        switch (demoteResult.success) {
-          case 'yes':
-            this.user.user_isAdmin = !this.user.user_isAdmin;
-            this.isAdmin = !this.user.user_isAdmin;
-            //leaving the console log for easier testing, for now
-            console.log(`User ${this.user.user_name} demoted from Admin`);
-            break;
-          case 'no':
-            this.isAdmin = !this.user.user_isAdmin;
-            alert('Something is wrong user was not demoted.');
-            break;
-        }
-        return;
-      case false:
-        let promoteResult = this.userService.promoteUserToAdmin(this.user.id);
-        switch (promoteResult.success) {
-          case 'yes':
-            this.user.user_isAdmin = !this.user.user_isAdmin;
-            this.isAdmin = !this.user.user_isAdmin;
-            //leaving the console log for easier testing, for now
-            console.log(`User ${this.user.user_name} promoted to Admin`);
-            break;
-          case 'no':
-            this.isAdmin = !this.user.user_isAdmin;
-            alert('Something is wrong user was not promoted.');
-            break;
-        }
-        return;
+    if (this.isAdmin) {
+      const demoteResult = this.userService.demoteUserFromAdmin(this.user.id);
+      this.resolvePromoteDemoteUser(demoteResult.success, 'demoted');
+      return;
+    } else {
+      const promoteResult = this.userService.promoteUserToAdmin(this.user.id);
+      this.resolvePromoteDemoteUser(promoteResult.success, 'promoted');
+    }
+  }
+
+  resolvePromoteDemoteUser(switchPromoteResult: string, status: string) {
+    switch (switchPromoteResult) {
+      case 'yes':
+        this.user.user_isAdmin = !this.user.user_isAdmin;
+        this.isAdmin = !this.user.user_isAdmin;
+        //leaving the console log for easier testing, for now
+        console.log(`User ${this.user.user_name} ${status} to Admin`);
+        break;
+      case 'no':
+        this.isAdmin = !this.user.user_isAdmin;
+        alert(`Something is wrong user was not ${status}.`);
+        break;
     }
   }
 }

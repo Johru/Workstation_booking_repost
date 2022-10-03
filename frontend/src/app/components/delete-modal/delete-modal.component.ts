@@ -17,7 +17,7 @@ export class DeleteModalComponent {
 
   delete(id: number) {
     if (this.reservation == undefined) {
-      this.deleteUserEmitter!.emit(id);
+      this.deleteUserEmitter.emit(id);
       return;
     }
     this.deleteReservationEmitter.emit(id);

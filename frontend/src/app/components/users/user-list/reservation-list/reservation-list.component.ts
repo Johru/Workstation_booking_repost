@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminReservation } from 'src/app/helpingHand/admin-reservation';
+import { ReservationService } from 'src/app/services/reservation.service';
 import { UserService } from 'src/app/services/user.service';
-import { WorkstationService } from 'src/app/services/workstation.service';
 
 @Component({
   selector: 'reservation-list',
@@ -15,7 +15,7 @@ export class ReservationListComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private reservationService: WorkstationService
+    private reservationService: ReservationService
   ) {}
 
   ngOnInit(): void {

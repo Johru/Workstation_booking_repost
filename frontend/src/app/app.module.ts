@@ -12,15 +12,15 @@ import { WorkstationSelectionBookingComponent } from './components/workstation-s
 import { SeatsComponent } from './components/workstation-selection-booking/seats/seats.component';
 import { ConfirmModalComponent } from './components/workstation-selection-booking/confirm-modal/confirm-modal.component';
 import { UsersComponent } from './components/users/users.component';
-import { UserListComponent } from './components/user-list/user-list.component';
-import { UserTabComponent } from './components/user-list/user-tab/user-tab.component';
+import { UserListComponent } from './components/users/user-list/user-list.component';
+import { UserTabComponent } from './components/users/user-list/user-tab/user-tab.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ReservationListComponent } from './components/user-list/reservation-list/reservation-list.component';
+import { ReservationListComponent } from './components/users/user-list/reservation-list/reservation-list.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
