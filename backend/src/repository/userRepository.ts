@@ -68,6 +68,7 @@ export class UserRepository implements IUserRepository {
 
     return determineSuccess(block);
   }
+
   async unblockUser(userId: number): Promise<Success> {
     const unblock = await appDataSource
       .getRepository(UserEntity)
