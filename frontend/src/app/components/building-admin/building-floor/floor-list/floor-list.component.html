@@ -1,5 +1,6 @@
 <div *ngFor="let floor of floorList; let i = index;">	
-	<mat-expansion-panel #mep="matExpansionPanel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+	<mat-expansion-panel [(expanded)]="panelOpenState">
+		<!-- <mat-expansion-panel #mep="matExpansionPanel" (opened)="panelOpenState = true" (closed)="panelOpenState = false"> -->
 		<mat-expansion-panel-header>
 			<mat-panel-title>
 				<span>Floor name: {{floor.floor_name}} </span>
@@ -10,8 +11,7 @@
 				<span>/ seats</span>
 			
 				<!-- <span>/ {{floor.workstations[i].seats}} seats</span> -->
-
-				<!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+			
 			</mat-panel-description>
 			<!-- </ng-container> -->
 		</mat-expansion-panel-header>
@@ -20,8 +20,13 @@
 		
 		<br>
 		<br>
-		<workstation-preview-input [cancelButton]="mep"></workstation-preview-input>
-		<!-- <workstation-preview-input [input]="mep" (newWorkstationEvent)="addWorkstation($event)"></workstation-preview-input> -->
+		<workstation-preview-input (closePanel)="closePanelFromChild()"
+		(newWorkstationEvent)="addWorkstation(i, $event)" *ngIf="previewMenuVisible"></workstation-preview-input>
+		<workstation-crossroad (switchComponents)="switchManagementAndPreview()" *ngIf="!previewMenuVisible"></workstation-crossroad>
+
+		<!-- (switchComponents)="switchManagementAndPreview()" -->		
+
+		<!-- <button type="button" (click)="switchManagementAndPreview()">ad;hfkjlsdf</button> -->
 		
 	</mat-expansion-panel>
 </div>

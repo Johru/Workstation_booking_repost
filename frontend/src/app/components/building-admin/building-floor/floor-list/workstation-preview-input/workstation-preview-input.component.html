@@ -1,18 +1,21 @@
+<!-- 
+		<div *ngIf="!previewMenuVisible">  -->
+			<div > 
 
-		<div>
 			<form [formGroup]="newWorkstationForm" (ngSubmit)="onSubmit()">
 				<!-- <label for="floorId">floor ID:</label>
 				<input type="text" name="floorId" id="floorId" formControlName="floor_id">				 -->
 				<label for="workstationName">Name:</label>
-				<input type="text" name="workstationName" id="workstationName" formControlName="workstation_name">
+				<input type="text" name="workstationName" id="workstationName" formControlName="workstation_name" required>
 				<br>
 				<label for="seatsNumber">Number of seats:</label>
-				<input type="text" name="seatsNumber" id="seatsNumber" formControlName="seats">
+				<input type="text" name="seatsNumber" id="seatsNumber" formControlName="seats" required>
 				<br>
 				
-				<input type="submit" name="addButton" id="addButton" value="Add workstation">
+				<input type="submit" name="addButton" id="addButton" value="Add workstation" 
+				[disabled]="!newWorkstationForm.valid">
 				<!-- <button type="submit">Add workstation</button> -->
 			</form>
-			<!-- <button (click)="cancelButton.expanded = !cancelButton.expanded">Cancel</button>  -->
+			<button (click)="clickToClosePanel()">Cancel</button> 
 			 <!-- CANCEL Does not work after separated into new component -->
 		</div>

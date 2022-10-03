@@ -40,8 +40,9 @@ export class BuildingFloorComponent implements OnInit {
 
   addFloor(newFloor: Floor) {
     this.floorService.addFloor(newFloor);  
-    console.log('test') 
+    console.log('test floor') 
     console.log(newFloor)
+    console.log(this.floors)
   }
 
 }

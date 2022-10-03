@@ -3,7 +3,7 @@
 		<div>
 			<h3>New building</h3>
 			<label for="buildingId">id: </label>
-			<input type="text" name="buildingId" id="buildingId" formControlName="building_id" required>
+			<input type="text" #getId name="buildingId" id="buildingId" formControlName="building_id" required>
 			<br>
 			<label for="nameOfBuilding">name: </label>
 			<input type="text" name="nameOfBuilding" id="nameOfBuilding" formControlName="building_name" required>
@@ -25,7 +25,9 @@
 			<br>
 			<!-- <a routerLink="floor"><button type="submit" >Create</button></a> -->
 
-			<a [routerLink]="[getBuildingId]"><button type="submit" [disabled]="!newBuildingForm.valid">Create</button></a>
+			<a routerLink="{{selectedId}}"><button (click)="pickId(getId.value)" type="submit" [disabled]="!newBuildingForm.valid">Create</button></a>
+
+			<!-- <a [routerLink]="[getBuildingId]"><button (keyup)="pickId(getId.value)" type="submit" [disabled]="!newBuildingForm.valid">Create</button></a> -->
 
 			<button type="button" routerLink="/buildings">Cancel</button>
 			<br>

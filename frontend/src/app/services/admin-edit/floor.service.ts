@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
 import { FLOORS } from 'src/app/help-files/floor-data';
+import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,8 @@ export class FloorService {
   addWorkstation(workstation: Floor): void {
     FLOORS.push(workstation);
   }
+
+  
 
 
 }

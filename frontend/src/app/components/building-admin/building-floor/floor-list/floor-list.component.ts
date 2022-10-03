@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
+import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 // import { Workstation } from 'src/app/help-files/workstation-interface';
 import { FloorService } from 'src/app/services/admin-edit/floor.service';
 
@@ -12,40 +13,44 @@ import { FloorService } from 'src/app/services/admin-edit/floor.service';
 })
 export class FloorListComponent implements OnInit {
 
-    floors: Floor[] = [];
-  // workstations: Workstation[] = [];
-
-  panelOpenState = false;  
+  floors: Floor[] = [];
+  managementMenuVisible: boolean = false;
+  previewMenuVisible: boolean = true;
+  crossroadMenuVisible: boolean = false;
+  panelOpenState = false;
 
   @Input() floorList?: Floor[];
-  // @Input() workstationList?: Workstation[];
-
 
   constructor(private floorService: FloorService) { }
 
-  ngOnInit(): void {  
-    this.getFloor();   
-     console.log(this.floors);
-      
-    //  this.getWorkstation();
-   
+  ngOnInit(): void {
+    this.getFloor();
+    console.log(this.floors);
   }
 
   getFloor(): void {
-    this.floors = this.floorService.getFloor();   
+    this.floors = this.floorService.getFloor();
   }
 
-  // addWorkstation(newWorkstation: Workstation): void {
-  //   this.floorService.addWorkstation(newWorkstation);
-  //   this.ngOnInit();
-  // }
+  addWorkstation(i: number, newWorkstation: WorkstationInterface): void {
+    this.floors[i].workstations.push(newWorkstation)
+    // this.floors[i].workstations[i].workstation_isActive = false
+    console.log('test add workstation')
+    console.log(newWorkstation)
+    console.log(this.previewMenuVisible)
+    console.log(this.managementMenuVisible)
+    // setTimeout(() => {this.switchManagementAndPreview()},2000);
 
-  // getWorkstation(): void {
-  //   this.workstations = this.floorService.getWorkstation();
-  // }
+    this.switchManagementAndPreview();
+  }
 
-  // onChange(): void {
-  //   this.getWorkstation();
-  // }
+  switchManagementAndPreview() {
+    this.managementMenuVisible = !this.managementMenuVisible;
+    this.previewMenuVisible = !this.previewMenuVisible;
+  }
+
+  closePanelFromChild() {
+    this.panelOpenState = !this.panelOpenState
+  }
 
 }

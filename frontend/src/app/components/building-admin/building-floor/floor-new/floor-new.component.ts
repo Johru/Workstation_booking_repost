@@ -13,7 +13,7 @@ export class FloorNewComponent implements OnInit {
   newFloorForm = new FormGroup({
     floor_id: new FormControl(),
     floor_name: new FormControl(),
-    
+
   })
 
   floor!: Floor;
@@ -24,13 +24,15 @@ export class FloorNewComponent implements OnInit {
 
   onSubmit(): void {
     this.floor = {
-      floor_id: this.newFloorForm.value.floor_id,
+      floor_id: Number(this.newFloorForm.value.floor_id),
       floor_name: this.newFloorForm.value.floor_name,
+      workstationsCount: 0,
+      seatsCount: 0,
       workstations: []
     }
     this.newFloorEvent.emit(this.floor);
     this.newFloorForm.reset();
-    
+
   }
 
   ngOnInit(): void {

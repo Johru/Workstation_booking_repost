@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'workstation-crossroad',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workstation-crossroad.component.css']
 })
 export class WorkstationCrossroadComponent implements OnInit {
+
+  @Output() switchComponents = new EventEmitter();
 
   constructor() { }
 
