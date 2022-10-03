@@ -1,5 +1,4 @@
 import { BuildingRepository, Success } from '../../repository';
-import { UpdateResult } from 'typeorm';
 import { BuildingEntity } from '../../db';
 import { buildingSchema } from './buildingSchema';
 import { ValidationError } from 'joi';
@@ -11,13 +10,15 @@ export class BuildingService {
   listCities(): Promise<BuildingEntity[]> {
     return this.buildingRepository.listCities();
   }
+
   listBuildings(): Promise<BuildingEntity[]> {
     return this.buildingRepository.listBuildings();
   }
 
-  singleBuilding(buildingId: number): Promise<BuildingEntity | null> {
-    return this.buildingRepository.singleBuilding(buildingId);
+  getSingleBuilding(buildingId: number): Promise<BuildingEntity | null> {
+    return this.buildingRepository.getSingleBuilding(buildingId);
   }
+
   async addNewBuilding(requestBody: BuildingEntity): Promise<Success> {
     try {
       const requestDataValidation = await buildingSchema.validateAsync(
@@ -55,6 +56,7 @@ export class BuildingService {
     );
     return { success: 'yes' };
   }
+
   deleteBuilding(id: number): Promise<Success> {
     return this.buildingRepository.deleteBuilding(id);
   }

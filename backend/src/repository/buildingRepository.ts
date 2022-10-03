@@ -6,7 +6,7 @@ import { Success } from './success';
 export interface IBuildingRepository {
   listCities(): Promise<BuildingEntity[]>;
   listBuildings(): Promise<BuildingEntity[]>;
-  singleBuilding(buildingId: number): Promise<BuildingEntity | null>;
+  getSingleBuilding(buildingId: number): Promise<BuildingEntity | null>;
   addNewBuilding(body: BuildingEntity): Promise<BuildingEntity>;
   updateBuilding(body: BuildingEntity, id: number): Promise<UpdateResult>;
   deleteBuilding(id: number): Promise<Success>;
@@ -29,7 +29,8 @@ export class BuildingRepository implements IBuildingRepository {
       .createQueryBuilder('building')
       .getMany();
   }
-  async singleBuilding(buildingId: number): Promise<BuildingEntity | null> {
+
+  async getSingleBuilding(buildingId: number): Promise<BuildingEntity | null> {
     return appDataSource
       .getRepository(BuildingEntity)
       .findOneBy({ building_id: buildingId });
@@ -60,6 +61,7 @@ export class BuildingRepository implements IBuildingRepository {
       building_image: body.building_image,
     });
   }
+
   async deleteBuilding(id: number): Promise<Success> {
     const deletion = await appDataSource
       .createQueryBuilder()
