@@ -29,7 +29,7 @@ jobs:
 
           # Heroku API key associated with provided user's email.
           # Api Key is available under your Heroku account settings.
-          heroku_api_key: 1a715b40-f289-4ffe-be63-71890753f64f
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
 
           # Name of the heroku application to which the build is to be sent.
           heroku_app_name: booking-app-greenfox
