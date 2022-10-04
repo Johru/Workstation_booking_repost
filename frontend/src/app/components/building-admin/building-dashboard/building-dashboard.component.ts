@@ -13,8 +13,7 @@ export class BuildingDashboardComponent implements OnInit {
 
   constructor(private buildingService: BuildingService) { }
 
-  ngOnInit(): void {
-       
+  ngOnInit(): void {       
   }  
 
   addBuilding(newBuilding: Building) {

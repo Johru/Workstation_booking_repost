@@ -5,7 +5,7 @@ export const FLOORS: Floor[] = [
 		floor_id: 1,
 		floor_name: 'A 1',
 		workstationsCount: 3,
-		seatsCount: 10,		
+		seatsCount: 10,		//REMOVE
 		workstations: [
 			{ workstation_name: 'management 1', seats: 5, workstation_isActive: true, },
 			{ workstation_name: 'management 2', seats: 6, workstation_isActive: true, },

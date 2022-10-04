@@ -13,7 +13,7 @@ import { FloorService } from 'src/app/services/admin-edit/floor.service';
 export class WorkstationPreviewInputComponent implements OnInit {
 
   @Input() buttonValueToFalse?: boolean;
-  @Output() closePanel = new EventEmitter();
+  @Output() closePanel = new EventEmitter<boolean>();
 
 
   newWorkstationForm = new FormGroup({
@@ -42,7 +42,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
   }
 
   clickToClosePanel(): void {
-    this.closePanel.emit();
+    this.closePanel.emit(true);
   }
 
   ngOnInit(): void {

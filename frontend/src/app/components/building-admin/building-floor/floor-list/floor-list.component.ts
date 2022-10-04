@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { transition } from '@angular/animations';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
@@ -22,12 +23,13 @@ export class FloorListComponent implements OnInit {
 
   
   @Input() floorList?: Floor[];
+  // @Output() reloadFloor = new EventEmitter();
 
   constructor(private floorService: FloorService) { }
 
   ngOnInit(): void {
     this.getFloor();
-    console.log(this.floors);
+    console.log(this.floors);    
   }
 
   getFloor(): void {
@@ -39,10 +41,11 @@ export class FloorListComponent implements OnInit {
   
     console.log('test add workstation')
     console.log(newWorkstation)
-    console.log(this.previewMenuVisible)
-    console.log(this.managementButtonMenuVisible)  
+    // console.log(this.previewMenuVisible)
+    // console.log(this.managementButtonMenuVisible)  
 
     this.switchManagementAndPreview();
+    // this.reloadFloor.emit();   
   }
 
   switchManagementAndPreview() {
@@ -50,8 +53,11 @@ export class FloorListComponent implements OnInit {
     this.previewMenuVisible = !this.previewMenuVisible;
   }
 
-  closePanelFromChild() {
-    this.panelOpenState = !this.panelOpenState
+  closePanelFromChild(event: boolean) {
+    // this.panelOpenState = !this.panelOpenState
+    this.panelOpenState = event;
+    console.log(event)
+    console.log(this.panelOpenState)
   }
 
 
