@@ -34,6 +34,12 @@ form {
   cursor: pointer;
 }
 
+p span {
+  text-decoration: underline;
+  color: #ef2c1e;
+  cursor: pointer;
+}
+
 input {
   border: none;
   border-bottom: 1px solid #b41b10;
