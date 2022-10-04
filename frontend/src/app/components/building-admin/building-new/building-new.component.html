@@ -23,11 +23,8 @@
 			<label for="buildingImage">image:</label>
 			<input type="text" name="buildingImage" id="buildingImage">
 			<br>
-			<!-- <a routerLink="floor"><button type="submit" >Create</button></a> -->
 
 			<a routerLink="{{selectedId}}"><button (click)="pickId(getId.value)" type="submit" [disabled]="!newBuildingForm.valid">Create</button></a>
-
-			<!-- <a [routerLink]="[getBuildingId]"><button (keyup)="pickId(getId.value)" type="submit" [disabled]="!newBuildingForm.valid">Create</button></a> -->
 
 			<button type="button" routerLink="/buildings">Cancel</button>
 			<br>
@@ -36,4 +33,3 @@
 	<br>
 	<br>
 </div>
-<building-list></building-list>

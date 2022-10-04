@@ -1,8 +1,7 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
-// import { Workstation } from 'src/app/help-files/workstation-interface';
 import { FloorService } from 'src/app/services/admin-edit/floor.service';
 
 
@@ -14,11 +13,14 @@ import { FloorService } from 'src/app/services/admin-edit/floor.service';
 export class FloorListComponent implements OnInit {
 
   floors: Floor[] = [];
-  managementMenuVisible: boolean = false;
+  managementButtonMenuVisible: boolean = false;
   previewMenuVisible: boolean = true;
   crossroadMenuVisible: boolean = false;
   panelOpenState = false;
+  confirmDeleteValue: boolean = false;
+  modalDeleteValue: boolean= true;
 
+  
   @Input() floorList?: Floor[];
 
   constructor(private floorService: FloorService) { }
@@ -34,23 +36,35 @@ export class FloorListComponent implements OnInit {
 
   addWorkstation(i: number, newWorkstation: WorkstationInterface): void {
     this.floors[i].workstations.push(newWorkstation)
-    // this.floors[i].workstations[i].workstation_isActive = false
+  
     console.log('test add workstation')
     console.log(newWorkstation)
     console.log(this.previewMenuVisible)
-    console.log(this.managementMenuVisible)
-    // setTimeout(() => {this.switchManagementAndPreview()},2000);
+    console.log(this.managementButtonMenuVisible)  
 
     this.switchManagementAndPreview();
   }
 
   switchManagementAndPreview() {
-    this.managementMenuVisible = !this.managementMenuVisible;
+    this.managementButtonMenuVisible = !this.managementButtonMenuVisible;
     this.previewMenuVisible = !this.previewMenuVisible;
   }
 
   closePanelFromChild() {
     this.panelOpenState = !this.panelOpenState
+  }
+
+
+  cancelDelete(event: boolean) {
+    if (event) {    
+      this.modalDeleteValue = event;
+    }
+  }
+
+  confirmDelete(event: boolean) {
+    if (event) {
+      this.confirmDeleteValue = event;
+    }
   }
 
 }

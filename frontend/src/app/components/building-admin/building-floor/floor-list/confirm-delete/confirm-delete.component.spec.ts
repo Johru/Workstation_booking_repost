@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BuildingListComponent } from './building-list.component';
+import { ConfirmDeleteComponent } from './confirm-delete.component';
 
-describe('BuildingListComponent', () => {
-  let component: BuildingListComponent;
-  let fixture: ComponentFixture<BuildingListComponent>;
+describe('ConfirmDeleteComponent', () => {
+  let component: ConfirmDeleteComponent;
+  let fixture: ComponentFixture<ConfirmDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BuildingListComponent ]
+      declarations: [ ConfirmDeleteComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BuildingListComponent);
+    fixture = TestBed.createComponent(ConfirmDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

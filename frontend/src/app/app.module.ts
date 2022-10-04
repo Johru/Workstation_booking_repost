@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BuildingNewComponent } from './components/building-admin/building-new/building-new.component';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
-import { BuildingListComponent } from './components/building-admin/building-list/building-list.component';
+// import { BuildingListComponent } from './components/building-admin/building-list/building-list.component'; DELETE
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
 import { BuildingsAdminMainComponent } from './components/building-admin/buildings-admin-main/buildings-admin-main.component';
 import { FloorListComponent } from './components/building-admin/building-floor/floor-list/floor-list.component';
@@ -18,20 +18,22 @@ import { FloorNewComponent } from './components/building-admin/building-floor/fl
 import { WorkstationManagementComponent } from './components/building-admin/building-floor/floor-list/workstation-management/workstation-management.component';
 import { WorkstationPreviewInputComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-input/workstation-preview-input.component';
 import { WorkstationCrossroadComponent } from './components/building-admin/building-floor/floor-list/workstation-crossroad/workstation-crossroad.component';
+import { ConfirmDeleteComponent } from './components/building-admin/building-floor/floor-list/confirm-delete/confirm-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BuildingNewComponent,
     BuildingDashboardComponent,
-    BuildingListComponent,
+    // BuildingListComponent, DELETE
     BuildingFloorComponent,
     BuildingsAdminMainComponent,
     FloorListComponent,
     FloorNewComponent,
     WorkstationManagementComponent,
     WorkstationPreviewInputComponent,
-    WorkstationCrossroadComponent
+    WorkstationCrossroadComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     BrowserModule,

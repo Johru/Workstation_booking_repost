@@ -30,7 +30,8 @@ export const FLOORS: Floor[] = [
 		seatsCount: 12,
 		workstations: [
 			{ workstation_name: 'kitchen 1', seats: 4, workstation_isActive: true, },
-			{ workstation_name: 'kitchen 2', seats: 4, workstation_isActive: true, }
+			{ workstation_name: 'kitchen 2', seats: 4, workstation_isActive: true, },
+			{ workstation_name: 'kitchen 3', seats: 4, workstation_isActive: true, }
 		]
 	},
 	{

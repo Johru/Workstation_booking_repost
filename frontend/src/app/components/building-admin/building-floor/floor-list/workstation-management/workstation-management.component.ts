@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
-
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 
 
@@ -13,12 +12,17 @@ import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 export class WorkstationManagementComponent implements OnInit {
   selectedWorkstation?: WorkstationInterface;
   workstationIsSelected: boolean = false;
-  // indexOfWorkstation?: string = '';
   selectedIndex: any;
+  defaultText: string = 'Select a workstation';
+  selected = 'option0';
+  disableButton: boolean = true;
+  confirmDeleteValue: boolean = false;  
 
   @Input() floorList?: Floor[];
   @Input() workstationList?: WorkstationInterface[];
+  @Input() managementButtonMenuVisible?: boolean;
 
+ 
 
   constructor() { }
 
@@ -28,28 +32,42 @@ export class WorkstationManagementComponent implements OnInit {
 
   onSelect(workstation: WorkstationInterface, i: number): void {
     this.selectedWorkstation = workstation;
-   
-   this.selectedIndex = i;
+    this.selectedIndex = i;
 
-    this.workstationIsSelected = true;
+    
+this.disableButton = false;
+
     console.log(this.selectedWorkstation)
     console.log(this.selectedIndex)
   }
 
-  // disableSelectedWorkstation(index: number): void {
-
-
-  // }
+  disableSelected(): string {
+    return this.selected;
+  }
 
   deleteWorkstation(): void {
+    
     this.workstationList?.splice(this.selectedIndex, 1)
     console.log(this.workstationList)
 
     
-    this. workstationIsSelected = false;
+    this.workstationIsSelected = false;
     console.log(this.workstationIsSelected)
+    this.disableSelected()   
+  }
 
-   
+  cancelDelete(event: boolean) {
+    if (event) {    
+      this.confirmDeleteValue = event;
+
+    }
+  }
+
+  confirmDelete(event: boolean) {
+    if (event) {
+      this.confirmDeleteValue = event;     
+    }
+    this.deleteWorkstation()
   }
 
 }

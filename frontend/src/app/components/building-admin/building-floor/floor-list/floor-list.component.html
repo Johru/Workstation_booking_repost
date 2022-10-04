@@ -1,32 +1,28 @@
-<div *ngFor="let floor of floorList; let i = index;">	
+<div *ngFor="let floor of floorList; let i = index;">
 	<mat-expansion-panel [(expanded)]="panelOpenState">
-		<!-- <mat-expansion-panel #mep="matExpansionPanel" (opened)="panelOpenState = true" (closed)="panelOpenState = false"> -->
 		<mat-expansion-panel-header>
 			<mat-panel-title>
 				<span>Floor name: {{floor.floor_name}} </span>
 			</mat-panel-title>
-			<!-- <ng-container *ngFor="let workstation of workstationList"> -->
 			<mat-panel-description>
-				<span >{{floor.workstations.length}} workstations </span>
+				<span>{{floor.workstations.length}} workstations </span>
 				<span>/ seats</span>
-			
-				<!-- <span>/ {{floor.workstations[i].seats}} seats</span> -->
-			
 			</mat-panel-description>
-			<!-- </ng-container> -->
 		</mat-expansion-panel-header>
-		
-		<workstation-management [workstationList]="floor.workstations" [floorList]="floors" *ngIf="floor.workstations.length"></workstation-management>
-		
+
+		<workstation-management [workstationList]="floor.workstations" [floorList]="floors" *ngIf="floor.workstations[i]">
+		</workstation-management>
 		<br>
 		<br>
-		<workstation-preview-input (closePanel)="closePanelFromChild()"
-		(newWorkstationEvent)="addWorkstation(i, $event)" *ngIf="previewMenuVisible"></workstation-preview-input>
-		<workstation-crossroad (switchComponents)="switchManagementAndPreview()" *ngIf="!previewMenuVisible"></workstation-crossroad>
+		<workstation-preview-input (closePanel)="closePanelFromChild()" (newWorkstationEvent)="addWorkstation(i, $event)"
+			*ngIf="previewMenuVisible"></workstation-preview-input>
+		<workstation-crossroad (switchComponents)="switchManagementAndPreview()" *ngIf="!previewMenuVisible">
+		</workstation-crossroad>
 
-		<!-- (switchComponents)="switchManagementAndPreview()" -->		
-
-		<!-- <button type="button" (click)="switchManagementAndPreview()">ad;hfkjlsdf</button> -->
-		
 	</mat-expansion-panel>
+</div>
+
+<div *ngIf="confirmDeleteValue" class="confirm-modal">
+	<confirm-delete (cancelDeleteEmitter)="cancelDelete($event)" (confirmDeleteEmitter)="confirmDelete($event)">
+	</confirm-delete>
 </div>

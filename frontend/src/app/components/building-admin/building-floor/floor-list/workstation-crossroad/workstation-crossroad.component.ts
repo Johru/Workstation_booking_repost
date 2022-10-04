@@ -15,3 +15,5 @@ export class WorkstationCrossroadComponent implements OnInit {
   }
 
 }
+
+// COMPONENT OBSOLETE, NOW WORKING WITH VERSION WITHOUT THIS COMPONENT

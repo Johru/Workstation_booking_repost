@@ -3,21 +3,19 @@
 	<form>
 		<mat-form-field appearance="fill">
 			<mat-label>Select a workstation</mat-label>
-			<mat-select name="workstation" >
+			<mat-select [(value)]="selected" name="workstation">
+				<mat-option value="0">{{ defaultText }}</mat-option>
 				<mat-option *ngFor="let workstation of workstationList; 
 				let i = index;" [value]="workstation.workstation_name">
-					<div (click)="onSelect(workstation, i)" >
-						{{workstation.workstation_name}}	
-						{{i}}				
+					<div (click)="onSelect(workstation, i)">
+						{{workstation.workstation_name}}
+						{{i}}
 					</div>
-					<!-- <button type="submit" (click)="deleteWorkstation(i)">DELETE</button> -->
 				</mat-option>
 			</mat-select>
-		</mat-form-field>		
+		</mat-form-field>
 	</form>
 </div>
-
-
 
 <div>
 	<div>Number of seats:
@@ -28,15 +26,8 @@
 	</div>
 </div>
 <br>
-<!-- <div>
-	<button>Edit workstation</button>
-<button>Add new workstation</button>
-<button>Delete</button>
-<button>Disable</button>
-</div> -->
 
 <button *ngIf="selectedWorkstation" (click)="deleteWorkstation()">Delete</button>
-<button *ngIf="!selectedWorkstation" [disabled]="workstationIsSelected == false">Delete</button>
+<button *ngIf="!selectedWorkstation" [disabled]="disableButton">Delete</button>
 <button *ngIf="selectedWorkstation" (click)="selectedWorkstation.workstation_isActive = false">Disable</button>
-<button *ngIf="!selectedWorkstation" [disabled]="workstationIsSelected == false" >Disable</button>
-
+<button *ngIf="!selectedWorkstation" [disabled]="workstationIsSelected == false">Disable</button>

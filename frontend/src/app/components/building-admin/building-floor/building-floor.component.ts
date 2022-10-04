@@ -10,9 +10,7 @@ import { BuildingService } from 'src/app/services/admin-edit/building.service';
   templateUrl: './building-floor.component.html',
   styleUrls: ['./building-floor.component.css']
 })
-export class BuildingFloorComponent implements OnInit {
-
- 
+export class BuildingFloorComponent implements OnInit { 
   buildings: Building[] = []
   floors: Floor[] = []; 
 
@@ -22,17 +20,13 @@ export class BuildingFloorComponent implements OnInit {
   ngOnInit(): void {
     this.getBuilding();
     this.getFloor();
-    // this.getWorkstation();
+   
      console.log(this.floors);   
   }
 
   getFloor(): void {
     this.floors = this.floorService.getFloor();   
   }
-
-  // getWorkstation(): void {
-  //   this.workstations = this.workstationService.getWorkstation();   
-  // }
 
   getBuilding(): void {
     this.buildings = this.buildingService.getBuildings();
@@ -41,8 +35,6 @@ export class BuildingFloorComponent implements OnInit {
   addFloor(newFloor: Floor) {
     this.floorService.addFloor(newFloor);  
     console.log('test floor') 
-    console.log(newFloor)
-    console.log(this.floors)
+    console.log(newFloor)    
   }
-
 }
