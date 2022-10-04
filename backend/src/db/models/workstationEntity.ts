@@ -13,7 +13,6 @@ import { BoolBitTransformer } from './transformer';
 
 @Entity('workstation')
 export class WorkstationEntity {
-  
   @PrimaryGeneratedColumn()
   workstation_id?: number;
 
@@ -33,7 +32,6 @@ export class WorkstationEntity {
   @ManyToOne(() => FloorEntity, floor => floor.workstation, {
     onDelete: 'CASCADE',
   })
-
   @OneToMany(() => SeatEntity, seat => seat.workstation)
   seat?: SeatEntity[];
 }

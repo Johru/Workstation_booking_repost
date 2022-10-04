@@ -1,2 +1,2 @@
-export { WorkstationController } from "./workstationController"
-export { SeatController } from "./seatController"
+export { WorkstationController } from './workstationController';
+export { SeatController } from './seatController';

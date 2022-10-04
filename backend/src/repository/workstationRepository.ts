@@ -3,7 +3,6 @@ import { WorkstationEntity } from '../db';
 import { Response, Request } from 'express';
 import { Success } from './success';
 
-
 export interface IWorkstationRepository {
   findAllWorkstations(): Promise<WorkstationEntity[]>;
   findAllWorkstationsOnFloor(floorId: number): Promise<WorkstationEntity[]>;
@@ -88,9 +87,9 @@ export class WorkstationRepository implements IWorkstationRepository {
       .execute();
 
     if (workstationRemove.affected == 0) {
-      return {success:"yes"}
+      return { success: 'yes' };
     } else {
-      return {success:"no"}
+      return { success: 'no' };
     }
   }
 }
