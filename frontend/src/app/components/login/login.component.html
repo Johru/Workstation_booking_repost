@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="form-wrapper">
+    <h2>SIGN IN</h2>
+    <p>Already member ? Please register <span routerLink="/register">here !</span> </p>
+    <form #f="ngForm">
+      <!-- EMAIL -->
+      <label for="email">e-mail / user name:</label>
+      <input type="email" name="email" id="email" placeholder="Enter e-mail or user login ..." ngModel required email
+        #email="ngModel">
+      <!-- USER PASSWORD -->
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" placeholder="Enter password ..." ngModel minlength="8"
+        required #password="ngModel">
+      <!-- BUTTON -->
+      <button type="submit">SIGN IN</button>
+    </form>
+  </div>
+</div>

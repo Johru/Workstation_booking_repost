@@ -24,7 +24,6 @@ export class RegisterComponent implements OnInit {
         ulogin: form.value.ulogin,
         password: form.value.password,
       })
-
       .subscribe((res) => console.log(res));
   }
 }

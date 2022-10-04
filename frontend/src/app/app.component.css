@@ -41,6 +41,15 @@ nav {
 .nav-link:hover {
   background-color: #b41b10;
 }
+
+.nav-link:nth-child(2) {
+  background-color: #6bb43a;
+}
+
+.nav-link:nth-child(2):hover {
+  background-color: #00611e;
+}
+
 .container {
   margin-top: 20px;
   padding-top: 75px;
