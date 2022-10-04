@@ -26,12 +26,18 @@
       </p>
       <!-- USER PASSWORD -->
       <label for="password">Password:</label>
-      <input type="password" name="password" id="password" placeholder="Your secret password ..." ngModel minlength="8"
-        required #password="ngModel">
+      <div>
+        <input [type]="attribute" name="password" id="password" placeholder="Your secret password ..." ngModel
+          minlength="8" required #password="ngModel">
+        <div [ngClass]=[visibility] (click)="toogle()"></div>
+      </div>
       <!-- PASS CONFIRM -->
       <label for="passwordConfirm">Confirm Password:</label>
-      <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Repeat your password ..." required
-        minlength="8" ngModel #passwordConfirm="ngModel">
+      <div>
+        <input [type]="attribute" name="passwordConfirm" id="passwordConfirm" placeholder="Repeat your password ..."
+          required minlength="8" ngModel #passwordConfirm="ngModel">
+        <div [ngClass]=[visibility] (click)="toogle()"></div>
+      </div>
       <p class="invalid-input" *ngIf="!password.valid && password.touched">Password has to be at least 8 characters
         long!</p>
       <p class="invalid-input" *ngIf="password.value != passwordConfirm.value && passwordConfirm.dirty">Password and

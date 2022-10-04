@@ -43,30 +43,32 @@ input {
   text-align: center;
 }
 
-form .invalid-input {
-  color: #ef2c1e;
-  font-size: 12px;
+.password-hidden {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  right: -380px;
+  cursor: pointer;
+  background-image: url("../../../assets/pass_hidden.png");
+  background-repeat: no-repeat;
+}
+
+.password-visible {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  right: -380px;
+  cursor: pointer;
+  background-image: url("../../../assets/pass_visible.png");
+  background-repeat: no-repeat;
 }
 
 input:focus {
   background-color: #f0f8eb;
   outline: 1px solid #00611e;
   border-radius: 2px;
-}
-
-.fullname {
-  display: flex;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.fullname-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.fullname-input {
-  width: 200px;
 }
 
 button {

@@ -43,6 +43,28 @@ input {
   text-align: center;
 }
 
+.password-hidden {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  right: -380px;
+  cursor: pointer;
+  background-image: url("../../../assets/pass_hidden.png");
+  background-repeat: no-repeat;
+}
+
+.password-visible {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  right: -380px;
+  cursor: pointer;
+  background-image: url("../../../assets/pass_visible.png");
+  background-repeat: no-repeat;
+}
+
 form .invalid-input {
   color: #ef2c1e;
   font-size: 12px;
