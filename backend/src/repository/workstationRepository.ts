@@ -1,12 +1,16 @@
 import { appDataSource } from '../db';
 import { WorkstationEntity } from '../db';
+import { SeatEntity } from '../db';
 import { Response, Request } from 'express';
 import { Success } from './success';
 
 export interface IWorkstationRepository {
   findAllWorkstations(): Promise<WorkstationEntity[]>;
   findAllWorkstationsOnFloor(floorId: number): Promise<WorkstationEntity[]>;
-  saveWorkstation(workstation: WorkstationEntity): Promise<WorkstationEntity>;
+  saveWorkstation(
+    workstation: WorkstationEntity,
+    seatsNumber: number
+  ): Promise<WorkstationEntity>;
   updateWorkstation(
     workstationId: number,
     workstation: WorkstationEntity
@@ -30,7 +34,8 @@ export class WorkstationRepository implements IWorkstationRepository {
   }
 
   async saveWorkstation(
-    workstation: WorkstationEntity
+    workstation: WorkstationEntity,
+    seatsNumber: number
   ): Promise<WorkstationEntity> {
     const workstationToSave = new WorkstationEntity();
     workstationToSave.floor_id = workstation.floor_id;
@@ -38,9 +43,18 @@ export class WorkstationRepository implements IWorkstationRepository {
     if (workstation.hasOwnProperty('workstation_isactive')) {
       workstationToSave.workstation_isactive = workstation.workstation_isactive;
     }
-    return appDataSource
+
+    const result = await appDataSource
       .getRepository(WorkstationEntity)
       .save(workstationToSave);
+
+    for (let index = 0; index < seatsNumber; index++) {
+      const seatToSave = new SeatEntity();
+      seatToSave.workstation_id = result.workstation_id;
+      appDataSource.getRepository(SeatEntity).save(seatToSave);
+    }
+
+    return result;
   }
 
   async updateWorkstation(
@@ -67,15 +81,6 @@ export class WorkstationRepository implements IWorkstationRepository {
       .getRepository(WorkstationEntity)
       .save(workstationToSave);
   }
-
-  // async deleteWorkstation(workstationId: number): Promise<WorkstationEntity[]> {
-  //   var workstationRemove = await appDataSource.getRepository(WorkstationEntity).find({
-  //       where: {
-  //         workstation_id: workstationId,
-  //       },
-  //     });
-  //   return appDataSource.getRepository(WorkstationEntity).remove(workstationRemove);
-  // }
 
   async deleteWorkstation(req: Request, res: Response): Promise<Success> {
     var workstationId = parseInt(req.params.workstationId, 10);

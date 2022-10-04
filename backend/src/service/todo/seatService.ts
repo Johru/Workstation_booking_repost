@@ -1,15 +1,12 @@
 import { SeatEntity, WorkstationEntity } from '../../db';
-// import { ITodoRepository } from '../../repository';
 import { ISeatRepository, Success } from '../../repository';
 import { Response, Request } from 'express';
-// import { todoSchema } from './schema';
-import { seatSchema } from './schema';
+import { seatSchema } from './Schema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 
 export interface ISeatService {
   getSeats(): Promise<SeatEntity[]>;
-  createSeat(seat: SeatEntity): Promise<{ status: string; message: string[] }>;
   createGivenNumberSeat(
     req: Request,
     res: Response
@@ -20,35 +17,10 @@ export interface ISeatService {
 export class SeatService implements ISeatService {
   constructor(private seatRepository: ISeatRepository) {}
 
-  // get all seats
   async getSeats(): Promise<SeatEntity[]> {
     return await this.seatRepository.findAllSeats();
   }
 
-  // create single seat
-  async createSeat(
-    seat: SeatEntity
-  ): Promise<{ status: string; message: string[] }> {
-    try {
-      const value = await seatSchema.validateAsync(seat);
-    } catch (error) {
-      if (error instanceof ValidationError) {
-        logger.error(error);
-        const { details } = error;
-        const errorMessage = details.map(ve => ve.message);
-        return { status: 'Error', message: errorMessage };
-      }
-    }
-
-    const newSeat = await this.seatRepository.saveSeat(seat);
-
-    return {
-      status: 'OK',
-      message: [`Seat is succesfully saved with id: ${newSeat.seat_id}`],
-    };
-  }
-
-  // create multiple seat
   async createGivenNumberSeat(
     req: Request,
     res: Response
@@ -79,7 +51,6 @@ export class SeatService implements ISeatService {
     };
   }
 
-  // delete single seat
   async deletedSeat(req: Request, res: Response): Promise<Success> {
     try {
       await this.seatRepository.deleteSeat(req, res);

@@ -27,6 +27,6 @@ export class FloorEntity {
   @JoinColumn({ name: 'building_id' })
   building?: BuildingEntity;
 
-  @OneToMany(() => WorkstationEntity, workstation => workstation.floor_id)
+  @OneToMany(() => WorkstationEntity, workstation => workstation.floor)
   workstation?: WorkstationEntity[];
 }

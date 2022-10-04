@@ -13,7 +13,7 @@ export const appDataSource = new DataSource({
   username: config.mysql.user,
   password: config.mysql.password,
   database: process.env.DB_DATABASE,
-  entities: [WorkstationEntity, SeatEntity],
+  entities: [WorkstationEntity, SeatEntity,FloorEntity,BuildingEntity],
   logging: false,
   synchronize: true,
 });

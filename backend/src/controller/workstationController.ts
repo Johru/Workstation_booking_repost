@@ -29,12 +29,18 @@ export class WorkstationController {
 
    
     this._router.post(
-      '/workstation/create',
+      '/workstation/create/:seats',
       async (req: Request, res: Response) => {
         const workstation: WorkstationEntity = req.body as WorkstationEntity;
+        const seatsNumber = parseInt(req.params.seats, 10)
+
+        if(!req.params.seats) {
+          seatsNumber == 1
+        }
+        
         res
           .status(200)
-          .json(await this.workstationService.createdWorkstation(workstation));
+          .json(await this.workstationService.createWorkstation(workstation, seatsNumber));
       }
     );
 

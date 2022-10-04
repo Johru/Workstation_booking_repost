@@ -1,7 +1,7 @@
 import { WorkstationEntity } from '../../db';
 import { IWorkstationRepository } from '../../repository';
 import { Response, Request } from 'express';
-import { workstationSchema } from './schema';
+import { workstationSchema } from './Schema'
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 import { Success } from '../../repository';
@@ -12,8 +12,8 @@ export interface IWorkstationService {
     req: Request,
     res: Response
   ): Promise<WorkstationEntity[]>;
-  createdWorkstation(
-    workstation: WorkstationEntity
+  createWorkstation(
+    workstation: WorkstationEntity, seatsNumber: number
   ): Promise<{ status: string; message: string[] }>;
   updatedWorkstation(
     req: Request,
@@ -37,8 +37,8 @@ export class WorkstationService implements IWorkstationService {
     return await this.workstationRepository.findAllWorkstationsOnFloor(floorId);
   }
 
-  async createdWorkstation(
-    workstation: WorkstationEntity
+  async createWorkstation(
+    workstation: WorkstationEntity, seatsNumber: number
   ): Promise<{ status: string; message: string[] }> {
     try {
       const value = await workstationSchema.validateAsync(workstation);
@@ -51,9 +51,7 @@ export class WorkstationService implements IWorkstationService {
       }
     }
 
-    const newWorkstation = await this.workstationRepository.saveWorkstation(
-      workstation
-    );
+    const newWorkstation = await this.workstationRepository.saveWorkstation(workstation, seatsNumber);
 
     return {
       status: 'OK',

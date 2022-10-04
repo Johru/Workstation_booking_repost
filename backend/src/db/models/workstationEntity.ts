@@ -30,8 +30,11 @@ export class WorkstationEntity {
   workstation_isactive?: boolean;
 
   @ManyToOne(() => FloorEntity, floor => floor.workstation, {
-    onDelete: 'CASCADE',
+  onDelete: 'CASCADE',
   })
+  @JoinColumn({ name: 'floor_id' })
+  floor?: FloorEntity;
+
   @OneToMany(() => SeatEntity, seat => seat.workstation)
   seat?: SeatEntity[];
 }
