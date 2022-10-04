@@ -14,16 +14,26 @@ import { ConfirmModalComponent } from './components/workstation-selection-bookin
 import { AdminBuildingComponent } from './components/admin-building/admin-building.component';
 import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-panel.component';
 import { BuildingCardComponent } from './components/admin-building/building-card/building-card.component';
+import { UsersComponent } from './components/users/users.component';
+import { UserListComponent } from './components/users/user-list/user-list.component';
+import { UserTabComponent } from './components/users/user-list/user-tab/user-tab.component';
+import { ReservationListComponent } from './components/users/user-list/reservation-list/reservation-list.component';
+import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
+    UsersComponent,
+    UserListComponent,
+    UserTabComponent,
     WorkstationFormComponent,
     WorkstationTabComponent,
     WorkstationSelectionBookingComponent,
@@ -32,6 +42,8 @@ import { MatButtonModule } from '@angular/material/button';
     AdminBuildingComponent,
     AdminNavPanelComponent,
     BuildingCardComponent,
+    ReservationListComponent,
+    DeleteModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +57,8 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     MatButtonModule,
     FormsModule,
+    MatSlideToggleModule,
+    MatTooltipModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent],
