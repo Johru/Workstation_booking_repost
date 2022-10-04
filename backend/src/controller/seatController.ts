@@ -8,24 +8,22 @@ export class SeatController {
   private readonly _router: Router = Router();
 
   constructor(private seatService: ISeatService) {
-    // get all seats
+ 
     this._router.get('/seat/showall', async (req: Request, res: Response) => {
       res.status(200).json(await this.seatService.getSeats());
     });
-    // create seat seat
+ 
     this._router.post('/seat/create', async (req: Request, res: Response) => {
       const seat: SeatEntity = req.body as SeatEntity;
       res.status(200).json(await this.seatService.createSeat(seat));
     });
 
-    // create seats by given number
     this._router.post('/seat/:seat/create', async (req: Request, res: Response) => {
       res
         .status(200)
         .json(await this.seatService.createGivenNumberSeat(req, res));
     });
 
-    // delete single seat
     this._router.delete(
       '/seat/:seatId/delete',
       async (req: Request, res: Response) => {

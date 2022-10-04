@@ -17,9 +17,9 @@ export class SeatEntity {
   @Column()
   workstation_id?: number;
 
-  // @ManyToOne(() => WorkstationEntity, workstation => workstation.seat, {
-  //   // onDelete: 'CASCADE',
-  // })
-  // @JoinColumn({ name: 'workstation_id' })
-  // workstation?: WorkstationEntity;
+  @ManyToOne(() => WorkstationEntity, workstation => workstation.seat, {
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn({ name: 'workstation_id' })
+  workstation?: WorkstationEntity;
 }

@@ -1,7 +1,4 @@
-// import { TodoController } from '../controller';
 import { Router } from 'express';
-// import { TodoRepository } from '../repository';
-// import { TodoService } from '../service';
 
 import { SeatController } from '../controller';
 import { SeatRepository } from '../repository';

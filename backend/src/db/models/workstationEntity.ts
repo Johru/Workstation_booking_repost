@@ -6,13 +6,14 @@ import {
   JoinColumn,
   OneToMany,
 } from 'typeorm';
-// import { BuildingEntity } from './buildingEntity';
-// import { FloorEntity } from './floorEntity';
+import { BuildingEntity } from './buildingEntity';
+import { FloorEntity } from './floorEntity';
 import { SeatEntity } from './seatEntity';
 import { BoolBitTransformer } from './transformer';
 
 @Entity('workstation')
 export class WorkstationEntity {
+  
   @PrimaryGeneratedColumn()
   workstation_id?: number;
 
@@ -29,10 +30,10 @@ export class WorkstationEntity {
   })
   workstation_isactive?: boolean;
 
-  // @ManyToOne(() => FloorEntity, floor => floor.workstation, {
-  //   onDelete: 'CASCADE',
-  // })
+  @ManyToOne(() => FloorEntity, floor => floor.workstation, {
+    onDelete: 'CASCADE',
+  })
 
-  // @OneToMany(() => SeatEntity, seat => seat.workstation)
-  // seat?: SeatEntity[];
+  @OneToMany(() => SeatEntity, seat => seat.workstation)
+  seat?: SeatEntity[];
 }

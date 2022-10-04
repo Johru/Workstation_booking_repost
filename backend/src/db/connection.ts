@@ -1,11 +1,10 @@
 import mysql from 'mysql';
 import { DataSource } from 'typeorm';
 import { WorkstationEntity } from './models/workstationEntity';
-// import { Todo } from './models/todo';
 import config from '../config';
 import { SeatEntity } from './models/seatEntity';
-// import { BuildingEntity } from './models/buildingEntity';
-// import { FloorEntity } from './models/floorEntity';
+import { BuildingEntity } from './models/buildingEntity';
+import { FloorEntity } from './models/floorEntity';
 
 export const appDataSource = new DataSource({
   type: 'mysql',

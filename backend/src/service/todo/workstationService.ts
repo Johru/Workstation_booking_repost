@@ -1,7 +1,5 @@
 import { WorkstationEntity } from '../../db';
-// import { ITodoRepository } from '../../repository';
 import { IWorkstationRepository } from '../../repository';
-// import { todoSchema } from './schema';
 import { Response, Request } from 'express';
 import { workstationSchema } from './schema';
 import { ValidationError } from 'joi';
