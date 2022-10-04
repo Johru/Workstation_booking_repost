@@ -1,11 +1,8 @@
 import { BuildingRepository, Success } from '../../repository';
 import { BuildingEntity } from '../../db';
 import { buildingSchema } from './buildingSchema';
-import Joi from 'joi';
-import { ValidationError } from 'joi';
-import logger from '../../logger';
-
-export const idSchema = Joi.number().required();
+import { idSchema } from '../index';
+import { yesOrNo } from '../index';
 
 export class BuildingService {
   constructor(public buildingRepository: BuildingRepository) {}
@@ -25,64 +22,29 @@ export class BuildingService {
   }
 
   async addNewBuilding(requestBody: BuildingEntity): Promise<Success> {
-    try {
-      const requestDataValidation = await buildingSchema.validateAsync(
-        requestBody
-      );
-    } catch (error) {
-      if (error instanceof ValidationError) {
-        logger.error(error);
-        return { success: 'no' };
-      }
-    }
-    const newBuilding = await this.buildingRepository.addNewBuilding(
-      requestBody
-    );
-    return { success: 'yes' };
+    const validation = await yesOrNo(buildingSchema, requestBody);
+    if (!validation) return { success: 'no' };
+
+    return this.buildingRepository.addNewBuilding(requestBody);
   }
 
   async updateBuilding(
     requestBody: BuildingEntity,
     id: number
   ): Promise<Success> {
-    try {
-      const requestDataValidation = await buildingSchema.validateAsync(
-        requestBody
-      );
-    } catch (error) {
-      if (error instanceof ValidationError) {
-        logger.error(error);
-        return { success: 'no' };
-      }
-    }
+    const validation = await yesOrNo(buildingSchema, requestBody);
+    if (!validation) return { success: 'no' };
 
-    try {
-      const requestDataValidation2 = await idSchema.validateAsync(id);
-    } catch (error) {
-      if (error instanceof ValidationError) {
-        logger.error(error);
-        return { success: 'no' };
-      }
-    }
+    const validation2 = await yesOrNo(idSchema, id);
+    if (!validation2) return { success: 'no' };
 
-    const updateABuilding = await this.buildingRepository.updateBuilding(
-      requestBody,
-      id
-    );
-    return { success: 'yes' };
+    return this.buildingRepository.updateBuilding(requestBody, id);
   }
 
   async deleteBuilding(id: number): Promise<Success> {
-    try {
-      const requestDataValidation = await idSchema.validateAsync(id);
-    } catch (error) {
-      if (error instanceof ValidationError) {
-        logger.error(error);
-        return { success: 'no' };
-      }
-    }
+    const validation = await yesOrNo(idSchema, id);
+    if (!validation) return { success: 'no' };
 
-    const deleteABuilding = await this.buildingRepository.deleteBuilding(id);
-    return { success: 'yes' };
+    return this.buildingRepository.deleteBuilding(id);
   }
 }

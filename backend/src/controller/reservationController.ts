@@ -27,7 +27,7 @@ export class ReservationController {
         logger.info('/reservation/user/:id endpoint accessed');
         const userId = req.params.id as unknown as number;
         res.json(
-          await this.reservationService.displayReservationForUser(userId)
+          await this.reservationService.showReservationForGivenUser(userId)
         );
       }
     );

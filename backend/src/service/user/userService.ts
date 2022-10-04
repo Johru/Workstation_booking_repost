@@ -1,6 +1,8 @@
 import { UserEntity } from '../../db';
 import { UserRepository } from '../../repository';
 import { Success } from '../../repository/success';
+import { idSchema } from '../index';
+import { yesOrNo } from '../index';
 
 export class UserService {
   constructor(public userRepository: UserRepository) {}
@@ -8,23 +10,34 @@ export class UserService {
     return this.userRepository.listUsers();
   }
 
-  deleteUser(id: number): Promise<Success> {
+  async deleteUser(id: number): Promise<Success> {
+    const validation = await yesOrNo(idSchema, id);
+    if (!validation) return { success: 'no' };
+
     return this.userRepository.deleteUser(id);
   }
 
-  promoteUserToAdmin(id: number): Promise<Success> {
+  async promoteUserToAdmin(id: number): Promise<Success> {
+    const validation = await yesOrNo(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.promoteUserToAdmin(id);
   }
 
-  demoteUserFromAdmin(id: number): Promise<Success> {
+  async demoteUserFromAdmin(id: number): Promise<Success> {
+    const validation = await yesOrNo(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.demoteUserFromAdmin(id);
   }
 
-  blockUser(id: number): Promise<Success> {
+  async blockUser(id: number): Promise<Success> {
+    const validation = await yesOrNo(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.blockUser(id);
   }
 
-  unblockUser(id: number): Promise<Success> {
+  async unblockUser(id: number): Promise<Success> {
+    const validation = await yesOrNo(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.unblockUser(id);
   }
 }

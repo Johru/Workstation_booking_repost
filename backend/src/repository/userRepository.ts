@@ -1,7 +1,7 @@
 import { appDataSource } from '../db';
 import { UserEntity } from '../db';
-import { determineSuccess } from './determineSuccess';
 import { Success } from './success';
+import { logErrorAndReturnYesOrNo } from './logErrorAndReturnYesOrNo';
 
 export interface IUserRepository {
   listUsers(): Promise<UserEntity[]>;
@@ -38,7 +38,7 @@ export class UserRepository implements IUserRepository {
       })
       .execute();
 
-    return determineSuccess(deletion);
+    return logErrorAndReturnYesOrNo(deletion, 'User');
   }
 
   async promoteUserToAdmin(userId: number): Promise<Success> {
@@ -48,7 +48,7 @@ export class UserRepository implements IUserRepository {
         user_isadmin: true,
       });
 
-    return determineSuccess(promotion);
+    return logErrorAndReturnYesOrNo(promotion, 'User');
   }
 
   async demoteUserFromAdmin(userId: number): Promise<Success> {
@@ -58,7 +58,7 @@ export class UserRepository implements IUserRepository {
         user_isadmin: false,
       });
 
-    return determineSuccess(demotion);
+    return logErrorAndReturnYesOrNo(demotion, 'User');
   }
 
   async blockUser(userId: number): Promise<Success> {
@@ -66,7 +66,7 @@ export class UserRepository implements IUserRepository {
       user_isblocked: true,
     });
 
-    return determineSuccess(block);
+    return logErrorAndReturnYesOrNo(block, 'User');
   }
 
   async unblockUser(userId: number): Promise<Success> {
@@ -75,6 +75,6 @@ export class UserRepository implements IUserRepository {
       .update(userId, {
         user_isblocked: false,
       });
-    return determineSuccess(unblock);
+    return logErrorAndReturnYesOrNo(unblock, 'User');
   }
 }
