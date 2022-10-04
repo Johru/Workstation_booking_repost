@@ -1,5 +1,6 @@
-import {Entity,Column,PrimaryGeneratedColumn,ManyToOne,JoinColumn,} from 'typeorm';
+import {Entity,Column,PrimaryGeneratedColumn,ManyToOne,JoinColumn,OneToMany} from 'typeorm';
 import { BuildingEntity } from './buildingEntity';
+import { WorkstationEntity } from './workstationEntity';
 
 @Entity('floor')
 export class FloorEntity {
@@ -8,7 +9,6 @@ export class FloorEntity {
 
   @Column()
   building_id?: number;
-
   @Column()
   floor_name?: string;
   @Column()
@@ -19,4 +19,8 @@ export class FloorEntity {
   @ManyToOne(() => BuildingEntity, building => building.floor)
   @JoinColumn({ name: 'building_id' })
   building?: BuildingEntity;
+
+  
+  @OneToMany(() => WorkstationEntity, workstation => workstation.floor)
+  workstation?: WorkstationEntity[];
 }

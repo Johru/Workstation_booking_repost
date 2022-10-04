@@ -5,12 +5,20 @@ import { floorSchema } from './floorschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 import { FloorEntity } from 'db';
+import { Success } from 'repository/success';
 
 export interface IFloorService {
   getFloors(): Promise<FloorEntity[]>;
-  createFloor(floor: FloorEntity): Promise<{ status: string; message: string[] }>;
-  updatedFloor(req: Request,res: Response): Promise<{ status: string; message: string[] }>;
-  deletedFloor(req: Request, res: Response): Promise<{status: string; message: string[]}>;
+  createFloor(
+    floor: FloorEntity
+  ): Promise<{ status: string; message: string[] }>;
+  updatedFloor(
+    req: Request,
+    res: Response
+  ): Promise<{ status: string; message: string[] }>;
+  deletedFloor(req: Request, res: Response): Promise<Success>;
+  workstationCount(): Promise<any[]>
+
 }
 
 export class FloorService implements IFloorService {
@@ -20,7 +28,9 @@ export class FloorService implements IFloorService {
     return await this.floorRepository.findAllFloors();
   }
 
-  async createFloor(floor: FloorEntity): Promise<{ status: string; message: string[] }> {
+  async createFloor(
+    floor: FloorEntity
+  ): Promise<{ status: string; message: string[] }> {
     try {
       const value = await floorSchema.validateAsync(floor);
     } catch (error) {
@@ -40,7 +50,10 @@ export class FloorService implements IFloorService {
     };
   }
 
-  async updatedFloor(req: Request,res: Response): Promise<{ status: string; message: string[] }> {
+  async updatedFloor(
+    req: Request,
+    res: Response
+  ): Promise<{ status: string; message: string[] }> {
     const floor: FloorEntity = req.body as FloorEntity;
     try {
       const value = await floorSchema.validateAsync(floor);
@@ -53,9 +66,7 @@ export class FloorService implements IFloorService {
       }
     }
     var floorId = parseInt(req.params.floorId, 10);
-    const newFloor = await this.floorRepository.updateFloor(
-      floorId,floor
-    );
+    const newFloor = await this.floorRepository.updateFloor(floorId, floor);
 
     return {
       status: 'OK',
@@ -65,28 +76,18 @@ export class FloorService implements IFloorService {
     };
   }
 
-
-  async deletedFloor(req: Request,res: Response): Promise<{status: string; message: string[]}> {
-    const floor: FloorEntity = req.body as FloorEntity;
+  async deletedFloor(req: Request, res: Response): Promise<Success> {
     try {
-      const value = await floorSchema.validateAsync(floor);
+      await this.floorRepository.deleteFloor(req, res);
+      return { success: 'yes' };
     } catch (error) {
-      if (error instanceof ValidationError) {
-        logger.error(error);
-        const { details } = error;
-        const errorMessage = details.map(ve => ve.message);
-        return { status: 'Error', message: errorMessage };
-      }
+      return { success: 'no' };
     }
-    var floorId = parseInt(req.params.FloorId, 10);
-    await this.floorRepository.deleteFloor(floorId);
+  }
 
-    return {
-        status: 'OK',
-        message: 
-          [`Floor is succesfully removed.`],
-        
-      };
-}
+  async workstationCount(): Promise<any[]> {
+    return this.floorRepository.countWorkstationAndSeat();
+  }
+
 
 }
