@@ -33,6 +33,7 @@ export class BuildingRepository implements IBuildingRepository {
       .createQueryBuilder('building')
       .getMany();
   }
+
   async getSingleBuilding(buildingId: number): Promise<BuildingEntity | null> {
     return appDataSource
       .getRepository(BuildingEntity)
@@ -64,6 +65,7 @@ export class BuildingRepository implements IBuildingRepository {
       building_image: body.building_image,
     });
   }
+
   async deleteBuilding(id: number): Promise<Success> {
     const deletion = await appDataSource
       .createQueryBuilder()
