@@ -1,4 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output,Input } from '@angular/core';
+import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
+import { FloorService } from 'src/app/services/admin-edit/floor.service';
 
 @Component({
   selector: 'confirm-delete',
@@ -7,23 +9,36 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class ConfirmDeleteComponent implements OnInit {
 
-  @Output() cancelDeleteEmitter = new EventEmitter<boolean>();
-  @Output() confirmDeleteEmitter = new EventEmitter<boolean>();
+  @Output() cancelEmitter = new EventEmitter<boolean>();
+  @Output() confirmEmitter = new EventEmitter<boolean>();
+  @Input() status?: string;
+  @Input() selectedWorkstation?: WorkstationInterface;
 
-  confirmDeleteValue: boolean = true;
-  cancelDeleteValue: boolean = true;
+  confirmValue: boolean = true;
+  cancelValue: boolean = true;
 
-  constructor() { }
+  constructor(private floorService: FloorService) { }
 
   ngOnInit(): void {
+    if (this.status == 'Disable'){
+      if(!this.selectedWorkstation?.workstation_isActive){
+        this.status = 'Activate'
+      }
+    }
   }
 
-  confirmDelete(): void {
-    this.confirmDeleteEmitter.emit(this.confirmDeleteValue);   
+  confirm(): void {
+    if(this.status == 'Disable' || 'Activate') {
+      this.floorService.disableWorkstation(this.selectedWorkstation!.workstation_id)
+    }
+    else if (this.status == 'Delete') {
+      this.floorService.deleteWorkstation(this.selectedWorkstation!.workstation_id)
+    }
+    this.confirmEmitter.emit(this.confirmValue)
   }
 
-  cancelDelete(): void {
-    this.cancelDeleteEmitter.emit(this.cancelDeleteValue);
+  cancel(): void {
+    this.cancelEmitter.emit(this.cancelValue);
   }
 
 }

@@ -1,8 +1,9 @@
-<h1>Delete workstation</h1>
+<div class="confirm-modal">
+<h1>{{status}} workstation</h1>
 <br>
-<div>Are you sure you want to delete the Management workstation?</div>
+<div>Are you sure you want to {{status!.toLowerCase()}} the {{selectedWorkstation!.workstation_name}} workstation?</div>
   <div>
-    <button (click)="confirmDelete()">Delete</button>    
-    <button (click)="cancelDelete()">Cancel</button>
+    <button (click)="confirm()">{{status}}</button>    
+    <button (click)="cancel()">Cancel</button>
   </div>
-
+</div>

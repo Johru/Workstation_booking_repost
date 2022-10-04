@@ -1,5 +1,5 @@
 import { transition } from '@angular/animations';
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
@@ -17,27 +17,34 @@ export class FloorListComponent implements OnInit {
   managementButtonMenuVisible: boolean = false;
   previewMenuVisible: boolean = true;
   crossroadMenuVisible: boolean = false;
-  panelOpenState = false;
+  panelOpenState? : boolean;
   confirmDeleteValue: boolean = false;
-  modalDeleteValue: boolean= true;
+  status?: string;
+  selectedWorkstation?: WorkstationInterface;
 
   
-  @Input() floorList?: Floor[];
+  @Input() floor!: Floor;
   // @Output() reloadFloor = new EventEmitter();
 
   constructor(private floorService: FloorService) { }
 
   ngOnInit(): void {
     this.getFloor();
-    console.log(this.floors);    
+    console.log(this.floor.workstations);    
+    this.panelOpenState = false
+  }
+
+  toggleExpand(){
+    this.panelOpenState = !this.panelOpenState;
+    console.log(this.panelOpenState)
   }
 
   getFloor(): void {
     this.floors = this.floorService.getFloor();
   }
 
-  addWorkstation(i: number, newWorkstation: WorkstationInterface): void {
-    this.floors[i].workstations.push(newWorkstation)
+  addWorkstation( newWorkstation: WorkstationInterface): void {
+    this.floor.workstations.push(newWorkstation)
   
     console.log('test add workstation')
     console.log(newWorkstation)
@@ -54,23 +61,31 @@ export class FloorListComponent implements OnInit {
   }
 
   closePanelFromChild(event: boolean) {
-    // this.panelOpenState = !this.panelOpenState
-    this.panelOpenState = event;
-    console.log(event)
-    console.log(this.panelOpenState)
+    this.toggleExpand()
   }
 
 
-  cancelDelete(event: boolean) {
+  cancel(event: boolean) {
     if (event) {    
-      this.modalDeleteValue = event;
+      this.toggleConfirmModal();
     }
   }
 
-  confirmDelete(event: boolean) {
+  confirm(event: boolean) {
     if (event) {
-      this.confirmDeleteValue = event;
+      this.toggleConfirmModal();
     }
+  }
+
+  toggleConfirmModal(){
+    this.confirmDeleteValue = !this.confirmDeleteValue;
+  }
+
+  onDisableClick(selectedWorkstation:WorkstationInterface){
+    console.log(selectedWorkstation)
+    this.toggleConfirmModal();
+    this.status = 'Disable'
+    this.selectedWorkstation = selectedWorkstation
   }
 
 }

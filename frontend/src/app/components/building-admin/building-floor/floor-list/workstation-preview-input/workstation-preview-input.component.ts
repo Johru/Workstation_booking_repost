@@ -17,6 +17,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
 
 
   newWorkstationForm = new FormGroup({
+    workstation_id: new FormControl(),
     workstation_name: new FormControl(),
     seats: new FormControl()
   })
@@ -32,6 +33,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
 
   onSubmit(): void {
     this.workstation = {
+      workstation_id: this.newWorkstationForm.value.workstation_id,
       workstation_name: this.newWorkstationForm.value.workstation_name,
       seats: Number(this.newWorkstationForm.value.seats),
       workstation_isActive: true

@@ -3,10 +3,10 @@
 	<form>
 		<mat-form-field appearance="fill">
 			<mat-label>Select a workstation</mat-label>
-			<mat-select [(value)]="selected" name="workstation">
+			<mat-select (change)="onChangeInSelect()" [(ngModel)]="selected" name="workstation">
 				<mat-option value="0">{{ defaultText }}</mat-option>
 				<mat-option *ngFor="let workstation of workstationList; 
-				let i = index;" [value]="workstation.workstation_name">
+				let i = index;" value="{{workstation.workstation_name}}">
 					<div (click)="onSelect(workstation, i)">
 						{{workstation.workstation_name}}
 						{{i}}
@@ -19,15 +19,14 @@
 
 <div>
 	<div>Number of seats:
-		<span *ngIf="selectedWorkstation">
-			{{selectedWorkstation.seats}}
-			{{selectedWorkstation.workstation_isActive}}
+		<span *ngIf="selected != '0'">
+			{{selectedWorkstation!.seats}}
+			{{selectedWorkstation!.workstation_isActive}}
 		</span>
 	</div>
 </div>
 <br>
 
-<button *ngIf="selectedWorkstation" (click)="deleteWorkstation()">Delete</button>
-<button *ngIf="!selectedWorkstation" [disabled]="disableButton">Delete</button>
-<button *ngIf="selectedWorkstation" (click)="selectedWorkstation.workstation_isActive = false">Disable</button>
-<button *ngIf="!selectedWorkstation" [disabled]="workstationIsSelected == false">Disable</button>
+<button [disabled]="selected == '0' " (click)="deleteWorkstation()">Delete</button>
+<button *ngIf="!isSelectedDisabled()" [disabled]="selected == '0'" (click)="disableSelected()">Disable</button>
+<button *ngIf="isSelectedDisabled()" [disabled]="selected == '0'" (click)="disableSelected()">Activate</button>

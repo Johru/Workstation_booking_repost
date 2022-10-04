@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventEmitter } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
@@ -15,13 +16,14 @@ export class WorkstationManagementComponent implements OnInit {
   workstationIsSelected: boolean = false;
   selectedIndex: any;
   defaultText: string = 'Select a workstation';
-  selected = 'option0';
+  selected:string = "0"; 
   disableButton: boolean = true;
   confirmDeleteValue: boolean = false;
 
   @Input() floorList?: Floor[];
   @Input() workstationList?: WorkstationInterface[];
   @Input() managementButtonMenuVisible?: boolean;
+  @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
 
   constructor(private router: Router) { }
 
@@ -33,15 +35,25 @@ export class WorkstationManagementComponent implements OnInit {
       this.selectedWorkstation = workstation;
     this.selectedIndex = i;
     this.disableButton = false;
-   
+   console.log(this.selectedWorkstation)
 
     // console.log(this.selectedWorkstation)
     // console.log(this.selectedIndex)
   }
+  onChangeInSelect(){
+    console.log(this.selected)
+  }
 
   disableSelected(): string {
-    return this.selected;
+    this.disableEmitter.emit(this.selectedWorkstation)
+   return 'yes'
   }
+
+  isSelectedDisabled(): boolean{
+    if (this.selectedWorkstation?.workstation_isActive) return false;
+    return true;
+  }
+
 
   deleteWorkstation(): void {
 

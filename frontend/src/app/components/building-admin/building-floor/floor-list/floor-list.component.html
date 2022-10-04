@@ -1,8 +1,8 @@
-<div *ngFor="let floor of floorList; let i = index;">
+<div >
 	<!-- Add tomat-expansion-panel. This work only for all at once:  [(expanded)]="panelOpenState" -->
-	<mat-expansion-panel
-	(opened)="panelOpenState = true" (closed)="panelOpenState = false">
-		<mat-expansion-panel-header>
+	<mat-expansion-panel [expanded]="panelOpenState"
+	>
+		<mat-expansion-panel-header (click)="toggleExpand()">
 			<mat-panel-title>
 				<span>Floor name: {{floor.floor_name}} </span>
 			</mat-panel-title>
@@ -11,21 +11,19 @@
 				<span>/ seats</span>
 			</mat-panel-description>
 		</mat-expansion-panel-header>
-
-		<workstation-management [workstationList]="floor.workstations" [floorList]="floors" *ngIf="floor.workstations[i]">
-		</workstation-management>
-		<br>
-		<br>
-		<workstation-preview-input (closePanel)="closePanelFromChild($event)" (newWorkstationEvent)="addWorkstation(i, $event)"
-			*ngIf="previewMenuVisible"></workstation-preview-input>
-		<workstation-crossroad (switchComponents)="switchManagementAndPreview()" *ngIf="!previewMenuVisible">
-		</workstation-crossroad>
-
+		<div *ngIf="panelOpenState">
+			<workstation-management (disableEmitter)="onDisableClick($event)" [workstationList]="floor.workstations" [floorList]="floors" *ngIf="floor.workstations.length != 0">
+			</workstation-management>
+			<br>
+			<br>
+			<workstation-preview-input (closePanel)="closePanelFromChild($event)" (newWorkstationEvent)="addWorkstation($event)"
+				*ngIf="previewMenuVisible"></workstation-preview-input>
+		</div>
 	</mat-expansion-panel>
 </div>
 
 <!-- CONFIRM DELETE -->
 <div *ngIf="confirmDeleteValue" class="confirm-modal">
-	<confirm-delete (cancelDeleteEmitter)="cancelDelete($event)" (confirmDeleteEmitter)="confirmDelete($event)">
+	<confirm-delete [selectedWorkstation]="selectedWorkstation"  [status]="status" (cancelEmitter)="cancel($event)" (confirmEmitter)="confirm($event)">
 	</confirm-delete>
 </div>
