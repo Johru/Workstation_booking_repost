@@ -22,7 +22,7 @@ export class BuildingController {
     this._router.get('/building/:id', async (req: Request, res: Response) => {
       const buildingId = req.params.id as unknown as number;
       logger.info('/building/:id endpoint accessed');
-      res.json(await this.buildingService.singleBuilding(buildingId));
+      res.json(await this.buildingService.getSingleBuilding(buildingId));
     });
 
     this._router.post('/building/new', async (req: Request, res: Response) => {

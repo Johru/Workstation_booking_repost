@@ -1,8 +1,11 @@
 import { BuildingRepository, Success } from '../../repository';
 import { BuildingEntity } from '../../db';
 import { buildingSchema } from './buildingSchema';
+import Joi from 'joi';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
+
+export const idSchema = Joi.number().required();
 
 export class BuildingService {
   constructor(public buildingRepository: BuildingRepository) {}
@@ -10,13 +13,17 @@ export class BuildingService {
   listCities(): Promise<BuildingEntity[]> {
     return this.buildingRepository.listCities();
   }
+
   listBuildings(): Promise<BuildingEntity[]> {
     return this.buildingRepository.listBuildings();
   }
 
-  singleBuilding(buildingId: number): Promise<BuildingEntity | null> {
-    return this.buildingRepository.singleBuilding(buildingId);
+  async getSingleBuilding(id: number): Promise<BuildingEntity | []> {
+    const findBuilding = await this.buildingRepository.getSingleBuilding(id);
+    if (findBuilding === null) return [];
+    return findBuilding;
   }
+
   async addNewBuilding(requestBody: BuildingEntity): Promise<Success> {
     try {
       const requestDataValidation = await buildingSchema.validateAsync(
@@ -48,13 +55,34 @@ export class BuildingService {
         return { success: 'no' };
       }
     }
+
+    try {
+      const requestDataValidation2 = await idSchema.validateAsync(id);
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        logger.error(error);
+        return { success: 'no' };
+      }
+    }
+
     const updateABuilding = await this.buildingRepository.updateBuilding(
       requestBody,
       id
     );
     return { success: 'yes' };
   }
-  deleteBuilding(id: number): Promise<Success> {
-    return this.buildingRepository.deleteBuilding(id);
+
+  async deleteBuilding(id: number): Promise<Success> {
+    try {
+      const requestDataValidation = await idSchema.validateAsync(id);
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        logger.error(error);
+        return { success: 'no' };
+      }
+    }
+
+    const deleteABuilding = await this.buildingRepository.deleteBuilding(id);
+    return { success: 'yes' };
   }
 }

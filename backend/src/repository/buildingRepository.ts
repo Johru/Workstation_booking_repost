@@ -7,7 +7,7 @@ import { Success } from './success';
 export interface IBuildingRepository {
   listCities(): Promise<BuildingEntity[]>;
   listBuildings(): Promise<BuildingEntity[]>;
-  singleBuilding(buildingId: number): Promise<BuildingEntity | null>;
+  getSingleBuilding(buildingId: number): Promise<BuildingEntity | null>;
   addNewBuilding(body: BuildingEntity): Promise<BuildingEntity>;
   updateBuilding(body: BuildingEntity, id: number): Promise<UpdateResult>;
   deleteBuilding(id: number): Promise<Success>;
@@ -15,13 +15,16 @@ export interface IBuildingRepository {
 
 export class BuildingRepository implements IBuildingRepository {
   async listCities(): Promise<BuildingEntity[]> {
-    return appDataSource
-      .getRepository(BuildingEntity)
-      .createQueryBuilder('building')
-      .select(['building.building_city'])
-      .distinctOn(['building.building_city'])
-      .orderBy('building.building_city')
-      .getMany();
+    return (
+      appDataSource
+        .getRepository(BuildingEntity)
+        .createQueryBuilder('building')
+        .select(['building_city'])
+        .distinct(true)
+        // .distinctOn(['building.building_city'])
+        // .orderBy('building.building_city', 'ASC')
+        .getMany()
+    );
   }
 
   async listBuildings(): Promise<BuildingEntity[]> {
@@ -30,7 +33,7 @@ export class BuildingRepository implements IBuildingRepository {
       .createQueryBuilder('building')
       .getMany();
   }
-  async singleBuilding(buildingId: number): Promise<BuildingEntity | null> {
+  async getSingleBuilding(buildingId: number): Promise<BuildingEntity | null> {
     return appDataSource
       .getRepository(BuildingEntity)
       .findOneBy({ building_id: buildingId });
