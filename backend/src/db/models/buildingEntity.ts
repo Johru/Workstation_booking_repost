@@ -19,5 +19,4 @@ export class BuildingEntity {
 
   @OneToMany(() => BuildingEntity, floor => floor.building_id)
   floor?: BuildingEntity[];
- 
 }

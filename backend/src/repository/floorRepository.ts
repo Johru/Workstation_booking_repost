@@ -7,8 +7,7 @@ export interface IFloorRepository {
   findAllFloors(): Promise<FloorEntity[]>;
   saveFloor(floor: FloorEntity): Promise<FloorEntity>;
   updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity>;
-  deleteFloor(floorId:number): Promise<Success>;
-  countWorkstation(): Promise <any[]>;
+  deleteFloor(floorId: number): Promise<Success>;
 }
 
 export class FloorRepository implements IFloorRepository {
@@ -26,29 +25,26 @@ export class FloorRepository implements IFloorRepository {
     return appDataSource.getRepository(FloorEntity).save(floorToSave);
   }
 
-  async updateFloor(floorId: number, floor:FloorEntity): Promise<FloorEntity> {
-
-    var floorUpdate = await appDataSource
-      .getRepository(FloorEntity)
-      .findOne({
-        where: {
-          floor_id: floorId,
-        },
-      });
+  async updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity> {
+    var floorUpdate = await appDataSource.getRepository(FloorEntity).findOne({
+      where: {
+        floor_id: floorId,
+      },
+    });
 
     if (floorUpdate == null) {
       let err = new Error();
       err.message = 'Record not found.';
       return Promise.reject(err);
     } else {
-      floorUpdate.building_id = floor.building_id
-      floorUpdate.floor_name = floor.floor_name
-      floorUpdate.floor_capacity = floor.floor_capacity
-      floorUpdate.floor_plan = floor.floor_plan
+      floorUpdate.building_id = floor.building_id;
+      floorUpdate.floor_name = floor.floor_name;
+      floorUpdate.floor_capacity = floor.floor_capacity;
+      floorUpdate.floor_plan = floor.floor_plan;
       return appDataSource.getRepository(FloorEntity).save(floorUpdate);
     }
   }
-  async deleteFloor(floorId:number): Promise<Success> {
+  async deleteFloor(floorId: number): Promise<Success> {
     var floorRemove = await appDataSource
       .createQueryBuilder()
       .delete()
@@ -62,21 +58,4 @@ export class FloorRepository implements IFloorRepository {
       return { success: 'no' };
     }
   }
-
-
-  async countWorkstation(): Promise<FloorEntity[]> {
-    
-    return appDataSource
-    .getRepository(FloorEntity)
-    .createQueryBuilder('floor')
-    .select([
-      'floor.floor_id',
-      'floor.floor_name',
-      'floor.floor_capacity',
-      'floor.floor_plan'
-    ])
-    .loadRelationCountAndMap('floor.workstationCount', 'floor.workstation')
-    .getMany();
-}
-
 }

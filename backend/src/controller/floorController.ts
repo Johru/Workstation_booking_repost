@@ -20,7 +20,9 @@ export class FloorController {
       async (req: Request, res: Response) => {
         const floor: FloorEntity = req.body as FloorEntity;
         var floorId = parseInt(req.params.floorId, 10);
-        res.status(200).json(await this.floorService.updateFloor(floorId,floor));
+        res
+          .status(200)
+          .json(await this.floorService.updateFloor(floorId, floor));
       }
     );
 
@@ -29,14 +31,6 @@ export class FloorController {
       async (req: Request, res: Response) => {
         var floorId = parseInt(req.params.floorId, 10);
         res.status(200).json(await this.floorService.deleteFloor(floorId));
-      }
-    );
-
-
-    this._router.get(
-      '/floor/workstationcount',
-      async (req: Request, res: Response) => {
-        res.status(200).json(await this.floorService.workstationCount());
       }
     );
   }

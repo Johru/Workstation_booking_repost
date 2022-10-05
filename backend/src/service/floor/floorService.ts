@@ -13,11 +13,10 @@ export interface IFloorService {
     floor: FloorEntity
   ): Promise<{ status: string; message: string[] }>;
   updateFloor(
-    floorId:number, floor:FloorEntity
+    floorId: number,
+    floor: FloorEntity
   ): Promise<{ status: string; message: string[] }>;
-  deleteFloor(floorId:number): Promise<Success>;
-  workstationCount(): Promise<any[]>
-
+  deleteFloor(floorId: number): Promise<Success>;
 }
 
 export class FloorService implements IFloorService {
@@ -50,7 +49,8 @@ export class FloorService implements IFloorService {
   }
 
   async updateFloor(
-    floorId:number, floor:FloorEntity
+    floorId: number,
+    floor: FloorEntity
   ): Promise<{ status: string; message: string[] }> {
     try {
       const value = await floorSchema.validateAsync(floor);
@@ -63,30 +63,20 @@ export class FloorService implements IFloorService {
       }
     }
 
-  try {
-    const newFloor = await this.floorRepository.updateFloor(
-      floorId,
-      floor
-    );
-    return {
-      status: 'OK',
-      message: [
-        `Floor is succesfully updated and saved with its id: ${newFloor.floor_id}`,
-      ],
-    };
-  } catch (error: any) {
-    return { status: 'Error', message: ['Error record not found.'] };
+    try {
+      const newFloor = await this.floorRepository.updateFloor(floorId, floor);
+      return {
+        status: 'OK',
+        message: [
+          `Floor is succesfully updated and saved with its id: ${newFloor.floor_id}`,
+        ],
+      };
+    } catch (error: any) {
+      return { status: 'Error', message: ['Error record not found.'] };
+    }
   }
-}
 
-
-  async deleteFloor(floorId:number): Promise<Success> {
+  async deleteFloor(floorId: number): Promise<Success> {
     return this.floorRepository.deleteFloor(floorId);
   }
-
-  async workstationCount(): Promise<FloorEntity[]> {
-    return this.floorRepository.countWorkstation();
-  }
-
-
 }
