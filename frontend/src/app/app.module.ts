@@ -13,12 +13,12 @@ import { WorkstationSelectionBookingComponent } from './components/workstation-s
 import { SeatsComponent } from './components/workstation-selection-booking/seats/seats.component';
 import { ConfirmModalComponent } from './components/workstation-selection-booking/confirm-modal/confirm-modal.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [

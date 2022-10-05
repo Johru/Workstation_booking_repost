@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
-import { filter } from 'rxjs';
 
 @Component({
   selector: 'register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
+  show: boolean = false;
+  visibility: string = 'password-hidden';
+  attribute: string = 'password';
   submitted = false;
+
   constructor(private http: HttpClient) {}
-  ngOnInit(): void {}
 
   onSubmit(form: NgForm) {
     this.submitted = true;
@@ -26,10 +28,6 @@ export class RegisterComponent implements OnInit {
       })
       .subscribe((res) => console.log(res));
   }
-
-  show: boolean = false;
-  visibility: string = 'password-hidden';
-  attribute: string = 'password';
 
   toogle() {
     this.show = !this.show;
