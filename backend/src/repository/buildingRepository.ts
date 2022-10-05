@@ -34,6 +34,7 @@ export class BuildingRepository implements IBuildingRepository {
       .createQueryBuilder('building')
       .getMany();
   }
+
   async getSingleBuilding(buildingId: number): Promise<BuildingEntity | null> {
     return appDataSource
       .getRepository(BuildingEntity)

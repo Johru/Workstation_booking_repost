@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Reservation } from 'src/app/helpingHand/reservation';
-import { WorkstationService } from 'src/app/services/workstation.service';
+import { ReservationService } from 'src/app/services/reservation.service';
 
 @Component({
   selector: 'confirm-modal',
@@ -17,7 +17,7 @@ export class ConfirmModalComponent {
   confirm: boolean = true;
   reservation?: Reservation = { seat_id: 0, res_date: '', user_id: 0 };
 
-  constructor(private wsService: WorkstationService) {}
+  constructor(private reservationService: ReservationService) {}
 
   editReservation() {
     this.editEmitter.emit(this.edit);
@@ -27,7 +27,7 @@ export class ConfirmModalComponent {
     this.reservation!.seat_id = this.resData.seat_id;
     this.reservation!.res_date = this.resData.res_date;
     this.reservation!.user_id = this.resData.user_id;
-    this.wsService.addReservation(this.reservation!);
+    this.reservationService.addReservation(this.reservation!);
     this.confirmEmitter.emit(this.confirm);
   }
 

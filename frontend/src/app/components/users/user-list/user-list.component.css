@@ -1,0 +1,8 @@
+user-tab {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  min-height: 50px;
+  box-sizing: border-box;
+  padding: 0px 25px;
+}
