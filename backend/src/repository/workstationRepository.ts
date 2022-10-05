@@ -73,10 +73,15 @@ export class WorkstationRepository implements IWorkstationRepository {
       err.message = 'Record not found.';
       return Promise.reject(err);
     } else {
-      workstationUpdate.floor_id = workstation.floor_id
-      workstationUpdate.workstation_name = workstation.workstation_name
-      workstationUpdate.workstation_isactive = workstation.workstation_isactive
-      return appDataSource.getRepository(WorkstationEntity).save(workstationUpdate);
+      await appDataSource
+        .createQueryBuilder()
+        .update(WorkstationEntity)
+        .set({
+          workstation_name: workstation.workstation_name,
+          workstation_isactive: workstation.workstation_isactive,
+        })
+        .where('id=:id', { workstationId: workstationId });
+      return workstationUpdate;
     }
   }
 
