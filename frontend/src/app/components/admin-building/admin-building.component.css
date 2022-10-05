@@ -15,8 +15,29 @@
   margin: 25px 50px;
 }
 
+.building-header .select-city {
+  appearance: none;
+  background-color: white;
+  padding-left: 20px;
+  border: 1px solid red;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.building-header .select-city:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+}
+
+.building-header .select-city option:hover {
+  color: red;
+}
+
 .building-header button:hover {
-  background-color: #dedede;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
 }
 
 .building-selector {
@@ -33,6 +54,12 @@
   width: 3%;
   font-size: 40px;
   font-weight: 100;
+}
+
+.building-selector button:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
 }
 
 .cards {

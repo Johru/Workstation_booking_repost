@@ -7,12 +7,14 @@ import { WorkstationSelectionBookingComponent } from './components/workstation-s
 
 const routes: Routes = [
   // users route will be a child of admin route on merge
-  { path: 'users', component: UsersComponent },
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
   {
     path: 'admin',
     component: AdminNavPanelComponent,
-    children: [{ path: 'buildings', component: AdminBuildingComponent }],
+    children: [
+      { path: 'buildings', component: AdminBuildingComponent },
+      { path: 'users', component: UsersComponent },
+    ],
   },
 ];
 

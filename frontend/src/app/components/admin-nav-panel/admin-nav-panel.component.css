@@ -2,20 +2,33 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #737373;
-  background-color: #f5f5f5;
+  border-bottom: 1px solid red;
+  background-color: white;
   margin: 0;
   box-sizing: border-box;
+  margin-bottom: 50px;
 }
+
 .left {
-  margin: 30px;
+  margin: 0 30px;
   width: 33.333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left img {
+  height: 5rem;
+  max-height: 6rem;
+  box-shadow: 0 0 8px 8px white inset;
 }
 
 .left h1 {
   cursor: pointer;
-  padding-left: 60px;
+  padding-left: 20px;
   font-size: 30px;
+  margin: 0;
+  font-weight: bold;
+  color: red;
 }
 
 .center,
@@ -41,6 +54,11 @@
   cursor: pointer;
 }
 
+.center button:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+}
+
 .right {
   display: flex;
   justify-content: flex-end;
@@ -51,5 +69,6 @@
 }
 
 .right button:hover {
-  background-color: #cccccc;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
 }

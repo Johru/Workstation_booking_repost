@@ -1,11 +1,19 @@
 <div class="building-header">
   <h2>Choose another city</h2>
-  <select (change)="onChange()" [(ngModel)]="selectedCityValue">
+  <select
+    class="select-city"
+    (change)="onChange()"
+    [(ngModel)]="selectedCityValue"
+  >
     <option *ngFor="let city of cityList; let i = index" [value]="city.city">
       {{ city.city }}
     </option>
   </select>
-  <button mat-raised-button routerLink="/admin/create/building">
+  <button
+    class="create-building-button"
+    mat-raised-button
+    routerLink="/admin/create/building"
+  >
     Create Building
   </button>
 </div>
