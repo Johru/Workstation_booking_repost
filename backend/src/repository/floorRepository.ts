@@ -53,9 +53,9 @@ export class FloorRepository implements IFloorRepository {
       .execute();
 
     if (floorRemove.affected == 0) {
-      return { success: 'yes' };
-    } else {
       return { success: 'no' };
+    } else {
+      return { success: 'yes' };
     }
   }
 }

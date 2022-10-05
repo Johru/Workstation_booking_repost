@@ -1,5 +1,4 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { FloorEntity } from './floorEntity';
 
 @Entity('building')
 export class BuildingEntity {

@@ -1,6 +1,4 @@
-// import { Todo } from '../../db';
 import { IFloorRepository } from '../../repository';
-import { Response, Request } from 'express';
 import { floorSchema } from './floorschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
