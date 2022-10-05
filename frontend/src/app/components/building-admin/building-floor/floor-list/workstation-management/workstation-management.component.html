@@ -3,11 +3,7 @@
   <form>
     <mat-form-field appearance="fill">
       <mat-label>Select a workstation</mat-label>
-      <mat-select
-        (change)="onChangeInSelect()"
-        [(ngModel)]="selected"
-        name="workstation"
-      >
+      <mat-select [(ngModel)]="selected" name="workstation">
         <mat-option value="0">{{ defaultText }}</mat-option>
         <mat-option
           *ngFor="let workstation of workstationList; let i = index"
@@ -15,7 +11,6 @@
         >
           <div (click)="onSelect(workstation, i)">
             {{ workstation.workstation_name }}
-            {{ i }}
           </div>
         </mat-option>
       </mat-select>

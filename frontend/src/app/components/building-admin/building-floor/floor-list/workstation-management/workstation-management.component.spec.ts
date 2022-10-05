@@ -8,9 +8,8 @@ describe('WorkstationManagementComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WorkstationManagementComponent ]
-    })
-    .compileComponents();
+      declarations: [WorkstationManagementComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WorkstationManagementComponent);
     component = fixture.componentInstance;

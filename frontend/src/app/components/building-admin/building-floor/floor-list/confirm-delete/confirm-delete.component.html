@@ -1,9 +1,12 @@
 <div class="confirm-modal">
-<h1>{{status}} workstation</h1>
-<br>
-<div>Are you sure you want to {{status!.toLowerCase()}} the {{selectedWorkstation!.workstation_name}} workstation?</div>
+  <h1>{{ status }} workstation</h1>
+  <br />
   <div>
-    <button (click)="confirm()">{{status}}</button>    
+    Are you sure you want to {{ status!.toLowerCase() }} the
+    {{ selectedWorkstation!.workstation_name }} workstation?
+  </div>
+  <div>
+    <button (click)="confirm()">{{ status }}</button>
     <button (click)="cancel()">Cancel</button>
   </div>
 </div>

@@ -17,7 +17,7 @@ import { FloorListComponent } from './components/building-admin/building-floor/f
 import { FloorNewComponent } from './components/building-admin/building-floor/floor-new/floor-new.component';
 import { WorkstationManagementComponent } from './components/building-admin/building-floor/floor-list/workstation-management/workstation-management.component';
 import { WorkstationPreviewInputComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-input/workstation-preview-input.component';
-import { WorkstationCrossroadComponent } from './components/building-admin/building-floor/floor-list/workstation-crossroad/workstation-crossroad.component';
+
 import { ConfirmDeleteComponent } from './components/building-admin/building-floor/floor-list/confirm-delete/confirm-delete.component';
 import { WorkstationPreviewEditComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-edit/workstation-preview-edit.component';
 
@@ -33,7 +33,7 @@ import { WorkstationPreviewEditComponent } from './components/building-admin/bui
     FloorNewComponent,
     WorkstationManagementComponent,
     WorkstationPreviewInputComponent,
-    WorkstationCrossroadComponent,
+
     ConfirmDeleteComponent,
     WorkstationPreviewEditComponent,
   ],

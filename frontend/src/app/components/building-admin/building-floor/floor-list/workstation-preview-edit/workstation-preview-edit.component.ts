@@ -1,27 +1,26 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+
 import { FloorService } from 'src/app/services/admin-edit/floor.service';
+import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 
 @Component({
   selector: 'workstation-preview-edit',
   templateUrl: './workstation-preview-edit.component.html',
   styleUrls: ['./workstation-preview-edit.component.css'],
 })
-export class WorkstationPreviewEditComponent implements OnInit {
+export class WorkstationPreviewEditComponent {
   @Input() selectedWorkstationToEdit?: WorkstationInterface;
+  @Output() showManagementEmitter = new EventEmitter();
+  @Output() closePanel = new EventEmitter<boolean>();
+
+  workstation?: WorkstationInterface;
   newWorkstationForm = new FormGroup({
     workstation_id: new FormControl(),
     workstation_name: new FormControl(),
   });
-  @Output() showManagementEmitter = new EventEmitter();
-  @Output() closePanel = new EventEmitter<boolean>();
-  workstation?: WorkstationInterface;
 
   constructor(private floorService: FloorService) {}
-
-  ngOnInit(): void {}
 
   onSubmit() {
     this.workstation = this.selectedWorkstationToEdit;

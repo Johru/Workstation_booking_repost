@@ -31,7 +31,6 @@ export class ConfirmDeleteComponent implements OnInit {
       this.floorService.disableWorkstation(
         this.selectedWorkstation!.workstation_id
       );
-      console.log('disable or active status'); //DELETE
     } else if (this.status == 'Delete') {
       this.floorService.deleteWorkstation(
         this.selectedWorkstation!.workstation_id

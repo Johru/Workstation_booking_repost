@@ -8,9 +8,8 @@ describe('WorkstationPreviewInputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WorkstationPreviewInputComponent ]
-    })
-    .compileComponents();
+      declarations: [WorkstationPreviewInputComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WorkstationPreviewInputComponent);
     component = fixture.componentInstance;

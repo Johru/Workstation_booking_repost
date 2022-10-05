@@ -1,12 +1,10 @@
 import {
   Component,
-  OnInit,
   Input,
   Output,
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
@@ -18,13 +16,6 @@ import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
   styleUrls: ['./workstation-management.component.css'],
 })
 export class WorkstationManagementComponent implements OnChanges {
-  selectedWorkstation?: WorkstationInterface;
-  workstationIsSelected: boolean = false;
-  selectedIndex: any;
-  defaultText: string = 'Select a workstation';
-  selected: string = '0';
-  disableButton: boolean = true;
-  confirmDeleteValue: boolean = false;
   @Input() successfullConfirmOnManagement?: boolean;
   @Output() successfullConfirmOnManagementChange = new EventEmitter<boolean>();
   @Output() showPreviewEmitter = new EventEmitter();
@@ -35,7 +26,13 @@ export class WorkstationManagementComponent implements OnChanges {
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
 
-  constructor(private router: Router) {}
+  selectedWorkstation?: WorkstationInterface;
+  selectedIndex: any;
+  defaultText: string = 'Select a workstation';
+  selected: string = '0';
+  disableButton: boolean = true;
+
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.successfullConfirmOnManagement) {
@@ -49,9 +46,6 @@ export class WorkstationManagementComponent implements OnChanges {
     this.selectedWorkstation = workstation;
     this.selectedIndex = i;
     this.disableButton = false;
-  }
-  onChangeInSelect() {
-    console.log(this.selected);
   }
 
   disableSelected(): string {
