@@ -5,7 +5,11 @@
     (change)="onChange()"
     [(ngModel)]="selectedCityValue"
   >
-    <option *ngFor="let city of cityList; let i = index" [value]="city.city">
+    <option
+      class="city"
+      *ngFor="let city of cityList; let i = index"
+      [value]="city.city"
+    >
       {{ city.city }}
     </option>
   </select>

@@ -36,7 +36,7 @@
 }
 
 .info-extension {
-  border-top: 1px solid black;
+  border-top: 1px solid red;
   height: auto;
   overflow: hidden;
 }
@@ -92,6 +92,7 @@
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
+  color: red;
 }
 
 .reservation-list-wrapper {

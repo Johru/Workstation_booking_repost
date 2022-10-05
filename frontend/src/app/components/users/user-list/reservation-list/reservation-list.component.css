@@ -2,19 +2,45 @@
   display: flex;
   border-top: 1px solid black;
   margin: 0 50px;
+  padding: 0 30px;
 }
 
 .left,
 .center,
 .right {
-  width: 30%;
+  width: auto;
+  min-width: 30%;
   font-size: 20px;
   padding: 20px 20px;
+}
+.left,
+.center {
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  text-align: start;
+  gap: 10px;
+  line-height: 1.5em;
+}
+.panel p {
+  min-width: 50%;
+}
+
+.panel .panel-value {
+  margin: 20px 0;
 }
 
 .left p,
 .center p {
-  margin: 20px 50px;
+  margin: 20px 30px 20px 0px;
+  margin-right: auto;
 }
 
 .right {
@@ -28,13 +54,18 @@
   transform: translateX(-40px);
   position: center;
   height: auto;
-  width: 30%;
+  width: auto;
   font-size: 20px;
   font-weight: bold;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.right button:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
 }
 
 delete-modal {
