@@ -8,46 +8,51 @@ import { FloorService } from 'src/app/services/admin-edit/floor.service';
 @Component({
   selector: 'workstation-preview-input',
   templateUrl: './workstation-preview-input.component.html',
-  styleUrls: ['./workstation-preview-input.component.css']
+  styleUrls: ['./workstation-preview-input.component.css'],
 })
 export class WorkstationPreviewInputComponent implements OnInit {
-
   @Input() buttonValueToFalse?: boolean;
   @Output() closePanel = new EventEmitter<boolean>();
-
+  @Output() showManagementEmitter = new EventEmitter();
 
   newWorkstationForm = new FormGroup({
     workstation_id: new FormControl(),
     workstation_name: new FormControl(),
-    seats: new FormControl()
-  })
+    seats: new FormControl(),
+  });
 
   workstation!: WorkstationInterface;
 
   @Output() newWorkstationEvent = new EventEmitter<WorkstationInterface>();
 
-  constructor(private floorService: FloorService,
+  constructor(
+    private floorService: FloorService,
     private router: Router,
     private route: ActivatedRoute
-  ) { }
+  ) {}
+
+  ngOnInit(): void {
+    this.newWorkstationForm.reset();
+  }
 
   onSubmit(): void {
     this.workstation = {
       workstation_id: this.newWorkstationForm.value.workstation_id,
       workstation_name: this.newWorkstationForm.value.workstation_name,
       seats: Number(this.newWorkstationForm.value.seats),
-      workstation_isActive: true
-    }
+      workstation_isActive: true,
+    };
     this.newWorkstationEvent.emit(this.workstation);
     this.newWorkstationForm.reset();
     console.log(this.workstation); //DELETE
+    this.goToWorkstationManagement();
   }
 
   clickToClosePanel(): void {
     this.closePanel.emit(true);
   }
 
-  ngOnInit(): void {
+  goToWorkstationManagement() {
+    this.showManagementEmitter.emit();
   }
-
 }

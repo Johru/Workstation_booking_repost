@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
 
@@ -10,7 +17,7 @@ import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
   templateUrl: './workstation-management.component.html',
   styleUrls: ['./workstation-management.component.css'],
 })
-export class WorkstationManagementComponent implements OnInit {
+export class WorkstationManagementComponent implements OnChanges {
   selectedWorkstation?: WorkstationInterface;
   workstationIsSelected: boolean = false;
   selectedIndex: any;
@@ -18,7 +25,10 @@ export class WorkstationManagementComponent implements OnInit {
   selected: string = '0';
   disableButton: boolean = true;
   confirmDeleteValue: boolean = false;
-
+  @Input() successfullConfirmOnManagement?: boolean;
+  @Output() successfullConfirmOnManagementChange = new EventEmitter<boolean>();
+  @Output() showPreviewEmitter = new EventEmitter();
+  @Output() showEditEmitter = new EventEmitter<WorkstationInterface>();
   @Input() floorList?: Floor[];
   @Input() workstationList?: WorkstationInterface[];
   @Input() managementButtonMenuVisible?: boolean;
@@ -27,18 +37,18 @@ export class WorkstationManagementComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    //  this.selectedWorkstation = this.workstationList[0].workstation_name.
+  ngOnChanges(changes: SimpleChanges) {
+    if (this.successfullConfirmOnManagement) {
+      this.successFullConfirm(
+        changes['successfullConfirmOnManagement'].currentValue
+      );
+    }
   }
 
   onSelect(workstation: WorkstationInterface, i: number): void {
     this.selectedWorkstation = workstation;
     this.selectedIndex = i;
     this.disableButton = false;
-    console.log(this.selectedWorkstation);
-
-    // console.log(this.selectedWorkstation)
-    // console.log(this.selectedIndex)
   }
   onChangeInSelect() {
     console.log(this.selected);
@@ -59,31 +69,21 @@ export class WorkstationManagementComponent implements OnInit {
     return true;
   }
 
-  deleteWorkstation(): void {
-    this.workstationList?.splice(this.selectedIndex, 1);
-    console.log(this.workstationList);
-
-    this.workstationIsSelected = false;
-    console.log(this.workstationIsSelected);
-    this.disableSelected();
-
-    // let currentUrl = this.router.url;
-    // this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-    //     this.router.navigate([currentUrl]);
-    // });
-    // console.log('workstation deleted')
+  successFullConfirm(confirm: boolean): void {
+    if (confirm) {
+      this.selected = '0';
+    }
+    this.successfullConfirmOnManagement = false;
+    this.successfullConfirmOnManagementChange.emit(
+      this.successfullConfirmOnManagement
+    );
   }
 
-  // cancelDelete(event: boolean) {
-  //   if (event) {
-  //     this.confirmDeleteValue = event;
-  //   }
-  // }
+  showPreviewPanel() {
+    this.showPreviewEmitter.emit();
+  }
 
-  // confirmDelete(event: boolean) {
-  //   if (event) {
-  //     this.confirmDeleteValue = event;
-  //   }
-  //   this.deleteWorkstation();
-  // }
+  showEditPanel() {
+    this.showEditEmitter.emit(this.selectedWorkstation);
+  }
 }

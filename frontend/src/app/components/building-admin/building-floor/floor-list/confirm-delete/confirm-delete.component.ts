@@ -27,7 +27,7 @@ export class ConfirmDeleteComponent implements OnInit {
   }
 
   confirm(): void {
-    if (this.status == 'Disable' || 'Activate') {
+    if (this.status == 'Disable' || this.status == 'Activate') {
       this.floorService.disableWorkstation(
         this.selectedWorkstation!.workstation_id
       );

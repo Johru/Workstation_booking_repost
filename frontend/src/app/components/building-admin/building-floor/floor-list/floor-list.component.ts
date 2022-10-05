@@ -1,5 +1,13 @@
 import { transition } from '@angular/animations';
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  EventEmitter,
+  Output,
+  ChangeDetectorRef,
+  AfterContentChecked,
+} from '@angular/core';
 
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
@@ -10,9 +18,10 @@ import { FloorService } from 'src/app/services/admin-edit/floor.service';
   templateUrl: './floor-list.component.html',
   styleUrls: ['./floor-list.component.css'],
 })
-export class FloorListComponent implements OnInit {
+export class FloorListComponent implements OnInit, AfterContentChecked {
   floors: Floor[] = [];
   // workstationList?: WorkstationInterface;
+  selectedWorkstationToEdit?: WorkstationInterface;
   managementButtonMenuVisible: boolean = false;
   previewMenuVisible: boolean = true;
   crossroadMenuVisible: boolean = false;
@@ -21,23 +30,37 @@ export class FloorListComponent implements OnInit {
   status?: string;
   selectedWorkstation?: WorkstationInterface;
   allSeats?: number;
+  successfullConfirm: boolean = false;
+  addWorkstationPanel: boolean = false;
+  editWorkstationPanel: boolean = false;
 
   @Input() floor!: Floor;
 
   // @Output() reloadFloor = new EventEmitter();
 
-  constructor(private floorService: FloorService) {}
+  constructor(
+    private floorService: FloorService,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.getFloor();
     console.log(this.floor.workstations); //DELETE
     this.panelOpenState = false;
     this.numberOfSeats();
+    if (this.floor.workstations.length == 0) {
+      this.addWorkstationPanel = true;
+    }
+  }
+
+  ngAfterContentChecked(): void {
+    this.cd.detectChanges();
   }
 
   toggleExpand() {
     this.panelOpenState = !this.panelOpenState;
-    console.log(this.panelOpenState);
+    this.editWorkstationPanel = false;
+    this.addWorkstationPanel = false;
   }
 
   getFloor(): void {
@@ -77,6 +100,7 @@ export class FloorListComponent implements OnInit {
   cancel(event: boolean) {
     if (event) {
       this.toggleConfirmModal();
+      this.successfullConfirm = event;
     }
   }
 
@@ -84,6 +108,9 @@ export class FloorListComponent implements OnInit {
     if (event) {
       this.toggleConfirmModal();
     }
+    console.log(this.successfullConfirm);
+    this.successfullConfirm = event;
+    console.log(this.successfullConfirm);
   }
 
   toggleConfirmModal() {
@@ -103,5 +130,32 @@ export class FloorListComponent implements OnInit {
     this.status = 'Delete';
     console.log(this.status);
     this.selectedWorkstation = selectedWorkstation;
+  }
+
+  successfullConfirmOnManagement(switchConfirm: boolean) {
+    console.log(switchConfirm);
+    this.successfullConfirm = switchConfirm;
+  }
+
+  switchPanels() {
+    this.addWorkstationPanel = !this.addWorkstationPanel;
+  }
+
+  showManagementPanel() {
+    this.switchPanels();
+    this.editWorkstationPanel = false;
+  }
+
+  isEditVisible() {
+    if (this.addWorkstationPanel && !this.editWorkstationPanel) return true;
+    return false;
+  }
+
+  showEditPanel(selectedWorkstation: WorkstationInterface) {
+    console.log(this.selectedWorkstation);
+    console.log(selectedWorkstation);
+    this.selectedWorkstationToEdit = selectedWorkstation;
+    this.switchPanels();
+    this.editWorkstationPanel = !this.editWorkstationPanel;
   }
 }

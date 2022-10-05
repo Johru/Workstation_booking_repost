@@ -19,6 +19,7 @@ import { WorkstationManagementComponent } from './components/building-admin/buil
 import { WorkstationPreviewInputComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-input/workstation-preview-input.component';
 import { WorkstationCrossroadComponent } from './components/building-admin/building-floor/floor-list/workstation-crossroad/workstation-crossroad.component';
 import { ConfirmDeleteComponent } from './components/building-admin/building-floor/floor-list/confirm-delete/confirm-delete.component';
+import { WorkstationPreviewEditComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-edit/workstation-preview-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ConfirmDeleteComponent } from './components/building-admin/building-flo
     WorkstationManagementComponent,
     WorkstationPreviewInputComponent,
     WorkstationCrossroadComponent,
-    ConfirmDeleteComponent
+    ConfirmDeleteComponent,
+    WorkstationPreviewEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,9 +44,9 @@ import { ConfirmDeleteComponent } from './components/building-admin/building-flo
     MatExpansionModule,
     MatSelectModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

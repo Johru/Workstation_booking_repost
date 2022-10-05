@@ -31,9 +31,11 @@ export class FloorService {
       let ws = FLOORS[i].workstations.find(
         (workstation) => workstation.workstation_id == id
       );
-      let index = FLOORS[i].workstations.indexOf(ws!);
-      if (index != -1) {
-        FLOORS[i].workstations.slice(index, 1);
+      if (ws != undefined) {
+        let index = FLOORS[i].workstations.indexOf(ws!);
+        if (index != -1) {
+          FLOORS[i].workstations.splice(index, 1);
+        }
       }
     }
   }
@@ -51,6 +53,20 @@ export class FloorService {
         } else {
           FLOORS[i].workstations[index].workstation_isActive = true;
         }
+      }
+    }
+  }
+
+  editWorkstation(workstation: WorkstationInterface) {
+    let id = workstation.workstation_id;
+    for (let i: number = 0; i < FLOORS.length; i++) {
+      let ws = FLOORS[i].workstations.find(
+        (workstation) => workstation.workstation_id == id
+      );
+      let index = FLOORS[i].workstations.indexOf(ws!);
+      if (index != -1) {
+        FLOORS[i].workstations[index].workstation_name =
+          workstation.workstation_name;
       }
     }
   }

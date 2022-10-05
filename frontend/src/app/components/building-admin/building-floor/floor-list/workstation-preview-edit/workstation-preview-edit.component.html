@@ -7,22 +7,15 @@
       id="workstationName"
       formControlName="workstation_name"
       required
+      [(ngModel)]="selectedWorkstationToEdit!.workstation_name"
     />
     <br />
-    <label for="seatsNumber">Number of seats:</label>
-    <input
-      type="number"
-      name="seatsNumber"
-      id="seatsNumber"
-      formControlName="seats"
-      required
-    />
     <br />
     <input
       type="submit"
       name="addButton"
       id="addButton"
-      value="Add workstation"
+      value="Edit workstation"
       [disabled]="!newWorkstationForm.valid"
     />
   </form>

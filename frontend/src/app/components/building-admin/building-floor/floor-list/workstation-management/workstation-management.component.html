@@ -34,8 +34,10 @@
 </div>
 <br />
 
-<button>Add new workstation</button>
-<button>Edit workstation</button>
+<button (click)="showPreviewPanel()">Add new workstation</button>
+<button (click)="showEditPanel()" [disabled]="selected == '0'">
+  Edit workstation
+</button>
 
 <button [disabled]="selected == '0'" (click)="deleteSelected()">Delete</button>
 <button
