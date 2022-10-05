@@ -6,17 +6,16 @@ import { BuildingService } from 'src/app/services/admin-edit/building.service';
 @Component({
   selector: 'building-dashboard',
   templateUrl: './building-dashboard.component.html',
-  styleUrls: ['./building-dashboard.component.css']
+  styleUrls: ['./building-dashboard.component.css'],
 })
 export class BuildingDashboardComponent implements OnInit {
   buildings: Building[] = [];
 
-  constructor(private buildingService: BuildingService) { }
+  constructor(private buildingService: BuildingService) {}
 
-  ngOnInit(): void {       
-  }  
+  ngOnInit(): void {} //DELETE?
 
   addBuilding(newBuilding: Building) {
-    this.buildingService.addBuilding(newBuilding);   
+    this.buildingService.addBuilding(newBuilding);
   }
 }

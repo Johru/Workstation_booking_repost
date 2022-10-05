@@ -5,14 +5,14 @@ import { BuildingDashboardComponent } from './components/building-admin/building
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
 import { BuildingsAdminMainComponent } from './components/building-admin/buildings-admin-main/buildings-admin-main.component';
 
-const routes: Routes = [] = [
-  { path: 'buildings', component: BuildingsAdminMainComponent }, // for testing purpose
+const routes: Routes = ([] = [
+  { path: 'buildings', component: BuildingsAdminMainComponent }, // REFACTOR AFTER CONNECTION WITH ADMIN/DUILDINGS
   { path: 'edit/building', component: BuildingDashboardComponent },
-  { path: 'edit/building/:id', component: BuildingFloorComponent }
-]
+  { path: 'edit/building/:id', component: BuildingFloorComponent },
+]);
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

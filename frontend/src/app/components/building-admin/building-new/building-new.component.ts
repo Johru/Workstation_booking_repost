@@ -6,12 +6,11 @@ import { Building } from 'src/app/help-files/buildind-interface';
 @Component({
   selector: 'building-new',
   templateUrl: './building-new.component.html',
-  styleUrls: ['./building-new.component.css']
+  styleUrls: ['./building-new.component.css'],
 })
 export class BuildingNewComponent implements OnInit {
-
   selectedId: string = '';
-  building!: Building;  
+  building!: Building;
 
   @Output() newBuildingEvent = new EventEmitter<Building>();
 
@@ -21,10 +20,10 @@ export class BuildingNewComponent implements OnInit {
     building_address: new FormControl(),
     building_state: new FormControl(),
     building_zip: new FormControl(),
-    building_city: new FormControl()
+    building_city: new FormControl(),
   });
 
-  constructor() { }
+  constructor() {}
 
   onSubmit(): void {
     this.building = {
@@ -33,18 +32,15 @@ export class BuildingNewComponent implements OnInit {
       building_address: this.newBuildingForm.value.building_address,
       building_state: this.newBuildingForm.value.building_state,
       building_zip: this.newBuildingForm.value.building_zip,
-      building_city: this.newBuildingForm.value.building_city
-    }    
+      building_city: this.newBuildingForm.value.building_city,
+    };
     this.newBuildingEvent.emit(this.building);
     this.newBuildingForm.reset();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {} //DELETE?
 
   pickId(id: string) {
     this.selectedId = id;
   }
-
 }
-

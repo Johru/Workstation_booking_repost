@@ -1,15 +1,15 @@
-.nameOfBuilding {
+.name-of-building {
   margin-left: 50px;
   margin-top: 50px;
   display: inline-block;
 }
 
-.noFloorsSign {
+.no-floors-sign {
   text-align: center;
   font-size: 1.4em;
   margin: 50px 0 0 0;
 }
 
-.addFloorContainer {
+.add-floor-container {
   margin: 50px 0 0 50px;
 }

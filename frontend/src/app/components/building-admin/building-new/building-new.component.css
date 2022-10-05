@@ -1,11 +1,10 @@
 form {
-	padding-left: 50px;
+  padding-left: 50px;
 }
 
-
 .newBuildingContainer {
-	width: 800px;
-	margin: 50px 0 0 80px;
-	display: flex;
-align-items: center;
+  width: 800px;
+  margin: 50px 0 0 80px;
+  display: flex;
+  align-items: center;
 }
