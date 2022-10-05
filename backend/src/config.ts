@@ -1,6 +1,6 @@
 import { config } from 'dotenv';
 
-config({ path: '../.env' });
+config();
 
 export default {
   port: process.env.SERVER_PORT,
