@@ -1,7 +1,7 @@
 import { SeatEntity, WorkstationEntity } from '../../db';
 import { ISeatRepository, Success } from '../../repository';
 import { Response, Request } from 'express';
-import { seatSchema } from './Schema';
+import { seatSchema } from './seatSchema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 
@@ -11,7 +11,7 @@ export interface ISeatService {
     req: Request,
     res: Response
   ): Promise<{ status: string; message: string[] }>;
-  deletedSeat(req: Request, res: Response): Promise<Success>;
+  deletedSeat(seatId: number): Promise<Success>;
 }
 
 export class SeatService implements ISeatService {
@@ -51,12 +51,7 @@ export class SeatService implements ISeatService {
     };
   }
 
-  async deletedSeat(req: Request, res: Response): Promise<Success> {
-    try {
-      await this.seatRepository.deleteSeat(req, res);
-      return { success: 'yes' };
-    } catch (error) {
-      return { success: 'no' };
-    }
+  async deletedSeat(seatId: number): Promise<Success> {
+    return this.seatRepository.deleteSeat(seatId);
   }
 }

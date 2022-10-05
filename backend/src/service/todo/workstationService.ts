@@ -1,25 +1,22 @@
 import { WorkstationEntity } from '../../db';
 import { IWorkstationRepository } from '../../repository';
-import { Response, Request } from 'express';
-import { workstationSchema } from './Schema'
+import { workstationSchema } from './workstationschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 import { Success } from '../../repository';
 
 export interface IWorkstationService {
   getWorkstations(): Promise<WorkstationEntity[]>;
-  showWorkstationOnFloor(
-    req: Request,
-    res: Response
-  ): Promise<WorkstationEntity[]>;
+  showWorkstationOnFloor(floorId: number): Promise<WorkstationEntity[]>;
   createWorkstation(
-    workstation: WorkstationEntity, seatsNumber: number
+    workstation: WorkstationEntity,
+    seatsNumber: number
   ): Promise<{ status: string; message: string[] }>;
-  updatedWorkstation(
-    req: Request,
-    res: Response
+  updateWorkstation(
+    workstationId: number,
+    workstation: WorkstationEntity
   ): Promise<{ status: string; message: string[] }>;
-  deletedWorkstation(req: Request, res: Response): Promise<Success>;
+  deleteWorkstation(workstationId: number): Promise<Success>;
 }
 
 export class WorkstationService implements IWorkstationService {
@@ -29,16 +26,13 @@ export class WorkstationService implements IWorkstationService {
     return await this.workstationRepository.findAllWorkstations();
   }
 
-  async showWorkstationOnFloor(
-    req: Request,
-    res: Response
-  ): Promise<WorkstationEntity[]> {
-    var floorId = parseInt(req.params.floorId, 10);
+  async showWorkstationOnFloor(floorId: number): Promise<WorkstationEntity[]> {
     return await this.workstationRepository.findAllWorkstationsOnFloor(floorId);
   }
 
   async createWorkstation(
-    workstation: WorkstationEntity, seatsNumber: number
+    workstation: WorkstationEntity,
+    seatsNumber: number
   ): Promise<{ status: string; message: string[] }> {
     try {
       const value = await workstationSchema.validateAsync(workstation);
@@ -51,7 +45,10 @@ export class WorkstationService implements IWorkstationService {
       }
     }
 
-    const newWorkstation = await this.workstationRepository.saveWorkstation(workstation, seatsNumber);
+    const newWorkstation = await this.workstationRepository.saveWorkstation(
+      workstation,
+      seatsNumber
+    );
 
     return {
       status: 'OK',
@@ -61,11 +58,10 @@ export class WorkstationService implements IWorkstationService {
     };
   }
 
-  async updatedWorkstation(
-    req: Request,
-    res: Response
+  async updateWorkstation(
+    workstationId: number,
+    workstation: WorkstationEntity
   ): Promise<{ status: string; message: string[] }> {
-    const workstation: WorkstationEntity = req.body as WorkstationEntity;
     try {
       const value = await workstationSchema.validateAsync(workstation);
     } catch (error) {
@@ -76,26 +72,24 @@ export class WorkstationService implements IWorkstationService {
         return { status: 'Error', message: errorMessage };
       }
     }
-    var workstationId = parseInt(req.params.workstationId, 10);
-    const newWorkstation = await this.workstationRepository.updateWorkstation(
-      workstationId,
-      workstation
-    );
 
-    return {
-      status: 'OK',
-      message: [
-        `Workstation is succesfully updated and saved with its id: ${newWorkstation.workstation_id}`,
-      ],
-    };
+    try {
+      const newWorkstation = await this.workstationRepository.updateWorkstation(
+        workstationId,
+        workstation
+      );
+      return {
+        status: 'OK',
+        message: [
+          `Workstation is succesfully updated and saved with its id: ${newWorkstation.workstation_id}`,
+        ],
+      };
+    } catch (error: any) {
+      return { status: 'Error', message: ['Error record not found.'] };
+    }
   }
 
-  async deletedWorkstation(req: Request, res: Response): Promise<Success> {
-    try {
-      await this.workstationRepository.deleteWorkstation(req, res);
-      return { success: 'yes' };
-    } catch (error) {
-      return { success: 'no' };
-    }
+  async deleteWorkstation(workstationId: number): Promise<Success> {
+    return this.workstationRepository.deleteWorkstation(workstationId);
   }
 }

@@ -6,7 +6,7 @@ import { SeatEntity } from '../db';
 export interface ISeatRepository {
   findAllSeats(): Promise<SeatEntity[]>;
   saveSeat(seat: SeatEntity): Promise<SeatEntity>;
-  deleteSeat(req: Request, res: Response): Promise<Success>;
+  deleteSeat(seatId: number): Promise<Success>;
 }
 
 export class SeatRepository implements ISeatRepository {
@@ -20,8 +20,7 @@ export class SeatRepository implements ISeatRepository {
     return appDataSource.getRepository(SeatEntity).save(seatToSave);
   }
 
-  async deleteSeat(req: Request, res: Response): Promise<Success> {
-    var seatId = parseInt(req.params.seatId, 10);
+  async deleteSeat(seatId: number): Promise<Success> {
     var seatRemove = await appDataSource
       .createQueryBuilder()
       .delete()

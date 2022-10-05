@@ -6,7 +6,6 @@ import {
   JoinColumn,
   OneToMany,
 } from 'typeorm';
-import { BuildingEntity } from './buildingEntity';
 import { FloorEntity } from './floorEntity';
 import { SeatEntity } from './seatEntity';
 import { BoolBitTransformer } from './transformer';
@@ -24,13 +23,12 @@ export class WorkstationEntity {
   @Column({
     name: 'workstation_isactive',
     type: 'bit',
-    default: true,
     transformer: new BoolBitTransformer(),
   })
-  workstation_isactive?: boolean;
+  workstation_isactive?: boolean = true;
 
   @ManyToOne(() => FloorEntity, floor => floor.workstation, {
-  onDelete: 'CASCADE',
+    onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'floor_id' })
   floor?: FloorEntity;

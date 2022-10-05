@@ -1,7 +1,6 @@
 import { appDataSource } from '../db';
 import { WorkstationEntity } from '../db';
 import { SeatEntity } from '../db';
-import { Response, Request } from 'express';
 import { Success } from './success';
 
 export interface IWorkstationRepository {
@@ -15,7 +14,7 @@ export interface IWorkstationRepository {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<WorkstationEntity>;
-  deleteWorkstation(req: Request, res: Response): Promise<Success>;
+  deleteWorkstation(workstationId: number): Promise<Success>;
 }
 
 export class WorkstationRepository implements IWorkstationRepository {
@@ -63,27 +62,24 @@ export class WorkstationRepository implements IWorkstationRepository {
   ): Promise<WorkstationEntity> {
     var workstationUpdate = await appDataSource
       .getRepository(WorkstationEntity)
-      .find({
+      .findOne({
         where: {
           workstation_id: workstationId,
         },
       });
-    var workstationToSave: WorkstationEntity = {};
-    workstationUpdate.map(v => {
-      workstationToSave = v;
-    });
-    workstationToSave.floor_id = workstation.floor_id;
-    workstationToSave.workstation_name = workstation.workstation_name;
-    if (workstation.hasOwnProperty('workstation_isactive')) {
-      workstationToSave.workstation_isactive = workstation.workstation_isactive;
+
+    if (workstationUpdate == null) {
+      let err = new Error();
+      err.message = 'Record not found.';
+      return Promise.reject(err);
+    } else {
+      workstationUpdate.floor_id = workstation.floor_id
+      workstationUpdate.workstation_name = workstation.workstation_name
+      return appDataSource.getRepository(WorkstationEntity).save(workstationUpdate);
     }
-    return appDataSource
-      .getRepository(WorkstationEntity)
-      .save(workstationToSave);
   }
 
-  async deleteWorkstation(req: Request, res: Response): Promise<Success> {
-    var workstationId = parseInt(req.params.workstationId, 10);
+  async deleteWorkstation(workstationId: number): Promise<Success> {
     var workstationRemove = await appDataSource
       .createQueryBuilder()
       .delete()
@@ -92,9 +88,9 @@ export class WorkstationRepository implements IWorkstationRepository {
       .execute();
 
     if (workstationRemove.affected == 0) {
-      return { success: 'yes' };
-    } else {
       return { success: 'no' };
+    } else {
+      return { success: 'yes' };
     }
   }
 }

@@ -1,8 +1,5 @@
-import { appDataSource } from '../db/connection';
 import { Router, Response, Request } from 'express';
-import { resourceLimits } from 'worker_threads';
 import { ISeatService } from '../service';
-import { SeatEntity } from '../db/models/seatEntity';
 
 export class SeatController {
   private readonly _router: Router = Router();
@@ -24,12 +21,8 @@ export class SeatController {
     this._router.delete(
       '/seat/:seatId/delete',
       async (req: Request, res: Response) => {
-        var result = await this.seatService.deletedSeat(req, res);
-        if (result) {
-          res.status(200).json('success:yes');
-        } else {
-          res.status(404).json('success:no');
-        }
+        var seatId = parseInt(req.params.seatId, 10);
+          res.status(200).json(await this.seatService.deletedSeat(seatId));
       }
     );
   }
