@@ -75,6 +75,7 @@ export class WorkstationRepository implements IWorkstationRepository {
     } else {
       workstationUpdate.floor_id = workstation.floor_id
       workstationUpdate.workstation_name = workstation.workstation_name
+      workstationUpdate.workstation_isactive = workstation.workstation_isactive
       return appDataSource.getRepository(WorkstationEntity).save(workstationUpdate);
     }
   }
