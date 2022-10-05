@@ -7,8 +7,8 @@ export interface IFloorRepository {
   findAllFloors(): Promise<FloorEntity[]>;
   saveFloor(floor: FloorEntity): Promise<FloorEntity>;
   updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity>;
-  deleteFloor(req: Request, res: Response): Promise<Success>;
-  countWorkstationAndSeat (): Promise <any[]>;
+  deleteFloor(floorId:number): Promise<Success>;
+  countWorkstation(): Promise <any[]>;
 }
 
 export class FloorRepository implements IFloorRepository {
@@ -26,28 +26,29 @@ export class FloorRepository implements IFloorRepository {
     return appDataSource.getRepository(FloorEntity).save(floorToSave);
   }
 
-  async updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity> {
-    var floorUpdate = await appDataSource.getRepository(FloorEntity).find({
-      where: {
-        floor_id: floorId,
-      },
-    });
-    var floorToSave: FloorEntity = {
-      floor_id: 0,
-    };
-    floorUpdate.map(v => {
-      floorToSave = v;
-    });
-    floorToSave.building_id = floor.building_id;
-    floorToSave.floor_name = floor.floor_name;
-    floorToSave.floor_capacity = floor.floor_capacity;
-    floorToSave.floor_plan = floor.floor_plan;
+  async updateFloor(floorId: number, floor:FloorEntity): Promise<FloorEntity> {
 
-    return appDataSource.getRepository(FloorEntity).save(floorToSave);
+    var floorUpdate = await appDataSource
+      .getRepository(FloorEntity)
+      .findOne({
+        where: {
+          floor_id: floorId,
+        },
+      });
+
+    if (floorUpdate == null) {
+      let err = new Error();
+      err.message = 'Record not found.';
+      return Promise.reject(err);
+    } else {
+      floorUpdate.building_id = floor.building_id
+      floorUpdate.floor_name = floor.floor_name
+      floorUpdate.floor_capacity = floor.floor_capacity
+      floorUpdate.floor_plan = floor.floor_plan
+      return appDataSource.getRepository(FloorEntity).save(floorUpdate);
+    }
   }
-
-  async deleteFloor(req: Request, res: Response): Promise<Success> {
-    var floorId = parseInt(req.params.floorId, 10);
+  async deleteFloor(floorId:number): Promise<Success> {
     var floorRemove = await appDataSource
       .createQueryBuilder()
       .delete()
@@ -63,7 +64,7 @@ export class FloorRepository implements IFloorRepository {
   }
 
 
-  async countWorkstationAndSeat(): Promise<any[]> {
+  async countWorkstation(): Promise<FloorEntity[]> {
     
     return appDataSource
     .getRepository(FloorEntity)

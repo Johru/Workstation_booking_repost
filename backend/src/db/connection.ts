@@ -1,7 +1,4 @@
-import mysql from 'mysql';
 import { DataSource } from 'typeorm';
-
-// import { Todo } from './models/todo';
 import { FloorEntity } from './models/floorEntity'
 import config from '../config';
 import { BuildingEntity } from './models/buildingEntity';

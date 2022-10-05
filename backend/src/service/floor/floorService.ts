@@ -12,11 +12,10 @@ export interface IFloorService {
   createFloor(
     floor: FloorEntity
   ): Promise<{ status: string; message: string[] }>;
-  updatedFloor(
-    req: Request,
-    res: Response
+  updateFloor(
+    floorId:number, floor:FloorEntity
   ): Promise<{ status: string; message: string[] }>;
-  deletedFloor(req: Request, res: Response): Promise<Success>;
+  deleteFloor(floorId:number): Promise<Success>;
   workstationCount(): Promise<any[]>
 
 }
@@ -50,11 +49,9 @@ export class FloorService implements IFloorService {
     };
   }
 
-  async updatedFloor(
-    req: Request,
-    res: Response
+  async updateFloor(
+    floorId:number, floor:FloorEntity
   ): Promise<{ status: string; message: string[] }> {
-    const floor: FloorEntity = req.body as FloorEntity;
     try {
       const value = await floorSchema.validateAsync(floor);
     } catch (error) {
@@ -65,28 +62,30 @@ export class FloorService implements IFloorService {
         return { status: 'Error', message: errorMessage };
       }
     }
-    var floorId = parseInt(req.params.floorId, 10);
-    const newFloor = await this.floorRepository.updateFloor(floorId, floor);
 
+  try {
+    const newFloor = await this.floorRepository.updateFloor(
+      floorId,
+      floor
+    );
     return {
       status: 'OK',
       message: [
         `Floor is succesfully updated and saved with its id: ${newFloor.floor_id}`,
       ],
     };
+  } catch (error: any) {
+    return { status: 'Error', message: ['Error record not found.'] };
+  }
+}
+
+
+  async deleteFloor(floorId:number): Promise<Success> {
+    return this.floorRepository.deleteFloor(floorId);
   }
 
-  async deletedFloor(req: Request, res: Response): Promise<Success> {
-    try {
-      await this.floorRepository.deleteFloor(req, res);
-      return { success: 'yes' };
-    } catch (error) {
-      return { success: 'no' };
-    }
-  }
-
-  async workstationCount(): Promise<any[]> {
-    return this.floorRepository.countWorkstationAndSeat();
+  async workstationCount(): Promise<FloorEntity[]> {
+    return this.floorRepository.countWorkstation();
   }
 
 

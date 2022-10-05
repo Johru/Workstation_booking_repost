@@ -1,5 +1,4 @@
 import { FloorEntity } from 'db';
-import { appDataSource } from '../db/connection';
 import { IFloorService } from '../service';
 import { Router, Response, Request } from 'express';
 
@@ -19,20 +18,23 @@ export class FloorController {
     this._router.put(
       '/floor/:floorId/update',
       async (req: Request, res: Response) => {
-        res.status(200).json(await this.floorService.updatedFloor(req, res));
+        const floor: FloorEntity = req.body as FloorEntity;
+        var floorId = parseInt(req.params.floorId, 10);
+        res.status(200).json(await this.floorService.updateFloor(floorId,floor));
       }
     );
 
     this._router.delete(
       '/floor/:floorId/delete',
       async (req: Request, res: Response) => {
-        res.status(200).json(await this.floorService.deletedFloor(req, res));
+        var floorId = parseInt(req.params.floorId, 10);
+        res.status(200).json(await this.floorService.deleteFloor(floorId));
       }
     );
 
 
     this._router.get(
-      '/floor/:floorId/workstationcount',
+      '/floor/workstationcount',
       async (req: Request, res: Response) => {
         res.status(200).json(await this.floorService.workstationCount());
       }
