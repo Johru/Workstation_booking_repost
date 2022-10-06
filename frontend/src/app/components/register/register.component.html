@@ -2,7 +2,7 @@
   <div class="form-wrapper" [hidden]="submitted">
     <h2>SIGN UP</h2>
     <p>Already member ? Please login <span routerLink="/login">here !</span></p>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
       <!-- EMAIL -->
       <label for="email">e-mail:</label>
       <input type="email" name="email" id="email" placeholder="place@holder.com" ngModel required email
@@ -44,11 +44,10 @@
         Password Confirm has to
         match !</p>
       <!-- BUTTON -->
-      <button type="submit" [disabled]="!f.valid">SUBMIT</button>
+      <button type="submit" [disabled]="!regForm.valid">SUBMIT</button>
     </form>
   </div>
-  <ng-container *ngIf="f.submitted">
+  <ng-container *ngIf="regForm.submitted">
     <p>Your account has been created. Login <span routerLink="/login">here!</span></p>
   </ng-container>
-
 </div>

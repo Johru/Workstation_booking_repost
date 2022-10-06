@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navpanel.component.html',
   styleUrls: ['./navpanel.component.css'],
 })
-export class NavpanelComponent implements OnInit {
+export class NavpanelComponent {
   constructor() {}
 
   ngOnInit(): void {}

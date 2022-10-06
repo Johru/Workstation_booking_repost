@@ -11,22 +11,13 @@ export class RegisterComponent {
   show: boolean = false;
   visibility: string = 'password-hidden';
   attribute: string = 'password';
-  submitted = false;
+  submitted: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   onSubmit(form: NgForm) {
     this.submitted = true;
     let fullName = form.value.firstName + ' ' + form.value.lastName;
-    let url = 'http://localhost:3022/api/users';
-    this.http
-      .post(url, {
-        fullName: fullName,
-        email: form.value.email,
-        ulogin: form.value.ulogin,
-        password: form.value.password,
-      })
-      .subscribe((res) => console.log(res));
   }
 
   toogle() {
