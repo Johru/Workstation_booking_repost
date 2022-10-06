@@ -45,3 +45,189 @@
 2022-09-29 18:13:54:1354 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
 2022-09-29 18:14:46:1446 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
 2022-09-29 18:16:30:1630 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-09-30 15:40:44:4044 [32minfo[39m: [32mLogger: Data source has been initialized.[39m
+2022-09-30 15:41:31:4131 [32minfo[39m: [32mLogger: Data source has been initialized.[39m
+2022-09-30 15:41:50:4150 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:42:11:4211 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-09-30 15:43:48:4348 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:44:37:4437 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:44:38:4438 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:45:15:4515 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:45:16:4516 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:47:21:4721 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:47:22:4722 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:48:36:4836 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:48:37:4837 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:49:46:4946 [32minfo[39m: [32m/building/delete/:id endpoint accessed[39m
+2022-09-30 15:50:28:5028 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 15:51:20:5120 [32minfo[39m: [32m/building/:id/edit endpoint accessed[39m
+2022-09-30 15:52:09:529 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:52:09:529 [32minfo[39m: [32m/building/:id/edit endpoint accessed[39m
+2022-09-30 15:53:22:5322 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-09-30 15:56:28:5628 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 15:56:29:5629 [32minfo[39m: [32m/building/edit/:id endpoint accessed[39m
+2022-09-30 15:59:15:5915 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-09-30 16:44:51:4451 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 16:45:09:459 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 16:45:18:4518 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-09-30 16:45:18:4518 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-09-30 16:46:16:4616 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-09-30 16:49:29:4929 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 16:49:53:4953 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-09-30 17:08:46:846 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:08:57:857 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-09-30 17:09:20:920 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:09:21:921 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-09-30 17:11:17:1117 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:16:00:160 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:16:01:161 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:16:06:166 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:16:10:1610 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:16:48:1648 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-09-30 17:17:06:176 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:17:11:1711 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-09-30 17:17:50:1750 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:17:55:1755 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:17:59:1759 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:18:04:184 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-09-30 17:18:08:188 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-09-30 17:30:04:304 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:34:00:340 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:34:37:3437 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:34:38:3438 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-09-30 17:50:21:5021 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:50:28:5028 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:51:38:5138 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 17:52:12:5212 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:52:13:5213 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 17:52:30:5230 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 17:57:28:5728 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 17:57:29:5729 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-09-30 17:57:51:5751 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 17:58:01:581 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 17:58:02:582 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 17:58:03:583 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 17:58:14:5814 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-09-30 17:58:23:5823 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-09-30 18:07:15:715 [32minfo[39m: [32mData source has been initialized.[39m
+2022-09-30 18:07:57:757 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-09-30 18:08:09:89 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-09-30 18:12:15:1215 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:18:13:1813 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:19:14:1914 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-03 17:19:27:1927 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-03 17:19:58:1958 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-03 17:20:01:201 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-03 17:20:09:209 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-03 17:20:22:2022 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-03 17:23:44:2344 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-03 17:25:42:2542 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:25:43:2543 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-03 17:26:32:2632 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:26:33:2633 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-03 17:27:13:2713 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:27:15:2715 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-03 17:27:26:2726 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-03 17:28:12:2812 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:28:17:2817 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-03 17:28:23:2823 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-03 17:30:00:300 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:30:01:301 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-03 17:30:13:3013 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-03 17:30:33:3033 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-03 17:32:57:3257 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:32:58:3258 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:32:58:3258 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-10-03 17:37:09:379 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:37:09:379 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-10-03 17:37:19:3719 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:38:06:386 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:38:06:386 [31merror[39m: [31m"building_name" is required[39m
+2022-10-03 17:38:50:3850 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:40:51:4051 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:40:51:4051 [31merror[39m: [31m"building_name" is required[39m
+2022-10-03 17:41:01:411 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:41:08:418 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:41:15:4115 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:41:20:4120 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:41:34:4134 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:41:34:4134 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:41:35:4135 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 17:41:39:4139 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:43:50:4350 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:43:52:4352 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:45:19:4519 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:45:20:4520 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:48:04:484 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:48:20:4820 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:51:49:5149 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:51:54:5154 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:52:34:5234 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:52:39:5239 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:53:18:5318 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:53:49:5349 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:53:55:5355 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:54:46:5446 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:54:47:5447 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:55:23:5523 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:55:24:5524 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:56:04:564 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:56:05:565 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 17:57:37:5737 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 17:57:39:5739 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 18:01:00:10 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 18:01:02:12 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-03 18:01:58:158 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 18:01:58:158 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-03 18:02:07:27 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-10-03 18:02:20:220 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-10-03 18:02:25:225 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-10-03 18:03:34:334 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-03 18:03:38:338 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-03 18:03:50:350 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-03 18:04:39:439 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-03 18:04:44:444 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 08:36:33:3633 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 09:07:06:76 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-04 09:17:27:1727 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-04 09:18:46:1846 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-04 09:18:59:1859 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-04 09:19:49:1949 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 09:19:49:1949 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 09:19:58:1958 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 09:20:03:203 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 09:20:38:2038 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 09:20:43:2043 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 09:22:33:2233 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 09:22:36:2236 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-04 09:23:24:2324 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 09:23:24:2324 [31merror[39m: [31m"building_name" is required[39m
+2022-10-04 09:24:15:2415 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 09:24:23:2423 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 09:24:23:2423 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 10:41:24:4124 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 10:41:46:4146 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-10-04 10:41:46:4146 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 10:45:05:455 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 10:45:26:4526 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 10:45:26:4526 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 10:45:38:4538 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 10:45:38:4538 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 10:47:21:4721 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 10:47:22:4722 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 10:47:41:4741 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 10:47:41:4741 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 10:57:15:5715 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 10:57:20:5720 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 10:57:44:5744 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 10:57:44:5744 [31merror[39m: [31m"building_name" is required[39m
+2022-10-04 10:57:59:5759 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 10:58:06:586 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 11:00:38:038 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 11:00:44:044 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 11:00:51:051 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 11:00:51:051 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 11:02:50:250 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-04 11:11:35:1135 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 11:11:43:1143 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 11:11:43:1143 [32minfo[39m: [32mnull control triggered[39m

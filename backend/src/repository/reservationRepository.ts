@@ -1,8 +1,9 @@
 import { appDataSource } from '../db';
 import { Success } from './success';
 import { ReservationEntity, SeatEntity } from '../db';
+import { determineSuccess } from './determineSuccess';
 
-interface IReservationRepository {
+export interface IReservationRepository {
   showReservationForGivenDate(
     workstationId: number,
     reservationDate: string
@@ -42,6 +43,14 @@ export class ReservationRepository implements IReservationRepository {
       .getRepository(ReservationEntity)
       .createQueryBuilder('reservation')
       .where('reservation.user_id = :id', { id: userId })
+      .leftJoin('reservation.seat', 'seat')
+      .addSelect(['seat.seat_id'])
+      .leftJoin('seat.workstation', 'workstation')
+      .addSelect(['workstation.workstation_name'])
+      .leftJoin('workstation.floor', 'floor')
+      .addSelect(['floor.floor_name'])
+      .leftJoin('floor.building', 'building')
+      .addSelect(['building.building_name'])
       .getMany();
   }
 
@@ -66,10 +75,6 @@ export class ReservationRepository implements IReservationRepository {
       })
       .execute();
 
-    if (deletion.affected == 0) {
-      return { success: 'no' };
-    } else {
-      return { success: 'yes' };
-    }
+    return determineSuccess(deletion);
   }
 }

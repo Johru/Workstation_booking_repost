@@ -11,7 +11,7 @@ export class UserEntity {
   user_name?: string;
 
   @Column()
-  seat_login?: string;
+  user_login?: string;
 
   @Column()
   user_password?: string;
@@ -22,9 +22,18 @@ export class UserEntity {
   @Column({
     name: 'user_isadmin',
     type: 'bit',
+    default: false,
     transformer: new BoolBitTransformer(),
   })
   readonly user_isadmin?: boolean;
+
+  @Column({
+    name: 'user_isblocked',
+    type: 'bit',
+    default: false,
+    transformer: new BoolBitTransformer(),
+  })
+  readonly user_isblocked?: boolean;
 
   @OneToMany(() => ReservationEntity, reservation => reservation.user)
   reservation?: ReservationEntity[];

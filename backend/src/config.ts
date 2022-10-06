@@ -2,7 +2,7 @@ import { config } from 'dotenv';
 const dirpath = require('path');
 const envpath = dirpath.join(__dirname, '../.env');
 
-config({ path: envpath });
+config();
 
 export default {
   port: process.env.SERVER_PORT,
