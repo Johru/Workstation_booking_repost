@@ -9,19 +9,11 @@ import { BuildingService } from 'src/app/services/admin-edit/building.service';
   styleUrls: ['./building-dashboard.component.css'],
 })
 export class BuildingDashboardComponent implements OnInit {
-  // buildings: Building[] = [];
-
   constructor(private buildingService: BuildingService) {}
 
-  ngOnInit(): void {
-    // this.getBuilding();
-  }
+  ngOnInit(): void {}
 
   addBuilding(newBuilding: Building) {
     this.buildingService.addBuilding(newBuilding);
   }
-
-  // getBuilding(): void {
-  //   this.buildings = this.buildingService.getBuildings();
-  // }
 }
