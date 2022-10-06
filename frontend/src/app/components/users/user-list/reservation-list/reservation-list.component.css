@@ -1,0 +1,49 @@
+.reservation-wrapper {
+  display: flex;
+  border-top: 1px solid black;
+  margin: 0 50px;
+}
+
+.left,
+.center,
+.right {
+  width: 30%;
+  font-size: 20px;
+  padding: 20px 20px;
+}
+
+.left p,
+.center p {
+  margin: 20px 50px;
+}
+
+.right {
+  display: grid;
+}
+
+.right button {
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 20px;
+  transform: translateX(-40px);
+  position: center;
+  height: auto;
+  width: 30%;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+delete-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+}

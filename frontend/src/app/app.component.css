@@ -1,0 +1,9 @@
+workstation-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.privacyTerms {
+  text-align: center;
+  padding: 70px;
+}

@@ -1,0 +1,52 @@
+.delete-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 50px;
+  width: 50%;
+  height: auto;
+  z-index: 3;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.delete-modal h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.delete-modal h3 {
+  margin: auto;
+}
+
+.delete-modal .confirm {
+  display: flex;
+  justify-content: space-around;
+}
+
+.delete-modal .confirm h3 {
+  font-size: 25px;
+}
+
+.modal-buttons {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  padding: auto;
+}
+
+.modal-buttons button {
+  text-align: center;
+  padding: auto;
+}
+
+.delete-modal .confirm button {
+  width: 120px;
+  height: 45px;
+  font-size: 25px;
+}

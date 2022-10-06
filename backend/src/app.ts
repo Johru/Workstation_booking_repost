@@ -1,15 +1,20 @@
 import express from 'express';
-
-import { router } from './route/todoRoute';
 import requestLogger from './middlewares/request-logger';
 import errorLogger from './middlewares/error-logger';
+import { reservationRouter } from './route/reservationRoute';
+import { buildingRouter } from './route/buildingRoute';
+import { userRouter } from './route/userRoute';
+import { authRouter } from './route/userRoute';
 
 const app = express();
 
 app.use(requestLogger);
 
 app.use(express.json());
-app.use(router);
+app.use(reservationRouter);
+app.use(buildingRouter);
+app.use(userRouter);
+app.use(authRouter);
 
 app.use(errorLogger);
 
