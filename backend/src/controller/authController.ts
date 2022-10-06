@@ -50,7 +50,7 @@ export class AuthController {
     );
 
     this._router.post('/login-login', async (req: Request, res: Response) => {
-      logger.info('login endpoint accessed');
+      logger.info('login-login endpoint accessed');
       const login = req.body.user_login;
       const userFound = await this.userService.findUserByLogin(login);
       if (!userFound)
@@ -62,7 +62,7 @@ export class AuthController {
     });
 
     this._router.post('/login-email', async (req: Request, res: Response) => {
-      logger.info('login endpoint accessed');
+      logger.info('login-email endpoint accessed');
       const email = req.body.user_email;
       const userFound = await this.userService.findUserByEmail(email);
       if (!userFound)
