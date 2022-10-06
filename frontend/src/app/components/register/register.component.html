@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="form-wrapper" [hidden]="submitted">
+    <h2>SIGN UP</h2>
+    <p>Already member ? Please login <span routerLink="/login">here !</span></p>
+    <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
+      <!-- EMAIL -->
+      <label for="email">e-mail:</label>
+      <input type="email" name="email" id="email" placeholder="place@holder.com" ngModel required email
+        #email="ngModel">
+      <p class="invalid-input" *ngIf="!email.valid && email.touched">Please enter a valid e-mail!</p>
+      <!-- FIRST + LAST NAME -->
+      <div class="fullname">
+        <div class="fullname-box">
+          <label for="firstname">First Name:</label>
+          <input class="fullname-input" type="text" name="firstName" id="firstname" placeholder="John" ngModel>
+        </div>
+        <div class="fullname-box">
+          <label for="lastname">Last Name:</label>
+          <input class="fullname-input" type="text" name="lastName" id="lastname" placeholder="Doe" ngModel>
+        </div>
+      </div>
+      <!-- USER LOGIN -->
+      <label for="ulogin">User login:</label>
+      <input type="text" name="ulogin" id="ulogin" placeholder="Login" ngModel required minlength="4" #ulogin="ngModel">
+      <p class="invalid-input" *ngIf="!ulogin.valid && ulogin.touched">User login has to be at least 4 characters long !
+      </p>
+      <!-- USER PASSWORD -->
+      <label for="password">Password:</label>
+      <div>
+        <input [type]="attribute" name="password" id="password" placeholder="Your secret password ..." ngModel
+          minlength="8" required #password="ngModel">
+        <div [ngClass]=[visibility] (click)="toogle()"></div>
+      </div>
+      <!-- PASS CONFIRM -->
+      <label for="passwordConfirm">Confirm Password:</label>
+      <div>
+        <input [type]="attribute" name="passwordConfirm" id="passwordConfirm" placeholder="Repeat your password ..."
+          required minlength="8" ngModel #passwordConfirm="ngModel">
+        <div [ngClass]=[visibility] (click)="toogle()"></div>
+      </div>
+      <p class="invalid-input" *ngIf="!password.valid && password.touched">Password has to be at least 8 characters
+        long!</p>
+      <p class="invalid-input" *ngIf="password.value != passwordConfirm.value && passwordConfirm.dirty">Password and
+        Password Confirm has to
+        match !</p>
+      <!-- BUTTON -->
+      <button type="submit" [disabled]="!regForm.valid">SUBMIT</button>
+    </form>
+  </div>
+  <ng-container *ngIf="regForm.submitted">
+    <p>Your account has been created. Login <span routerLink="/login">here!</span></p>
+  </ng-container>
+</div>

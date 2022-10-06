@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 //components
 import { AppComponent } from './app.component';
 import { WorkstationFormComponent } from './components/workstation-selection-booking/workstation-form/workstation-form.component';
@@ -19,6 +20,9 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { UserTabComponent } from './components/users/user-list/user-tab/user-tab.component';
 import { ReservationListComponent } from './components/users/user-list/reservation-list/reservation-list.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavpanelComponent } from './components/navpanel/navpanel.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -44,6 +48,9 @@ import { MatButtonModule } from '@angular/material/button';
     BuildingCardComponent,
     ReservationListComponent,
     DeleteModalComponent,
+    RegisterComponent,
+    LoginComponent,
+    NavpanelComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +66,7 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     MatSlideToggleModule,
     MatTooltipModule,
+    HttpClientModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent],
