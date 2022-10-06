@@ -38,4 +38,31 @@ export class AuthMiddleware {
 
     next();
   }
+
+  async verifyJWT(req: Request, res: Response, next: NextFunction) {
+    // 1. Get auth header from req
+    // 2. Check the value of token - Bearer prefix
+    // 3. Verify with JWT.verify(token, secret, callBackFn(err, decoded))
+    // 4. From decoded (payload) - get ID
+    // 5. request.id = id from payload
+    // 6. next()
+  }
+  async isAdmin(req: Request, res: Response, next: NextFunction) {
+    // 1. req.id
+    // 2. run findById(req.id)
+    // 3. create method findById in repository/service
+    // 4. returns user
+    // 5. check If user_isAdmin == true
+    // 6. next()
+  }
+
+  async isUser(req: Request, res: Response, next: NextFunction) {
+    // 1. req.id
+    // 2. run findById(req.id)
+    // 3. create method findById in repository/service
+    // 4. returns user
+    // 5. check If user_isBlocked
+    // 6. check If user_isAdmin == false
+    // 7. next()
+  }
 }
