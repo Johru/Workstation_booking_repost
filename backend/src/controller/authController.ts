@@ -22,7 +22,7 @@ export class AuthController {
 
     if (!isValidPassword)
       return res
-        .status(401)
+        .status(200)
         .send({ error: 'User not found  or incorrect password' });
 
     const token = jwt.sign({ id: userFound?.user_id }, config.secret!, {
@@ -55,8 +55,8 @@ export class AuthController {
       const userFound = await this.userService.findUserByLogin(login);
       if (!userFound)
         return res
-          .status(401)
-          .send({ error: 'User not found or incorrect password' });
+          .status(200)
+          .send({ error: 'Provided credentials are not valid!' });
 
       this.passwordCheckAndToken(req, res, userFound);
     });
@@ -67,8 +67,8 @@ export class AuthController {
       const userFound = await this.userService.findUserByEmail(email);
       if (!userFound)
         return res
-          .status(401)
-          .send({ error: 'User not found or incorrect password' });
+          .status(200)
+          .send({ error: 'Provided credentials are not valid!' });
 
       this.passwordCheckAndToken(req, res, userFound);
     });
