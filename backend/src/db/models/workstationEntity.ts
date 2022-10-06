@@ -24,6 +24,7 @@ export class WorkstationEntity {
     name: 'workstation_isactive',
     type: 'bit',
     transformer: new BoolBitTransformer(),
+    default: true,
   })
   workstation_isactive?: boolean = true;
 
@@ -34,5 +35,5 @@ export class WorkstationEntity {
   floor?: FloorEntity;
 
   @OneToMany(() => SeatEntity, seat => seat.workstation)
-  seat?: SeatEntity[];
+  seats?: SeatEntity[];
 }

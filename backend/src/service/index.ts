@@ -1,5 +1,5 @@
 export {
   IWorkstationService,
   WorkstationService,
-} from './todo/workstationService';
-export { ISeatService, SeatService } from './todo/seatService';
+} from './workstation/workstationService';
+export { ISeatService, SeatService } from './workstation/seatService';

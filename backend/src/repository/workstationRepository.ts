@@ -19,7 +19,11 @@ export interface IWorkstationRepository {
 
 export class WorkstationRepository implements IWorkstationRepository {
   async findAllWorkstations(): Promise<WorkstationEntity[]> {
-    return appDataSource.getRepository(WorkstationEntity).find();
+    return appDataSource.getRepository(WorkstationEntity).find({
+      relations: {
+        seats: true,
+      },
+    });
   }
 
   async findAllWorkstationsOnFloor(
@@ -39,9 +43,6 @@ export class WorkstationRepository implements IWorkstationRepository {
     const workstationToSave = new WorkstationEntity();
     workstationToSave.floor_id = workstation.floor_id;
     workstationToSave.workstation_name = workstation.workstation_name;
-    if (workstation.hasOwnProperty('workstation_isactive')) {
-      workstationToSave.workstation_isactive = workstation.workstation_isactive;
-    }
 
     const result = await appDataSource
       .getRepository(WorkstationEntity)
@@ -49,7 +50,7 @@ export class WorkstationRepository implements IWorkstationRepository {
 
     for (let index = 0; index < seatsNumber; index++) {
       const seatToSave = new SeatEntity();
-      seatToSave.workstation_id = result.workstation_id;
+      seatToSave.workstation = workstationToSave;
       appDataSource.getRepository(SeatEntity).save(seatToSave);
     }
 
@@ -60,7 +61,7 @@ export class WorkstationRepository implements IWorkstationRepository {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<WorkstationEntity> {
-    var workstationUpdate = await appDataSource
+    const findWorkstation = await appDataSource
       .getRepository(WorkstationEntity)
       .findOne({
         where: {
@@ -68,20 +69,19 @@ export class WorkstationRepository implements IWorkstationRepository {
         },
       });
 
-    if (workstationUpdate == null) {
-      let err = new Error();
-      err.message = 'Record not found.';
-      return Promise.reject(err);
+    if (findWorkstation == null) {
+      throw new Error('Record does not exits');
     } else {
       await appDataSource
         .createQueryBuilder()
         .update(WorkstationEntity)
         .set({
           workstation_name: workstation.workstation_name,
-          workstation_isactive: workstation.workstation_isactive,
         })
-        .where('id=:id', { workstationId: workstationId });
-      return workstationUpdate;
+        .where('workstation_id = :id', { id: workstationId })
+        .execute();
+
+      return findWorkstation;
     }
   }
 

@@ -27,10 +27,10 @@ export class WorkstationController {
       '/workstation/create/:seats',
       async (req: Request, res: Response) => {
         const workstation: WorkstationEntity = req.body as WorkstationEntity;
-        const seatsNumber = parseInt(req.params.seats, 10);
+        let seatsNumber = parseInt(req.params.seats, 10);
 
         if (!req.params.seats) {
-          seatsNumber == 1;
+          seatsNumber = 1;
         }
         res
           .status(200)

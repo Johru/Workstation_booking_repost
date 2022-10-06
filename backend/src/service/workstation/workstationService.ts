@@ -85,7 +85,7 @@ export class WorkstationService implements IWorkstationService {
         ],
       };
     } catch (error: any) {
-      return { status: 'Error', message: ['Error record not found.'] };
+      return { status: 'Error', message: [error.message] };
     }
   }
 

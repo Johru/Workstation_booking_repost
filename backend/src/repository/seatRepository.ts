@@ -1,11 +1,10 @@
 import { Success } from 'repository';
 import { appDataSource } from '../db';
-import { Response, Request } from 'express';
 import { SeatEntity } from '../db';
 
 export interface ISeatRepository {
   findAllSeats(): Promise<SeatEntity[]>;
-  saveSeat(seat: SeatEntity): Promise<SeatEntity>;
+  saveSeat(): Promise<SeatEntity>;
   deleteSeat(seatId: number): Promise<Success>;
 }
 
@@ -14,9 +13,8 @@ export class SeatRepository implements ISeatRepository {
     return appDataSource.getRepository(SeatEntity).find();
   }
 
-  async saveSeat(seat: SeatEntity): Promise<SeatEntity> {
+  async saveSeat(): Promise<SeatEntity> {
     const seatToSave = new SeatEntity();
-    seatToSave.workstation_id = seat.workstation_id;
     return appDataSource.getRepository(SeatEntity).save(seatToSave);
   }
 
