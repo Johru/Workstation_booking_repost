@@ -36,14 +36,14 @@ export class UserService {
     };
   }
 
-  async findUserByEmail(email: string): Promise<boolean> {
+  async findUserByEmail(email: string): Promise<UserEntity | null> {
     const users = await this.userRepository.findUserByEmail(email);
-    return users.length as unknown as boolean;
+    return users;
   }
 
-  async findUserByLogin(login: string): Promise<boolean> {
+  async findUserByLogin(login: string): Promise<UserEntity | null> {
     const users = await this.userRepository.findUserByLogin(login);
-    return users.length as unknown as boolean;
+    return users;
   }
 
   async deleteUser(id: number): Promise<Success> {

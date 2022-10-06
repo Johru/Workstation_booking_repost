@@ -947,3 +947,102 @@
 [32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
 [32m  RowDataPacket { building_building_city: 'PRague' }[39m
 [32m][39m
+2022-10-06 11:40:31:4031 [32minfo[39m: [32mError during Data Source initialization: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client[39m
+2022-10-06 11:41:22:4122 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 11:45:42:4542 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-06 12:10:26:1026 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:12:03:123 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:12:37:1237 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:13:18:1318 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:13:19:1319 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:22:49:2249 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:22:50:2250 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:23:23:2323 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:23:28:2328 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:34:28:3428 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:34:32:3432 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:38:29:3829 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:38:31:3831 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:41:42:4142 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:41:43:4143 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:54:09:549 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:54:13:5413 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:57:03:573 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:57:06:576 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:05:02:52 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 13:05:12:512 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:05:22:522 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:16:38:1638 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 13:16:39:1639 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:16:39:1639 [32minfo[39m: [32m[32minfo[32m[39m
+2022-10-06 13:17:14:1714 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 13:17:15:1715 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:17:15:1715 [32minfo[39m: [32m123[39m
+2022-10-06 13:17:15:1715 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 13:17:25:1725 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:17:25:1725 [32minfo[39m: [32m1234[39m
+2022-10-06 13:17:25:1725 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 13:17:32:1732 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:17:32:1732 [32minfo[39m: [32m123[39m
+2022-10-06 13:17:32:1732 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:15:28:1528 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:15:29:1529 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:15:29:1529 [32minfo[39m: [32m123[39m
+2022-10-06 14:15:29:1529 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:18:25:1825 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32m123[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32m[32minfo[32m[39m
+2022-10-06 14:19:08:198 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32m123[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32msecret: undefined[39m
+2022-10-06 14:20:17:2017 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32m123[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32msecret: a2b7f4d8b6a3f03fa098d881[39m
+2022-10-06 14:23:05:235 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:23:08:238 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:23:08:238 [32minfo[39m: [32m123[39m
+2022-10-06 14:23:08:238 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:23:09:239 [32minfo[39m: [32msecret: a2b7f4d8b6a3f03fa098d881[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32m123[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32msecret: a2b7f4d8b6a3f03fa098d881[39m
+2022-10-06 15:08:23:823 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 15:08:26:826 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:13:5313 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 15:53:14:5314 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:26:5326 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:33:5333 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:49:5349 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:58:5358 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:00:22:022 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:00:27:027 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:01:26:126 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:01:27:127 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:47:347 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:48:348 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:49:349 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:50:350 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:51:351 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:52:352 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:53:353 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:54:354 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:55:355 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:56:356 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:56:356 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:57:357 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:58:358 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:04:00:40 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:11:30:1130 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:11:31:1131 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:13:41:1341 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:13:43:1343 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:13:52:1352 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:13:57:1357 [32minfo[39m: [32mlogin endpoint accessed[39m

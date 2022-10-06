@@ -8,8 +8,8 @@ export interface IUserRepository {
   listUsers(): Promise<UserEntity[]>;
   createUser(user: UserEntity): Promise<UserEntity>;
   deleteUser(reservationId: number): Promise<Success>;
-  findUserByEmail(email: string): Promise<UserEntity[]>;
-  findUserByLogin(login: string): Promise<UserEntity[]>;
+  findUserByEmail(email: string): Promise<UserEntity | null>;
+  findUserByLogin(login: string): Promise<UserEntity | null>;
   promoteUserToAdmin(userId: number): Promise<Success>;
   demoteUserFromAdmin(userId: number): Promise<Success>;
   blockUser(userId: number): Promise<Success>;
@@ -60,16 +60,26 @@ export class UserRepository implements IUserRepository {
     return logErrorAndReturnYesOrNo(deletion, 'User');
   }
 
-  async findUserByEmail(email: string): Promise<UserEntity[]> {
+  async findUserByEmail(email: string): Promise<UserEntity | null> {
     return appDataSource
       .getRepository(UserEntity)
-      .find({ where: { user_email: email } });
+      .createQueryBuilder('user')
+      .select(['user.user_id', 'user.user_password'])
+      .where('user_email=:user_email', {
+        user_email: email,
+      })
+      .getOne();
   }
 
-  async findUserByLogin(login: string): Promise<UserEntity[]> {
+  async findUserByLogin(login: string): Promise<UserEntity | null> {
     return appDataSource
       .getRepository(UserEntity)
-      .find({ where: { user_login: login } });
+      .createQueryBuilder('user')
+      .select(['user.user_id', 'user.user_password'])
+      .where('user_login=:user_login', {
+        user_login: login,
+      })
+      .getOne();
   }
 
   async promoteUserToAdmin(userId: number): Promise<Success> {
