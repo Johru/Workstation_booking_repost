@@ -26,7 +26,7 @@ export class AuthController {
         .send({ error: 'User not found  or incorrect password' });
 
     const token = jwt.sign({ id: userFound?.user_id }, config.secret!, {
-      expiresIn: '24h',
+      expiresIn: config.tokenExpiry,
     });
 
     res.json({
