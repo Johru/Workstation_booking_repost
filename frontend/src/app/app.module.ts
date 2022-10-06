@@ -19,6 +19,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { NavpanelComponent } from './navpanel/navpanel.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
     ConfirmModalComponent,
     RegisterComponent,
     LoginComponent,
+    NavpanelComponent,
   ],
   imports: [
     BrowserModule,
