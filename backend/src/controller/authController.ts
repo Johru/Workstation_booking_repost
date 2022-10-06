@@ -23,7 +23,7 @@ export class AuthController {
     if (!isValidPassword)
       return res
         .status(200)
-        .send({ error: 'User not found  or incorrect password' });
+        .send({ error: 'Provided credentials are not valid!' });
 
     const token = jwt.sign({ id: userFound?.user_id }, config.secret!, {
       expiresIn: config.tokenExpiry,
