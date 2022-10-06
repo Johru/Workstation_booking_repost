@@ -16,4 +16,8 @@ export class BuildingService {
   addBuilding(building: Building): void {
     BUILDINGS.push(building);
   }
+
+  getBuilding(id: number) {
+    return BUILDINGS.find((building) => building.building_id === id);
+  }
 }

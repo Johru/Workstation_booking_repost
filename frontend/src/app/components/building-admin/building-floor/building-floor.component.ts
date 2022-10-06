@@ -12,9 +12,9 @@ import { BuildingService } from 'src/app/services/admin-edit/building.service';
   styleUrls: ['./building-floor.component.css'],
 })
 export class BuildingFloorComponent implements OnInit {
-  buildings: Building[] = [];
   floors: Floor[] = [];
   buildingId: number = 0;
+  building?: Building;
 
   constructor(
     private floorService: FloorService,
@@ -33,7 +33,7 @@ export class BuildingFloorComponent implements OnInit {
   }
 
   getBuilding(): void {
-    this.buildings = this.buildingService.getBuildings();
+    this.building = this.buildingService.getBuilding(this.buildingId);
   }
 
   addFloor(newFloor: Floor) {

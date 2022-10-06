@@ -1,7 +1,7 @@
 <div class="whole-container">
   <div class="add-floor-container">
     <div class="name-of-building">
-      {{ buildings[buildingId].building_name }}
+      {{ building?.building_name }}
     </div>
     <floor-new (newFloorEvent)="addFloor($event)"></floor-new>
     <!-- CANCEL BUTTON TO ADMIN/BUILDINGS, PREPARED (INACTIVE)-->
