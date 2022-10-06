@@ -1,17 +1,22 @@
-<div class="add-floor-container">
-  <div class="name-of-building">
-    Building name: {{ buildings[buildingId].building_name }}
+<div class="whole-container">
+  <div class="add-floor-container">
+    <div class="name-of-building">
+      {{ buildings[buildingId].building_name }}
+    </div>
+
+    <floor-new (newFloorEvent)="addFloor($event)"></floor-new>
+    <!-- CANCEL BUTTON TO ADMIN/BUILDINGS, PREPARED (INACTIVE)-->
+    <button type="button" routerLink="/buildings">Cancel</button>
   </div>
   <br />
-  <floor-new (newFloorEvent)="addFloor($event)"></floor-new>
-  <button type="button" routerLink="/buildings">Cancel</button>
-</div>
-<br />
-<floor-list
-  [floor]="floor"
-  *ngFor="let floor of floors; let i = index"
-></floor-list>
+  <floor-list
+    [floor]="floor"
+    *ngFor="let floor of floors; let i = index"
+  ></floor-list>
 
-<div *ngIf="!floors.length">
-  <p class="no-floors-sign">There are currently no floors in this buidilng.</p>
+  <div *ngIf="!floors.length">
+    <p class="no-floors-sign">
+      There are currently no floors in this buidilng.
+    </p>
+  </div>
 </div>

@@ -1,5 +1,5 @@
-<div>
-  <span>Workstation: </span>
+<div class class="drop-container">
+  <div class="labels">Workstation:</div>
   <form>
     <mat-form-field appearance="fill">
       <mat-label>Select a workstation</mat-label>
@@ -19,15 +19,13 @@
 </div>
 
 <div>
-  <div>
+  <div class="labels">
     Number of seats:
     <span *ngIf="selected != '0'">
       {{ selectedWorkstation!.seats }}
-      {{ selectedWorkstation!.workstation_isActive }}
     </span>
   </div>
 </div>
-<br />
 
 <button (click)="showPreviewPanel()">Add new workstation</button>
 <button (click)="showEditPanel()" [disabled]="selected == '0'">

@@ -1,83 +1,88 @@
-<div class="newBuildingContainer">
+<div class="main-container">
   <form [formGroup]="newBuildingForm" (ngSubmit)="onSubmit()">
     <div>
-      <h3>New building</h3>
-      <label for="buildingId">id: </label>
-      <!-- ID WILL BE DELETED AFTER CONNECTION WITH BACKEND -->
-      <input
-        type="text"
-        #getId
-        name="buildingId"
-        id="buildingId"
-        formControlName="building_id"
-        required
-      />
-      <br />
-      <label for="nameOfBuilding">name: </label>
-      <input
-        type="text"
-        name="nameOfBuilding"
-        id="nameOfBuilding"
-        formControlName="building_name"
-        required
-      />
-      <br />
-      <label for="zipCode">zip code:</label>
-      <input
-        type="text"
-        name="zipCode"
-        id="zipCode"
-        formControlName="building_zip"
-        required
-      />
-      <br />
-      <label for="state">state:</label>
-      <input
-        type="text"
-        name="state"
-        id="state"
-        formControlName="building_state"
-        required
-      />
-      <br />
-      <label for="city">city:</label>
-      <input
-        type="text"
-        name="city"
-        id="city"
-        formControlName="building_city"
-        required
-      />
-      <br />
-      <label for="adress">adress:</label>
-      <input
-        type="text"
-        name="adress"
-        id="adress"
-        formControlName="building_address"
-        required
-      />
-      <br />
-      <label for="buildingImage">image:</label>
-      <!-- TEMPORARY EMPTY INPUT FOR IMAGE -->
-      <input type="text" name="buildingImage" id="buildingImage" />
-      <br />
+      <h1>New building</h1>
+      <div class="input-container">
+        <label for="buildingId">id: </label>
+        <!-- ID WILL BE DELETED AFTER CONNECTION WITH BACKEND -->
+        <input
+          type="text"
+          #getId
+          name="buildingId"
+          id="buildingId"
+          formControlName="building_id"
+          required
+        />
+      </div>
+      <div class="input-container">
+        <label for="nameOfBuilding">name: </label>
+        <input
+          type="text"
+          name="nameOfBuilding"
+          id="nameOfBuilding"
+          formControlName="building_name"
+          required
+        />
+      </div>
+      <div class="input-container">
+        <label for="zipCode">zip code:</label>
+        <input
+          type="text"
+          name="zipCode"
+          id="zipCode"
+          formControlName="building_zip"
+          required
+        />
+      </div>
+      <div class="input-container">
+        <label for="state">state:</label>
+        <input
+          type="text"
+          name="state"
+          id="state"
+          formControlName="building_state"
+          required
+        />
+      </div>
+      <div class="input-container">
+        <label for="city">city:</label>
+        <input
+          type="text"
+          name="city"
+          id="city"
+          formControlName="building_city"
+          required
+        />
+      </div>
+      <div class="input-container">
+        <label for="adress">adress:</label>
+        <input
+          type="text"
+          name="adress"
+          id="adress"
+          formControlName="building_address"
+          required
+        />
+      </div>
+      <div class="input-container">
+        <label for="buildingImage">image:</label>
+        <!-- TEMPORARY EMPTY INPUT FOR IMAGE -->
+        <input type="text" name="buildingImage" id="buildingImage" />
+      </div>
 
-      <a routerLink="{{ selectedId }}"
-        ><button
-          (click)="pickId(getId.value)"
-          type="submit"
-          [disabled]="!newBuildingForm.valid"
+      <div class="buttons">
+        <a routerLink="{{ selectedId }}"
+          ><button
+            (click)="pickId(getId.value)"
+            type="submit"
+            [disabled]="!newBuildingForm.valid"
+          >
+            Create
+          </button></a
         >
-          Create
-        </button></a
-      >
-
+      </div>
       <!-- ROUTE TO ADMIN/BUILDINGS -->
       <button type="button" routerLink="/buildings">Cancel</button>
-      <br />
     </div>
   </form>
-  <br />
-  <br />
 </div>

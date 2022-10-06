@@ -1,23 +1,25 @@
 <div>
   <form [formGroup]="newWorkstationForm" (ngSubmit)="onSubmit()">
-    <label for="workstationName">Name:</label>
-    <input
-      type="text"
-      name="workstationName"
-      id="workstationName"
-      formControlName="workstation_name"
-      required
-    />
-    <br />
-    <label for="seatsNumber">Number of seats:</label>
-    <input
-      type="number"
-      name="seatsNumber"
-      id="seatsNumber"
-      formControlName="seats"
-      required
-    />
-    <br />
+    <div class="input-container">
+      <label for="workstationName">Name:</label>
+      <input
+        type="text"
+        name="workstationName"
+        id="workstationName"
+        formControlName="workstation_name"
+        required
+      />
+    </div>
+    <div class="input-container">
+      <label for="seatsNumber">Number of seats:</label>
+      <input
+        type="number"
+        name="seatsNumber"
+        id="seatsNumber"
+        formControlName="seats"
+        required
+      />
+    </div>
     <input
       type="submit"
       name="addButton"

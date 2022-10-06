@@ -8,3 +8,29 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.confirmation {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+button {
+  height: 30px;
+  font-size: 1.2em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.workstation {
+  font-weight: bold;
+}

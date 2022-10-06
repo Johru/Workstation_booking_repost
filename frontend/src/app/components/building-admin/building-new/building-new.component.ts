@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 import { Building } from 'src/app/help-files/buildind-interface';
@@ -8,7 +8,7 @@ import { Building } from 'src/app/help-files/buildind-interface';
   templateUrl: './building-new.component.html',
   styleUrls: ['./building-new.component.css'],
 })
-export class BuildingNewComponent implements OnInit {
+export class BuildingNewComponent {
   selectedId: string = '';
   building!: Building;
 
@@ -37,8 +37,6 @@ export class BuildingNewComponent implements OnInit {
     this.newBuildingEvent.emit(this.building);
     this.newBuildingForm.reset();
   }
-
-  ngOnInit(): void {} //DELETE?
 
   pickId(id: string) {
     this.selectedId = id;

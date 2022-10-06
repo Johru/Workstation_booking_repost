@@ -9,14 +9,13 @@ import { Floor } from 'src/app/help-files/floor-interface';
   styleUrls: ['./floor-new.component.css'],
 })
 export class FloorNewComponent implements OnInit {
+  @Output() newFloorEvent = new EventEmitter<Floor>();
+
   newFloorForm = new FormGroup({
     floor_id: new FormControl(),
     floor_name: new FormControl(),
   });
-
   floor!: Floor;
-
-  @Output() newFloorEvent = new EventEmitter<Floor>();
 
   constructor() {}
 
