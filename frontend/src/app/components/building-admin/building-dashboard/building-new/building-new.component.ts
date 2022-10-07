@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-
 import { Building } from 'src/app/help-files/buildind-interface';
+import { BuildingService } from 'src/app/services/building-new.service';
 
 @Component({
   selector: 'building-new',
@@ -9,11 +9,9 @@ import { Building } from 'src/app/help-files/buildind-interface';
   styleUrls: ['./building-new.component.css'],
 })
 export class BuildingNewComponent {
+  @Output() newBuildingEvent = new EventEmitter<Building>();
   selectedId: string = '';
   building!: Building;
-
-  @Output() newBuildingEvent = new EventEmitter<Building>();
-
   newBuildingForm = new FormGroup({
     building_id: new FormControl(),
     building_name: new FormControl(),
@@ -23,11 +21,11 @@ export class BuildingNewComponent {
     building_city: new FormControl(),
   });
 
-  constructor() {}
+  constructor(private buildingService: BuildingService) {}
 
   onSubmit(): void {
     this.building = {
-      building_id: this.newBuildingForm.value.building_id,
+      building_id: this.buildingService.buildingId(),
       building_name: this.newBuildingForm.value.building_name,
       building_address: this.newBuildingForm.value.building_address,
       building_state: this.newBuildingForm.value.building_state,
@@ -38,7 +36,8 @@ export class BuildingNewComponent {
     this.newBuildingForm.reset();
   }
 
-  pickId(id: string) {
-    this.selectedId = id;
+  pickId(): string {
+    let id = (this.selectedId = String(this.buildingService.buildingId()));
+    return id;
   }
 }

@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-
-import { FloorService } from 'src/app/services/admin-edit/floor.service';
+import { FloorService } from 'src/app/services/floor.service';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 
 @Component({
@@ -13,7 +12,6 @@ export class WorkstationPreviewEditComponent {
   @Input() selectedWorkstationToEdit?: WorkstationInterface;
   @Output() showManagementEmitter = new EventEmitter();
   @Output() closePanel = new EventEmitter<boolean>();
-
   workstation?: WorkstationInterface;
   newWorkstationForm = new FormGroup({
     workstation_id: new FormControl(),

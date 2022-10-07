@@ -1,14 +1,5 @@
 <form [formGroup]="newFloorForm" (ngSubmit)="onSubmit()">
-  <label for="floorId">floor id: </label>
-  <!-- FLOOR ID ONLY TEMPORARY -->
-  <input
-    type="text"
-    name="floorId"
-    id="floorId"
-    formControlName="floor_id"
-    required
-  />
-  <label for="nameOfFloor">floor name: </label>
+  <label for="nameOfFloor">Floor Name: </label>
   <input
     type="text"
     name="nameOfFloor"

@@ -1,21 +1,9 @@
 <div class="main-container">
   <form [formGroup]="newBuildingForm" (ngSubmit)="onSubmit()">
     <div>
-      <h1>New building</h1>
+      <h1>New Building</h1>
       <div class="input-container">
-        <label for="buildingId">id: </label>
-        <!-- ID WILL BE DELETED AFTER CONNECTION WITH BACKEND -->
-        <input
-          type="text"
-          #getId
-          name="buildingId"
-          id="buildingId"
-          formControlName="building_id"
-          required
-        />
-      </div>
-      <div class="input-container">
-        <label for="nameOfBuilding">name: </label>
+        <label for="nameOfBuilding">Name: </label>
         <input
           type="text"
           name="nameOfBuilding"
@@ -25,7 +13,7 @@
         />
       </div>
       <div class="input-container">
-        <label for="zipCode">zip code:</label>
+        <label for="zipCode">ZIP Code:</label>
         <input
           type="text"
           name="zipCode"
@@ -35,7 +23,7 @@
         />
       </div>
       <div class="input-container">
-        <label for="state">state:</label>
+        <label for="state">State:</label>
         <input
           type="text"
           name="state"
@@ -45,7 +33,7 @@
         />
       </div>
       <div class="input-container">
-        <label for="city">city:</label>
+        <label for="city">City:</label>
         <input
           type="text"
           name="city"
@@ -55,7 +43,7 @@
         />
       </div>
       <div class="input-container">
-        <label for="adress">adress:</label>
+        <label for="adress">Adress:</label>
         <input
           type="text"
           name="adress"
@@ -65,14 +53,14 @@
         />
       </div>
       <div class="input-container">
-        <label for="buildingImage">image:</label>
+        <label for="buildingImage">Image:</label>
         <!-- TEMPORARY EMPTY INPUT FOR IMAGE -->
         <input type="text" name="buildingImage" id="buildingImage" />
       </div>
       <div class="buttons">
-        <a routerLink="{{ selectedId }}"
+        <a routerLink="{{ selectedId }}/floor"
           ><button
-            (click)="pickId(getId.value)"
+            (click)="pickId()"
             type="submit"
             [disabled]="!newBuildingForm.valid"
           >
@@ -81,7 +69,7 @@
         >
       </div>
       <!-- ROUTE TO ADMIN/BUILDINGS -->
-      <button type="button" routerLink="/buildings">Cancel</button>
+      <button type="button" routerLink="/admin/buildings">Cancel</button>
     </div>
   </form>
 </div>

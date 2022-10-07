@@ -17,21 +17,18 @@
     </mat-form-field>
   </form>
 </div>
-
 <div>
   <div class="labels">
-    Number of seats:
+    Number of Seats:
     <span *ngIf="selected != '0'">
       {{ selectedWorkstation!.seats }}
     </span>
   </div>
 </div>
-
-<button (click)="showPreviewPanel()">Add new workstation</button>
+<button (click)="showPreviewPanel()">Add New Workstation</button>
 <button (click)="showEditPanel()" [disabled]="selected == '0'">
-  Edit workstation
+  Edit Workstation
 </button>
-
 <button [disabled]="selected == '0'" (click)="deleteSelected()">Delete</button>
 <button
   *ngIf="!isSelectedDisabled()"

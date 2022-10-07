@@ -14,10 +14,6 @@ export class FloorService {
     return FLOORS;
   }
 
-  getWorkstation(): Floor[] {
-    return FLOORS;
-  }
-
   addFloor(floor: Floor): void {
     FLOORS.push(floor);
   }
@@ -27,6 +23,8 @@ export class FloorService {
   }
 
   deleteWorkstation(id: number) {
+    console.log('service'); //DEL
+    console.log(FLOORS); //DEL
     for (let i: number = 0; i < FLOORS.length; i++) {
       let ws = FLOORS[i].workstations.find(
         (workstation) => workstation.workstation_id == id
@@ -38,6 +36,7 @@ export class FloorService {
         }
       }
     }
+    console.log(FLOORS); //DEL
   }
 
   disableWorkstation(id: number) {
@@ -69,5 +68,10 @@ export class FloorService {
           workstation.workstation_name;
       }
     }
+  }
+
+  floorId(): number {
+    let id = FLOORS[FLOORS.length - 1].floor_id + 1;
+    return id;
   }
 }

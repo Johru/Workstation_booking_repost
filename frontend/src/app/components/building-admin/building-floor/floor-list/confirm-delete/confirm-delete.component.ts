@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
-import { FloorService } from 'src/app/services/admin-edit/floor.service';
+import { FloorService } from 'src/app/services/floor.service';
 
 @Component({
   selector: 'confirm-delete',
@@ -12,7 +12,6 @@ export class ConfirmDeleteComponent implements OnInit {
   @Output() confirmEmitter = new EventEmitter<boolean>();
   @Input() status?: string;
   @Input() selectedWorkstation?: WorkstationInterface;
-
   confirmValue: boolean = true;
   cancelValue: boolean = true;
 

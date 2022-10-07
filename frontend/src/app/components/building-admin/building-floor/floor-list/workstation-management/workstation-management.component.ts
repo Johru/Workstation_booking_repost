@@ -6,7 +6,6 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 
@@ -25,7 +24,6 @@ export class WorkstationManagementComponent implements OnChanges {
   @Input() managementButtonMenuVisible?: boolean;
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
-
   selectedWorkstation?: WorkstationInterface;
   selectedIndex: any;
   defaultText: string = 'Select a workstation';

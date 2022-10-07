@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { Building } from 'src/app/help-files/buildind-interface';
 import { Floor } from 'src/app/help-files/floor-interface';
-import { FloorService } from 'src/app/services/admin-edit/floor.service';
-import { BuildingService } from 'src/app/services/admin-edit/building.service';
+import { FloorService } from 'src/app/services/floor.service';
+import { BuildingService } from 'src/app/services/building-new.service';
 
 @Component({
   selector: 'building-floor',
@@ -23,9 +22,10 @@ export class BuildingFloorComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.buildingId = Number(this.route.snapshot.params['id']) - 1;
+    this.buildingId = Number(this.route.snapshot.params['id']);
     this.getBuilding();
     this.getFloor();
+    console.log(this.building);
   }
 
   getFloor(): void {

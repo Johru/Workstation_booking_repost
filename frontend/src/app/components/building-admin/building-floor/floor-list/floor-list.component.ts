@@ -5,10 +5,9 @@ import {
   ChangeDetectorRef,
   AfterContentChecked,
 } from '@angular/core';
-
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
-import { FloorService } from 'src/app/services/admin-edit/floor.service';
+import { FloorService } from 'src/app/services/floor.service';
 
 @Component({
   selector: 'floor-list',
@@ -17,7 +16,6 @@ import { FloorService } from 'src/app/services/admin-edit/floor.service';
 })
 export class FloorListComponent implements OnInit, AfterContentChecked {
   @Input() floor!: Floor;
-
   floors: Floor[] = [];
   selectedWorkstationToEdit?: WorkstationInterface;
   panelOpenState?: boolean;
@@ -41,6 +39,8 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     if (this.floor.workstations.length == 0) {
       this.addWorkstationPanel = true;
     }
+    console.log(this.floor.workstations.length); //DEL
+    console.log(this.addWorkstationPanel); //DEL
   }
 
   ngAfterContentChecked(): void {
@@ -49,8 +49,12 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
 
   toggleExpand() {
     this.panelOpenState = !this.panelOpenState;
-    this.editWorkstationPanel = false;
-    this.addWorkstationPanel = false;
+    if (this.floor.workstations.length != 0) {
+      this.editWorkstationPanel = false;
+      this.addWorkstationPanel = false;
+    } else {
+      this.addWorkstationPanel = true;
+    }
   }
 
   getFloor(): void {
@@ -60,6 +64,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   addWorkstation(newWorkstation: WorkstationInterface): void {
     this.floor.workstations.push(newWorkstation);
     this.numberOfSeats();
+    console.log(this.floor.workstations); //DEL
   }
 
   numberOfSeats(): void {
@@ -104,6 +109,8 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     this.toggleConfirmModal();
     this.status = 'Delete';
     this.selectedWorkstation = selectedWorkstation;
+    console.log(this.addWorkstationPanel); //DEL
+    console.log(this.floor.workstations.length); //DEL
   }
 
   successfullConfirmOnManagement(switchConfirm: boolean) {
@@ -111,7 +118,9 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   }
 
   switchPanels() {
+    console.log(this.addWorkstationPanel + ' before switch');
     this.addWorkstationPanel = !this.addWorkstationPanel;
+    console.log(this.addWorkstationPanel + ' after swith');
   }
 
   showManagementPanel() {

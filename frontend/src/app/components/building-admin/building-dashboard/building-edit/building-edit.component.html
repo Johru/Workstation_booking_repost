@@ -1,0 +1,77 @@
+<div class="main-container">
+  <form [formGroup]="editBuildingForm" (ngSubmit)="onSubmit()">
+    <div>
+      <h1>Edit Building</h1>
+      <div class="input-container">
+        <label for="nameOfBuilding">Name: </label>
+        <input
+          type="text"
+          name="nameOfBuilding"
+          id="nameOfBuilding"
+          formControlName="building_name"
+          value="Edit workstation"
+          required
+          [(ngModel)]="actualBuilding!.building_name"
+        />
+      </div>
+      <div class="input-container">
+        <label for="zipCode">ZIP Code:</label>
+        <input
+          type="text"
+          name="zipCode"
+          id="zipCode"
+          formControlName="building_zip"
+          required
+          [(ngModel)]="actualBuilding!.building_zip"
+        />
+      </div>
+      <div class="input-container">
+        <label for="state">State:</label>
+        <input
+          type="text"
+          name="state"
+          id="state"
+          formControlName="building_state"
+          required
+          [(ngModel)]="actualBuilding!.building_state"
+        />
+      </div>
+      <div class="input-container">
+        <label for="city">City:</label>
+        <input
+          type="text"
+          name="city"
+          id="city"
+          formControlName="building_city"
+          required
+          [(ngModel)]="actualBuilding!.building_city"
+        />
+      </div>
+      <div class="input-container">
+        <label for="adress">Adress:</label>
+        <input
+          type="text"
+          name="adress"
+          id="adress"
+          formControlName="building_address"
+          required
+          [(ngModel)]="actualBuilding!.building_address"
+        />
+      </div>
+      <div class="input-container">
+        <label for="buildingImage">Image:</label>
+        <!-- TEMPORARY EMPTY INPUT FOR IMAGE -->
+        <input type="text" name="buildingImage" id="buildingImage" />
+      </div>
+      <div class="buttons">
+        <a routerLink="floor"
+          ><button type="submit" [disabled]="!editBuildingForm.valid">
+            Edit
+          </button></a
+        >
+      </div>
+      <!-- ROUTE TO ADMIN/BUILDINGS -->
+      <button type="button" routerLink="/admin/buildings">Cancel</button>
+    </div>
+  </form>
+</div>
