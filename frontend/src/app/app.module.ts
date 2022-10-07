@@ -12,6 +12,9 @@ import { WorkstationTabComponent } from './components/workstation-selection-book
 import { WorkstationSelectionBookingComponent } from './components/workstation-selection-booking/workstation-selection-booking.component';
 import { SeatsComponent } from './components/workstation-selection-booking/seats/seats.component';
 import { ConfirmModalComponent } from './components/workstation-selection-booking/confirm-modal/confirm-modal.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavpanelComponent } from './components/navpanel/navpanel.component';
 import { AdminBuildingComponent } from './components/admin-building/admin-building.component';
 import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-panel.component';
 import { BuildingCardComponent } from './components/admin-building/building-card/building-card.component';
@@ -43,6 +46,9 @@ import { MatButtonModule } from '@angular/material/button';
     WorkstationSelectionBookingComponent,
     SeatsComponent,
     ConfirmModalComponent,
+    RegisterComponent,
+    LoginComponent,
+    NavpanelComponent,
     AdminBuildingComponent,
     AdminNavPanelComponent,
     BuildingCardComponent,
@@ -62,6 +68,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatButtonModule,
     FormsModule,
     MatSlideToggleModule,
