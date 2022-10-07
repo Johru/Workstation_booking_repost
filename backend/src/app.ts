@@ -7,7 +7,7 @@ import { userRouter } from './route/userRoute';
 import { authRouter } from './route/userRoute';
 import cors from 'cors';
 
-const allowedDomains = ['http://localhost:4200/'];
+const allowedDomains = ['http://localhost:4200'];
 
 const app = express();
 
