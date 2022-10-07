@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'register',
@@ -13,11 +14,21 @@ export class RegisterComponent {
   attribute: string = 'password';
   submitted: boolean = false;
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   onSubmit(form: NgForm) {
     this.submitted = true;
     let fullName = form.value.firstName + ' ' + form.value.lastName;
+    let user = {
+      user_name: fullName,
+      user_login: form.value.ulogin,
+      user_password: form.value.password,
+      user_email: form.value.email,
+    };
+    let response = this.authService.register(user);
+    response.subscribe((data) => {
+      console.log(data);
+    });
   }
 
   toogle() {
