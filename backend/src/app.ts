@@ -5,10 +5,12 @@ import { reservationRouter } from './route/reservationRoute';
 import { buildingRouter } from './route/buildingRoute';
 import { userRouter } from './route/userRoute';
 import { authRouter } from './route/userRoute';
+import cors from 'cors';
 
 const app = express();
 
 app.use(requestLogger);
+app.use(cors());
 
 app.use(express.json());
 app.use(reservationRouter);

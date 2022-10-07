@@ -1,5 +1,5 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -13,11 +13,14 @@ export class RegisterComponent {
   visibility: string = 'password-hidden';
   attribute: string = 'password';
   submitted: boolean = false;
+  emailUsed: boolean = false;
+  loginUsed: boolean = false;
 
   constructor(private authService: AuthService) {}
 
   onSubmit(form: NgForm) {
-    this.submitted = true;
+    this.loginUsed = false;
+    this.emailUsed = false;
     let fullName = form.value.firstName + ' ' + form.value.lastName;
     let user = {
       user_name: fullName,
@@ -26,9 +29,19 @@ export class RegisterComponent {
       user_email: form.value.email,
     };
     let response = this.authService.register(user);
-    response.subscribe((data) => {
-      console.log(data);
-    });
+    response.subscribe(
+      () => {
+        this.submitted = true;
+      },
+      (error: HttpErrorResponse) => {
+        if (error.error.error == 'Email is already in use!') {
+          this.emailUsed = true;
+          return;
+        } else if (error.error.error == 'Login name is already in use!') {
+          this.loginUsed = true;
+        }
+      }
+    );
   }
 
   toogle() {

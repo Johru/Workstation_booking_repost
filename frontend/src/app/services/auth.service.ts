@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { Register } from '../helpingHand/register';
 
 @Injectable({
@@ -8,7 +8,6 @@ import { Register } from '../helpingHand/register';
 })
 export class AuthService {
   constructor(private http: HttpClient) {}
-
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
@@ -26,11 +25,11 @@ export class AuthService {
       () => new Error('Something bad happened; please try again later.')
     );
   }
-
   register(user: Register): Observable<Register> {
-    let obs = this.http
-      .post<Register>('http://localhost:8080/auth/registration', user)
-      .pipe(catchError(this.handleError));
+    let obs = this.http.post<Register>(
+      'http://localhost:8080/auth/registration',
+      user
+    );
     return obs;
   }
 }
