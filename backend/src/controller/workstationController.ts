@@ -48,7 +48,6 @@ export class WorkstationController {
       async (req: Request, res: Response) => {
         var workstationId = parseInt(req.params.workstationId, 10);
         const workstation: WorkstationEntity = req.body as WorkstationEntity;
-        //
         res
           .status(200)
           .json(
@@ -56,6 +55,19 @@ export class WorkstationController {
               workstationId,
               workstation
             )
+          );
+      }
+    );
+
+    this._router.put(
+      '/workstation/:workstationId/setstatus',
+      async (req: Request, res: Response) => {
+        var workstationId = parseInt(req.params.workstationId, 10);
+        const workstation: WorkstationEntity = req.body as WorkstationEntity;
+        res
+          .status(200)
+          .json(
+            await this.workstationService.setStatus(workstationId, workstation)
           );
       }
     );

@@ -16,6 +16,10 @@ export interface IWorkstationService {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<{ status: string; message: string[] }>;
+  setStatus(
+    workstationId: number,
+    workstation: WorkstationEntity
+  ): Promise<{ status: string; message: string[] }>;
   deleteWorkstation(workstationId: number): Promise<Success>;
 }
 
@@ -75,6 +79,37 @@ export class WorkstationService implements IWorkstationService {
 
     try {
       const newWorkstation = await this.workstationRepository.updateWorkstation(
+        workstationId,
+        workstation
+      );
+      return {
+        status: 'OK',
+        message: [
+          `Workstation is succesfully updated and saved with its id: ${newWorkstation.workstation_id}`,
+        ],
+      };
+    } catch (error: any) {
+      return { status: 'Error', message: [error.message] };
+    }
+  }
+
+  async setStatus(
+    workstationId: number,
+    workstation: WorkstationEntity
+  ): Promise<{ status: string; message: string[] }> {
+    try {
+      const value = await workstationSchema.validateAsync(workstation);
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        logger.error(error);
+        const { details } = error;
+        const errorMessage = details.map(ve => ve.message);
+        return { status: 'Error', message: errorMessage };
+      }
+    }
+
+    try {
+      const newWorkstation = await this.workstationRepository.setStatus(
         workstationId,
         workstation
       );

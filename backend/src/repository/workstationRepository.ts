@@ -14,6 +14,11 @@ export interface IWorkstationRepository {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<WorkstationEntity>;
+  setStatus(
+    workstationId: number,
+    workstation: WorkstationEntity
+  ): Promise<WorkstationEntity>;
+
   deleteWorkstation(workstationId: number): Promise<Success>;
 }
 
@@ -77,6 +82,34 @@ export class WorkstationRepository implements IWorkstationRepository {
         .update(WorkstationEntity)
         .set({
           workstation_name: workstation.workstation_name,
+        })
+        .where('workstation_id = :id', { id: workstationId })
+        .execute();
+
+      return findWorkstation;
+    }
+  }
+
+  async setStatus(
+    workstationId: number,
+    workstation: WorkstationEntity
+  ): Promise<WorkstationEntity> {
+    const findWorkstation = await appDataSource
+      .getRepository(WorkstationEntity)
+      .findOne({
+        where: {
+          workstation_id: workstationId,
+        },
+      });
+
+    if (findWorkstation == null) {
+      throw new Error('Record does not exits');
+    } else {
+      await appDataSource
+        .createQueryBuilder()
+        .update(WorkstationEntity)
+        .set({
+          workstation_isactive: workstation.workstation_isactive,
         })
         .where('workstation_id = :id', { id: workstationId })
         .execute();
