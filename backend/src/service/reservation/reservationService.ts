@@ -2,7 +2,7 @@ import { ReservationEntity } from '../../db';
 import { ReservationRepository, Success } from '../../repository';
 import { dateSchema, idSchema } from '../index';
 import { reservationSchema } from './reservationSchema';
-import { yesOrNo } from '../index';
+import { validateInput } from '../index';
 
 export class ReservationService {
   constructor(public reservationRepository: ReservationRepository) {}
@@ -11,7 +11,7 @@ export class ReservationService {
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationEntity[]> {
-    const validation = await yesOrNo(dateSchema, reservationDate);
+    const validation = await validateInput(dateSchema, reservationDate);
     if (!validation) return [];
 
     return this.reservationRepository.showReservationForGivenDate(
@@ -21,13 +21,13 @@ export class ReservationService {
   }
 
   async addNewReservation(requestBody: ReservationEntity): Promise<Success> {
-    const validation = await yesOrNo(reservationSchema, requestBody);
+    const validation = await validateInput(reservationSchema, requestBody);
     if (!validation) return { success: 'no' };
     return this.reservationRepository.addNewReservation(requestBody);
   }
 
   async deleteReservation(id: number): Promise<Success> {
-    const validation = await yesOrNo(idSchema, id);
+    const validation = await validateInput(idSchema, id);
     if (!validation) return { success: 'no' };
 
     return this.reservationRepository.deleteReservation(id);
