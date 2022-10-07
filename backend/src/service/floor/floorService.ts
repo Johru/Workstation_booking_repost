@@ -7,6 +7,7 @@ import { Success } from 'repository/success';
 
 export interface IFloorService {
   getFloors(): Promise<FloorEntity[]>;
+  showFloorInBuilding(buildingId: number): Promise<FloorEntity[]>;
   createFloor(
     floor: FloorEntity
   ): Promise<{ status: string; message: string[] }>;
@@ -22,6 +23,10 @@ export class FloorService implements IFloorService {
 
   async getFloors(): Promise<FloorEntity[]> {
     return await this.floorRepository.findAllFloors();
+  }
+
+  async showFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
+    return await this.floorRepository.findAllFloorInBuilding(buildingId);
   }
 
   async createFloor(

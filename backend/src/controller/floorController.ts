@@ -10,6 +10,16 @@ export class FloorController {
       res.status(200).json(await this.floorService.getFloors());
     });
 
+    this._router.get(
+      '/floor/:buildingId/showinbuilding',
+      async (req: Request, res: Response) => {
+        var buildingId = parseInt(req.params.buildingId, 10);
+        res
+          .status(200)
+          .json(await this.floorService.showFloorInBuilding(buildingId));
+      }
+    );
+
     this._router.post('/floor/create', async (req: Request, res: Response) => {
       const floor: FloorEntity = req.body as FloorEntity;
       res.status(200).json(await this.floorService.createFloor(floor));

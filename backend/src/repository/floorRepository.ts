@@ -5,6 +5,7 @@ import { Success } from './success';
 
 export interface IFloorRepository {
   findAllFloors(): Promise<FloorEntity[]>;
+  findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]>;
   saveFloor(floor: FloorEntity): Promise<FloorEntity>;
   updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity>;
   deleteFloor(floorId: number): Promise<Success>;
@@ -13,6 +14,14 @@ export interface IFloorRepository {
 export class FloorRepository implements IFloorRepository {
   async findAllFloors(): Promise<FloorEntity[]> {
     return appDataSource.getRepository(FloorEntity).find();
+  }
+
+  async findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
+    return appDataSource.getRepository(FloorEntity).find({
+      where: {
+        building_id: buildingId,
+      },
+    });
   }
 
   async saveFloor(floor: FloorEntity): Promise<FloorEntity> {
