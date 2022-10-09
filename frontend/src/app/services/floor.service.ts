@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Floor } from 'src/app/help-files/floor-interface';
 import { FLOORS } from 'src/app/help-files/floor-data';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
@@ -23,8 +22,6 @@ export class FloorService {
   }
 
   deleteWorkstation(id: number) {
-    console.log('service'); //DEL
-    console.log(FLOORS); //DEL
     for (let i: number = 0; i < FLOORS.length; i++) {
       let ws = FLOORS[i].workstations.find(
         (workstation) => workstation.workstation_id == id
@@ -36,7 +33,6 @@ export class FloorService {
         }
       }
     }
-    console.log(FLOORS); //DEL
   }
 
   disableWorkstation(id: number) {

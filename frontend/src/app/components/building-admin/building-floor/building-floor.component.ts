@@ -25,7 +25,6 @@ export class BuildingFloorComponent implements OnInit {
     this.buildingId = Number(this.route.snapshot.params['id']);
     this.getBuilding();
     this.getFloor();
-    console.log(this.building);
   }
 
   getFloor(): void {
