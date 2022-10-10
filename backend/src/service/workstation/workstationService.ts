@@ -16,7 +16,10 @@ export interface IWorkstationService {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<{ status: string; message: string[] }>;
-  setStatus(
+  workstationIsActive(
+    workstationId: number,
+  ): Promise<{ status: string; message: string[] }>;
+  workstationIsNotActive(
     workstationId: number,
   ): Promise<{ status: string; message: string[] }>;
   deleteWorkstation(workstationId: number): Promise<Success>;
@@ -92,12 +95,12 @@ export class WorkstationService implements IWorkstationService {
     }
   }
 
-  async setStatus(
+  async workstationIsActive(
     workstationId: number,
   ): Promise<{ status: string; message: string[] }> {
 
     try {
-      const newWorkstation = await this.workstationRepository.setStatus(
+      const newWorkstation = await this.workstationRepository.statusIsActive(
         workstationId,
       );
       return {
@@ -110,7 +113,25 @@ export class WorkstationService implements IWorkstationService {
       return { status: 'Error', message: [error.message] };
     }
   }
+  
+  async workstationIsNotActive(
+    workstationId: number,
+  ): Promise<{ status: string; message: string[] }> {
 
+    try {
+      const newWorkstation = await this.workstationRepository.statusIsNotActive(
+        workstationId,
+      );
+      return {
+        status: 'OK',
+        message: [
+          `Workstation is succesfully updated and saved with its id: ${newWorkstation.workstation_id}`,
+        ],
+      };
+    } catch (error: any) {
+      return { status: 'Error', message: [error.message] };
+    }
+  }
   async deleteWorkstation(workstationId: number): Promise<Success> {
     return this.workstationRepository.deleteWorkstation(workstationId);
   }

@@ -14,7 +14,8 @@ export interface IWorkstationRepository {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<WorkstationEntity>;
-  setStatus(workstationId: number): Promise<WorkstationEntity>;
+  statusIsActive(workstationId: number): Promise<WorkstationEntity>;
+  statusIsNotActive(workstationId: number): Promise<WorkstationEntity>;
 
   deleteWorkstation(workstationId: number): Promise<Success>;
 }
@@ -87,7 +88,7 @@ export class WorkstationRepository implements IWorkstationRepository {
     }
   }
 
-  async setStatus(
+  async statusIsActive(
     workstationId: number,
   ): Promise<WorkstationEntity> {
     const findWorkstation = await appDataSource
@@ -105,7 +106,34 @@ export class WorkstationRepository implements IWorkstationRepository {
         .createQueryBuilder()
         .update(WorkstationEntity)
         .set({
-          workstation_isactive: !findWorkstation.workstation_isactive,
+          workstation_isactive: true,
+        })
+        .where('workstation_id = :id', { id: workstationId })
+        .execute();
+
+      return findWorkstation;
+    }
+  }
+
+  async statusIsNotActive(
+    workstationId: number,
+  ): Promise<WorkstationEntity> {
+    const findWorkstation = await appDataSource
+      .getRepository(WorkstationEntity)
+      .findOne({
+        where: {
+          workstation_id: workstationId,
+        },
+      });
+
+    if (findWorkstation == null) {
+      throw new Error('Record does not exits');
+    } else {
+      await appDataSource
+        .createQueryBuilder()
+        .update(WorkstationEntity)
+        .set({
+          workstation_isactive: false,
         })
         .where('workstation_id = :id', { id: workstationId })
         .execute();

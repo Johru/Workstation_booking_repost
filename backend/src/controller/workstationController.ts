@@ -60,13 +60,25 @@ export class WorkstationController {
     );
 
     this._router.put(
-      '/workstation/:workstationId/setstatus',
+      '/workstation/:workstationId/active',
       async (req: Request, res: Response) => {
         const workstationId = parseInt(req.params.workstationId, 10);
         res
           .status(200)
           .json(
-            await this.workstationService.setStatus(workstationId)
+            await this.workstationService.workstationIsActive(workstationId)
+          );
+      }
+    );
+
+    this._router.put(
+      '/workstation/:workstationId/notactive',
+      async (req: Request, res: Response) => {
+        const workstationId = parseInt(req.params.workstationId, 10);
+        res
+          .status(200)
+          .json(
+            await this.workstationService.workstationIsNotActive(workstationId)
           );
       }
     );
