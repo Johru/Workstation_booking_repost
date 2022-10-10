@@ -26,7 +26,7 @@ export class WorkstationEntity {
     transformer: new BoolBitTransformer(),
     default: true,
   })
-  workstation_isactive?: boolean = true;
+  workstation_isactive?: boolean;
 
   @ManyToOne(() => FloorEntity, floor => floor.workstation, {
     onDelete: 'CASCADE',

@@ -1,4 +1,4 @@
-import { appDataSource } from '../db';
+import { appDataSource, BoolBitTransformer } from '../db';
 import { WorkstationEntity } from '../db';
 import { SeatEntity } from '../db';
 import { Success } from './success';
@@ -14,10 +14,7 @@ export interface IWorkstationRepository {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<WorkstationEntity>;
-  setStatus(
-    workstationId: number,
-    workstation: WorkstationEntity
-  ): Promise<WorkstationEntity>;
+  setStatus(workstationId: number): Promise<WorkstationEntity>;
 
   deleteWorkstation(workstationId: number): Promise<Success>;
 }
@@ -92,7 +89,6 @@ export class WorkstationRepository implements IWorkstationRepository {
 
   async setStatus(
     workstationId: number,
-    workstation: WorkstationEntity
   ): Promise<WorkstationEntity> {
     const findWorkstation = await appDataSource
       .getRepository(WorkstationEntity)
@@ -109,7 +105,7 @@ export class WorkstationRepository implements IWorkstationRepository {
         .createQueryBuilder()
         .update(WorkstationEntity)
         .set({
-          workstation_isactive: workstation.workstation_isactive,
+          workstation_isactive: !findWorkstation.workstation_isactive,
         })
         .where('workstation_id = :id', { id: workstationId })
         .execute();
@@ -119,7 +115,7 @@ export class WorkstationRepository implements IWorkstationRepository {
   }
 
   async deleteWorkstation(workstationId: number): Promise<Success> {
-    var workstationRemove = await appDataSource
+    const workstationRemove = await appDataSource
       .createQueryBuilder()
       .delete()
       .from(WorkstationEntity)

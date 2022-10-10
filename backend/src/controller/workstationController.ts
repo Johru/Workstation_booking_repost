@@ -16,7 +16,7 @@ export class WorkstationController {
     this._router.get(
       '/workstation/:floorId/showonfloor',
       async (req: Request, res: Response) => {
-        var floorId = parseInt(req.params.floorId, 10);
+        const floorId = parseInt(req.params.floorId, 10);
         res
           .status(200)
           .json(await this.workstationService.showWorkstationOnFloor(floorId));
@@ -46,7 +46,7 @@ export class WorkstationController {
     this._router.put(
       '/workstation/:workstationId/update',
       async (req: Request, res: Response) => {
-        var workstationId = parseInt(req.params.workstationId, 10);
+        const workstationId = parseInt(req.params.workstationId, 10);
         const workstation: WorkstationEntity = req.body as WorkstationEntity;
         res
           .status(200)
@@ -62,12 +62,11 @@ export class WorkstationController {
     this._router.put(
       '/workstation/:workstationId/setstatus',
       async (req: Request, res: Response) => {
-        var workstationId = parseInt(req.params.workstationId, 10);
-        const workstation: WorkstationEntity = req.body as WorkstationEntity;
+        const workstationId = parseInt(req.params.workstationId, 10);
         res
           .status(200)
           .json(
-            await this.workstationService.setStatus(workstationId, workstation)
+            await this.workstationService.setStatus(workstationId)
           );
       }
     );
@@ -75,7 +74,7 @@ export class WorkstationController {
     this._router.delete(
       '/workstation/:workstationId/delete',
       async (req, res) => {
-        var workstationId = parseInt(req.params.workstationId, 10);
+        const workstationId = parseInt(req.params.workstationId, 10);
         res
           .status(200)
           .json(await this.workstationService.deleteWorkstation(workstationId));
