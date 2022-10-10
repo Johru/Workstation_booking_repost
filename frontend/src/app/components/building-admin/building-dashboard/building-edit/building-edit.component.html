@@ -11,7 +11,6 @@
           formControlName="building_name"
           value="Edit workstation"
           required
-          [(ngModel)]="actualBuilding!.building_name"
         />
       </div>
       <div class="input-container">
@@ -22,7 +21,6 @@
           id="zipCode"
           formControlName="building_zip"
           required
-          [(ngModel)]="actualBuilding!.building_zip"
         />
       </div>
       <div class="input-container">
@@ -33,7 +31,6 @@
           id="state"
           formControlName="building_state"
           required
-          [(ngModel)]="actualBuilding!.building_state"
         />
       </div>
       <div class="input-container">
@@ -44,7 +41,6 @@
           id="city"
           formControlName="building_city"
           required
-          [(ngModel)]="actualBuilding!.building_city"
         />
       </div>
       <div class="input-container">
@@ -55,7 +51,6 @@
           id="adress"
           formControlName="building_address"
           required
-          [(ngModel)]="actualBuilding!.building_address"
         />
       </div>
       <div class="input-container">
@@ -66,15 +61,10 @@
           name="buildingImage"
           id="buildingImage"
           formControlName="building_image"
-          [(ngModel)]="actualBuilding!.building_image"
         />
       </div>
       <div class="buttons">
-        <a routerLink="floor"
-          ><button type="submit" [disabled]="!editBuildingForm.valid">
-            Edit
-          </button></a
-        >
+        <button type="submit" [disabled]="!editBuildingForm.valid">Edit</button>
       </div>
       <button type="button" routerLink="/admin/buildings">Cancel</button>
     </div>

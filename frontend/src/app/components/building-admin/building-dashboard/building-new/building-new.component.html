@@ -1,5 +1,5 @@
 <div class="main-container">
-  <form [formGroup]="newBuildingForm">
+  <form [formGroup]="newBuildingForm" (ngSubmit)="onSubmit()">
     <div>
       <h1>New Building</h1>
       <div class="input-container">
@@ -63,15 +63,9 @@
         />
       </div>
       <div class="buttons">
-        <a routerLink="{{ selectedId }}/floor"
-          ><button
-            (click)="[pickId(), onSubmit()]"
-            type="submit"
-            [disabled]="!newBuildingForm.valid"
-          >
-            Create
-          </button></a
-        >
+        <button type="submit" [disabled]="!newBuildingForm.valid">
+          Create
+        </button>
       </div>
       <button type="button" routerLink="/admin/buildings">Cancel</button>
     </div>

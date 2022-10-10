@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
 import { BuildingService } from 'src/app/services/building-new.service';
 
@@ -9,10 +10,7 @@ import { BuildingService } from 'src/app/services/building-new.service';
   styleUrls: ['./building-edit.component.css'],
 })
 export class BuildingEditComponent implements OnInit {
-  @Output() editBuildingEvent = new EventEmitter<Building>();
   @Input() actualBuilding?: Building;
-  selectedBuilding?: Building;
-  selectedId: string = '';
   editBuildingForm = new FormGroup({
     building_id: new FormControl(),
     building_name: new FormControl(),
@@ -23,26 +21,31 @@ export class BuildingEditComponent implements OnInit {
     building_image: new FormControl(),
   });
 
-  constructor(private buildingService: BuildingService) {}
+  constructor(
+    private buildingService: BuildingService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.selectedBuilding = this.actualBuilding;
-    this.selectedId = String(this.actualBuilding?.building_id);
+    this.setInitialValues(this.actualBuilding!);
   }
 
   onSubmit(): void {
-    (this.selectedBuilding!.building_name =
-      this.editBuildingForm.value.building_name),
-      (this.selectedBuilding!.building_address =
-        this.editBuildingForm.value.building_address),
-      (this.selectedBuilding!.building_state =
-        this.editBuildingForm.value.building_state),
-      (this.selectedBuilding!.building_zip =
-        this.editBuildingForm.value.building_zip),
-      (this.selectedBuilding!.building_city =
-        this.editBuildingForm.value.building_city),
-      (this.selectedBuilding!.building_image =
-        this.editBuildingForm.value.building_image);
-    this.buildingService.editBuilding(this.selectedBuilding!);
+    this.buildingService.editBuilding(this.editBuildingForm.value as Building);
+    this.router.navigate([`${this.router.url}/floor`]);
+  }
+
+  setInitialValues(initialBuilding: Building) {
+    const building = {
+      building_id: initialBuilding.building_id,
+      building_name: initialBuilding.building_name,
+      building_address: initialBuilding.building_address,
+      building_state: initialBuilding.building_state,
+      building_zip: initialBuilding.building_zip,
+      building_city: initialBuilding.building_city,
+      building_image: initialBuilding.building_image,
+    };
+
+    this.editBuildingForm.setValue(building);
   }
 }

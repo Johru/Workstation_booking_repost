@@ -21,17 +21,14 @@ export class BuildingService {
   }
 
   buildingId(): number {
-    let id = BUILDINGS[BUILDINGS.length - 1].building_id + 1;
+    const id = BUILDINGS[BUILDINGS.length - 1].building_id + 1;
     return id;
   }
 
-  editBuilding(building: Building) {
-    let id = building.building_id;
-    BUILDINGS[id].building_address = building.building_address;
-    BUILDINGS[id].building_name = building.building_name;
-    BUILDINGS[id].building_state = building.building_state;
-    BUILDINGS[id].building_zip = building.building_zip;
-    BUILDINGS[id].building_city = building.building_city;
-    BUILDINGS[id].building_image = building.building_image;
+  editBuilding(updatedBuilding: Building) {
+    const buildingIndex = BUILDINGS.findIndex(
+      (building) => building.building_id === updatedBuilding.building_id
+    );
+    BUILDINGS[buildingIndex] = updatedBuilding;
   }
 }

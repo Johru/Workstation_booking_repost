@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
 import { BuildingService } from 'src/app/services/building-new.service';
 
@@ -10,8 +11,6 @@ import { BuildingService } from 'src/app/services/building-new.service';
 })
 export class BuildingNewComponent {
   @Output() newBuildingEvent = new EventEmitter<Building>();
-  selectedId: string = '';
-  building!: Building;
   newBuildingForm = new FormGroup({
     building_id: new FormControl(),
     building_name: new FormControl(),
@@ -22,24 +21,18 @@ export class BuildingNewComponent {
     building_image: new FormControl(),
   });
 
-  constructor(private buildingService: BuildingService) {}
+  constructor(
+    private buildingService: BuildingService,
+    private router: Router
+  ) {}
 
   onSubmit(): void {
-    this.building = {
-      building_id: this.buildingService.buildingId(),
-      building_name: this.newBuildingForm.value.building_name,
-      building_address: this.newBuildingForm.value.building_address,
-      building_state: this.newBuildingForm.value.building_state,
-      building_zip: this.newBuildingForm.value.building_zip,
-      building_city: this.newBuildingForm.value.building_city,
-      building_image: this.newBuildingForm.value.building_image,
-    };
-    this.newBuildingEvent.emit(this.building);
+    this.newBuildingForm.value.building_id = this.buildingService.buildingId();
+    console.log(this.newBuildingForm.value.building_id);
+    this.newBuildingEvent.emit(this.newBuildingForm.value as Building);
+    this.router.navigate([
+      `${this.router.url}/${this.newBuildingForm.value.building_id}/floor`,
+    ]);
     this.newBuildingForm.reset();
-  }
-
-  pickId(): string {
-    let id = (this.selectedId = String(this.buildingService.buildingId()));
-    return id;
   }
 }
