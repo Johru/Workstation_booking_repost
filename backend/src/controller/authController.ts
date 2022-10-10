@@ -15,7 +15,6 @@ export class AuthController {
     res: Response,
     userFound: UserEntity | null
   ) {
-    console.log(userFound);
     const isValidPassword = await bcrypt.compare(
       req.body.user_password,
       userFound?.user_password as string

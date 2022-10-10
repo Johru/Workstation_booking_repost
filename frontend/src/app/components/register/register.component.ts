@@ -29,19 +29,19 @@ export class RegisterComponent {
       user_email: form.value.email,
     };
     let response = this.authService.register(user);
-    response.subscribe(
-      () => {
+    response.subscribe({
+      next: () => {
         this.submitted = true;
       },
-      (error: HttpErrorResponse) => {
-        if (error.error.error == 'Email is already in use!') {
+      error: (e) => {
+        if (e.error.error == 'Email is already in use!') {
           this.emailUsed = true;
           return;
-        } else if (error.error.error == 'Login name is already in use!') {
+        } else if (e.error.error == 'Login name is already in use!') {
           this.loginUsed = true;
         }
-      }
-    );
+      },
+    });
   }
 
   toogle() {
