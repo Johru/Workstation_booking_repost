@@ -1,5 +1,14 @@
 import { Response, Request, NextFunction } from 'express';
 import { UserService } from '../service';
+import { UserEntity } from '../db';
+
+declare global {
+  namespace Express {
+    export interface Request {
+      user: UserEntity;
+    }
+  }
+}
 
 export class AuthMiddleware {
   constructor(private userService: UserService) {}
@@ -45,15 +54,29 @@ export class AuthMiddleware {
     // 3. Verify with JWT.verify(token, secret, callBackFn(err, decoded))
     // 4. From decoded (payload) - get ID
     // 5. request.id = id from payload
+
+    // findUserById service/repository
     // 6. next()
-  }
+
+  //   const authHeader = req.headers['authorization'];
+  //   const token = authHeader && authHeader.split(' ')[1];
+  //   if (token == null) return res.sendStatus(401);
+  //   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+  //     if (err) return res.sendStatus(403);
+  //   req.user = user;
+  //     next();
+  //   }
+  // }
+
+
   async isAdmin(req: Request, res: Response, next: NextFunction) {
-    // 1. req.id
+    // 1. req.user.id
     // 2. run findById(req.id)
     // 3. create method findById in repository/service
     // 4. returns user
-    // 5. check If user_isAdmin == true
-    // 6. next()
+    // 5. if !admin - res.sendStatus(401).json('unauthorized request')
+    // 5. check If user_isAdmin == true --  // 6. next()
+   
   }
 
   async isUser(req: Request, res: Response, next: NextFunction) {
@@ -62,7 +85,5 @@ export class AuthMiddleware {
     // 3. create method findById in repository/service
     // 4. returns user
     // 5. check If user_isBlocked
-    // 6. check If user_isAdmin == false
-    // 7. next()
+    // 6. next()
   }
-}
