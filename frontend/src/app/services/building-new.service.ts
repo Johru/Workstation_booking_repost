@@ -32,5 +32,6 @@ export class BuildingService {
     BUILDINGS[id].building_state = building.building_state;
     BUILDINGS[id].building_zip = building.building_zip;
     BUILDINGS[id].building_city = building.building_city;
+    BUILDINGS[id].building_image = building.building_image;
   }
 }

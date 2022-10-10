@@ -19,6 +19,7 @@ export class BuildingNewComponent {
     building_state: new FormControl(),
     building_zip: new FormControl(),
     building_city: new FormControl(),
+    building_image: new FormControl(),
   });
 
   constructor(private buildingService: BuildingService) {}
@@ -31,6 +32,7 @@ export class BuildingNewComponent {
       building_state: this.newBuildingForm.value.building_state,
       building_zip: this.newBuildingForm.value.building_zip,
       building_city: this.newBuildingForm.value.building_city,
+      building_image: this.newBuildingForm.value.building_image,
     };
     this.newBuildingEvent.emit(this.building);
     this.newBuildingForm.reset();

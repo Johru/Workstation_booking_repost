@@ -60,8 +60,14 @@
       </div>
       <div class="input-container">
         <label for="buildingImage">Image:</label>
-        <!-- TEMPORARY EMPTY INPUT FOR IMAGE -->
-        <input type="text" name="buildingImage" id="buildingImage" />
+        <!-- TEMPORARY INPUT FOR IMAGE -->
+        <input
+          type="text"
+          name="buildingImage"
+          id="buildingImage"
+          formControlName="building_image"
+          [(ngModel)]="actualBuilding!.building_image"
+        />
       </div>
       <div class="buttons">
         <a routerLink="floor"

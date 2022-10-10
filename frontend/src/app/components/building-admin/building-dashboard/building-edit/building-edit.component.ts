@@ -20,6 +20,7 @@ export class BuildingEditComponent implements OnInit {
     building_state: new FormControl(),
     building_zip: new FormControl(),
     building_city: new FormControl(),
+    building_image: new FormControl(),
   });
 
   constructor(private buildingService: BuildingService) {}
@@ -39,7 +40,9 @@ export class BuildingEditComponent implements OnInit {
       (this.selectedBuilding!.building_zip =
         this.editBuildingForm.value.building_zip),
       (this.selectedBuilding!.building_city =
-        this.editBuildingForm.value.building_city);
+        this.editBuildingForm.value.building_city),
+      (this.selectedBuilding!.building_image =
+        this.editBuildingForm.value.building_image);
     this.buildingService.editBuilding(this.selectedBuilding!);
   }
 }

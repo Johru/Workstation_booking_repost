@@ -5,4 +5,5 @@ export interface Building {
   building_state: string;
   building_zip: string;
   building_city: string;
+  building_image: string;
 }
