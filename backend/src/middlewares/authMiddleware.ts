@@ -4,7 +4,7 @@ import { UserService } from '../service';
 export class AuthMiddleware {
   constructor(private userService: UserService) {}
 
-  async checkSignUp(req: Request, res: Response, next: NextFunction) {
+  checkSignUp = async (req: Request, res: Response, next: NextFunction) => {
     const { user_login, user_email } = req.body;
 
     if (!(user_login && user_email)) {
@@ -37,5 +37,5 @@ export class AuthMiddleware {
     }
 
     next();
-  }
+  };
 }

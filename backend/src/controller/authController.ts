@@ -41,7 +41,7 @@ export class AuthController {
   ) {
     this._router.post(
       '/registration',
-      (req, res, next) => this.authMiddleware.checkSignUp(req, res, next),
+      this.authMiddleware.checkSignUp,
       async (req: Request, res: Response) => {
         logger.info('new user endpoint accessed');
         const user: UserEntity = req.body as UserEntity;
