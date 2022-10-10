@@ -15,6 +15,7 @@ export class AuthController {
     res: Response,
     userFound: UserEntity | null
   ) {
+    console.log(userFound);
     const isValidPassword = await bcrypt.compare(
       req.body.user_password,
       userFound?.user_password as string
@@ -25,12 +26,16 @@ export class AuthController {
         .status(200)
         .send({ error: 'Provided credentials are not valid!' });
 
-    const token = jwt.sign({ id: userFound?.user_id }, config.secret!, {
-      expiresIn: config.tokenExpiry,
-    });
-
+    const token = jwt.sign(
+      { id: userFound?.user_id, isAdmin: userFound?.user_isadmin },
+      config.secret!,
+      {
+        expiresIn: config.tokenExpiry,
+      }
+    );
     res.json({
       user_id: userFound?.user_id,
+      isAdmin: userFound?.user_isadmin,
       token: token,
     });
   }

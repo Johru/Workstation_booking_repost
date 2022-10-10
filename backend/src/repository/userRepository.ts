@@ -64,7 +64,7 @@ export class UserRepository implements IUserRepository {
     return appDataSource
       .getRepository(UserEntity)
       .createQueryBuilder('user')
-      .select(['user.user_id', 'user.user_password'])
+      .select(['user.user_id', 'user.user_password', 'user.user_isadmin'])
       .where('user_email=:user_email', {
         user_email: email,
       })
@@ -75,7 +75,7 @@ export class UserRepository implements IUserRepository {
     return appDataSource
       .getRepository(UserEntity)
       .createQueryBuilder('user')
-      .select(['user.user_id', 'user.user_password'])
+      .select(['user.user_id', 'user.user_password', 'user.user_isadmin'])
       .where('user_login=:user_login', {
         user_login: login,
       })
