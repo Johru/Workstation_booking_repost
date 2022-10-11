@@ -231,3 +231,820 @@
 2022-10-04 11:11:35:1135 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-04 11:11:43:1143 [32minfo[39m: [32m/building/:id endpoint accessed[39m
 2022-10-04 11:11:43:1143 [32minfo[39m: [32mnull control triggered[39m
+2022-10-04 11:52:55:5255 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 11:53:06:536 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:53:06:536 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:53:23:5323 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:53:23:5323 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:53:43:5343 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:53:43:5343 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:54:00:540 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:54:00:540 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:54:45:5445 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 11:54:47:5447 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:54:47:5447 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:54:54:5454 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:55:23:5523 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-04 11:55:32:5532 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-04 11:56:01:561 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:56:12:5612 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 11:56:12:5612 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:56:18:5618 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 12:04:22:422 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 12:04:45:445 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 12:04:46:446 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 12:04:52:452 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 12:04:52:452 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 12:05:03:53 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 12:05:08:58 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:05:08:58 [31merror[39m: [31m"value" must be a valid date[39m
+2022-10-04 12:05:26:526 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:05:26:526 [31merror[39m: [31m"value" must be a valid date[39m
+2022-10-04 12:06:31:631 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 12:06:32:632 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:06:39:639 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:06:39:639 [31merror[39m: [31m"reservation_date" must be in ISO 8601 date format[39m
+2022-10-04 12:06:56:656 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:07:03:73 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:07:03:73 [31merror[39m: [31m"user_id" must be a number[39m
+2022-10-04 12:07:30:730 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:07:30:730 [31merror[39m: [31m"user_id" must be a number[39m
+2022-10-04 12:07:38:738 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:07:38:738 [31merror[39m: [31m"reservation_date" is required[39m
+2022-10-04 12:10:36:1036 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-04 12:10:46:1046 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 12:10:50:1050 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-04 12:11:01:111 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-04 12:11:01:111 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 12:17:27:1727 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 12:17:31:1731 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-04 12:17:31:1731 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 12:17:39:1739 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-04 12:32:27:3227 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 12:32:36:3236 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:32:56:3256 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 12:32:56:3256 [31merror[39m: [31m"reservation_date" must be in ISO 8601 date format[39m
+2022-10-04 12:47:18:4718 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 12:47:28:4728 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 12:47:28:4728 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 12:47:35:4735 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 12:47:38:4738 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 12:47:40:4740 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 12:47:43:4743 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:07:30:730 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 13:07:31:731 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:07:38:738 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:08:16:816 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:08:16:816 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:08:40:840 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:09:19:919 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:09:19:919 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:09:21:921 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:09:21:921 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:09:22:922 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:09:22:922 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:09:27:927 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:09:27:927 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:09:44:944 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:09:53:953 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:28:12:2812 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 13:43:08:438 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 13:43:09:439 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 13:43:13:4313 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-04 13:43:21:4321 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 13:43:21:4321 [31merror[39m: [31m"reservation_date" must be in ISO 8601 date format[39m
+2022-10-04 13:43:33:4333 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 13:50:22:5022 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 13:50:25:5025 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 13:50:25:5025 [31merror[39m: [31mER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`booking`.`reservation`, CONSTRAINT `FK_3452adeda140eb195008f44d3c0` FOREIGN KEY (`seat_id`) REFERENCES `seat` (`seat_id`) ON DELETE CASCADE)[39m
+2022-10-04 13:50:54:5054 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 13:50:55:5055 [31merror[39m: [31mER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`booking`.`reservation`, CONSTRAINT `FK_e219b0a4ff01b85072bfadf3fd7` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE)[39m
+2022-10-04 13:51:16:5116 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-04 13:51:44:5144 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-04 13:51:44:5144 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:51:52:5152 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-04 13:51:54:5154 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-04 13:51:54:5154 [31merror[39m: [31mReservation with this id doesn't exist[39m
+2022-10-04 13:53:24:5324 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 13:53:32:5332 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 13:53:37:5337 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 13:53:37:5337 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 13:53:42:5342 [32minfo[39m: [32m/reservation/date endpoint accessed[39m
+2022-10-04 13:54:34:5434 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 13:54:45:5445 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-04 13:54:52:5452 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-04 13:54:52:5452 [31merror[39m: [31m"building_name" is required[39m
+2022-10-04 13:55:02:552 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-04 13:55:09:559 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-10-04 13:55:09:559 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:55:15:5515 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-10-04 13:55:15:5515 [31merror[39m: [31mBuilding with this id doesn't exist[39m
+2022-10-04 13:55:22:5522 [32minfo[39m: [32m/building/:id/delete endpoint accessed[39m
+2022-10-04 13:55:45:5545 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 13:55:45:5545 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:55:53:5553 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 13:55:53:5553 [31merror[39m: [31mBuilding with this id doesn't exist[39m
+2022-10-04 13:56:04:564 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 13:56:04:564 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-10-04 13:56:11:5611 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-04 13:56:11:5611 [31merror[39m: [31mBuilding with this id doesn't exist[39m
+2022-10-04 13:56:37:5637 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 13:56:45:5645 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 13:56:53:5653 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-04 13:57:00:570 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-04 13:57:08:578 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-04 13:57:19:5719 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-04 13:57:19:5719 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:57:26:5726 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-04 13:57:26:5726 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:57:43:5743 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:57:43:5743 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:57:49:5749 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:00:580 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:00:580 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:58:08:588 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:10:5810 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:11:5811 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:11:5811 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:12:5812 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:19:5819 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:58:24:5824 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:58:24:5824 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:58:29:5829 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:58:29:5829 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:58:37:5837 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-04 13:58:42:5842 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-04 13:58:55:5855 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-10-04 13:58:55:5855 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:59:03:593 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-10-04 13:59:03:593 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:59:09:599 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-10-04 13:59:09:599 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:59:15:5915 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-10-04 13:59:25:5925 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-04 13:59:25:5925 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:59:30:5930 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-04 13:59:33:5933 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-04 13:59:33:5933 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-04 13:59:34:5934 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-04 14:03:32:332 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:03:37:337 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:04:13:413 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:04:23:423 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:06:47:647 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:06:49:649 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:06:49:649 [32minfo[39m: [32m[][39m
+2022-10-04 14:08:35:835 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:08:42:842 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:08:43:843 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:08:43:843 [32minfo[39m: [32m[][39m
+2022-10-04 14:09:20:920 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:09:21:921 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:09:21:921 [32minfo[39m: [32m[][39m
+2022-10-04 14:09:50:950 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:09:51:951 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:09:51:951 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 8,[39m
+[32m    building_name: 'Hightower',[39m
+[32m    building_address: 'Atacliff 99',[39m
+[32m    building_zip: 'g45',[39m
+[32m    building_city: 'Oldtown',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 9,[39m
+[32m    building_name: 'Barrow Hall',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: 'changet',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 11,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 12,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 14,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'PRague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 15,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 16,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 17,[39m
+[32m    building_name: 'Barrow Hall',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: 'changet',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 18,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 19,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 21,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 22,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 23,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  }[39m
+[32m][39m
+2022-10-04 14:11:52:1152 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:11:56:1156 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:11:56:1156 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 8,[39m
+[32m    building_name: 'Hightower',[39m
+[32m    building_address: 'Atacliff 99',[39m
+[32m    building_zip: 'g45',[39m
+[32m    building_city: 'Oldtown',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 9,[39m
+[32m    building_name: 'Barrow Hall',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: 'changet',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 11,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 12,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 14,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'PRague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 15,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 16,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 17,[39m
+[32m    building_name: 'Barrow Hall',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: 'changet',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 18,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 19,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 21,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 22,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 23,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  }[39m
+[32m][39m
+2022-10-04 14:12:34:1234 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:12:36:1236 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:12:36:1236 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:12:50:1250 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:12:51:1251 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:12:51:1251 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:13:20:1320 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:13:21:1321 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:13:21:1321 [32minfo[39m: [32m[][39m
+2022-10-04 14:13:46:1346 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:13:49:1349 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:13:49:1349 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:18:23:1823 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:18:27:1827 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:18:27:1827 [32minfo[39m: [32m[][39m
+2022-10-04 14:19:07:197 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:19:08:198 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:19:08:198 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:19:32:1932 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:19:32:1932 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:19:32:1932 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:20:19:2019 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:20:22:2022 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:20:22:2022 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 8,[39m
+[32m    building_name: 'Hightower',[39m
+[32m    building_address: 'Atacliff 99',[39m
+[32m    building_zip: 'g45',[39m
+[32m    building_city: 'Oldtown',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 9,[39m
+[32m    building_name: 'Barrow Hall',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: 'changet',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 11,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 12,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 14,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'PRague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 15,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 16,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 17,[39m
+[32m    building_name: 'Barrow Hall',[39m
+[32m    building_address: 'Rockbottom 99',[39m
+[32m    building_zip: 'changet',[39m
+[32m    building_city: 'Barrowton',[39m
+[32m    building_country: 'Westeros',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 18,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 19,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 21,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 22,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  },[39m
+[32m  BuildingEntity {[39m
+[32m    building_id: 23,[39m
+[32m    building_name: '123',[39m
+[32m    building_address: 'kkk 99',[39m
+[32m    building_zip: '123',[39m
+[32m    building_city: 'Prague',[39m
+[32m    building_country: 'mmm',[39m
+[32m    building_image: '../frontend/src/fake/path.png'[39m
+[32m  }[39m
+[32m][39m
+2022-10-04 14:20:50:2050 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:20:51:2051 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:20:51:2051 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:21:43:2143 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:21:44:2144 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:21:44:2144 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:23:11:2311 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:23:15:2315 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:23:15:2315 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:23:55:2355 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:23:56:2356 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:23:56:2356 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:25:14:2514 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:25:15:2515 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:25:15:2515 [32minfo[39m: [32m[[39m
+[32m  BuildingEntity { building_city: 'Oldtown' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'PRague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Barrowton' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' },[39m
+[32m  BuildingEntity { building_city: 'Prague' }[39m
+[32m][39m
+2022-10-04 14:28:18:2818 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-04 14:28:21:2821 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-04 14:28:21:2821 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-06 11:40:31:4031 [32minfo[39m: [32mError during Data Source initialization: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client[39m
+2022-10-06 11:41:22:4122 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 11:45:42:4542 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-06 12:10:26:1026 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:12:03:123 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:12:37:1237 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:13:18:1318 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:13:19:1319 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:22:49:2249 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:22:50:2250 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:23:23:2323 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:23:28:2328 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:34:28:3428 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:34:32:3432 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:38:29:3829 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:38:31:3831 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:41:42:4142 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:41:43:4143 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:54:09:549 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:54:13:5413 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 12:57:03:573 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 12:57:06:576 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:05:02:52 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 13:05:12:512 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:05:22:522 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:16:38:1638 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 13:16:39:1639 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:16:39:1639 [32minfo[39m: [32m[32minfo[32m[39m
+2022-10-06 13:17:14:1714 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 13:17:15:1715 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:17:15:1715 [32minfo[39m: [32m123[39m
+2022-10-06 13:17:15:1715 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 13:17:25:1725 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:17:25:1725 [32minfo[39m: [32m1234[39m
+2022-10-06 13:17:25:1725 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 13:17:32:1732 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 13:17:32:1732 [32minfo[39m: [32m123[39m
+2022-10-06 13:17:32:1732 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:15:28:1528 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:15:29:1529 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:15:29:1529 [32minfo[39m: [32m123[39m
+2022-10-06 14:15:29:1529 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:18:25:1825 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32m123[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:18:29:1829 [32minfo[39m: [32m[32minfo[32m[39m
+2022-10-06 14:19:08:198 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32m123[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:19:11:1911 [32minfo[39m: [32msecret: undefined[39m
+2022-10-06 14:20:17:2017 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32m123[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:20:42:2042 [32minfo[39m: [32msecret: a2b7f4d8b6a3f03fa098d881[39m
+2022-10-06 14:23:05:235 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:23:08:238 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:23:08:238 [32minfo[39m: [32m123[39m
+2022-10-06 14:23:08:238 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:23:09:239 [32minfo[39m: [32msecret: a2b7f4d8b6a3f03fa098d881[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32m123[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32m$2b$10$M73YdZ3tgR7JcKmtsx7u6OQCyH4yBUHumVtD0NZDUBV2hf4O2FKdu[39m
+2022-10-06 14:24:28:2428 [32minfo[39m: [32msecret: a2b7f4d8b6a3f03fa098d881[39m
+2022-10-06 15:08:23:823 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 15:08:26:826 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:13:5313 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 15:53:14:5314 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:26:5326 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:33:5333 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:49:5349 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 15:53:58:5358 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:00:22:022 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:00:27:027 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:01:26:126 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:01:27:127 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:47:347 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:48:348 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:49:349 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:50:350 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:51:351 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:52:352 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:53:353 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:54:354 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:55:355 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:56:356 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:56:356 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:57:357 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:03:58:358 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:04:00:40 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:11:30:1130 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:11:31:1131 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:13:41:1341 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:13:43:1343 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:13:52:1352 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:13:57:1357 [32minfo[39m: [32mlogin endpoint accessed[39m
+2022-10-06 16:40:10:4010 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-06 16:40:12:4012 [32minfo[39m: [32mlogin-email endpoint accessed[39m

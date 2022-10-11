@@ -1,30 +1,39 @@
 import { ReservationEntity } from '../../db';
 import { ReservationRepository, Success } from '../../repository';
+import { dateSchema, idSchema } from '../index';
+import { reservationSchema } from './reservationSchema';
+import { validateInput } from '../index';
 
 export class ReservationService {
   constructor(public reservationRepository: ReservationRepository) {}
 
-  showReservationForGivenDate(
+  async showReservationForGivenDate(
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationEntity[]> {
+    const validation = await validateInput(dateSchema, reservationDate);
+    if (!validation) return [];
+
     return this.reservationRepository.showReservationForGivenDate(
       workstationId,
       reservationDate
     );
   }
 
-  addNewReservation(
-    requestBody: ReservationEntity
-  ): Promise<ReservationEntity> {
+  async addNewReservation(requestBody: ReservationEntity): Promise<Success> {
+    const validation = await validateInput(reservationSchema, requestBody);
+    if (!validation) return { success: 'no' };
     return this.reservationRepository.addNewReservation(requestBody);
   }
 
-  deleteReservation(reservationId: number): Promise<Success> {
-    return this.reservationRepository.deleteReservation(reservationId);
+  async deleteReservation(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
+
+    return this.reservationRepository.deleteReservation(id);
   }
 
-  displayReservationForUser(userId: number): Promise<ReservationEntity[]> {
-    return this.reservationRepository.displayReservationForUser(userId);
+  showReservationForGivenUser(id: number): Promise<ReservationEntity[]> {
+    return this.reservationRepository.showReservationForGivenUser(id);
   }
 }
