@@ -45,16 +45,14 @@ export class LoginComponent {
   }
 
   signInByMail(user: Login) {
-    let response: Observable<TokenResponse> = this.authService.loginByMail(
-      user
-    ) as unknown as Observable<TokenResponse>;
+    let response: Observable<TokenResponse> =
+      this.authService.loginByMail(user);
     this.handleResponse(response);
   }
 
   signInByLogin(user: Login) {
-    let response: Observable<TokenResponse> = this.authService.loginByLogin(
-      user
-    ) as unknown as Observable<TokenResponse>;
+    let response: Observable<TokenResponse> =
+      this.authService.loginByLogin(user);
     this.handleResponse(response);
   }
 
