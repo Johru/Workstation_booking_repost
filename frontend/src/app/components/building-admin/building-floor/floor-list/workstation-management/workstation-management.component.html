@@ -6,10 +6,10 @@
       <mat-select [(ngModel)]="selected" name="workstation">
         <mat-option value="0">{{ defaultText }}</mat-option>
         <mat-option
-          *ngFor="let workstation of workstationList; let i = index"
+          *ngFor="let workstation of workstationList"
           value="{{ workstation.workstation_name }}"
         >
-          <div (click)="onSelect(workstation, i)">
+          <div (click)="onSelect(workstation)">
             {{ workstation.workstation_name }}
           </div>
         </mat-option>

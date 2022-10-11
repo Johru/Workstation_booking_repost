@@ -40,7 +40,6 @@ export class WorkstationPreviewEditComponent implements OnInit {
       workstation_id: initialWorkstation.workstation_id,
       workstation_name: initialWorkstation.workstation_name,
     };
-
     this.newWorkstationForm.setValue(workstation);
   }
 

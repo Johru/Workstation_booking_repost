@@ -8,10 +8,6 @@ import { BUILDINGS } from '../help-files/building-data';
 export class BuildingService {
   constructor() {}
 
-  getBuildings(): Building[] {
-    return BUILDINGS;
-  }
-
   addBuilding(building: Building): void {
     BUILDINGS.push(building);
   }

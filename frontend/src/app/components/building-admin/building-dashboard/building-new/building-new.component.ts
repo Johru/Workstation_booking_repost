@@ -28,7 +28,6 @@ export class BuildingNewComponent {
 
   onSubmit(): void {
     this.newBuildingForm.value.building_id = this.buildingService.buildingId();
-    console.log(this.newBuildingForm.value.building_id);
     this.newBuildingEvent.emit(this.newBuildingForm.value as Building);
     this.router.navigate([
       `${this.router.url}/${this.newBuildingForm.value.building_id}/floor`,

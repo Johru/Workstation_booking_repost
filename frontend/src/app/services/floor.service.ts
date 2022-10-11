@@ -17,10 +17,6 @@ export class FloorService {
     FLOORS.push(floor);
   }
 
-  addWorkstation(workstation: Floor): void {
-    FLOORS.push(workstation);
-  }
-
   deleteWorkstation(id: number) {
     for (let i: number = 0; i < FLOORS.length; i++) {
       let ws = FLOORS[i].workstations.find(

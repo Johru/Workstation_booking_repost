@@ -19,14 +19,11 @@ export class WorkstationManagementComponent implements OnChanges {
   @Output() showPreviewEmitter = new EventEmitter();
   @Output() showEditEmitter = new EventEmitter<WorkstationInterface>();
   @Input() workstationList?: WorkstationInterface[];
-  @Input() managementButtonMenuVisible?: boolean;
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
   selectedWorkstation?: WorkstationInterface;
-  selectedIndex: any;
   defaultText: string = 'Select a workstation';
   selected: string = '0';
-  disableButton: boolean = true;
 
   constructor() {}
 
@@ -38,10 +35,8 @@ export class WorkstationManagementComponent implements OnChanges {
     }
   }
 
-  onSelect(workstation: WorkstationInterface, i: number): void {
+  onSelect(workstation: WorkstationInterface): void {
     this.selectedWorkstation = workstation;
-    this.selectedIndex = i;
-    this.disableButton = false;
   }
 
   disableSelected(): string {
