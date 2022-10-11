@@ -1,5 +1,5 @@
 import { Router, Response, Request } from 'express';
-import { UserService } from '../service';
+import { idSchema, UserService } from '../service';
 import logger from '../logger';
 import { UserEntity } from 'db';
 import { AuthMiddleware } from '../middlewares';
@@ -49,17 +49,21 @@ export class AuthController {
       }
     );
 
-    this._router.post('/login-login', async (req: Request, res: Response) => {
-      logger.info('login-login endpoint accessed');
-      const login = req.body.user_login;
-      const userFound = await this.userService.findUserByLogin(login);
-      if (!userFound)
-        return res
-          .status(200)
-          .send({ error: 'Provided credentials are not valid!' });
+    this._router.post(
+      '/login-login',
 
-      this.passwordCheckAndToken(req, res, userFound);
-    });
+      async (req: Request, res: Response) => {
+        logger.info('login-login endpoint accessed');
+        const login = req.body.user_login;
+        const userFound = await this.userService.findUserByLogin(login);
+        if (!userFound)
+          return res
+            .status(200)
+            .send({ error: 'Provided credentials are not valid!' });
+
+        this.passwordCheckAndToken(req, res, userFound);
+      }
+    );
 
     this._router.post('/login-email', async (req: Request, res: Response) => {
       logger.info('login-email endpoint accessed');
@@ -69,7 +73,6 @@ export class AuthController {
         return res
           .status(200)
           .send({ error: 'Provided credentials are not valid!' });
-
       this.passwordCheckAndToken(req, res, userFound);
     });
   }
