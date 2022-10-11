@@ -16,11 +16,11 @@ export interface IWorkstationService {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<{ status: string; message: string[] }>;
-  workstationIsActive(
-    workstationId: number,
+  setWorkstationToActive(
+    workstationId: number
   ): Promise<{ status: string; message: string[] }>;
-  workstationIsNotActive(
-    workstationId: number,
+  setWorkstationToInActive(
+    workstationId: number
   ): Promise<{ status: string; message: string[] }>;
   deleteWorkstation(workstationId: number): Promise<Success>;
 }
@@ -95,13 +95,12 @@ export class WorkstationService implements IWorkstationService {
     }
   }
 
-  async workstationIsActive(
-    workstationId: number,
+  async setWorkstationToActive(
+    workstationId: number
   ): Promise<{ status: string; message: string[] }> {
-
     try {
-      const newWorkstation = await this.workstationRepository.statusIsActive(
-        workstationId,
+      const newWorkstation = await this.workstationRepository.setStatusToActive(
+        workstationId
       );
       return {
         status: 'OK',
@@ -113,15 +112,13 @@ export class WorkstationService implements IWorkstationService {
       return { status: 'Error', message: [error.message] };
     }
   }
-  
-  async workstationIsNotActive(
-    workstationId: number,
-  ): Promise<{ status: string; message: string[] }> {
 
+  async setWorkstationToInActive(
+    workstationId: number
+  ): Promise<{ status: string; message: string[] }> {
     try {
-      const newWorkstation = await this.workstationRepository.statusIsNotActive(
-        workstationId,
-      );
+      const newWorkstation =
+        await this.workstationRepository.setStatusToInActive(workstationId);
       return {
         status: 'OK',
         message: [

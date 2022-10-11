@@ -66,7 +66,7 @@ export class WorkstationController {
         res
           .status(200)
           .json(
-            await this.workstationService.workstationIsActive(workstationId)
+            await this.workstationService.setWorkstationToActive(workstationId)
           );
       }
     );
@@ -78,7 +78,9 @@ export class WorkstationController {
         res
           .status(200)
           .json(
-            await this.workstationService.workstationIsNotActive(workstationId)
+            await this.workstationService.setWorkstationToInActive(
+              workstationId
+            )
           );
       }
     );

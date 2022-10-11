@@ -14,8 +14,8 @@ export interface IWorkstationRepository {
     workstationId: number,
     workstation: WorkstationEntity
   ): Promise<WorkstationEntity>;
-  statusIsActive(workstationId: number): Promise<WorkstationEntity>;
-  statusIsNotActive(workstationId: number): Promise<WorkstationEntity>;
+  setStatusToActive(workstationId: number): Promise<WorkstationEntity>;
+  setStatusToInActive(workstationId: number): Promise<WorkstationEntity>;
 
   deleteWorkstation(workstationId: number): Promise<Success>;
 }
@@ -88,9 +88,7 @@ export class WorkstationRepository implements IWorkstationRepository {
     }
   }
 
-  async statusIsActive(
-    workstationId: number,
-  ): Promise<WorkstationEntity> {
+  async setStatusToActive(workstationId: number): Promise<WorkstationEntity> {
     const findWorkstation = await appDataSource
       .getRepository(WorkstationEntity)
       .findOne({
@@ -115,9 +113,7 @@ export class WorkstationRepository implements IWorkstationRepository {
     }
   }
 
-  async statusIsNotActive(
-    workstationId: number,
-  ): Promise<WorkstationEntity> {
+  async setStatusToInActive(workstationId: number): Promise<WorkstationEntity> {
     const findWorkstation = await appDataSource
       .getRepository(WorkstationEntity)
       .findOne({
