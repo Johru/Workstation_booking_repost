@@ -8,7 +8,7 @@ export const CITYLIST = [
   { city: 'Rockport City' },
 ];
 
-export const BUILDINGLIST: Building[] = [
+export const BUILDINGLIST: any[] = [
   {
     id: 1,
     name: 'Mage HQ',
