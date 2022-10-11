@@ -1,15 +1,16 @@
+import logger from '../logger';
 import { appDataSource } from '../db';
-import { Success } from './success';
 import { ReservationEntity, SeatEntity } from '../db';
-import { determineSuccess } from './determineSuccess';
+import { logErrorAndReturnYesOrNo } from './logErrorAndReturnYesOrNo';
+import { Success } from './success';
 
 export interface IReservationRepository {
   showReservationForGivenDate(
     workstationId: number,
     reservationDate: string
   ): Promise<ReservationEntity[]>;
-  displayReservationForUser(userId: number): Promise<ReservationEntity[]>;
-  addNewReservation(requestBody: ReservationEntity): Promise<ReservationEntity>;
+  showReservationForGivenUser(userId: number): Promise<ReservationEntity[]>;
+  addNewReservation(requestBody: ReservationEntity): Promise<Success>;
   deleteReservation(reservationId: number): Promise<Success>;
 }
 
@@ -36,7 +37,7 @@ export class ReservationRepository implements IReservationRepository {
       .getMany();
   }
 
-  async displayReservationForUser(
+  async showReservationForGivenUser(
     userId: number
   ): Promise<ReservationEntity[]> {
     return appDataSource
@@ -54,15 +55,20 @@ export class ReservationRepository implements IReservationRepository {
       .getMany();
   }
 
-  async addNewReservation(
-    requestBody: ReservationEntity
-  ): Promise<ReservationEntity> {
+  async addNewReservation(requestBody: ReservationEntity): Promise<Success> {
     const resSave = new ReservationEntity();
     resSave.user_id = requestBody.user_id;
     resSave.seat_id = requestBody.seat_id;
     resSave.reservation_date = requestBody.reservation_date;
-
-    return appDataSource.getRepository(ReservationEntity).save(resSave);
+    try {
+      const addition = await appDataSource
+        .getRepository(ReservationEntity)
+        .save(resSave);
+      return logErrorAndReturnYesOrNo(addition, 'Reservation');
+    } catch (error) {
+      logger.error(error);
+      return { success: 'no' };
+    }
   }
 
   async deleteReservation(reservationId: number): Promise<Success> {
@@ -75,6 +81,6 @@ export class ReservationRepository implements IReservationRepository {
       })
       .execute();
 
-    return determineSuccess(deletion);
+    return logErrorAndReturnYesOrNo(deletion, 'Reservation');
   }
 }

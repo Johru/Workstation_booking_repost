@@ -27,7 +27,7 @@ export class ReservationController {
         logger.info('/reservation/user/:id endpoint accessed');
         const userId = req.params.id as unknown as number;
         res.json(
-          await this.reservationService.displayReservationForUser(userId)
+          await this.reservationService.showReservationForGivenUser(userId)
         );
       }
     );
@@ -43,7 +43,6 @@ export class ReservationController {
 
     this._router.delete(
       '/reservation/:id/delete',
-
       async (req: Request, res: Response) => {
         logger.info('/reservation/delete endpoint accessed');
         const reservationId = req.params.id as unknown as number;

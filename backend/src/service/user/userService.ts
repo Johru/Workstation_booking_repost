@@ -3,6 +3,8 @@ import { ValidationError } from 'joi';
 import { UserEntity } from '../../db';
 import { UserRepository } from '../../repository';
 import { Success } from '../../repository/success';
+import { idSchema } from '../index';
+import { validateInput } from '../index';
 import { userSchema } from './userSchema';
 import logger from '../../logger';
 
@@ -34,33 +36,48 @@ export class UserService {
     };
   }
 
-  async findUserByEmail(email: string): Promise<boolean> {
+  async findUserByEmail(email: string): Promise<UserEntity | null> {
     const users = await this.userRepository.findUserByEmail(email);
-    return users.length as unknown as boolean;
+    return users;
   }
 
-  async findUserByLogin(login: string): Promise<boolean> {
+  async findUserByLogin(login: string): Promise<UserEntity | null> {
     const users = await this.userRepository.findUserByLogin(login);
-    return users.length as unknown as boolean;
+    return users;
   }
 
-  deleteUser(id: number): Promise<Success> {
+  async findUserById(id: number): Promise<UserEntity | null> {
+    const user = await this.userRepository.findUserById(id);
+    return user;
+  }
+
+  async deleteUser(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.deleteUser(id);
   }
 
-  promoteUserToAdmin(id: number): Promise<Success> {
+  async promoteUserToAdmin(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.promoteUserToAdmin(id);
   }
 
-  demoteUserFromAdmin(id: number): Promise<Success> {
+  async demoteUserFromAdmin(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.demoteUserFromAdmin(id);
   }
 
-  blockUser(id: number): Promise<Success> {
+  async blockUser(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.blockUser(id);
   }
 
-  unblockUser(id: number): Promise<Success> {
+  async unblockUser(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.unblockUser(id);
   }
 }

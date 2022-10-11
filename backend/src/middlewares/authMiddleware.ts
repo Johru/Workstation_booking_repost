@@ -1,19 +1,26 @@
 import { Response, Request, NextFunction } from 'express';
 import { UserService } from '../service';
+import config from '../config';
+import { Secret, verify } from 'jsonwebtoken';
 import { UserEntity } from '../db';
 
 declare global {
   namespace Express {
     export interface Request {
       user: UserEntity;
+      id: number;
     }
   }
+}
+
+interface JwtPayload {
+  id: number;
 }
 
 export class AuthMiddleware {
   constructor(private userService: UserService) {}
 
-  async checkSignUp(req: Request, res: Response, next: NextFunction) {
+  checkSignUp = async (req: Request, res: Response, next: NextFunction) => {
     const { user_login, user_email } = req.body;
 
     if (!(user_login && user_email)) {
@@ -46,44 +53,48 @@ export class AuthMiddleware {
     }
 
     next();
-  }
+  };
 
-  async verifyJWT(req: Request, res: Response, next: NextFunction) {
-    // 1. Get auth header from req
-    // 2. Check the value of token - Bearer prefix
-    // 3. Verify with JWT.verify(token, secret, callBackFn(err, decoded))
-    // 4. From decoded (payload) - get ID
-    // 5. request.id = id from payload
+  verifyJWT = async (req: Request, res: Response, next: NextFunction) => {
+    const authHeader = req.headers['authorization'];
+    if (!authHeader)
+      return res.status(401).json({ error: 'Please log in first' });
+    if (authHeader?.split(' ')[0] != 'Bearer') {
+      return res.status(401).json({ error: 'Token not valid' });
+    }
+    const token = authHeader?.split(' ')[1];
+    if (token == null) return res.sendStatus(401);
+    try {
+      const payload = verify(token, config.secret as Secret) as JwtPayload;
+      req.id = payload.id;
+    } catch {
+      res.sendStatus(403).json({ error: 'Token is not valid' });
+      return;
+    }
+    next();
+  };
 
-    // findUserById service/repository
-    // 6. next()
+  isAdmin = async (req: Request, res: Response, next: NextFunction) => {
+    const id = req.id;
+    const user = await this.userService.findUserById(id);
+    if (user != null) {
+      if (!user.user_isadmin) {
+        res.status(401).json({ error: 'unauthorized request' });
+        return;
+      }
+      next();
+    }
+  };
 
-  //   const authHeader = req.headers['authorization'];
-  //   const token = authHeader && authHeader.split(' ')[1];
-  //   if (token == null) return res.sendStatus(401);
-  //   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-  //     if (err) return res.sendStatus(403);
-  //   req.user = user;
-  //     next();
-  //   }
-  // }
-
-
-  async isAdmin(req: Request, res: Response, next: NextFunction) {
-    // 1. req.user.id
-    // 2. run findById(req.id)
-    // 3. create method findById in repository/service
-    // 4. returns user
-    // 5. if !admin - res.sendStatus(401).json('unauthorized request')
-    // 5. check If user_isAdmin == true --  // 6. next()
-   
-  }
-
-  async isUser(req: Request, res: Response, next: NextFunction) {
-    // 1. req.id
-    // 2. run findById(req.id)
-    // 3. create method findById in repository/service
-    // 4. returns user
-    // 5. check If user_isBlocked
-    // 6. next()
-  }
+  isBlocked = async (req: Request, res: Response, next: NextFunction) => {
+    const id = req.id;
+    const user = await this.userService.findUserById(id);
+    if (user != null) {
+      if (!user.user_isblocked) {
+        res.status(401).json({ error: 'access denied' });
+        return;
+      }
+      next();
+    }
+  };
+}
