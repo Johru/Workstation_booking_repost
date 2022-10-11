@@ -8,7 +8,6 @@ import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
   styleUrls: ['./workstation-preview-input.component.css'],
 })
 export class WorkstationPreviewInputComponent implements OnInit {
-  @Input() buttonValueToFalse?: boolean;
   @Output() closePanel = new EventEmitter<boolean>();
   @Output() showManagementEmitter = new EventEmitter();
   @Output() newWorkstationEvent = new EventEmitter<WorkstationInterface>();
@@ -17,7 +16,6 @@ export class WorkstationPreviewInputComponent implements OnInit {
     workstation_name: new FormControl(),
     seats: new FormControl(),
   });
-  workstation!: WorkstationInterface;
 
   constructor() {}
 
@@ -26,13 +24,13 @@ export class WorkstationPreviewInputComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.workstation = {
+    const workstation: WorkstationInterface = {
       workstation_id: this.newWorkstationForm.value.workstation_id,
       workstation_name: this.newWorkstationForm.value.workstation_name,
       seats: Number(this.newWorkstationForm.value.seats),
       workstation_isActive: true,
     };
-    this.newWorkstationEvent.emit(this.workstation);
+    this.newWorkstationEvent.emit(workstation);
     this.newWorkstationForm.reset();
     this.goToWorkstationManagement();
   }

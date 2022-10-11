@@ -7,8 +7,6 @@ import {
 } from '@angular/core';
 import { Floor } from 'src/app/help-files/floor-interface';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
-import { FloorService } from 'src/app/services/floor.service';
-
 @Component({
   selector: 'floor-list',
   templateUrl: './floor-list.component.html',
@@ -16,7 +14,6 @@ import { FloorService } from 'src/app/services/floor.service';
 })
 export class FloorListComponent implements OnInit, AfterContentChecked {
   @Input() floor!: Floor;
-  floors: Floor[] = [];
   selectedWorkstationToEdit?: WorkstationInterface;
   panelOpenState?: boolean;
   confirmDeleteValue: boolean = false;
@@ -27,13 +24,9 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   addWorkstationPanel: boolean = false;
   editWorkstationPanel: boolean = false;
 
-  constructor(
-    private floorService: FloorService,
-    private cd: ChangeDetectorRef
-  ) {}
+  constructor(private cd: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.getFloor();
     this.panelOpenState = false;
     this.numberOfSeats();
   }
@@ -50,10 +43,6 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     } else {
       this.addWorkstationPanel = true;
     }
-  }
-
-  getFloor(): void {
-    this.floors = this.floorService.getFloor();
   }
 
   addWorkstation(newWorkstation: WorkstationInterface): void {

@@ -14,17 +14,16 @@ export class FloorNewComponent {
     floor_id: new FormControl(),
     floor_name: new FormControl(),
   });
-  floor!: Floor;
 
   constructor(private floorService: FloorService) {}
 
   onSubmit(): void {
-    this.floor = {
+    const floor: Floor = {
       floor_id: this.floorService.floorId(),
       floor_name: this.newFloorForm.value.floor_name,
       workstations: [],
     };
-    this.newFloorEvent.emit(this.floor);
+    this.newFloorEvent.emit(floor);
     this.newFloorForm.reset();
   }
 }
