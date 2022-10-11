@@ -1,0 +1,25 @@
+section {
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content-containers {
+  width: 50%;
+}
+
+.main-picture {
+  max-width: 100%;
+  height: auto;
+}
+
+.invite-text {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 26px;
+  margin: 0 25%;
+  line-height: 1.5;
+}

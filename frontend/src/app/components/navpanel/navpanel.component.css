@@ -64,3 +64,7 @@ workstation-form {
   display: flex;
   flex-direction: row;
 }
+
+.main-view-container {
+  height: 600px;
+}
