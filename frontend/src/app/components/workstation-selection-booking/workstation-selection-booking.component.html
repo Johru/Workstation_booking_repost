@@ -1,0 +1,27 @@
+<workstation-tab
+  (selectedWorkstation)="onSelection($event)"
+  [(canceledOnTab)]="canceled"
+  [workstationList]="workstations"
+></workstation-tab>
+<div *ngIf="showForm()">
+  <workstation-form
+    [selectedWorkstationOnTab]="selectedWorkstation"
+    (reservation)="onBookClick($event)"
+  ></workstation-form>
+</div>
+<div *ngIf="modalVisibility">
+  <div class="modal-background">
+    <confirm-modal
+      *ngIf="!confirmed"
+      (editEmitter)="onEdit($event)"
+      (cancelEmitter)="onCancel($event)"
+      (confirmEmitter)="onConfirm($event)"
+      [resData]="reservationData"
+    ></confirm-modal>
+    <div class="confirmed" *ngIf="confirmed">
+      <h2>Reservation Confirmed</h2>
+      <!--ADD ROUTE TO SOME COMPONENT-->
+      <a routerLink="/">Go Home</a>
+    </div>
+  </div>
+</div>

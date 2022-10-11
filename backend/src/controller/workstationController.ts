@@ -1,6 +1,6 @@
 import { Router, Response, Request } from 'express';
 import { IWorkstationService } from '../service';
-import { WorkstationEntity } from '../db/models/workstationEntity';
+import { WorkstationEntity } from '../db';
 
 export class WorkstationController {
   private readonly _router: Router = Router();

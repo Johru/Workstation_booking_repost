@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2022-10-04 11:19:06:196 [31merror[39m: [31m"workstation_id" is not allowed[39m
 2022-10-04 11:20:30:2030 [31merror[39m: [31m"value" must be of type object[39m
 2022-10-04 11:24:51:2451 [31merror[39m: [31m"workstation_id" is not allowed[39m
@@ -6,3 +7,63 @@
 2022-10-07 08:48:31:4831 [31merror[39m: [31m"floor_id" is required[39m
 2022-10-07 08:48:59:4859 [31merror[39m: [31m"workstation_name" is required[39m
 2022-10-07 08:50:29:5029 [31merror[39m: [31m"workstation_isactive" is not allowed[39m
+=======
+2022-09-30 16:45:18:4518 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-10-03 17:32:58:3258 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-10-03 17:37:09:379 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-10-03 17:38:06:386 [31merror[39m: [31m"building_name" is required[39m
+2022-10-03 17:40:51:4051 [31merror[39m: [31m"building_name" is required[39m
+2022-10-04 09:23:24:2324 [31merror[39m: [31m"building_name" is required[39m
+2022-10-04 10:41:46:4146 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 10:45:26:4526 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 10:45:38:4538 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 10:47:41:4741 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 10:57:44:5744 [31merror[39m: [31m"building_name" is required[39m
+2022-10-04 11:00:51:051 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 11:53:06:536 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:53:23:5323 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:53:43:5343 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:54:00:540 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:54:47:5447 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 11:56:12:5612 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 12:04:52:452 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 12:05:08:58 [31merror[39m: [31m"value" must be a valid date[39m
+2022-10-04 12:05:26:526 [31merror[39m: [31m"value" must be a valid date[39m
+2022-10-04 12:06:39:639 [31merror[39m: [31m"reservation_date" must be in ISO 8601 date format[39m
+2022-10-04 12:07:03:73 [31merror[39m: [31m"user_id" must be a number[39m
+2022-10-04 12:07:30:730 [31merror[39m: [31m"user_id" must be a number[39m
+2022-10-04 12:07:38:738 [31merror[39m: [31m"reservation_date" is required[39m
+2022-10-04 12:11:01:111 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 12:17:31:1731 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 12:32:56:3256 [31merror[39m: [31m"reservation_date" must be in ISO 8601 date format[39m
+2022-10-04 12:47:28:4728 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:08:16:816 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:09:19:919 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:09:21:921 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:09:22:922 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:09:27:927 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:43:21:4321 [31merror[39m: [31m"reservation_date" must be in ISO 8601 date format[39m
+2022-10-04 13:50:25:5025 [31merror[39m: [31mER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`booking`.`reservation`, CONSTRAINT `FK_3452adeda140eb195008f44d3c0` FOREIGN KEY (`seat_id`) REFERENCES `seat` (`seat_id`) ON DELETE CASCADE)[39m
+2022-10-04 13:50:55:5055 [31merror[39m: [31mER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`booking`.`reservation`, CONSTRAINT `FK_e219b0a4ff01b85072bfadf3fd7` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE)[39m
+2022-10-04 13:51:44:5144 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:51:54:5154 [31merror[39m: [31mReservation with this id doesn't exist[39m
+2022-10-04 13:53:37:5337 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-04 13:54:52:5452 [31merror[39m: [31m"building_name" is required[39m
+2022-10-04 13:55:09:559 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:55:15:5515 [31merror[39m: [31mBuilding with this id doesn't exist[39m
+2022-10-04 13:55:45:5545 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:55:53:5553 [31merror[39m: [31mBuilding with this id doesn't exist[39m
+2022-10-04 13:56:04:564 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
+2022-10-04 13:56:11:5611 [31merror[39m: [31mBuilding with this id doesn't exist[39m
+2022-10-04 13:57:19:5719 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:57:26:5726 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:57:43:5743 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:58:00:580 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:58:24:5824 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:58:29:5829 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:58:55:5855 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-04 13:59:03:593 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:59:09:599 [31merror[39m: [31m"value" must be a number[39m
+2022-10-04 13:59:25:5925 [31merror[39m: [31mUser with this id doesn't exist[39m
+>>>>>>> 69d59899f0239c76fec98217be33d5b40676c092
+2022-10-11 10:30:59:3059 [31merror[39m: [31m"floor_id" is required[39m

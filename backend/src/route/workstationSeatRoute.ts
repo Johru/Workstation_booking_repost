@@ -8,7 +8,8 @@ import { WorkstationController } from '../controller';
 import { WorkstationRepository } from '../repository';
 import { WorkstationService } from '../service';
 
-const router = Router();
+const seatRouter = Router();
+const workstationRouter = Router();
 
 const workstationRepository = new WorkstationRepository();
 const workstationService = new WorkstationService(workstationRepository);
@@ -18,7 +19,7 @@ const seatRepository = new SeatRepository();
 const seatService = new SeatService(seatRepository);
 const seatController = new SeatController(seatService);
 
-router.use('/api', workstationController.router);
-router.use('/api', seatController.router);
+workstationRouter.use('/api', workstationController.router);
+seatRouter.use('/api', seatController.router);
 
-export { router };
+export { workstationRouter, seatRouter };

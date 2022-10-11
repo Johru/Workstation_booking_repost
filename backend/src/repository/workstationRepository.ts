@@ -24,7 +24,7 @@ export class WorkstationRepository implements IWorkstationRepository {
   async findAllWorkstations(): Promise<WorkstationEntity[]> {
     return appDataSource.getRepository(WorkstationEntity).find({
       relations: {
-        seats: true,
+        seat: true,
       },
     });
   }

@@ -1,8 +1,6 @@
-import { SeatEntity, WorkstationEntity } from '../../db';
+import { SeatEntity} from '../../db';
 import { ISeatRepository, Success } from '../../repository';
 import { Response, Request } from 'express';
-import { ValidationError } from 'joi';
-import logger from '../../logger';
 
 export interface ISeatService {
   getSeats(): Promise<SeatEntity[]>;

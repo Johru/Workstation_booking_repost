@@ -1,0 +1,9 @@
+<button
+  class="seat"
+  *ngFor="let seat of seats"
+  value="{{ seat.id! }}"
+  [disabled]="disableSeat(seat.user_name)"
+  (click)="emitCheckedSeat($event)"
+>
+  <p class="taken-seat">{{ isItTaken(seat.user_name) }}</p>
+</button>
