@@ -78,7 +78,7 @@ export class AuthMiddleware {
     const id = req.id;
     const user = await this.userService.findUserById(id);
     if (user != null) {
-      if (!user.user_isadmin) {
+      if (user.user_isadmin === false) {
         res.status(401).json({ error: 'unauthorized request' });
         return;
       }
@@ -90,7 +90,7 @@ export class AuthMiddleware {
     const id = req.id;
     const user = await this.userService.findUserById(id);
     if (user != null) {
-      if (!user.user_isblocked) {
+      if (user.user_isblocked === true) {
         res.status(401).json({ error: 'access denied' });
         return;
       }
