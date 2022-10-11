@@ -1,6 +1,12 @@
+import { ValidationError } from 'joi';
+
 import { UserEntity } from '../../db';
 import { UserRepository } from '../../repository';
 import { Success } from '../../repository/success';
+import { idSchema } from '../index';
+import { validateInput } from '../index';
+import { userSchema } from './userSchema';
+import logger from '../../logger';
 
 export class UserService {
   constructor(public userRepository: UserRepository) {}
@@ -8,23 +14,65 @@ export class UserService {
     return this.userRepository.listUsers();
   }
 
-  deleteUser(id: number): Promise<Success> {
+  async createUser(
+    user: UserEntity
+  ): Promise<{ status: string; message: string[] }> {
+    try {
+      await userSchema.validateAsync(user);
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        logger.error(error);
+        const { details } = error;
+        const errorMessage = details.map(ve => ve.message);
+        return { status: 'Error', message: errorMessage };
+      }
+    }
+
+    const newUser = await this.userRepository.createUser(user);
+
+    return {
+      status: 'OK',
+      message: [`User is succesfully saved with userID: ${newUser.user_id}`],
+    };
+  }
+
+  async findUserByEmail(email: string): Promise<UserEntity | null> {
+    const users = await this.userRepository.findUserByEmail(email);
+    return users;
+  }
+
+  async findUserByLogin(login: string): Promise<UserEntity | null> {
+    const users = await this.userRepository.findUserByLogin(login);
+    return users;
+  }
+
+  async deleteUser(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.deleteUser(id);
   }
 
-  promoteUserToAdmin(id: number): Promise<Success> {
+  async promoteUserToAdmin(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.promoteUserToAdmin(id);
   }
 
-  demoteUserFromAdmin(id: number): Promise<Success> {
+  async demoteUserFromAdmin(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.demoteUserFromAdmin(id);
   }
 
-  blockUser(id: number): Promise<Success> {
+  async blockUser(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.blockUser(id);
   }
 
-  unblockUser(id: number): Promise<Success> {
+  async unblockUser(id: number): Promise<Success> {
+    const validation = await validateInput(idSchema, id);
+    if (!validation) return { success: 'no' };
     return this.userRepository.unblockUser(id);
   }
 }

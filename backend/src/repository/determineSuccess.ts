@@ -1,7 +1,7 @@
 export function determineSuccess(object: any) {
   if (object.affected == 0) {
-    return { success: 'no' };
+    return false;
   } else {
-    return { success: 'yes' };
+    return true;
   }
 }

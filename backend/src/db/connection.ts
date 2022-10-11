@@ -25,7 +25,7 @@ export const appDataSource = new DataSource({
     WorkstationEntity,
   ],
 
-  logging: true,
+  logging: false,
   synchronize: true,
 });
 
