@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
+import { FloorService } from 'src/app/services/floor.service';
 
 @Component({
   selector: 'workstation-preview-input',
@@ -17,7 +18,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
     seats: new FormControl(),
   });
 
-  constructor() {}
+  constructor(private workstationId: FloorService) {}
 
   ngOnInit(): void {
     this.newWorkstationForm.reset();
@@ -25,7 +26,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
 
   onSubmit(): void {
     const workstation: WorkstationInterface = {
-      workstation_id: this.newWorkstationForm.value.workstation_id,
+      workstation_id: this.workstationId.workstationId(),
       workstation_name: this.newWorkstationForm.value.workstation_name,
       seats: Number(this.newWorkstationForm.value.seats),
       workstation_isActive: true,

@@ -7,6 +7,8 @@ import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
   providedIn: 'root',
 })
 export class FloorService {
+  wsId: number = 100;
+
   constructor() {}
 
   getFloor(): Floor[] {
@@ -65,5 +67,10 @@ export class FloorService {
   floorId(): number {
     let id = FLOORS[FLOORS.length - 1].floor_id + 1;
     return id;
+  }
+
+  workstationId(): number {
+    let nr = (this.wsId = this.wsId + 1);
+    return nr;
   }
 }
