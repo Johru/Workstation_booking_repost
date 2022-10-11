@@ -6,7 +6,7 @@ export interface Login {
 
 export interface TokenResponse {
   user_id: number;
-  isAdmin: string;
+  isAdmin: boolean;
   token: string;
   error?: string;
 }

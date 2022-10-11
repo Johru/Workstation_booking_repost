@@ -65,9 +65,7 @@ export class LoginComponent {
           this.invalidInput = true;
         } else {
           this.invalidInput = false;
-          localStorage.setItem('userId', `${data.user_id}`);
           localStorage.setItem('token', data.token);
-          localStorage.setItem('isAdmin', data.isAdmin);
           this.rerouteHome();
           this.authService.logIn.next(true);
         }

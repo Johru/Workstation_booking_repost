@@ -7,6 +7,7 @@ import { AdminBuildingComponent } from './components/admin-building/admin-buildi
 import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-panel.component';
 import { UsersComponent } from './components/users/users.component';
 import { WorkstationSelectionBookingComponent } from './components/workstation-selection-booking/workstation-selection-booking.component';
+import { RoleGuardService } from './services/role-guard.service';
 
 const routes: Routes = [
   // users route will be a child of admin route on merge
@@ -24,6 +25,8 @@ const routes: Routes = [
     path: 'admin',
     component: AdminNavPanelComponent,
     children: [{ path: 'buildings', component: AdminBuildingComponent }],
+    //roleguard commented in developer mode, but working
+    //canActivate: [RoleGuardService],
   },
   {
     path: '',

@@ -4,12 +4,14 @@ import { Observable, Subject } from 'rxjs';
 import { Login } from '../helpingHand/login';
 import { Register } from '../helpingHand/register';
 import { environment } from 'src/environments/environment';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   logIn = new Subject();
+  jwtHelper = new JwtHelperService();
 
   constructor(private http: HttpClient) {}
 
@@ -39,5 +41,16 @@ export class AuthService {
 
   loginSubscription() {
     return this.logIn.asObservable();
+  }
+
+  isAuthenticated(): boolean {
+    let token: string | null | undefined = localStorage.getItem('token');
+    if (token == null) {
+      return false;
+    }
+    if (this.jwtHelper.isTokenExpired(token)) {
+      localStorage.removeItem('token');
+    }
+    return !this.jwtHelper.isTokenExpired(token);
   }
 }

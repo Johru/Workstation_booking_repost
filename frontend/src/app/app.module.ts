@@ -31,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSlideToggleModule,
     MatTooltipModule,
     HttpClientModule,
+    JwtModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent],

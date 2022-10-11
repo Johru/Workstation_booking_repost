@@ -27,16 +27,12 @@ export class NavpanelComponent implements OnInit, OnDestroy {
   }
 
   isAnybodyOutThere() {
-    let checkLocalStorageForUser = localStorage.getItem('userId');
-    if (checkLocalStorageForUser) return true;
+    if (this.authService.isAuthenticated()) return true;
     return false;
   }
 
   logOut() {
-    let keysToRemove: string[] = ['userId', 'isAdmin', 'token'];
-    keysToRemove.forEach((key) => {
-      localStorage.removeItem(key);
-    });
+    localStorage.removeItem('token');
     this.loggedIn = false;
   }
 }
