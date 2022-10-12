@@ -17,7 +17,7 @@ export class UserController {
     this._router.get(
       '/user',
       verifyJWT,
-      isBlocked,
+      isAdmin,
       async (req: Request, res: Response) => {
         logger.info('/user endpoint accessed');
         res.json(await this.userService.listUsers());
