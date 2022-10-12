@@ -51,7 +51,7 @@ export class ReservationRepository implements IReservationRepository {
       .leftJoin('workstation.floor', 'floor')
       .addSelect(['floor.floor_name'])
       .leftJoin('floor.building', 'building')
-      .addSelect(['building.building_name'])
+      .addSelect(['building.building_name', 'building.building_address'])
       .getMany();
   }
 

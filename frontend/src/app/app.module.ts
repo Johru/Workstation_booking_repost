@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 //components
 import { AppComponent } from './app.component';
 import { WorkstationFormComponent } from './components/workstation-selection-booking/workstation-form/workstation-form.component';
@@ -71,6 +72,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSlideToggleModule,
     MatTooltipModule,
     HttpClientModule,
+    RouterModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent],

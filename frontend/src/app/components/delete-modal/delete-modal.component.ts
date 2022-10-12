@@ -12,42 +12,36 @@ export class DeleteModalComponent {
   @Output() deleteUserEmitter = new EventEmitter<number>();
   @Output() deleteReservationEmitter = new EventEmitter<number>();
   @Output() toggleModalEmitter = new EventEmitter<boolean>();
-
   constructor() {}
-
-  delete(id: number) {
+  delete(user_id: number) {
     if (this.reservation == undefined) {
-      this.deleteUserEmitter.emit(id);
+      this.deleteUserEmitter.emit(user_id);
       return;
     }
-    this.deleteReservationEmitter.emit(id);
+    this.deleteReservationEmitter.emit(user_id);
   }
-
   toggleDeleteModal() {
     this.toggleModalEmitter.emit(true);
   }
-
   setTheHeader() {
     if (this.user == undefined) {
-      return `reservation id: ${this.reservation}`;
+      return `reservation user_id: ${this.reservation}`;
     }
     return `user ${this.user.user_name}`;
   }
-
   setTheInfo() {
     if (this.user == undefined) {
-      return `reservation with id: ${this.reservation}`;
+      return `reservation with user_id: ${this.reservation}`;
     }
     return `user ${this.user.user_name} / ${this.user.user_login}`;
   }
-
   setTheId(): number {
-    let id: number;
+    let user_id: number;
     if (this.user == undefined) {
-      id = this.reservation;
+      user_id = this.reservation;
     } else {
-      id = this.user.id;
+      user_id = this.user.user_id;
     }
-    return id;
+    return user_id;
   }
 }

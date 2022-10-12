@@ -1,6 +1,6 @@
 <div *ngFor="let reservation of reservationList" class="reservation-wrapper">
   <div class="left">
-    <p><b>Date:</b> {{ reservation.res_date }}</p>
+    <p><b>Date:</b> {{ reservation.reservation_date }}</p>
     <p><b>Place:</b> {{ reservation.building_address }}</p>
     <p><b>Building:</b> {{ reservation.building_name }}</p>
   </div>
@@ -11,7 +11,9 @@
   </div>
   <div class="right">
     <button
-      (click)="[toggleDeleteModal(), setTheReservationId(reservation.id)]"
+      (click)="
+        [toggleDeleteModal(), setTheReservationId(reservation.reservation_id)]
+      "
     >
       Delete
     </button>

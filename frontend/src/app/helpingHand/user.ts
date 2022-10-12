@@ -1,8 +1,9 @@
 export interface User {
-  id: number;
+  user_id: number;
   user_login: string;
   user_name: string;
-  user_isAdmin: boolean;
-  user_isBlocked: boolean;
+  user_isadmin: boolean;
+  user_isblocked: boolean;
   res_count: number;
+  id: number;
 }

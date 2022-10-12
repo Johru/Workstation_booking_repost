@@ -31,7 +31,7 @@
       <div class="promote">
         <p>{{ promoteTitle }}</p>
         <mat-slide-toggle
-          (click)="[promoteDemoteUser(), setThePromoteTitle()]"
+          (click)="[promoteDemoteUser()]"
           [color]="color"
           matTooltip="{{ promoteTitle }}"
           [matTooltipPosition]="'right'"
@@ -41,7 +41,7 @@
       <div class="block">
         <p>{{ blockTitle }}</p>
         <mat-slide-toggle
-          (click)="[blockUnblockUser(), setTheBlockTitle()]"
+          (click)="[blockUnblockUser()]"
           [color]="color"
           matTooltip="{{ blockTitle }}"
           [matTooltipPosition]="'right'"
@@ -71,7 +71,7 @@
     *ngIf="displayUserReservations"
     [@collapse]="displayUserReservations"
   >
-    <reservation-list></reservation-list>
+    <reservation-list [userId]="user.user_id!"></reservation-list>
   </div>
   <delete-modal
     *ngIf="confirmDelete"
