@@ -23,9 +23,16 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { UserTabComponent } from './components/users/user-list/user-tab/user-tab.component';
 import { ReservationListComponent } from './components/users/user-list/reservation-list/reservation-list.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
-import { NavpanelComponent } from './components/navpanel/navpanel.component';
+import { BuildingNewComponent } from './components/building-admin/building-dashboard/building-new/building-new.component';
+import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
+import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
+import { FloorListComponent } from './components/building-admin/building-floor/floor-list/floor-list.component';
+import { FloorNewComponent } from './components/building-admin/building-floor/floor-new/floor-new.component';
+import { WorkstationManagementComponent } from './components/building-admin/building-floor/floor-list/workstation-management/workstation-management.component';
+import { WorkstationPreviewInputComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-input/workstation-preview-input.component';
+import { ConfirmDeleteComponent } from './components/building-admin/building-floor/floor-list/confirm-delete/confirm-delete.component';
+import { WorkstationPreviewEditComponent } from './components/building-admin/building-floor/floor-list/workstation-preview-edit/workstation-preview-edit.component';
+import { BuildingEditComponent } from './components/building-admin/building-dashboard/building-edit/building-edit.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -34,10 +41,21 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
+    BuildingNewComponent,
+    BuildingDashboardComponent,
+    BuildingFloorComponent,
+    FloorListComponent,
+    FloorNewComponent,
+    WorkstationManagementComponent,
+    WorkstationPreviewInputComponent,
+    ConfirmDeleteComponent,
+    WorkstationPreviewEditComponent,
     UsersComponent,
     UserListComponent,
     UserTabComponent,
@@ -54,12 +72,15 @@ import { MatButtonModule } from '@angular/material/button';
     BuildingCardComponent,
     ReservationListComponent,
     DeleteModalComponent,
-    RegisterComponent,
-    LoginComponent,
-    NavpanelComponent,
+    BuildingEditComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatExpansionModule,
+    MatSelectModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDatepickerModule,

@@ -8,6 +8,7 @@ import { BuildingEntity } from './entity/buildingEntity';
 import { FloorEntity } from './entity/floorEntity';
 import logger from '../logger';
 
+
 export const appDataSource = new DataSource({
   type: 'mysql',
   host: config.mysql.host,
@@ -24,7 +25,6 @@ export const appDataSource = new DataSource({
     FloorEntity,
     WorkstationEntity,
   ],
-
   logging: false,
   synchronize: true,
 });
