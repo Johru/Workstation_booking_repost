@@ -1,0 +1,26 @@
+.footer-container {
+  height: 100px;
+  margin-top: 50px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #fcd5d2;
+  max-width: 1400px;
+  margin: 0 10%;
+}
+
+.footer-links {
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+img {
+  width: fit-content;
+  height: 95px;
+  cursor: pointer;
+}

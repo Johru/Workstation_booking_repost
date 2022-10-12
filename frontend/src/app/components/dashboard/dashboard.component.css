@@ -1,14 +1,17 @@
 section {
-  /* height: 100%; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1400px;
+  justify-content: center;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
 .content-containers {
   width: 50%;
+}
+
+.dashboard-container {
+  margin-bottom: 100px;
 }
 
 .main-picture {
@@ -22,4 +25,27 @@ section {
   font-size: 26px;
   margin: 0 25%;
   line-height: 1.5;
+  font-weight: 500;
+}
+
+.join {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border: none;
+  padding: 12px 24px;
+  background-color: #ef2c1e;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.join:hover {
+  cursor: pointer;
+  background-color: #b41b10;
 }

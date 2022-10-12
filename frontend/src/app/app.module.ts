@@ -23,6 +23,8 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { UserTabComponent } from './components/users/user-list/user-tab/user-tab.component';
 import { ReservationListComponent } from './components/users/user-list/reservation-list/reservation-list.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FooterPanelComponent } from './components/footer-panel/footer-panel.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -31,7 +33,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ReservationListComponent,
     DeleteModalComponent,
     DashboardComponent,
+    FooterPanelComponent,
   ],
   imports: [
     BrowserModule,
