@@ -4,6 +4,6 @@ export interface User {
   user_name: string;
   user_isadmin: boolean;
   user_isblocked: boolean;
-  res_count: number;
+  reservationCount: number;
   id: number;
 }

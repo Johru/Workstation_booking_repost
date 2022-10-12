@@ -27,8 +27,6 @@ export class ReservationListComponent implements OnInit {
   pushReservationsToLocalArray() {
     this.getReservationList().subscribe((data) => {
       for (let item of data) {
-        console.log(JSON.stringify(item));
-        console.log(item.seat.workstation.floor.building.building_address);
         let reservation = {
           reservation_id: item.reservation_id,
           user_id: item.user_id,
@@ -42,12 +40,10 @@ export class ReservationListComponent implements OnInit {
         };
         this.reservationList?.push(reservation);
       }
-      console.log(this.reservationList);
     });
   }
 
   getReservationList(): Observable<any> {
-    console.log('getting reservations with id' + this.userId);
     return this.userService.getReservations(this.userId);
   }
 

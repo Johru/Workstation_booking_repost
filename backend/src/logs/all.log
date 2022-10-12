@@ -3357,3 +3357,4 @@
 2022-10-12 16:47:50:4750 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
 2022-10-12 16:48:41:4841 [32minfo[39m: [32m/user endpoint accessed[39m
 2022-10-12 16:48:44:4844 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 16:51:03:513 [32minfo[39m: [32mData source has been initialized.[39m
