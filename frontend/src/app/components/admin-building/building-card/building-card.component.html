@@ -17,13 +17,13 @@
     <div *ngIf="mouseOverCard" [@fadeInOut] class="action">
       <button
         mat-raised-button
-        routerLink="admin/edit/building/{{ building.id }}/floor"
+        routerLink="/admin/edit/building/{{ building.id }}/floor"
       >
         Manage Floors and Workstations
       </button>
       <button
         mat-raised-button
-        routerLink="admin/edit/building/{{ building.id }}"
+        routerLink="/admin/edit/building/{{ building.id }}"
       >
         Edit Building
       </button>
