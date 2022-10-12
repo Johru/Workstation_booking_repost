@@ -1,6 +1,6 @@
 .reservation-wrapper {
   display: flex;
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(0, 0, 0, 0.455);
   margin: 0 50px;
   padding: 0 30px;
 }
@@ -12,6 +12,7 @@
   min-width: 30%;
   font-size: 20px;
   padding: 20px 20px;
+  color: rgba(0, 0, 0, 0.7);
 }
 .left,
 .center {
