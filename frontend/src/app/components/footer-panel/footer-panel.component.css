@@ -1,5 +1,4 @@
 .footer-container {
-  height: 100px;
   margin-top: 50px;
 }
 
@@ -13,7 +12,7 @@ footer {
 }
 
 .footer-links {
-  font-size: 17px;
+  font-size: 19px;
   text-decoration: none;
   font-weight: 500;
   color: black;
@@ -23,4 +22,19 @@ img {
   width: fit-content;
   height: 95px;
   cursor: pointer;
+}
+
+.circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  background-color: #b41b10;
+  border: solid rgb(182, 174, 174) 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 40px 50px;
 }
