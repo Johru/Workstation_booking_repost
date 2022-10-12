@@ -2,14 +2,15 @@ import { IFloorRepository } from '../../repository';
 import { floorSchema } from './floorschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
-import { FloorEntity } from 'db';
+import { FloorEntity, BuildingEntity } from '../../db';
 import { Success } from 'repository/success';
 
 export interface IFloorService {
   getFloors(): Promise<FloorEntity[]>;
   showFloorInBuilding(buildingId: number): Promise<FloorEntity[]>;
   createFloor(
-    floor: FloorEntity
+    floor: FloorEntity,
+    buildingId: number
   ): Promise<{ status: string; message: string[] }>;
   updateFloor(
     floorId: number,
@@ -30,7 +31,8 @@ export class FloorService implements IFloorService {
   }
 
   async createFloor(
-    floor: FloorEntity
+    floor: FloorEntity,
+    buildingId: number
   ): Promise<{ status: string; message: string[] }> {
     try {
       const value = await floorSchema.validateAsync(floor);
@@ -43,7 +45,12 @@ export class FloorService implements IFloorService {
       }
     }
 
-    const newFloor = await this.floorRepository.saveFloor(floor);
+    //const building = this.buildingRepository.findBuildingById(buildingId);
+    // chnage the new BuildingEntity() to building
+    const newFloor = await this.floorRepository.saveFloor(
+      floor,
+      new BuildingEntity()
+    );
 
     return {
       status: 'OK',
@@ -75,7 +82,7 @@ export class FloorService implements IFloorService {
         ],
       };
     } catch (error: any) {
-      return { status: 'Error', message: ['Error record not found.'] };
+      return { status: 'Error', message: [error.message] };
     }
   }
 

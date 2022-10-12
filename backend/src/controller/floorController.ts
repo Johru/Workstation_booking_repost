@@ -10,26 +10,40 @@ export class FloorController {
       res.status(200).json(await this.floorService.getFloors());
     });
 
-    this._router.get(
-      '/floor/:buildingId/showinbuilding',
-      async (req: Request, res: Response) => {
-        var buildingId = parseInt(req.params.buildingId, 10);
+    this._router.get('/building-floor', async (req: Request, res: Response) => {
+      const buildingIdQuery = req.query.buildingId;
+      if (buildingIdQuery === undefined) {
+        res.status(400).json({
+          error: 'Building was not selected',
+        });
+      } else {
+        const buildingId = parseInt(buildingIdQuery as string, 10);
         res
           .status(200)
           .json(await this.floorService.showFloorInBuilding(buildingId));
       }
-    );
+    });
 
     this._router.post('/floor/create', async (req: Request, res: Response) => {
-      const floor: FloorEntity = req.body as FloorEntity;
-      res.status(200).json(await this.floorService.createFloor(floor));
+      const buildingIdQuery = req.query.buildingId;
+      if (buildingIdQuery === undefined) {
+        res.status(400).json({
+          error: 'Building was not selected',
+        });
+      } else {
+        const floor: FloorEntity = req.body as FloorEntity;
+        const buildingId = parseInt(buildingIdQuery as string, 10);
+        res
+          .status(200)
+          .json(await this.floorService.createFloor(floor, buildingId));
+      }
     });
 
     this._router.put(
       '/floor/:floorId/update',
       async (req: Request, res: Response) => {
         const floor: FloorEntity = req.body as FloorEntity;
-        var floorId = parseInt(req.params.floorId, 10);
+        const floorId = parseInt(req.params.floorId, 10);
         res
           .status(200)
           .json(await this.floorService.updateFloor(floorId, floor));
@@ -39,7 +53,7 @@ export class FloorController {
     this._router.delete(
       '/floor/:floorId/delete',
       async (req: Request, res: Response) => {
-        var floorId = parseInt(req.params.floorId, 10);
+        const floorId = parseInt(req.params.floorId, 10);
         res.status(200).json(await this.floorService.deleteFloor(floorId));
       }
     );

@@ -1,12 +1,11 @@
-import { appDataSource } from '../db';
+import { appDataSource, BuildingEntity } from '../db';
 import { FloorEntity } from '../db';
-import { Response, Request } from 'express';
 import { Success } from './success';
 
 export interface IFloorRepository {
   findAllFloors(): Promise<FloorEntity[]>;
   findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]>;
-  saveFloor(floor: FloorEntity): Promise<FloorEntity>;
+  saveFloor(floor: FloorEntity, building: BuildingEntity): Promise<FloorEntity>;
   updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity>;
   deleteFloor(floorId: number): Promise<Success>;
 }
@@ -17,44 +16,48 @@ export class FloorRepository implements IFloorRepository {
   }
 
   async findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
-    return appDataSource.getRepository(FloorEntity).find({
-      where: {
+    return appDataSource
+      .getRepository(FloorEntity)
+      .createQueryBuilder('user')
+      .where('floor.buildingBuidingId = :building_id', {
         building_id: buildingId,
-      },
-    });
+      })
+      .getRawMany();
   }
 
-  async saveFloor(floor: FloorEntity): Promise<FloorEntity> {
+  async saveFloor(
+    floor: FloorEntity,
+    building: BuildingEntity
+  ): Promise<FloorEntity> {
     const floorToSave = new FloorEntity();
-    floorToSave.building_id = floor.building_id;
+    floorToSave.building = building;
     floorToSave.floor_name = floor.floor_name;
-    floorToSave.floor_capacity = floor.floor_capacity;
-    floorToSave.floor_plan = floor.floor_plan;
 
     return appDataSource.getRepository(FloorEntity).save(floorToSave);
   }
 
   async updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity> {
-    var floorUpdate = await appDataSource.getRepository(FloorEntity).findOne({
+    const floorUpdate = await appDataSource.getRepository(FloorEntity).findOne({
       where: {
         floor_id: floorId,
       },
     });
 
     if (floorUpdate == null) {
-      let err = new Error();
-      err.message = 'Record not found.';
-      return Promise.reject(err);
+      throw new Error('Record not found');
     } else {
-      floorUpdate.building_id = floor.building_id;
-      floorUpdate.floor_name = floor.floor_name;
-      floorUpdate.floor_capacity = floor.floor_capacity;
-      floorUpdate.floor_plan = floor.floor_plan;
-      return appDataSource.getRepository(FloorEntity).save(floorUpdate);
+      await appDataSource
+        .createQueryBuilder()
+        .update(FloorEntity)
+        .set({ floor_name: floor.floor_name })
+        .where('floor_id = :id', { id: floor.floor_id })
+        .execute();
+
+      return floorUpdate;
     }
   }
   async deleteFloor(floorId: number): Promise<Success> {
-    var floorRemove = await appDataSource
+    const floorRemove = await appDataSource
       .createQueryBuilder()
       .delete()
       .from(FloorEntity)
