@@ -1,0 +1,19 @@
+button {
+  height: 30px;
+  font-size: 1.2em;
+}
+
+.labels {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  margin: 0 0 10px 10px;
+}
+
+.drop-container {
+  display: flex;
+  justify-content: row;
+  align-items: center;
+}
