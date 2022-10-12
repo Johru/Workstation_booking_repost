@@ -1,0 +1,13 @@
+<div class="confirm-modal">
+  <h1>{{ status }} workstation</h1>
+  <div class="confirmation">
+    Are you sure you want to
+    {{ status!.toLowerCase() }} the
+    <span class="workstation">{{ selectedWorkstation!.workstation_name }}</span>
+    workstation?
+  </div>
+  <div class="buttons">
+    <button (click)="confirm()">{{ status }}</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+</div>
