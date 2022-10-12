@@ -57,13 +57,17 @@ export class AuthMiddleware {
 
   verifyJWT = async (req: Request, res: Response, next: NextFunction) => {
     const authHeader = req.headers['authorization'];
-    if (!authHeader)
+    if (!authHeader) {
       return res.status(401).json({ error: 'Please log in first' });
+    }
     if (authHeader?.split(' ')[0] != 'Bearer') {
       return res.status(401).json({ error: 'Token not valid' });
     }
+
     const token = authHeader?.split(' ')[1];
-    if (token == null) return res.sendStatus(401);
+    if (token == null) {
+      return res.sendStatus(401).json({ error: 'Token does not exist' });
+    }
     try {
       const payload = verify(token, config.secret as Secret) as JwtPayload;
       req.id = payload.id;
@@ -77,6 +81,7 @@ export class AuthMiddleware {
   isAdmin = async (req: Request, res: Response, next: NextFunction) => {
     const id = req.id;
     const user = await this.userService.findUserById(id);
+
     if (user != null) {
       if (user.user_isadmin === true) {
         res.status(401).json({ error: 'unauthorized request' });
@@ -89,6 +94,7 @@ export class AuthMiddleware {
   isBlocked = async (req: Request, res: Response, next: NextFunction) => {
     const id = req.id;
     const user = await this.userService.findUserById(id);
+
     if (user != null) {
       if (user.user_isblocked === true) {
         res.status(401).json({ error: 'access denied' });
