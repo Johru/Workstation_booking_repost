@@ -1,3 +1,4 @@
+export { IFloorService, FloorService } from './floor/floorService';
 export {
   IWorkstationService,
   WorkstationService,
@@ -9,4 +10,3 @@ export { UserService } from './user/userService';
 export { idSchema } from './idSchema';
 export { dateSchema } from './dateSchema';
 export { validateInput } from './validateInput';
-

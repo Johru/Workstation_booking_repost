@@ -10,6 +10,7 @@ export interface IUserRepository {
   deleteUser(reservationId: number): Promise<Success>;
   findUserByEmail(email: string): Promise<UserEntity | null>;
   findUserByLogin(login: string): Promise<UserEntity | null>;
+  findUserById(id: number): Promise<UserEntity | null>;
   promoteUserToAdmin(userId: number): Promise<Success>;
   demoteUserFromAdmin(userId: number): Promise<Success>;
   blockUser(userId: number): Promise<Success>;
@@ -64,7 +65,7 @@ export class UserRepository implements IUserRepository {
     return appDataSource
       .getRepository(UserEntity)
       .createQueryBuilder('user')
-      .select(['user.user_id', 'user.user_password'])
+      .select(['user.user_id', 'user.user_password', 'user.user_isadmin'])
       .where('user_email=:user_email', {
         user_email: email,
       })
@@ -75,9 +76,20 @@ export class UserRepository implements IUserRepository {
     return appDataSource
       .getRepository(UserEntity)
       .createQueryBuilder('user')
-      .select(['user.user_id', 'user.user_password'])
+      .select(['user.user_id', 'user.user_password', 'user.user_isadmin'])
       .where('user_login=:user_login', {
         user_login: login,
+      })
+      .getOne();
+  }
+
+  async findUserById(id: number): Promise<UserEntity | null> {
+    return appDataSource
+      .getRepository(UserEntity)
+      .createQueryBuilder('user')
+      .select(['user.user_id', 'user.user_isadmin', 'user.user_isblocked'])
+      .where('user_id=:user_id', {
+        user_id: id,
       })
       .getOne();
   }
