@@ -14,7 +14,7 @@ export class NavpanelComponent implements OnInit, OnDestroy {
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.loggedIn = this.isAnybodyOutThere();
+    this.loggedIn = this.authService.isAuthenticated();
     this.loginSubscription = this.authService
       .loginSubscription()
       .subscribe(() => {
@@ -24,11 +24,6 @@ export class NavpanelComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.loginSubscription?.unsubscribe();
-  }
-
-  isAnybodyOutThere() {
-    if (this.authService.isAuthenticated()) return true;
-    return false;
   }
 
   logOut() {
