@@ -1,7 +1,7 @@
 import { config } from 'dotenv';
-import path from 'path';
-const dirpath = require('path');
-const envpath = dirpath.join(__dirname, '../.env');
+import { join } from 'path';
+
+const envPath = join(__dirname, '../.env');
 
 config();
 

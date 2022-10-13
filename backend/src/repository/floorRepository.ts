@@ -5,7 +5,10 @@ import { Success } from './success';
 export interface IFloorRepository {
   findAllFloors(): Promise<FloorEntity[]>;
   findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]>;
-  saveFloor(floor: FloorEntity, building: BuildingEntity | null): Promise<FloorEntity>;
+  saveFloor(
+    floor: FloorEntity,
+    building: BuildingEntity | null
+  ): Promise<FloorEntity>;
   updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity>;
   deleteFloor(floorId: number): Promise<Success>;
 }
@@ -16,13 +19,10 @@ export class FloorRepository implements IFloorRepository {
   }
 
   async findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
-    return appDataSource
-      .getRepository(FloorEntity)
-      .createQueryBuilder('user')
-      .where('building_id = :building_id', {
-        building_id: buildingId,
-      })
-      .getRawMany();
+    return appDataSource.getRepository(FloorEntity).find({
+      relations: { workstation: { seat: true } },
+      where: { building_id: buildingId },
+    });
   }
 
   async saveFloor(

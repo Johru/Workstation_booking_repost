@@ -21,14 +21,29 @@ export interface IFloorService {
 }
 
 export class FloorService implements IFloorService {
-  constructor(private floorRepository: IFloorRepository, private buildingRepository: BuildingRepository) {}
+  constructor(
+    private floorRepository: IFloorRepository,
+    private buildingRepository: BuildingRepository
+  ) {}
 
   async getFloors(): Promise<FloorEntity[]> {
     return await this.floorRepository.findAllFloors();
   }
 
   async showFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
-    return await this.floorRepository.findAllFloorInBuilding(buildingId);
+    const floors = await this.floorRepository.findAllFloorInBuilding(
+      buildingId
+    );
+
+    for (const floor of floors) {
+      floor.workstation = floor.workstation?.map(workstation => {
+        const numberOfSeats = workstation.seat?.length;
+        delete workstation.seat;
+        return { ...workstation, allSeats: numberOfSeats };
+      });
+    }
+
+    return floors;
   }
 
   async createFloor(
@@ -46,11 +61,10 @@ export class FloorService implements IFloorService {
       }
     }
 
-    const building = await this.buildingRepository.getSingleBuilding(buildingId);
-    const newFloor = await this.floorRepository.saveFloor(
-      floor,
-      building
+    const building = await this.buildingRepository.getSingleBuilding(
+      buildingId
     );
+    const newFloor = await this.floorRepository.saveFloor(floor, building);
 
     return {
       status: 'OK',
