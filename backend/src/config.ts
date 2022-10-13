@@ -3,7 +3,7 @@ import path from 'path';
 const dirpath = require('path');
 const envpath = dirpath.join(__dirname, '../.env');
 
-config();
+config({ path: '../.env' });
 
 export default {
   port: process.env.SERVER_PORT,

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Floor } from 'src/app/help-files/floor-interface';
 import { FLOORS } from 'src/app/help-files/floor-data';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,17 +11,25 @@ import { Observable } from 'rxjs';
 export class FloorService {
   wsId: number = 100;
 
-  private getFloorApiUrl = '';
+  AjD: string = '10';
+
+  private floorApiUrl = `http://localhost:8080/api/building-floor?buildingId=${this.AjD}`;
+  httpHeader = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+    }),
+  };
 
   constructor(private http: HttpClient) {}
 
   getFloor(): Observable<Floor[]> {
     // return FLOORS;
-    return this.http.get<Floor[]>(this.getFloorApiUrl);
+    return this.http.get<Floor[]>(this.floorApiUrl);
   }
 
-  addFloor(floor: Floor): void {
-    FLOORS.push(floor);
+  addFloor(floor: Floor): Observable<Floor> {
+    // FLOORS.push(floor);
+    return this.http.post<Floor>(this.floorApiUrl, floor, this.httpHeader);
   }
 
   deleteWorkstation(id: number) {

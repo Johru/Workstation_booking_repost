@@ -11,7 +11,7 @@ import { workstationRouter } from './route/workstationSeatRoute';
 import { seatRouter } from './route/workstationSeatRoute';
 import cors from 'cors';
 
-const allowedDomains = ['http://localhost:4200'];
+const allowedDomains = ['http://localhost:4200', 'http://localhost:8080'];
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));

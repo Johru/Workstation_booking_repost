@@ -28,7 +28,9 @@ export class BuildingFloorComponent implements OnInit {
   }
 
   getFloor(): void {
-    this.floors = this.floorService.getFloor();
+    this.floorService.getFloor().subscribe((floors) => {
+      this.floors = floors;
+    });
   }
 
   getBuilding(): void {
@@ -36,6 +38,9 @@ export class BuildingFloorComponent implements OnInit {
   }
 
   addFloor(newFloor: Floor) {
-    this.floorService.addFloor(newFloor);
+    this.floorService.addFloor(newFloor).subscribe((floor) => {
+      this.floors.push(floor);
+    });
+    this.getBuilding();
   }
 }
