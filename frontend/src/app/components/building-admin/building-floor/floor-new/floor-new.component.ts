@@ -21,7 +21,7 @@ export class FloorNewComponent {
     const floor: Floor = {
       floor_id: this.floorService.floorId(),
       floor_name: this.newFloorForm.value.floor_name,
-      workstations: [],
+      workstation: [],
     };
     this.newFloorEvent.emit(floor);
     this.newFloorForm.reset();

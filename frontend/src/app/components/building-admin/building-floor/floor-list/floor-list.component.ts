@@ -37,7 +37,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
 
   toggleExpand() {
     this.panelOpenState = !this.panelOpenState;
-    if (this.floor.workstations.length != 0) {
+    if (this.floor.workstation.length != 0) {
       this.editWorkstationPanel = false;
       this.addWorkstationPanel = false;
     } else {
@@ -46,15 +46,16 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   }
 
   addWorkstation(newWorkstation: WorkstationInterface): void {
-    this.floor.workstations.push(newWorkstation);
+    this.floor.workstation.push(newWorkstation);
     this.numberOfSeats();
   }
 
   numberOfSeats(): void {
-    let stations = this.floor.workstations.length;
+    let stations = this.floor.workstation.length;
     let number = 0;
     for (let i = 0; i < stations; i++) {
-      number = number + this.floor.workstations[i].seats;
+      if (this.floor.workstation[i].allSeats)
+        number += this.floor.workstation[i].allSeats;
     }
     this.allSeats = number;
   }
@@ -73,7 +74,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   confirm(event: boolean) {
     if (event) {
       this.toggleConfirmModal();
-      if (this.floor.workstations.length == 0) {
+      if (this.floor.workstation.length == 0) {
         this.addWorkstationPanel = !this.addWorkstationPanel;
       }
     }
@@ -82,7 +83,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
 
   toggleConfirmModal() {
     this.confirmDeleteValue = !this.confirmDeleteValue;
-    this.numberOfSeats();
+    //this.numberOfSeats();
   }
 
   onDisableClick(selectedWorkstation: WorkstationInterface) {

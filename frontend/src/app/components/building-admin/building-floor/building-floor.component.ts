@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
 import { Floor } from 'src/app/help-files/floor-interface';
 import { FloorService } from 'src/app/services/floor.service';
-import { BuildingService } from 'src/app/services/building-new.service';
+import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({
   selector: 'building-floor',
@@ -17,30 +17,39 @@ export class BuildingFloorComponent implements OnInit {
 
   constructor(
     private floorService: FloorService,
-    private buildingService: BuildingService,
+    private buildingService: BuildingNewService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.buildingId = Number(this.route.snapshot.params['id']);
-    this.getBuilding();
-    this.getFloor();
+    this.getBuilding(this.buildingId);
+    this.getFloor(this.buildingId);
   }
 
-  getFloor(): void {
-    this.floorService.getFloor().subscribe((floors) => {
-      this.floors = floors;
+  getFloor(buildingId: number): void {
+    this.floorService.getFloor(buildingId).subscribe({
+      next: (floors) => {
+        this.floors = floors;
+      },
+      error: (error) => {
+        console.error(error);
+      },
     });
   }
 
-  getBuilding(): void {
-    this.building = this.buildingService.getBuilding(this.buildingId);
+  getBuilding(buildingId: number): void {
+    this.building = this.buildingService.getBuilding(buildingId);
   }
 
   addFloor(newFloor: Floor) {
-    this.floorService.addFloor(newFloor).subscribe((floor) => {
-      this.floors.push(floor);
+    this.floorService.addFloor(newFloor).subscribe({
+      next: (floor) => {
+        this.floors.push(floor);
+      },
+      error: (error) => {
+        console.error(error);
+      },
     });
-    this.getBuilding();
   }
 }
