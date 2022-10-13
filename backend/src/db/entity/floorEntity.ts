@@ -18,10 +18,10 @@ export class FloorEntity {
 
   @Column()
   floor_name?: string;
-  @Column()
-  floor_capacity?: number;
-  @Column()
-  floor_plan?: string;
+  // @Column()
+  // floor_capacity?: number;
+  // @Column()
+  // floor_plan?: string;
 
   @ManyToOne(() => BuildingEntity, building => building.floor, {
     onDelete: 'CASCADE',

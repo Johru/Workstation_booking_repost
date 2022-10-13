@@ -1,3 +1,4 @@
+export { IFloorRepository, FloorRepository } from './floorRepository';
 export {
   IWorkstationRepository,
   WorkstationRepository,

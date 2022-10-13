@@ -67,3 +67,5 @@
 2022-10-04 13:59:25:5925 [31merror[39m: [31mUser with this id doesn't exist[39m
 >>>>>>> 69d59899f0239c76fec98217be33d5b40676c092
 2022-10-11 10:30:59:3059 [31merror[39m: [31m"floor_id" is required[39m
+2022-10-13 08:23:23:2323 [31merror[39m: [31m"building_id" is required[39m
+2022-10-13 08:28:39:2839 [31merror[39m: [31m"building_id" is required[39m

@@ -1,4 +1,5 @@
 import express from 'express';
+import { floorRouter } from './route/floorRoute';
 import bodyParser from 'body-parser';
 import requestLogger from './middlewares/request-logger';
 import errorLogger from './middlewares/error-logger';
@@ -37,6 +38,7 @@ app.use(userRouter);
 app.use(authRouter);
 app.use(workstationRouter);
 app.use(seatRouter);
+app.use(floorRouter);
 
 app.use(errorLogger);
 

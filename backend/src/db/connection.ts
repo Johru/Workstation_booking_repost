@@ -8,7 +8,6 @@ import { BuildingEntity } from './entity/buildingEntity';
 import { FloorEntity } from './entity/floorEntity';
 import logger from '../logger';
 
-
 export const appDataSource = new DataSource({
   type: 'mysql',
   host: config.mysql.host,
@@ -16,6 +15,7 @@ export const appDataSource = new DataSource({
   port: Number.parseInt(config.mysql.port!),
   username: config.mysql.user,
   password: config.mysql.password,
+
   database: config.mysql.database,
   entities: [
     BuildingEntity,

@@ -1128,3 +1128,19 @@
 2022-10-11 17:19:33:1933 [32minfo[39m: [32mnew user endpoint accessed[39m
 2022-10-11 17:19:39:1939 [32minfo[39m: [32mnew user endpoint accessed[39m
 2022-10-11 17:21:31:2131 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-12 22:25:26:2526 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-12 22:46:35:4635 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:20:46:2046 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:23:23:2323 [31merror[39m: [31m"building_id" is required[39m
+2022-10-13 08:24:40:2440 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:28:39:2839 [31merror[39m: [31m"building_id" is required[39m
+2022-10-13 08:30:57:3057 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:39:11:3911 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:45:10:4510 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:48:09:489 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:49:58:4958 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:51:41:5141 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:53:31:5331 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:56:30:5630 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 09:00:19:019 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 09:00:57:057 [32minfo[39m: [32mData source has been initialized.[39m
