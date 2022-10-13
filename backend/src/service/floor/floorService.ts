@@ -3,6 +3,7 @@ import { floorSchema } from './floorschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 import { FloorEntity, BuildingEntity } from '../../db';
+import { BuildingRepository } from '../../repository';
 import { Success } from 'repository/success';
 
 export interface IFloorService {
@@ -20,7 +21,7 @@ export interface IFloorService {
 }
 
 export class FloorService implements IFloorService {
-  constructor(private floorRepository: IFloorRepository) {}
+  constructor(private floorRepository: IFloorRepository, private buildingRepository: BuildingRepository) {}
 
   async getFloors(): Promise<FloorEntity[]> {
     return await this.floorRepository.findAllFloors();
@@ -45,11 +46,10 @@ export class FloorService implements IFloorService {
       }
     }
 
-    //const building = this.buildingRepository.findBuildingById(buildingId);
-    // chnage the new BuildingEntity() to building
+    const building = await this.buildingRepository.getSingleBuilding(buildingId);
     const newFloor = await this.floorRepository.saveFloor(
       floor,
-      new BuildingEntity()
+      building
     );
 
     return {

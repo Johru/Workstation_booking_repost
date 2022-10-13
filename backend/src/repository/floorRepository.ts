@@ -5,7 +5,7 @@ import { Success } from './success';
 export interface IFloorRepository {
   findAllFloors(): Promise<FloorEntity[]>;
   findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]>;
-  saveFloor(floor: FloorEntity, building: BuildingEntity): Promise<FloorEntity>;
+  saveFloor(floor: FloorEntity, building: BuildingEntity | null): Promise<FloorEntity>;
   updateFloor(floorId: number, floor: FloorEntity): Promise<FloorEntity>;
   deleteFloor(floorId: number): Promise<Success>;
 }
@@ -19,7 +19,7 @@ export class FloorRepository implements IFloorRepository {
     return appDataSource
       .getRepository(FloorEntity)
       .createQueryBuilder('user')
-      .where('floor.buildingBuidingId = :building_id', {
+      .where('building_id = :building_id', {
         building_id: buildingId,
       })
       .getRawMany();
@@ -50,12 +50,12 @@ export class FloorRepository implements IFloorRepository {
         .createQueryBuilder()
         .update(FloorEntity)
         .set({ floor_name: floor.floor_name })
-        .where('floor_id = :id', { id: floor.floor_id })
+        .where('floor_id = :id', { id: floorUpdate.floor_id })
         .execute();
-
       return floorUpdate;
     }
   }
+
   async deleteFloor(floorId: number): Promise<Success> {
     const floorRemove = await appDataSource
       .createQueryBuilder()

@@ -1,0 +1,125 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 32px 102px;
+}
+
+form {
+  display: flex;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 500;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 2px;
+}
+
+.form-wrapper h2 {
+  color: #ef2c1e;
+  font-size: 26px;
+}
+
+.form-wrapper p {
+  margin-bottom: 30px;
+}
+
+.form-wrapper p span {
+  text-decoration: underline;
+  color: #ef2c1e;
+  cursor: pointer;
+}
+
+p span {
+  text-decoration: underline;
+  color: #ef2c1e;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #b41b10;
+  margin-bottom: 10px;
+  width: 420px;
+  height: 28px;
+  text-align: center;
+}
+
+.password-hidden {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  right: -380px;
+  cursor: pointer;
+  background-image: url("../../../assets/pass_hidden.png");
+  background-repeat: no-repeat;
+}
+
+.password-visible {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  right: -380px;
+  cursor: pointer;
+  background-image: url("../../../assets/pass_visible.png");
+  background-repeat: no-repeat;
+}
+
+form .invalid-input {
+  color: #ef2c1e;
+  font-size: 12px;
+}
+
+input:focus {
+  background-color: #fdeae9;
+  outline: 1px solid #b41b10;
+  border-radius: 2px;
+}
+
+.fullname {
+  display: flex;
+  align-self: flex-start;
+  gap: 20px;
+}
+
+.fullname-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fullname-input {
+  width: 200px;
+}
+
+button {
+  margin-top: 15px;
+  border: none;
+  padding: 14px 96px;
+
+  background-color: #ef2c1e;
+  color: #fdeae9;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #b41b10;
+}
+
+button:disabled {
+  background-color: #444;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+[hidden] {
+  display: none;
+}

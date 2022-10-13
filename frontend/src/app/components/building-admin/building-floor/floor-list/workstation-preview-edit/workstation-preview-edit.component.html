@@ -1,0 +1,25 @@
+<div>
+  <form [formGroup]="newWorkstationForm" (ngSubmit)="onSubmit()">
+    <div class="input-container">
+      <label for="workstationName">Name:</label>
+      <input
+        type="text"
+        name="workstationName"
+        id="workstationName"
+        formControlName="workstation_name"
+        required
+      />
+    </div>
+    <div class="input-container">
+      <input
+        type="submit"
+        name="addButton"
+        id="addButton"
+        value="Edit workstation"
+        [disabled]="!newWorkstationForm.valid"
+      />
+    </div>
+  </form>
+  <button (click)="goToWorkstationManagement()">Go Back</button>
+  <button (click)="clickToClosePanel()">Cancel</button>
+</div>

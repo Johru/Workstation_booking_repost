@@ -1,14 +1,15 @@
 import { FloorController } from '../controller';
 import { Router } from 'express';
-import { FloorRepository } from '../repository';
+import { BuildingRepository, FloorRepository } from '../repository';
 import { FloorService } from '../service';
 
-const router = Router();
+const floorRouter = Router();
 
 const floorRepository = new FloorRepository();
-const floorService = new FloorService(floorRepository);
+const buildingRepository = new BuildingRepository();
+const floorService = new FloorService(floorRepository, buildingRepository);
 const floorController = new FloorController(floorService);
 
-router.use('/api', floorController.router);
+floorRouter.use('/api', floorController.router);
 
-export { router };
+export { floorRouter };
