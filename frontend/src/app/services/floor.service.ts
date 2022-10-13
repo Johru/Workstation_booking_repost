@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Floor } from 'src/app/help-files/floor-interface';
 import { FLOORS } from 'src/app/help-files/floor-data';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,10 +11,13 @@ import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 export class FloorService {
   wsId: number = 100;
 
-  constructor() {}
+  private getFloorApiUrl = '';
 
-  getFloor(): Floor[] {
-    return FLOORS;
+  constructor(private http: HttpClient) {}
+
+  getFloor(): Observable<Floor[]> {
+    // return FLOORS;
+    return this.http.get<Floor[]>(this.getFloorApiUrl);
   }
 
   addFloor(floor: Floor): void {
