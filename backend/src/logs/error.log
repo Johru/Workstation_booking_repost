@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+2022-10-04 11:19:06:196 [31merror[39m: [31m"workstation_id" is not allowed[39m
+2022-10-04 11:20:30:2030 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 11:24:51:2451 [31merror[39m: [31m"workstation_id" is not allowed[39m
+2022-10-04 18:17:36:1736 [31merror[39m: [31m"workstation_name" must be a string[39m
+2022-10-04 18:21:09:219 [31merror[39m: [31m"workstation_name" must be a string[39m
+2022-10-07 08:48:31:4831 [31merror[39m: [31m"floor_id" is required[39m
+2022-10-07 08:48:59:4859 [31merror[39m: [31m"workstation_name" is required[39m
+2022-10-07 08:50:29:5029 [31merror[39m: [31m"workstation_isactive" is not allowed[39m
+=======
 2022-09-30 16:45:18:4518 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
 2022-10-03 17:32:58:3258 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
 2022-10-03 17:37:09:379 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
@@ -55,3 +65,5 @@
 2022-10-04 13:59:03:593 [31merror[39m: [31m"value" must be a number[39m
 2022-10-04 13:59:09:599 [31merror[39m: [31m"value" must be a number[39m
 2022-10-04 13:59:25:5925 [31merror[39m: [31mUser with this id doesn't exist[39m
+>>>>>>> 69d59899f0239c76fec98217be33d5b40676c092
+2022-10-11 10:30:59:3059 [31merror[39m: [31m"floor_id" is required[39m
