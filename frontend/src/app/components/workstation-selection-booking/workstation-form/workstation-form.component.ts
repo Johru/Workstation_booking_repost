@@ -35,6 +35,8 @@ export class WorkstationFormComponent implements OnInit {
   onChange(e: any) {
     this.getSeats();
     this.selectedDate = e.target.value;
+    const iso = this.planModel.start_time.toISOString();
+    console.log(iso.substring(0, iso.indexOf('T')));
   }
 
   makeReservation() {

@@ -3358,3 +3358,59 @@
 2022-10-12 16:48:41:4841 [32minfo[39m: [32m/user endpoint accessed[39m
 2022-10-12 16:48:44:4844 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
 2022-10-12 16:51:03:513 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-12 16:58:31:5831 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-12 16:58:31:5831 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-12 16:58:31:5831 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-12 16:58:43:5843 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 16:58:50:5850 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:00:19:019 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-12 17:00:19:019 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-12 17:00:19:019 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-12 17:00:19:019 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 17:00:28:028 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 17:00:31:031 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:01:04:14 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-12 17:01:04:14 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-12 17:01:04:14 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-12 17:01:04:14 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 17:01:07:17 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:01:26:126 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:01:36:136 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-10-12 17:01:42:142 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-12 17:02:01:21 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-10-12 17:02:02:22 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-12 17:03:21:321 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 17:04:48:448 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-12 17:04:48:448 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-12 17:04:48:448 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-12 17:04:48:448 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 17:05:00:50 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:07:43:743 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:13:44:1344 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:17:59:1759 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 17:18:03:183 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:18:10:1810 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:18:11:1811 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:18:16:1816 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:18:19:1819 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 17:18:21:1821 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 18:20:20:2020 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-12 18:42:09:429 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-12 18:42:13:4213 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-13 08:12:43:1243 [32minfo[39m: [32m/user endpoint accessed[39m
