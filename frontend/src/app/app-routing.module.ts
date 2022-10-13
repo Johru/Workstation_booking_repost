@@ -7,6 +7,9 @@ import { AdminBuildingComponent } from './components/admin-building/admin-buildi
 import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-panel.component';
 import { UsersComponent } from './components/users/users.component';
 import { WorkstationSelectionBookingComponent } from './components/workstation-selection-booking/workstation-selection-booking.component';
+import { RoleGuardService } from './services/role-guard.service';
+import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
+import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
 
 const routes: Routes = [
   // users route will be a child of admin route on merge
@@ -25,8 +28,15 @@ const routes: Routes = [
     component: AdminNavPanelComponent,
     children: [
       { path: 'buildings', component: AdminBuildingComponent },
-      { path: 'users', component: UsersComponent },
+      { path: 'edit/building', component: BuildingDashboardComponent },
+      { path: 'edit/building/:id', component: BuildingDashboardComponent },
+      {
+        path: 'edit/building/:id/floor',
+        component: BuildingFloorComponent,
+      },
     ],
+    //roleguard commented in developer mode, but working
+    //canActivate: [RoleGuardService],
   },
   {
     path: '',
