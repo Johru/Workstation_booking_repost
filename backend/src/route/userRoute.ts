@@ -9,8 +9,8 @@ const authRouter = Router();
 
 const userRepository = new UserRepository();
 const userService = new UserService(userRepository);
-const userController = new UserController(userService);
 const authMiddleware = new AuthMiddleware(userService);
+const userController = new UserController(userService, authMiddleware);
 const authController = new AuthController(userService, authMiddleware);
 
 userRouter.use('/api', userController.router);

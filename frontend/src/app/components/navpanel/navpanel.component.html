@@ -1,9 +1,12 @@
 <div class="nav-container">
   <nav>
-    <img class="logo" routerLink="/" src="../assets/logo-new.png" alt="">
-    <div class="link-wrapper">
+    <img class="logo" routerLink="/" src="../assets/logo-new.png" alt="" />
+    <div *ngIf="!loggedIn" class="link-wrapper">
       <a class="nav-link" routerLink="/register">Sign Up</a>
       <a class="nav-link" routerLink="/login">Login</a>
+    </div>
+    <div *ngIf="loggedIn" class="link-wrapper">
+      <a class="nav-link" (click)="logOut()">LogOut</a>
     </div>
   </nav>
 </div>
