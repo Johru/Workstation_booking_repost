@@ -60,17 +60,21 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     };
     this.workstationService.addWorkstation(newWorkstation, e.seats).subscribe({
       next: (res: ResponseI) => {
-        if (res.status == '200') {
-          console.log(res);
-          this.floor.workstation.push(res.workstation!);
+        if (res.status == 'OK') {
+          const workstation = res.workstation;
+          workstation!.allSeats = e.seats;
+          this.floor.workstation.push(workstation!);
           this.numberOfSeats();
+        } else {
+          alert(
+            'Something went wrong. Adding of new workstation was not successfull'
+          );
         }
       },
       error: (e: Error) => {
         console.error(e);
       },
     });
-    this.numberOfSeats();
   }
 
   numberOfSeats(): void {
@@ -90,7 +94,6 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   cancel(event: boolean) {
     if (event) {
       this.toggleConfirmModal();
-      this.successfullConfirm = event;
     }
   }
 

@@ -56,6 +56,7 @@ export class WorkstationManagementComponent implements OnChanges {
 
   successFullConfirm(confirm: boolean): void {
     if (confirm) {
+      console.log(this.workstationList);
       let index = this.findWorkstationIndex(this.workstationList!);
       this.workstationList?.splice(index, 1);
       this.selected = '0';
