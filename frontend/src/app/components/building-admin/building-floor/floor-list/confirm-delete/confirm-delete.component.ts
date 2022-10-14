@@ -1,6 +1,8 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
+import { Success } from 'src/app/helpingHand/response';
 import { FloorService } from 'src/app/services/floor.service';
+import { WorkstationService } from 'src/app/services/workstation.service';
 
 @Component({
   selector: 'confirm-delete',
@@ -10,12 +12,16 @@ import { FloorService } from 'src/app/services/floor.service';
 export class ConfirmDeleteComponent implements OnInit {
   @Output() cancelEmitter = new EventEmitter<boolean>();
   @Output() confirmEmitter = new EventEmitter<boolean>();
+  @Output() successEmitter = new EventEmitter<number>();
   @Input() status?: string;
   @Input() selectedWorkstation?: WorkstationInterface;
   confirmValue: boolean = true;
   cancelValue: boolean = true;
 
-  constructor(private floorService: FloorService) {}
+  constructor(
+    private workstationService: WorkstationService,
+    private floorService: FloorService
+  ) {}
 
   ngOnInit(): void {
     if (this.status == 'Disable') {
@@ -28,14 +34,26 @@ export class ConfirmDeleteComponent implements OnInit {
   confirm(): void {
     if (this.status == 'Disable' || this.status == 'Activate') {
       this.floorService.disableWorkstation(
-        this.selectedWorkstation!.workstation_id
+        this.selectedWorkstation!.workstation_id!
       );
     } else if (this.status == 'Delete') {
-      this.floorService.deleteWorkstation(
-        this.selectedWorkstation!.workstation_id
-      );
+      this.deleteWorkstation(this.selectedWorkstation!.workstation_id!);
     }
-    this.confirmEmitter.emit(this.confirmValue);
+  }
+
+  deleteWorkstation(id: number) {
+    this.workstationService.deleteWorkstation(id).subscribe({
+      next: (data: Success) => {
+        if (data.success == 'yes') {
+          this.confirmEmitter.emit(this.confirmValue);
+        } else {
+          alert('Something went wrong. Deletion was not successfull.');
+        }
+      },
+      error: (e: Error) => {
+        console.error(e);
+      },
+    });
   }
 
   cancel(): void {

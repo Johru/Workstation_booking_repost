@@ -6,7 +6,12 @@ import {
   AfterContentChecked,
 } from '@angular/core';
 import { Floor } from 'src/app/help-files/floor-interface';
-import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
+import {
+  AddWorkstationI,
+  WorkstationInterface,
+} from 'src/app/help-files/workstation-interface';
+import { ResponseI } from 'src/app/helpingHand/response';
+import { WorkstationService } from 'src/app/services/workstation.service';
 @Component({
   selector: 'floor-list',
   templateUrl: './floor-list.component.html',
@@ -24,7 +29,10 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   addWorkstationPanel: boolean = false;
   editWorkstationPanel: boolean = false;
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(
+    private cd: ChangeDetectorRef,
+    private workstationService: WorkstationService
+  ) {}
 
   ngOnInit(): void {
     this.panelOpenState = false;
@@ -45,8 +53,23 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     }
   }
 
-  addWorkstation(newWorkstation: WorkstationInterface): void {
-    this.floor.workstation.push(newWorkstation);
+  addWorkstation(e: { name: string; seats: number }): void {
+    const newWorkstation: AddWorkstationI = {
+      workstation_name: e.name,
+      floor_id: this.floor.floor_id,
+    };
+    this.workstationService.addWorkstation(newWorkstation, e.seats).subscribe({
+      next: (res: ResponseI) => {
+        if (res.status == '200') {
+          console.log(res);
+          this.floor.workstation.push(res.workstation!);
+          this.numberOfSeats();
+        }
+      },
+      error: (e: Error) => {
+        console.error(e);
+      },
+    });
     this.numberOfSeats();
   }
 

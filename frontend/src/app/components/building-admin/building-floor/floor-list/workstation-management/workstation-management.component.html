@@ -7,7 +7,7 @@
         <mat-option value="0">{{ defaultText }}</mat-option>
         <mat-option
           *ngFor="let workstation of workstationList"
-          value="{{ workstation.workstation_name }}"
+          value="{{ workstation.workstation_id }}"
         >
           <div (click)="onSelect(workstation)">
             {{ workstation.workstation_name }}
@@ -31,14 +31,14 @@
 </button>
 <button [disabled]="selected == '0'" (click)="deleteSelected()">Delete</button>
 <button
-  *ngIf="!isSelectedDisabled()"
+  *ngIf="isSelectedDisabled()"
   [disabled]="selected == '0'"
   (click)="disableSelected()"
 >
   Disable
 </button>
 <button
-  *ngIf="isSelectedDisabled()"
+  *ngIf="!isSelectedDisabled()"
   [disabled]="selected == '0'"
   (click)="disableSelected()"
 >

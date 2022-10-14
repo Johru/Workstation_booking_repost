@@ -5,6 +5,7 @@ import { EditWorkstationInterface } from 'src/app/help-files/workstation-interfa
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Success } from '../helpingHand/response';
 
 @Injectable({
   providedIn: 'root',
@@ -25,20 +26,6 @@ export class FloorService {
     // FLOORS.push(floor);
     const addFloorUrl = environment.rootPath + `/api/floor/create`;
     return this.http.post<Floor>(addFloorUrl, floor);
-  }
-
-  deleteWorkstation(id: number) {
-    for (let i: number = 0; i < FLOORS.length; i++) {
-      let ws = FLOORS[i].workstation.find(
-        (workstation) => workstation.workstation_id == id
-      );
-      if (ws != undefined) {
-        let index = FLOORS[i].workstation.indexOf(ws!);
-        if (index != -1) {
-          FLOORS[i].workstation.splice(index, 1);
-        }
-      }
-    }
   }
 
   disableWorkstation(id: number) {

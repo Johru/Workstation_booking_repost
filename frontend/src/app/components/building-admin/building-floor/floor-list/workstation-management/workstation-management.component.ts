@@ -56,11 +56,20 @@ export class WorkstationManagementComponent implements OnChanges {
 
   successFullConfirm(confirm: boolean): void {
     if (confirm) {
+      let index = this.findWorkstationIndex(this.workstationList!);
+      this.workstationList?.splice(index, 1);
       this.selected = '0';
+      console.log(this.workstationList);
     }
     this.successfullConfirmOnManagement = false;
     this.successfullConfirmOnManagementChange.emit(
       this.successfullConfirmOnManagement
+    );
+  }
+
+  findWorkstationIndex(workstation: WorkstationInterface[]): number {
+    return workstation.indexOf(
+      workstation.find((ws) => (ws.workstation_id = parseInt(this.selected)))!
     );
   }
 

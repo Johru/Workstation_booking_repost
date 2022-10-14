@@ -31,6 +31,7 @@ export class BuildingFloorComponent implements OnInit {
     this.floorService.getFloor(buildingId).subscribe({
       next: (floors) => {
         this.floors = floors;
+        console.log(this.floors);
       },
       error: (error) => {
         console.error(error);
