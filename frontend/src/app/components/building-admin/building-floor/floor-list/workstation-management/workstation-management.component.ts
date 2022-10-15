@@ -50,7 +50,7 @@ export class WorkstationManagementComponent implements OnChanges {
   }
 
   isSelectedDisabled(): boolean {
-    if (this.selectedWorkstation?.workstation_isActive) return false;
+    if (this.selectedWorkstation?.workstation_isactive) return false;
     return true;
   }
 

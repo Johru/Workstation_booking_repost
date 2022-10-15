@@ -147,4 +147,16 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     this.switchPanels();
     this.editWorkstationPanel = !this.editWorkstationPanel;
   }
+
+  updateWorkstationList(event: { update: AddWorkstationI; id: number }) {
+    console.log('floorlist');
+    const workstation = this.floor.workstation.find(
+      (ws) => (ws.workstation_id = event.id)
+    );
+    const index = this.floor.workstation.indexOf(workstation!);
+    workstation!.workstation_name = event.update.workstation_name;
+    console.log(this.floor);
+    this.floor.workstation[index] = workstation!;
+    console.log(this.floor);
+  }
 }

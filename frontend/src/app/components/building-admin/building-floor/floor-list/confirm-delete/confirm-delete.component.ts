@@ -25,7 +25,7 @@ export class ConfirmDeleteComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.status == 'Disable') {
-      if (!this.selectedWorkstation?.workstation_isActive) {
+      if (!this.selectedWorkstation?.workstation_isactive) {
         this.status = 'Activate';
       }
     }

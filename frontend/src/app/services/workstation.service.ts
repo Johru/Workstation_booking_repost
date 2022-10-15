@@ -3,10 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IWorkstation } from 'src/app/helpingHand/iworkstation';
 import { environment } from 'src/environments/environment';
-import {
-  AddWorkstationI,
-  WorkstationInterface,
-} from '../help-files/workstation-interface';
+import { AddWorkstationI } from '../help-files/workstation-interface';
 import { Seat } from '../helpingHand/seat';
 import { SEATS } from '../helpingHand/seat-data';
 import { ResponseI, Success } from '../helpingHand/response';
@@ -39,6 +36,17 @@ export class WorkstationService {
   deleteWorkstation(id: number): Observable<Success> {
     return this.http.delete<Success>(
       environment.rootPath + `/api/workstation/${id}/delete`
+    );
+  }
+
+  editWorkstation(
+    workstation: AddWorkstationI,
+    id: number
+  ): Observable<ResponseI> {
+    console.log(workstation);
+    return this.http.put<ResponseI>(
+      environment.rootPath + `/api/workstation/${id}/update`,
+      workstation
     );
   }
 }
