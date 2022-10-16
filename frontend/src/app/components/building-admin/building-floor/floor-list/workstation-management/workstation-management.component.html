@@ -31,14 +31,14 @@
 </button>
 <button [disabled]="selected == '0'" (click)="deleteSelected()">Delete</button>
 <button
-  *ngIf="isSelectedDisabled()"
+  *ngIf="!isSelectedDisabled()"
   [disabled]="selected == '0'"
   (click)="disableSelected()"
 >
   Disable
 </button>
 <button
-  *ngIf="!isSelectedDisabled()"
+  *ngIf="isSelectedDisabled()"
   [disabled]="selected == '0'"
   (click)="disableSelected()"
 >

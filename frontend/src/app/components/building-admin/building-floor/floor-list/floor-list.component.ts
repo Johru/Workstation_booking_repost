@@ -28,6 +28,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   successfullConfirm: boolean = false;
   addWorkstationPanel: boolean = false;
   editWorkstationPanel: boolean = false;
+  confirmStatus?: string;
 
   constructor(
     private cd: ChangeDetectorRef,
@@ -97,14 +98,14 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     }
   }
 
-  confirm(event: boolean) {
-    if (event) {
-      this.toggleConfirmModal();
-      if (this.floor.workstation.length == 0) {
-        this.addWorkstationPanel = !this.addWorkstationPanel;
-      }
+  confirm(status: string) {
+    this.toggleConfirmModal();
+    if (this.floor.workstation.length == 0) {
+      this.addWorkstationPanel = !this.addWorkstationPanel;
     }
-    this.successfullConfirm = event;
+
+    this.successfullConfirm = true;
+    this.confirmStatus = status;
   }
 
   toggleConfirmModal() {

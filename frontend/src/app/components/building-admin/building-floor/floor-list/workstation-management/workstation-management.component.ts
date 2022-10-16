@@ -21,6 +21,7 @@ export class WorkstationManagementComponent implements OnChanges {
   @Input() workstationList?: WorkstationInterface[];
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
+  @Input() status?: string;
   selectedWorkstation?: WorkstationInterface;
   defaultText: string = 'Select a workstation';
   selected: string = '0';
@@ -56,16 +57,34 @@ export class WorkstationManagementComponent implements OnChanges {
 
   successFullConfirm(confirm: boolean): void {
     if (confirm) {
-      console.log(this.workstationList);
-      let index = this.findWorkstationIndex(this.workstationList!);
-      this.workstationList?.splice(index, 1);
-      this.selected = '0';
-      console.log(this.workstationList);
+      switch (this.status) {
+        case 'Delete':
+          this.deleteConfirm();
+          break;
+        case 'Activate':
+          this.switchStatusConfirm();
+          break;
+        case 'Disable':
+          this.switchStatusConfirm();
+          break;
+      }
+      this.successfullConfirmOnManagement = false;
+      this.successfullConfirmOnManagementChange.emit(
+        this.successfullConfirmOnManagement
+      );
     }
-    this.successfullConfirmOnManagement = false;
-    this.successfullConfirmOnManagementChange.emit(
-      this.successfullConfirmOnManagement
-    );
+  }
+
+  deleteConfirm() {
+    let index = this.findWorkstationIndex(this.workstationList!);
+    this.workstationList?.splice(index, 1);
+    this.selected = '0';
+  }
+
+  switchStatusConfirm() {
+    let index = this.findWorkstationIndex(this.workstationList!);
+    this.workstationList![index].workstation_isactive =
+      !this.workstationList![index].workstation_isactive;
   }
 
   findWorkstationIndex(workstation: WorkstationInterface[]): number {

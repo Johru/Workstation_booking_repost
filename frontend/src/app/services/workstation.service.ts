@@ -43,10 +43,23 @@ export class WorkstationService {
     workstation: AddWorkstationI,
     id: number
   ): Observable<ResponseI> {
-    console.log(workstation);
     return this.http.put<ResponseI>(
       environment.rootPath + `/api/workstation/${id}/update`,
       workstation
+    );
+  }
+
+  disableWorkstation(id: number): Observable<ResponseI> {
+    return this.http.put<ResponseI>(
+      environment.rootPath + `/api/workstation/${id}/active`,
+      null
+    );
+  }
+
+  activateWorkstation(id: number): Observable<ResponseI> {
+    return this.http.put<ResponseI>(
+      environment.rootPath + `/api/workstation/${id}/notactive`,
+      null
     );
   }
 }

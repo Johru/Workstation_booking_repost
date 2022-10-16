@@ -17,6 +17,7 @@
         (disableEmitter)="onDisableClick($event)"
         [workstationList]="floor.workstation"
         [(successfullConfirmOnManagement)]="successfullConfirm"
+        [status]="confirmStatus"
         (showPreviewEmitter)="switchPanels()"
         (showEditEmitter)="showEditPanel($event)"
         *ngIf="!addWorkstationPanel && floor.workstation.length != 0"
