@@ -1,7 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 import { Success } from 'src/app/helpingHand/response';
-import { FloorService } from 'src/app/services/floor.service';
 import { WorkstationService } from 'src/app/services/workstation.service';
 
 @Component({
@@ -18,10 +17,7 @@ export class ConfirmDeleteComponent implements OnInit {
   confirmValue: boolean = true;
   cancelValue: boolean = true;
 
-  constructor(
-    private workstationService: WorkstationService,
-    private floorService: FloorService
-  ) {}
+  constructor(private workstationService: WorkstationService) {}
 
   ngOnInit(): void {
     if (this.status == 'Disable') {
@@ -32,8 +28,6 @@ export class ConfirmDeleteComponent implements OnInit {
   }
 
   confirm(): void {
-    console.log(this.status);
-
     switch (this.status) {
       case 'Delete':
         this.deleteWorkstation(this.selectedWorkstation!.workstation_id!);

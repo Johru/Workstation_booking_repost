@@ -103,19 +103,23 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     if (this.floor.workstation.length == 0) {
       this.addWorkstationPanel = !this.addWorkstationPanel;
     }
-
     this.successfullConfirm = true;
     this.confirmStatus = status;
   }
 
   toggleConfirmModal() {
     this.confirmDeleteValue = !this.confirmDeleteValue;
-    //this.numberOfSeats();
   }
 
   onDisableClick(selectedWorkstation: WorkstationInterface) {
     this.toggleConfirmModal();
     this.status = 'Disable';
+    this.selectedWorkstation = selectedWorkstation;
+  }
+
+  onActivateClick(selectedWorkstation: WorkstationInterface) {
+    this.toggleConfirmModal();
+    this.status = 'Activate';
     this.selectedWorkstation = selectedWorkstation;
   }
 

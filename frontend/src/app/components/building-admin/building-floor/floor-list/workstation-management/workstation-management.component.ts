@@ -20,6 +20,7 @@ export class WorkstationManagementComponent implements OnChanges {
   @Output() showEditEmitter = new EventEmitter<WorkstationInterface>();
   @Input() workstationList?: WorkstationInterface[];
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
+  @Output() activateEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
   @Input() status?: string;
   selectedWorkstation?: WorkstationInterface;
@@ -45,14 +46,19 @@ export class WorkstationManagementComponent implements OnChanges {
     return 'yes';
   }
 
+  activateSelected(): string {
+    this.activateEmitter.emit(this.selectedWorkstation);
+    return 'yes';
+  }
+
   deleteSelected(): string {
     this.deleteEmitter.emit(this.selectedWorkstation);
     return 'yes';
   }
 
-  isSelectedDisabled(): boolean {
-    if (this.selectedWorkstation?.workstation_isactive) return false;
-    return true;
+  isSelectedActive(): boolean {
+    if (this.selectedWorkstation?.workstation_isactive) return true;
+    return false;
   }
 
   successFullConfirm(confirm: boolean): void {
@@ -89,7 +95,7 @@ export class WorkstationManagementComponent implements OnChanges {
 
   findWorkstationIndex(workstation: WorkstationInterface[]): number {
     return workstation.indexOf(
-      workstation.find((ws) => (ws.workstation_id = parseInt(this.selected)))!
+      workstation.find((ws) => ws.workstation_id == parseInt(this.selected))!
     );
   }
 

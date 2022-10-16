@@ -51,14 +51,14 @@ export class WorkstationService {
 
   disableWorkstation(id: number): Observable<ResponseI> {
     return this.http.put<ResponseI>(
-      environment.rootPath + `/api/workstation/${id}/active`,
+      environment.rootPath + `/api/workstation/${id}/notactive`,
       null
     );
   }
 
   activateWorkstation(id: number): Observable<ResponseI> {
     return this.http.put<ResponseI>(
-      environment.rootPath + `/api/workstation/${id}/notactive`,
+      environment.rootPath + `/api/workstation/${id}/active`,
       null
     );
   }

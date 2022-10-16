@@ -15,6 +15,7 @@
       <workstation-management
         (deleteEmitter)="onDeleteClick($event)"
         (disableEmitter)="onDisableClick($event)"
+        (activateEmitter)="onActivateClick($event)"
         [workstationList]="floor.workstation"
         [(successfullConfirmOnManagement)]="successfullConfirm"
         [status]="confirmStatus"
