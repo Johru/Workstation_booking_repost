@@ -38,6 +38,9 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   ngOnInit(): void {
     this.panelOpenState = false;
     this.numberOfSeats();
+    if (this.floor.workstation.length == 0) {
+      this.addWorkstationPanel = true;
+    }
   }
 
   ngAfterContentChecked(): void {
@@ -127,6 +130,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     this.toggleConfirmModal();
     this.status = 'Delete';
     this.selectedWorkstation = selectedWorkstation;
+    console.log(this.floor);
   }
 
   successfullConfirmOnManagement(switchConfirm: boolean) {
@@ -134,7 +138,13 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   }
 
   switchPanels() {
-    this.addWorkstationPanel = !this.addWorkstationPanel;
+    if (this.floor.workstation.length == 0) {
+      this.addWorkstationPanel = false;
+    } else {
+      this.addWorkstationPanel = !this.addWorkstationPanel;
+    }
+    console.log(this.addWorkstationPanel);
+    console.log(this.addWorkstationPanel);
   }
 
   showManagementPanel() {
@@ -155,6 +165,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
 
   updateWorkstationList(event: { update: AddWorkstationI; id: number }) {
     console.log('floorlist');
+    console.log(event.update);
     const workstation = this.floor.workstation.find(
       (ws) => (ws.workstation_id = event.id)
     );
@@ -163,5 +174,9 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     console.log(this.floor);
     this.floor.workstation[index] = workstation!;
     console.log(this.floor);
+  }
+
+  countSeatsAndCheckLength() {
+    this.numberOfSeats();
   }
 }

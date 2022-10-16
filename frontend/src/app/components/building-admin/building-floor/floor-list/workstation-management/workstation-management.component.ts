@@ -22,6 +22,7 @@ export class WorkstationManagementComponent implements OnChanges {
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
   @Output() activateEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
+  @Output() confirmEmitter = new EventEmitter<boolean>();
   @Input() status?: string;
   selectedWorkstation?: WorkstationInterface;
   defaultText: string = 'Select a workstation';
@@ -78,6 +79,7 @@ export class WorkstationManagementComponent implements OnChanges {
       this.successfullConfirmOnManagementChange.emit(
         this.successfullConfirmOnManagement
       );
+      this.confirmEmitter.emit(true);
     }
   }
 
