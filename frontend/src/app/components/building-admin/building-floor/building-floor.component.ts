@@ -46,10 +46,13 @@ export class BuildingFloorComponent implements OnInit {
 
   addFloor(newFloor: AddFloor) {
     this.floorService.addFloor(newFloor, this.buildingId).subscribe({
-      next: (floor) => {
-        this.floors.push(floor);
-        console.log(floor); //DEL
-        this.getFloor(this.buildingId);
+      next: (response) => {
+        if (response.status == 'OK') {
+          window.location.reload();
+          // this.floors.push(response.floor!);
+          // console.log(response); //DEL
+          // this.getFloor(this.buildingId);
+        }
       },
       error: (error) => {
         console.error(error);

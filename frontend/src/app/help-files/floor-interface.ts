@@ -10,3 +10,9 @@ export interface AddFloor {
   building_id: number;
   floor_name: string;
 }
+
+export interface FloorResponse {
+  status: string;
+  message: string;
+  floor?: Floor;
+}

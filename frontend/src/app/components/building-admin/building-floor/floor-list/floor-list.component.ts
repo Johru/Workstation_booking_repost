@@ -29,7 +29,6 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   ngOnInit(): void {
     this.panelOpenState = false;
     this.numberOfSeats();
-    console.log(this.floor + ' ahoj');
   }
 
   ngAfterContentChecked(): void {

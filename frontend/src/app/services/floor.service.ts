@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AddFloor, Floor } from 'src/app/help-files/floor-interface';
+import {
+  AddFloor,
+  Floor,
+  FloorResponse,
+} from 'src/app/help-files/floor-interface';
 import { FLOORS } from 'src/app/help-files/floor-data';
 import { EditWorkstationInterface } from 'src/app/help-files/workstation-interface';
 import { HttpClient } from '@angular/common/http';
@@ -21,11 +25,11 @@ export class FloorService {
     return this.http.get<Floor[]>(getFloorUrl);
   }
 
-  addFloor(floor: AddFloor, buildingId: number): Observable<Floor> {
+  addFloor(floor: AddFloor, buildingId: number): Observable<FloorResponse> {
     // FLOORS.push(floor);
     const addFloorUrl =
       environment.rootPath + `/api/floor/create/?buildingId=${buildingId}`;
-    return this.http.post<Floor>(addFloorUrl, floor);
+    return this.http.post<FloorResponse>(addFloorUrl, floor);
   }
 
   deleteWorkstation(id: number) {
