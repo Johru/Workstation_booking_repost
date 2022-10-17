@@ -44,8 +44,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+//services to differentiate from material.io modules
 import { AuthInterceptor } from './services/auth.interceptor';
-import { AuthService } from './services/auth.service';
+
 
 @NgModule({
   declarations: [
