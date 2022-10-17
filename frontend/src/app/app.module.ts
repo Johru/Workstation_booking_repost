@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 //components
 import { AppComponent } from './app.component';
@@ -44,6 +44,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { AuthInterceptor } from './services/auth.interceptor';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,7 @@ import { MatSelectModule } from '@angular/material/select';
     BuildingCardComponent,
     ReservationListComponent,
     DeleteModalComponent,
-    BuildingEditComponent,
+    BuildingEditComponent
   ],
   imports: [
     BrowserModule,
@@ -96,9 +98,13 @@ import { MatSelectModule } from '@angular/material/select';
     MatSlideToggleModule,
     MatTooltipModule,
     HttpClientModule,
-    JwtModule,
+    JwtModule
   ],
-  providers: [MatDatepickerModule],
+  providers: [AuthService, MatDatepickerModule, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
