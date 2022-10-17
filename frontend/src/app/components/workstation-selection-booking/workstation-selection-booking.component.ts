@@ -39,8 +39,6 @@ export class WorkstationSelectionBookingComponent
 
   ngOnInit(): void {
     this.pushWorkstationsToLocalArray();
-    console.log(localStorage);
-    console.log(localStorage.getItem('token'));
   }
 
   ngAfterContentChecked(): void {

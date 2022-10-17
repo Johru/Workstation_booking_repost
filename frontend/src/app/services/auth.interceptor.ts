@@ -2,7 +2,6 @@
 // import { Injectable } from "@angular/core";
 // import { Observable } from "rxjs";
 
-
 // @Injectable()
 // export class AuthInterceptor implements HttpInterceptor {
 
@@ -24,13 +23,12 @@
 //         }
 //     }
 // }
-      
+
 // import { AuthService } from "./auth.service";
 // import { Injectable } from "@angular/core";
 // import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 // import { Observable } from "rxjs";
 // import { environment } from "src/environments/environment";
-
 
 // @Injectable()
 // export class AuthInterceptor implements HttpInterceptor {
@@ -42,7 +40,7 @@
 //     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
 //      // This is my helper method to fetch the data from localStorage.
-//       const token: string | null = localStorage.getItem("token"); 
+//       const token: string | null = localStorage.getItem("token");
 
 //           const params = request.params;
 //           console.log(params)
@@ -67,7 +65,6 @@
 // import { Observable } from "rxjs";
 // import { AuthService } from "./auth.service";
 
-
 // @Injectable()
 // export class AuthInterceptor implements HttpInterceptor {
 //     constructor ( private injector:Injector){}
@@ -82,34 +79,36 @@
 //         })
 
 //             return next.handle(tokenizedReq);
-    
-        
+
 //     }
 // }
 
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
-import { Injectable, Injector } from "@angular/core";
-import { Observable } from "rxjs";
-import { AuthService } from "./auth.service";
-
+import {
+  HttpEvent,
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
+} from '@angular/common/http';
+import { Injectable, Injector } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-    constructor ( private injector:Injector){}
+  constructor(private injector: Injector) {}
 
-    intercept(req: HttpRequest<any>,
-              next: HttpHandler): Observable<HttpEvent<any>> {
-                const idToken = localStorage.getItem("token");
-            console.log(localStorage.getItem("token"))
-            const cloned = req.clone({
-            setHeaders:{
-            Authorization:`Bearer ${idToken}`
-         } });
- 
-            return next.handle(cloned);
-        }
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    const idToken = localStorage.getItem('token');
 
-    }
+    const cloned = req.clone({
+      setHeaders: {
+        Authorization: `Bearer ${idToken}`,
+      },
+    });
 
-
-
+    return next.handle(cloned);
+  }
+}

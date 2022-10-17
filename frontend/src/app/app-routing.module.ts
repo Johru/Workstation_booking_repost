@@ -12,11 +12,6 @@ import { BuildingDashboardComponent } from './components/building-admin/building
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
-  // users route will be a child of admin route on merge
-
-=======
->>>>>>> development
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
   { path: 'admin', redirectTo: '/admin/buildings', pathMatch: 'full' },
   {

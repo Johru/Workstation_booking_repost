@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Building } from '../help-files/buildind-interface';
+import { Building } from '../help-files/building-interface';
 import { BUILDINGS } from '../help-files/building-data';
 
 @Injectable({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Building } from 'src/app/help-files/buildind-interface';
+import { Building } from 'src/app/help-files/building-interface';
 import { Floor } from 'src/app/help-files/floor-interface';
 import { FloorService } from 'src/app/services/floor.service';
 import { BuildingService } from 'src/app/services/building-new.service';

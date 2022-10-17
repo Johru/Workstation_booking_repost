@@ -18,10 +18,9 @@ export class ReservationService {
     });
   }
 
-  deleteReservation(resId: number) {
-    const message = {
-      success: 'yes',
-    };
-    return message;
+  deleteReservation(resId: number): Observable<any> {
+    console.log(`service called, id ${resId}`);
+    const path = `http://localhost:8080/api/reservation/${resId}/delete`;
+    return this.http.delete<any>(path);
   }
 }

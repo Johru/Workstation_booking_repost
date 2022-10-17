@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Building } from 'src/app/help-files/buildind-interface';
+import { Building } from 'src/app/help-files/building-interface';
 import { BuildingService } from 'src/app/services/building-new.service';
 
 @Component({

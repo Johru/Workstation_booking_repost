@@ -48,16 +48,17 @@ export class ReservationListComponent implements OnInit {
   }
 
   deleteReservation(id: number) {
-    let result = this.reservationService.deleteReservation(id);
-    if (result.success == 'yes') {
+    this.reservationService.deleteReservation(id).subscribe((data) => {
+      if (data.success == 'yes') {
+        this.toggleDeleteModal();
+        this.reservationList = this.reservationList?.filter(
+          (res) => res.reservation_id != id
+        );
+        return;
+      }
+      alert('Something is wrong, deletion of reservation was unsuccessfull.');
       this.toggleDeleteModal();
-      this.reservationList = this.reservationList?.filter(
-        (res) => res.reservation_id != id
-      );
-      return;
-    }
-    alert('Something is wrong, deletion of reservation was unsuccessfull.');
-    this.toggleDeleteModal();
+    });
   }
 
   toggleDeleteModal() {

@@ -1,25 +1,11 @@
 <div class="building-header">
   <h2>Choose another city</h2>
-<<<<<<< HEAD
   <select (change)="onChange()" [(ngModel)]="selectedCityValue">
     <option
       *ngFor="let city of cityList; let i = index"
       [value]="city.building_city"
     >
       {{ city.building_city }}
-=======
-  <select
-    class="select-city"
-    (change)="onChange()"
-    [(ngModel)]="selectedCityValue"
-  >
-    <option
-      class="city"
-      *ngFor="let city of cityList; let i = index"
-      [value]="city.city"
-    >
-      {{ city.city }}
->>>>>>> development
     </option>
   </select>
   <button

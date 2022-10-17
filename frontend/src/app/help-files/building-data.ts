@@ -1,4 +1,4 @@
-import { Building } from './buildind-interface';
+import { Building } from './building-interface';
 
 export const BUILDINGS: Building[] = [
   {
