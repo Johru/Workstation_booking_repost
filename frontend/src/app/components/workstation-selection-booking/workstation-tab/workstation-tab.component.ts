@@ -22,6 +22,7 @@ export class WorkstationTabComponent implements OnChanges {
 
   @Input() canceledOnTab?: boolean;
   @Output() canceledOnTabChange = new EventEmitter<boolean>();
+  @Output() seats = new EventEmitter<void>();
 
   selectedValue: number = 0;
   defaultSelectionText: string = 'Select a workstation';
@@ -46,12 +47,14 @@ export class WorkstationTabComponent implements OnChanges {
         id: this.selectedValue,
         name: this.getWorkstationName(this.selectedValue as number)!,
       });
+      this.seats!.emit();
     }
   }
 
   getWorkstationName(id: number): string | undefined {
-    return this.workstationList?.find((workstation) => workstation.id == id)
-      ?.name;
+    return this.workstationList?.find(
+      (workstation) => workstation.workstation_id == id
+    )?.workstation_name;
   }
 
   resetOnCancel(cancel: boolean): void {

@@ -26,6 +26,7 @@ export class UsersComponent implements OnInit {
   }
 
   getUserList(): Observable<any> {
+    console.log(window.localStorage);
     return this.userService.getUsers();
   }
 

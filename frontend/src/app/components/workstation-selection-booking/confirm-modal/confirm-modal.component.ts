@@ -15,7 +15,7 @@ export class ConfirmModalComponent {
   edit: boolean = true;
   cancel: boolean = true;
   confirm: boolean = true;
-  reservation?: Reservation = { seat_id: 0, res_date: '', user_id: 0 };
+  reservation?: Reservation = { user_id: 0, seat_id: 0, reservation_date: '' };
 
   constructor(private reservationService: ReservationService) {}
 
@@ -24,11 +24,14 @@ export class ConfirmModalComponent {
   }
 
   confirmReservation() {
-    this.reservation!.seat_id = this.resData.seat_id;
-    this.reservation!.res_date = this.resData.res_date;
     this.reservation!.user_id = this.resData.user_id;
-    this.reservationService.addReservation(this.reservation!);
+    this.reservation!.seat_id = this.resData.seat_id;
+    this.reservation!.reservation_date = this.resData.reservation_date;
+    this.reservationService
+      .addReservation(this.reservation!)
+      .subscribe((data) => {});
     this.confirmEmitter.emit(this.confirm);
+    this.confirm = !this.confirm;
   }
 
   cancelReservation() {

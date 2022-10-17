@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Reservation } from 'src/app/helpingHand/reservation';
 import { Seat } from 'src/app/helpingHand/seat';
 import { WorkstationService } from 'src/app/services/workstation.service';
@@ -9,34 +10,29 @@ import { WorkstationService } from 'src/app/services/workstation.service';
   styleUrls: ['./workstation-form.component.css'],
 })
 export class WorkstationFormComponent implements OnInit {
-  @Input() selectedWorkstationOnTab?: number | string;
-  @Input() seatList?: Seat[];
-  @Input() selectedSeat?: number;
-  @Input() wsIdAndName?: { id: string | number; name: string };
-
+  @Input() seatListFromParent?: Seat[];
   @Output() reservation = new EventEmitter<Reservation>();
+  @Output() dateToRequestSeats = new EventEmitter<any>();
 
+  selectedSeat?: number;
+  seatList?: Seat[];
   planModel: any = { start_time: new Date() };
-  selectedDate?: Date;
+  selectedDate?: Date = new Date();
   confirmed: boolean = false;
   disabledButton: boolean = true;
   minDate: Date = new Date();
 
-  constructor(private wsService: WorkstationService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.getSeats();
-  }
-
-  getSeats(): void {
-    this.seatList = this.wsService.getSeats();
-  }
+  ngOnInit(): void {}
 
   onChange(e: any) {
-    this.getSeats();
     this.selectedDate = e.target.value;
-    const iso = this.planModel.start_time.toISOString();
-    console.log(iso.substring(0, iso.indexOf('T')));
+    this.requestSeats();
+  }
+
+  requestSeats() {
+    this.dateToRequestSeats.emit(this.selectedDate);
   }
 
   makeReservation() {
@@ -48,7 +44,7 @@ export class WorkstationFormComponent implements OnInit {
       .split('T')[0];
     this.reservation!.emit({
       seat_id: this.selectedSeat!,
-      res_date: date,
+      reservation_date: date,
       user_id: 1, //change when user will be set up
     });
   }

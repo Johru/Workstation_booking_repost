@@ -12,15 +12,15 @@ export class SeatsComponent {
 
   constructor() {}
 
-  isItTaken(seat: string | null): string {
-    if (seat == null) {
+  isItTaken(userName: string | null): string {
+    if (userName == null) {
       return '';
     }
-    return `Booked by ${seat}`;
+    return `Booked by ${userName}`;
   }
 
-  disableSeat(seat: string | null): boolean {
-    if (seat == null) {
+  disableSeat(userName: string | null): boolean {
+    if (userName == null) {
       return false;
     } else {
       return true;

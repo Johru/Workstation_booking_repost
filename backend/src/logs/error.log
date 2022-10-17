@@ -78,3 +78,10 @@
 2022-10-12 13:54:24:5424 [31merror[39m: [31mUser with this id doesn't exist[39m
 2022-10-12 13:54:25:5425 [31merror[39m: [31mUser with this id doesn't exist[39m
 2022-10-12 13:54:29:5429 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-13 13:28:56:2856 [31merror[39m: [31m"value" is required[39m
+2022-10-13 19:45:51:4551 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-14 17:04:22:422 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:05:15:515 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:06:27:627 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:09:27:927 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:11:10:1110 [31merror[39m: [31m"user_id" is required[39m

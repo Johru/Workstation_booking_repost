@@ -3,6 +3,7 @@ import { appDataSource } from '../db';
 import { ReservationEntity, SeatEntity } from '../db';
 import { logErrorAndReturnYesOrNo } from './logErrorAndReturnYesOrNo';
 import { Success } from './success';
+import { seatRouter } from 'route/workstationSeatRoute';
 
 export interface IReservationRepository {
   showReservationForGivenDate(
@@ -31,9 +32,10 @@ export class ReservationRepository implements IReservationRepository {
         }
       )
       .addSelect(['reservation.reservation_date'])
-      .where('seat.workstation_id = :id', { id: workstationId })
+
       .leftJoin('reservation.user', 'user')
       .addSelect(['user.user_name'])
+      .where('seat.workstation_id = :id', { id: workstationId })
       .getMany();
   }
 

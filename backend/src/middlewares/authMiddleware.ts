@@ -5,6 +5,7 @@ import { Secret, verify } from 'jsonwebtoken';
 import { UserEntity } from '../db';
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Express {
     export interface Request {
       user: UserEntity;
@@ -81,6 +82,8 @@ export class AuthMiddleware {
   isAdmin = async (req: Request, res: Response, next: NextFunction) => {
     const id = req.id;
     const user = await this.userService.findUserById(id);
+    console.log(user);
+    console.log(user?.user_isadmin);
 
     if (user != null) {
       if (user.user_isadmin === false) {
