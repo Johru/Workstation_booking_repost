@@ -10,7 +10,6 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root',
 })
 export class AuthService {
-  [x: string]: any;
   logIn = new Subject();
   jwtHelper = new JwtHelperService();
 
@@ -51,6 +50,4 @@ export class AuthService {
     }
     return !this.jwtHelper.isTokenExpired(token);
   }
-
-
 }
