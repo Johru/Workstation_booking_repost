@@ -30,7 +30,7 @@ export class FloorRepository implements IFloorRepository {
     building: BuildingEntity
   ): Promise<FloorEntity> {
     const floorToSave = new FloorEntity();
-    floorToSave.building = building;
+    floorToSave.building_id = building.building_id;
     floorToSave.floor_name = floor.floor_name;
 
     return appDataSource.getRepository(FloorEntity).save(floorToSave);
