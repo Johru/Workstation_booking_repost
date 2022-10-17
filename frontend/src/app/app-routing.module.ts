@@ -12,9 +12,13 @@ import { BuildingDashboardComponent } from './components/building-admin/building
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
   // users route will be a child of admin route on merge
 
+=======
+>>>>>>> development
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
+  { path: 'admin', redirectTo: '/admin/buildings', pathMatch: 'full' },
   {
     path: '',
     component: NavpanelComponent,
@@ -29,6 +33,7 @@ const routes: Routes = [
     component: AdminNavPanelComponent,
     children: [
       { path: 'buildings', component: AdminBuildingComponent },
+      { path: 'users', component: UsersComponent },
       { path: 'edit/building', component: BuildingDashboardComponent },
       { path: 'edit/building/:id', component: BuildingDashboardComponent },
       {
@@ -38,14 +43,6 @@ const routes: Routes = [
     ],
     //roleguard commented in developer mode, but working
     //canActivate: [RoleGuardService],
-  },
-  {
-    path: '',
-    component: NavpanelComponent,
-    children: [
-      { path: 'register', component: RegisterComponent },
-      { path: 'login', component: LoginComponent },
-    ],
   },
 ];
 

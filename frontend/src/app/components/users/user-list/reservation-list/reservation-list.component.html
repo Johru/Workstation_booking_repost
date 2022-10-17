@@ -1,19 +1,49 @@
 <div *ngFor="let reservation of reservationList" class="reservation-wrapper">
   <div class="left">
+<<<<<<< HEAD
     <p><b>Date:</b> {{ reservation.reservation_date }}</p>
     <p><b>Place:</b> {{ reservation.building_address }}</p>
     <p><b>Building:</b> {{ reservation.building_name }}</p>
+=======
+    <div class="panel">
+      <p class="panel-label"><b>Date:</b></p>
+      <p class="panel-value">{{ reservation.res_date }}</p>
+    </div>
+    <div class="panel">
+      <p class="panel-label"><b>Place:</b></p>
+      <p class="panel-value">{{ reservation.building_address }}</p>
+    </div>
+    <div class="panel">
+      <p class="panel-label"><b>Building:</b></p>
+      <p class="panel-value">{{ reservation.building_name }}</p>
+    </div>
+>>>>>>> development
   </div>
   <div class="center">
-    <p><b>Floor:</b> {{ reservation.floor_name }}</p>
-    <p><b>Workstation:</b> {{ reservation.workstation_name }}</p>
-    <p><b>SeatId:</b> {{ reservation.seat_id }}</p>
+    <div class="panel">
+      <p class="panel-label"><b>Floor:</b></p>
+      <p class="panel-value">{{ reservation.floor_name }}</p>
+    </div>
+    <div class="panel">
+      <p class="panel-label"><b>Workstation:</b></p>
+      <p class="panel-value">{{ reservation.workstation_name }}</p>
+    </div>
+    <div class="panel">
+      <p class="panel-label"><b>SeatId:</b></p>
+      <p class="panel-value">{{ reservation.seat_id }}</p>
+    </div>
   </div>
   <div class="right">
     <button
+<<<<<<< HEAD
       (click)="
         [toggleDeleteModal(), setTheReservationId(reservation.reservation_id)]
       "
+=======
+      mat-button
+      class
+      (click)="[toggleDeleteModal(), setTheReservationId(reservation.id)]"
+>>>>>>> development
     >
       Delete
     </button>

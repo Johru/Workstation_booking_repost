@@ -5,6 +5,7 @@ form {
 input {
   height: 40px;
   font-size: 1.3em;
+  padding-left: 10px;
 }
 
 label {
@@ -42,6 +43,15 @@ button {
   display: inline;
   margin-right: 10px;
   margin-left: 90px;
+}
+
+.buttons button {
+  margin-right: 25px;
+}
+
+.buttons button:not([disabled]):hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
 }
 
 .input-container {

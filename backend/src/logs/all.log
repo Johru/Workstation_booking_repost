@@ -1141,6 +1141,7 @@
 2022-10-13 08:56:30:5630 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-13 09:00:19:019 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-13 09:00:57:057 [32minfo[39m: [32mData source has been initialized.[39m
+<<<<<<< HEAD
 2022-10-07 17:37:03:373 [32minfo[39m: [32mError during Data Source initialization: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client[39m
 2022-10-07 17:38:27:3827 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-10 13:49:20:4920 [32minfo[39m: [32mData source has been initialized.[39m
@@ -3941,3 +3942,86 @@
 2022-10-17 10:17:30:1730 [32minfo[39m: [32m1[39m
 2022-10-17 10:17:30:1730 [32minfo[39m: [32mbody received: {"user_id":1,"seat_id":84,"reservation_date":"2022-10-17"}[39m
 2022-10-17 10:17:32:1732 [32minfo[39m: [32m/reservation/date endpoint accessed, date requested: 2022-10-17[39m
+=======
+2022-10-16 17:46:15:4615 [32minfo[39m: [32mError during Data Source initialization: Error: connect ECONNREFUSED 127.0.0.1:3306[39m
+2022-10-16 17:47:28:4728 [32minfo[39m: [32mError during Data Source initialization: Error: connect ECONNREFUSED 127.0.0.1:3306[39m
+2022-10-16 17:48:41:4841 [32minfo[39m: [32mError during Data Source initialization: Error: connect ECONNREFUSED 127.0.0.1:3306[39m
+2022-10-16 17:50:30:5030 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 17:54:22:5422 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 17:58:10:5810 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 17:59:10:5910 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 17:59:45:5945 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 18:00:27:027 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 18:00:32:032 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:00:44:044 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:00:55:055 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:01:09:19 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:01:17:117 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:01:26:126 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:01:27:127 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:02:11:211 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-16 18:02:16:216 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:02:40:240 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 18:02:45:245 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:08:07:87 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 18:08:21:821 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:08:36:836 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:11:45:1145 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 18:12:56:1256 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:19:59:1959 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:21:07:217 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:21:14:2114 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:21:36:2136 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:22:20:2220 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:22:25:2225 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:22:29:2229 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:23:14:2314 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:23:33:2333 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:23:39:2339 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:24:00:240 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:24:58:2458 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 18:25:09:259 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-16 18:25:31:2531 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:40:10:4010 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-16 18:40:17:4017 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:44:26:4426 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:44:33:4433 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:44:41:4441 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:45:59:4559 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:49:48:4948 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:50:27:5027 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:50:55:5055 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:51:06:516 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:51:06:516 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:51:18:5118 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-16 18:51:20:5120 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:13:03:133 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:13:04:134 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:14:45:1445 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:15:15:1515 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:18:58:1858 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:19:51:1951 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:23:17:2317 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-17 09:23:27:2327 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:34:38:3438 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-17 09:36:55:3655 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 09:37:34:3734 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-17 09:37:44:3744 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-17 10:15:48:1548 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 10:22:14:2214 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 10:28:10:2810 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 10:41:23:4123 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 10:47:54:4754 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 10:50:57:5057 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 10:52:10:5210 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 11:15:44:1544 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 11:19:19:1919 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 11:49:21:4921 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 11:51:18:5118 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 11:56:04:564 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 11:58:36:5836 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 12:00:16:016 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 12:02:39:239 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 12:06:52:652 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-17 12:10:19:1019 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+>>>>>>> development
