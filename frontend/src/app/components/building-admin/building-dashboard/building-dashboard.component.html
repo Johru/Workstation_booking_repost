@@ -1,0 +1,8 @@
+<building-new
+  *ngIf="buildingId == 0"
+  (newBuildingEvent)="addBuilding($event)"
+></building-new>
+<building-edit
+  *ngIf="buildingId != 0"
+  [actualBuilding]="actualBuilding"
+></building-edit>

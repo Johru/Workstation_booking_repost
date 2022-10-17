@@ -1,0 +1,13 @@
+<form [formGroup]="newFloorForm" (ngSubmit)="onSubmit()">
+  <label for="nameOfFloor">Floor Name: </label>
+  <input
+    type="text"
+    name="nameOfFloor"
+    id="nameOfFloor"
+    formControlName="floor_name"
+    required
+  />
+  <button mat-raised-button type="submit" [disabled]="!newFloorForm.valid">
+    Add floor
+  </button>
+</form>

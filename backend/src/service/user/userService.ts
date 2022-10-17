@@ -46,6 +46,11 @@ export class UserService {
     return users;
   }
 
+  async findUserById(id: number): Promise<UserEntity | null> {
+    const user = await this.userRepository.findUserById(id);
+    return user;
+  }
+
   async deleteUser(id: number): Promise<Success> {
     const validation = await validateInput(idSchema, id);
     if (!validation) return { success: 'no' };
