@@ -1,0 +1,57 @@
+button {
+  height: 35px;
+  font-size: 1.2em;
+  padding: auto;
+  align-items: center;
+}
+
+button:not([disabled]):hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.labels {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  margin: 0 0 10px 10px;
+}
+
+.drop-container {
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  width: 100%;
+}
+
+.drop-container .labels {
+  width: 30%;
+  align-items: center;
+  font-weight: bold;
+  text-align: end;
+  font-size: 1.7em;
+  padding-right: 20px;
+}
+
+.drop-container form {
+  width: 40%;
+}
+.drop-container form .mat-form-field {
+  width: 90%;
+}
+
+.labels {
+  text-align: center;
+}
+
+input {
+  padding-left: 10px;
+}

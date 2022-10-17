@@ -28,6 +28,11 @@
   gap: 2px;
 }
 
+.action button {
+  padding: auto;
+  white-space: pre-wrap;
+}
+
 .action button:hover {
   background-color: #dedede;
 }

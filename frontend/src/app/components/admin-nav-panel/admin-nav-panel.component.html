@@ -1,15 +1,15 @@
 <div class="nav-panel">
   <div class="left">
-    <h1 routerLink="/admin">Admin Land</h1>
+    <img src="../../../assets/logo-new.png" />
+    <h1 routerLink="buildings">Admin Land</h1>
   </div>
   <div class="center">
-    <button mat-button routerLink="/admin/buildings">Buildings</button>
-    <button mat-button>Users</button>
-    <button mat-button>Bookings</button>
+    <button mat-button routerLink="buildings">Buildings</button>
+    <button mat-button routerLink="users">Users</button>
   </div>
   <div class="right">
     <button mat-raised-button routerLink="/">Main Page</button>
-    <button mat-raised-button>Sign Out</button>
+    <button mat-raised-button (click)="signOut()">Sign Out</button>
   </div>
 </div>
 <router-outlet></router-outlet>

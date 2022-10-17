@@ -15,6 +15,7 @@ export const appDataSource = new DataSource({
   port: Number.parseInt(config.mysql.port!),
   username: config.mysql.user,
   password: config.mysql.password,
+
   database: config.mysql.database,
   entities: [
     BuildingEntity,
@@ -24,7 +25,6 @@ export const appDataSource = new DataSource({
     FloorEntity,
     WorkstationEntity,
   ],
-
   logging: false,
   synchronize: true,
 });

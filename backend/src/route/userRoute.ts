@@ -10,7 +10,6 @@ const authRouter = Router();
 
 const userRepository = new UserRepository();
 const userService = new UserService(userRepository);
-const userController = new UserController(userService);
 const authMiddleware = new AuthMiddleware(userService);
 const emailService = new EmailService();
 const authController = new AuthController(
@@ -18,6 +17,7 @@ const authController = new AuthController(
   authMiddleware,
   emailService
 );
+const userController = new UserController(userService, authMiddleware);
 
 userRouter.use('/api', userController.router);
 authRouter.use('/auth', authController.router);

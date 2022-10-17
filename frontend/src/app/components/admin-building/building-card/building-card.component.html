@@ -15,10 +15,18 @@
       </div>
     </div>
     <div *ngIf="mouseOverCard" [@fadeInOut] class="action">
-      <!--add reroutes-->
-      <button mat-raised-button>Edit Bookings</button>
-      <button mat-raised-button>Edit Workstations</button>
-      <button mat-raised-button>Edit Building</button>
+      <button
+        mat-raised-button
+        routerLink="/admin/edit/building/{{ building.id }}/floor"
+      >
+        Manage Floors and Workstations
+      </button>
+      <button
+        mat-raised-button
+        routerLink="/admin/edit/building/{{ building.id }}"
+      >
+        Edit Building
+      </button>
     </div>
   </div>
 </div>
