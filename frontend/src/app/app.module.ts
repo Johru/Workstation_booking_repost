@@ -100,7 +100,7 @@ import { AuthService } from './services/auth.service';
     HttpClientModule,
     JwtModule
   ],
-  providers: [AuthService, MatDatepickerModule, {
+  providers: [ MatDatepickerModule, {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
