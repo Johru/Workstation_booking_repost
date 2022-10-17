@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
-import { Floor } from 'src/app/help-files/floor-interface';
+import { AddFloor, Floor } from 'src/app/help-files/floor-interface';
 import { FloorService } from 'src/app/services/floor.service';
 import { BuildingNewService } from 'src/app/services/building-new.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'building-floor',
@@ -31,6 +32,7 @@ export class BuildingFloorComponent implements OnInit {
     this.floorService.getFloor(buildingId).subscribe({
       next: (floors) => {
         this.floors = floors;
+        console.log(this.floors);
       },
       error: (error) => {
         console.error(error);
@@ -42,14 +44,18 @@ export class BuildingFloorComponent implements OnInit {
     this.building = this.buildingService.getBuilding(buildingId);
   }
 
-  addFloor(newFloor: Floor) {
-    this.floorService.addFloor(newFloor).subscribe({
+  addFloor(newFloor: AddFloor) {
+    this.floorService.addFloor(newFloor, this.buildingId).subscribe({
       next: (floor) => {
         this.floors.push(floor);
+        console.log(floor); //DEL
+        this.getFloor(this.buildingId);
       },
       error: (error) => {
         console.error(error);
       },
     });
+
+    console.log(this.floors); //DEL
   }
 }

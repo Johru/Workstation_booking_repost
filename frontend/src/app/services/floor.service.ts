@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Floor } from 'src/app/help-files/floor-interface';
+import { AddFloor, Floor } from 'src/app/help-files/floor-interface';
 import { FLOORS } from 'src/app/help-files/floor-data';
 import { EditWorkstationInterface } from 'src/app/help-files/workstation-interface';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -21,9 +21,10 @@ export class FloorService {
     return this.http.get<Floor[]>(getFloorUrl);
   }
 
-  addFloor(floor: Floor): Observable<Floor> {
+  addFloor(floor: AddFloor, buildingId: number): Observable<Floor> {
     // FLOORS.push(floor);
-    const addFloorUrl = environment.rootPath + `/api/floor/create`;
+    const addFloorUrl =
+      environment.rootPath + `/api/floor/create/?buildingId=${buildingId}`;
     return this.http.post<Floor>(addFloorUrl, floor);
   }
 
