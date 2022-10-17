@@ -83,7 +83,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
 
   toggleConfirmModal() {
     this.confirmDeleteValue = !this.confirmDeleteValue;
-    //this.numberOfSeats();
+    this.numberOfSeats();
   }
 
   onDisableClick(selectedWorkstation: WorkstationInterface) {

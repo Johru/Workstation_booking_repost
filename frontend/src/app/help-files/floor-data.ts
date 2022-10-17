@@ -4,7 +4,6 @@ export const FLOORS: Floor[] = [
   {
     floor_id: 1,
     floor_name: 'A 1',
-
     workstation: [
       {
         workstation_id: 10,

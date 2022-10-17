@@ -21,12 +21,10 @@ export class FloorService {
   getFloor(buildingId: number): Observable<Floor[]> {
     const getFloorUrl =
       environment.rootPath + `/api/building-floor/?buildingId=${buildingId}`;
-    // return FLOORS;
     return this.http.get<Floor[]>(getFloorUrl);
   }
 
   addFloor(floor: AddFloor, buildingId: number): Observable<FloorResponse> {
-    // FLOORS.push(floor);
     const addFloorUrl =
       environment.rootPath + `/api/floor/create/?buildingId=${buildingId}`;
     return this.http.post<FloorResponse>(addFloorUrl, floor);

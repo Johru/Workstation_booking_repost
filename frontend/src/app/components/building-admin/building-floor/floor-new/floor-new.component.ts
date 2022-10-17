@@ -1,8 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Floor } from 'src/app/help-files/floor-interface';
-import { FloorService } from 'src/app/services/floor.service';
-
+import { ActivatedRoute } from '@angular/router';
 import { AddFloor } from 'src/app/help-files/floor-interface';
 
 @Component({
@@ -12,17 +10,18 @@ import { AddFloor } from 'src/app/help-files/floor-interface';
 })
 export class FloorNewComponent {
   @Output() newFloorEvent = new EventEmitter<AddFloor>();
+  buildingId!: number;
   newFloorForm = new FormGroup({
     building_id: new FormControl(),
     floor_name: new FormControl(),
   });
 
-  constructor(private floorService: FloorService) {}
+  constructor(private route: ActivatedRoute) {}
 
   onSubmit(): void {
+    this.buildingId = Number(this.route.snapshot.params['id']);
     const floor: AddFloor = {
-      building_id: 10,
-      //  building_id: this.floorService.floorId(),
+      building_id: this.buildingId,
       floor_name: this.newFloorForm.value.floor_name,
     };
     this.newFloorEvent.emit(floor);

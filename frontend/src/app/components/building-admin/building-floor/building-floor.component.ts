@@ -4,7 +4,6 @@ import { Building } from 'src/app/help-files/buildind-interface';
 import { AddFloor, Floor } from 'src/app/help-files/floor-interface';
 import { FloorService } from 'src/app/services/floor.service';
 import { BuildingNewService } from 'src/app/services/building-new.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'building-floor',
@@ -13,7 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class BuildingFloorComponent implements OnInit {
   floors: Floor[] = [];
-  buildingId: number = 0;
+  buildingId!: number;
   building?: Building;
 
   constructor(
@@ -32,7 +31,6 @@ export class BuildingFloorComponent implements OnInit {
     this.floorService.getFloor(buildingId).subscribe({
       next: (floors) => {
         this.floors = floors;
-        console.log(this.floors);
       },
       error: (error) => {
         console.error(error);
@@ -48,17 +46,13 @@ export class BuildingFloorComponent implements OnInit {
     this.floorService.addFloor(newFloor, this.buildingId).subscribe({
       next: (response) => {
         if (response.status == 'OK') {
-          window.location.reload();
-          // this.floors.push(response.floor!);
-          // console.log(response); //DEL
-          // this.getFloor(this.buildingId);
+          this.floors.push(response.floor!);
+          this.getFloor(this.buildingId);
         }
       },
       error: (error) => {
         console.error(error);
       },
     });
-
-    console.log(this.floors); //DEL
   }
 }
