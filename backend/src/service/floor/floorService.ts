@@ -31,8 +31,11 @@ export class FloorService implements IFloorService {
   }
 
   async showFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
-    const floors = await this.floorRepository.findAllFloorInBuilding(
+    const building = await this.buildingRepository.getSingleBuilding(
       buildingId
+    );
+    const floors = await this.floorRepository.findAllFloorInBuilding(
+      building as BuildingEntity
     );
 
     for (const floor of floors) {
