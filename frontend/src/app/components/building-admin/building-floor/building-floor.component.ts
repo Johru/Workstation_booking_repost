@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
-import { Floor } from 'src/app/help-files/floor-interface';
+import { AddFloor, Floor } from 'src/app/help-files/floor-interface';
 import { FloorService } from 'src/app/services/floor.service';
-import { BuildingService } from 'src/app/services/building-new.service';
+import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({
   selector: 'building-floor',
@@ -12,30 +12,47 @@ import { BuildingService } from 'src/app/services/building-new.service';
 })
 export class BuildingFloorComponent implements OnInit {
   floors: Floor[] = [];
-  buildingId: number = 0;
+  buildingId!: number;
   building?: Building;
 
   constructor(
     private floorService: FloorService,
-    private buildingService: BuildingService,
+    private buildingService: BuildingNewService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.buildingId = Number(this.route.snapshot.params['id']);
-    this.getBuilding();
-    this.getFloor();
+    this.getBuilding(this.buildingId);
+    this.getFloor(this.buildingId);
   }
 
-  getFloor(): void {
-    this.floors = this.floorService.getFloor();
+  getFloor(buildingId: number): void {
+    this.floorService.getFloor(buildingId).subscribe({
+      next: (floors) => {
+        this.floors = floors;
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    });
   }
 
-  getBuilding(): void {
-    this.building = this.buildingService.getBuilding(this.buildingId);
+  getBuilding(buildingId: number): void {
+    this.building = this.buildingService.getBuilding(buildingId);
   }
 
-  addFloor(newFloor: Floor) {
-    this.floorService.addFloor(newFloor);
+  addFloor(newFloor: AddFloor) {
+    this.floorService.addFloor(newFloor, this.buildingId).subscribe({
+      next: (response) => {
+        if (response.status == 'OK') {
+          this.floors.push(response.floor!);
+          this.getFloor(this.buildingId);
+        }
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    });
   }
 }
