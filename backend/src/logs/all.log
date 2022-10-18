@@ -1,3 +1,11 @@
+2022-10-04 11:19:06:196 [31merror[39m: [31m"workstation_id" is not allowed[39m
+2022-10-04 11:20:30:2030 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-04 11:24:51:2451 [31merror[39m: [31m"workstation_id" is not allowed[39m
+2022-10-04 18:17:36:1736 [31merror[39m: [31m"workstation_name" must be a string[39m
+2022-10-04 18:21:09:219 [31merror[39m: [31m"workstation_name" must be a string[39m
+2022-10-07 08:48:31:4831 [31merror[39m: [31m"floor_id" is required[39m
+2022-10-07 08:48:59:4859 [31merror[39m: [31m"workstation_name" is required[39m
+2022-10-07 08:50:29:5029 [31merror[39m: [31m"workstation_isactive" is not allowed[39m
 2022-09-27 16:30:15:3015 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
 2022-09-27 16:43:54:4354 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
 2022-09-27 16:44:22:4422 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
@@ -1048,6 +1056,7 @@
 2022-10-06 16:13:57:1357 [32minfo[39m: [32mlogin endpoint accessed[39m
 2022-10-06 16:40:10:4010 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-06 16:40:12:4012 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+<<<<<<< HEAD
 2022-10-07 17:37:03:373 [32minfo[39m: [32mError during Data Source initialization: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client[39m
 2022-10-07 17:38:27:3827 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-10 13:49:20:4920 [32minfo[39m: [32mData source has been initialized.[39m
@@ -2688,4 +2697,89 @@
 2022-10-11 14:52:39:5239 [32minfo[39m: [32m/building endpoint accessed[39m
 2022-10-11 14:52:40:5240 [32minfo[39m: [32m/building endpoint accessed[39m
 2022-10-11 14:52:43:5243 [32minfo[39m: [32m/building endpoint accessed[39m
-2022-10-11 14:52:48:5248 [32minfo[39m: [32m/building endpoint accessed[39m
+
+2022-10-11 10:08:35:835 [32minfo[39m: [32mError during Data Source initialization: Error: connect EHOSTUNREACH 192.168.1.16:3306[39m
+2022-10-11 10:19:43:1943 [32minfo[39m: [32mError during Data Source initialization: Error: connect ECONNREFUSED 172.21.141.107:3306[39m
+2022-10-11 10:20:36:2036 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 10:25:53:2553 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 10:29:50:2950 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 10:30:59:3059 [31merror[39m: [31m"floor_id" is required[39m
+2022-10-10 17:58:42:5842 [32minfo[39m: [32mError during Data Source initialization: Error: Access denied for user ''@'localhost' (using password: YES)[39m
+2022-10-10 18:00:29:029 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 18:06:06:66 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 18:06:44:644 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 18:06:44:644 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-10 18:09:37:937 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-10 18:10:33:1033 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-10 18:14:05:145 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-10 18:14:06:146 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-10 18:14:07:147 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-10 18:14:08:148 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-10 18:28:20:2820 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 18:29:17:2917 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 18:33:54:3354 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 18:46:51:4651 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 18:59:32:5932 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-10 19:00:18:018 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-10 19:01:23:123 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:01:56:156 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:03:18:318 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:04:15:415 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:06:34:634 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:07:51:751 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:08:24:824 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:08:41:841 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:09:45:945 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:15:38:1538 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:16:54:1654 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:17:17:1717 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:18:29:1829 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 08:08:30:830 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 08:15:11:1511 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 08:17:12:1712 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 08:18:00:180 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-11 08:18:31:1831 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-11 08:18:40:1840 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-11 08:20:23:2023 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 08:34:47:3447 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 08:39:40:3940 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 09:20:43:2043 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 09:23:19:2319 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 09:56:53:5653 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 10:03:18:318 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:34:04:344 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:34:11:3411 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:39:00:390 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:40:58:4058 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:43:05:435 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:46:46:4646 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:06:37:637 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:07:03:73 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:08:36:836 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-11 17:09:08:98 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-11 17:10:01:101 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:13:29:1329 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:13:32:1332 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-11 17:13:47:1347 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:14:32:1432 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:15:17:1517 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-11 17:18:38:1838 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 17:19:33:1933 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-11 17:19:39:1939 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-11 17:21:31:2131 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-12 22:25:26:2526 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-12 22:46:35:4635 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:20:46:2046 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:23:23:2323 [31merror[39m: [31m"building_id" is required[39m
+2022-10-13 08:24:40:2440 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:28:39:2839 [31merror[39m: [31m"building_id" is required[39m
+2022-10-13 08:30:57:3057 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:39:11:3911 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:45:10:4510 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:48:09:489 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:49:58:4958 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:51:41:5141 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:53:31:5331 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 08:56:30:5630 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 09:00:19:019 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 09:00:57:057 [32minfo[39m: [32mData source has been initialized.[39m

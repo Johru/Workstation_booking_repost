@@ -1,0 +1,22 @@
+.confirm-modal {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.floor-name {
+  font-size: 1.6em;
+}
+
+mat-expansion-panel {
+  margin: 0 10% 0 10%;
+}
+
+.preview-numbers {
+  font-size: 1.4em;
+  margin-right: 10px;
+}

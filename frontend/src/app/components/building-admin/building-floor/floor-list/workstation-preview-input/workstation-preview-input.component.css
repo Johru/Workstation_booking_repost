@@ -1,0 +1,54 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  height: 30px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: auto;
+  font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form button {
+  align-self: center;
+}
+
+button:not([disabled]):hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+}
+
+.input-container {
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-size: 1.3em;
+}
+
+input {
+  padding-left: 10px;
+}

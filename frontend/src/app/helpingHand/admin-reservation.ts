@@ -12,8 +12,8 @@ export const ADMINRESERVATIONLIST: AdminReservation[] = [
   {
     id: 1,
     res_date: '2022-09-19',
-    building_name: 'Building 1',
-    building_address: 'City, street 1',
+    building_name: 'Office Home',
+    building_address: 'Bratislava, Kosicka 1',
     floor_name: 'first floor',
     workstation_name: 'HR',
     seat_id: 58,

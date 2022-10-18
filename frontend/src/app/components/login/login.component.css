@@ -43,6 +43,11 @@ input {
   text-align: center;
 }
 
+form .invalid-input {
+  color: #ef2c1e;
+  font-size: 12px;
+}
+
 .password-hidden {
   position: relative;
   width: 32px;
@@ -85,4 +90,10 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #00611e;
+}
+
+button:disabled {
+  background-color: #444;
+  color: #fff;
+  cursor: not-allowed;
 }

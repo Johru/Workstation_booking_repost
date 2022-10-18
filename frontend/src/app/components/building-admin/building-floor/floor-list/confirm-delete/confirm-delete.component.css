@@ -1,0 +1,43 @@
+.confirm-modal {
+  background-color: white;
+  z-index: 2;
+  width: 40%;
+  height: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid red;
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.confirmation {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+button {
+  padding: auto;
+  font-size: 1.2em;
+}
+
+button:hover {
+  filter: brightness(150%);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.workstation {
+  font-weight: bold;
+}
