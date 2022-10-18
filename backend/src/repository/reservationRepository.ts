@@ -70,6 +70,8 @@ export class ReservationRepository implements IReservationRepository {
         .where('reservation.reservation_id = :id', {
           id: addition.reservation_id,
         })
+        .leftJoin('reservation.user', 'user')
+        .addSelect(['user.user_name', 'user.user_email'])
         .leftJoin('reservation.seat', 'seat')
         .addSelect(['seat.seat_id'])
         .leftJoin('seat.workstation', 'workstation')
@@ -83,7 +85,6 @@ export class ReservationRepository implements IReservationRepository {
           'building.building_city',
         ])
         .getMany();
-      //this.emailService.sendWelcomeMail(resSave)
       return logErrorAndReturnYesOrNo(addition, 'Reservation', output);
     } catch (error) {
       logger.error(error);

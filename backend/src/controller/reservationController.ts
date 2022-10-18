@@ -43,7 +43,9 @@ export class ReservationController {
         logger.info('/reservation/new endpoint accessed');
         const body = req.body;
         const response = await this.reservationService.addNewReservation(body);
-        this.emailService.sendSuccessfullReservation(response.data);
+        if (response.data) {
+          this.emailService.sendSuccessfullReservation(response.data[0]);
+        }
         res.json(response);
       }
     );
