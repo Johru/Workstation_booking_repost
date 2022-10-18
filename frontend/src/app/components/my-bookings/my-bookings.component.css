@@ -1,0 +1,10 @@
+.wrapper-bookings {
+  margin: 20px 20em;
+}
+h1 {
+  padding: 2em;
+  font-weight: bold;
+}
+reservation-list {
+  min-width: 80%;
+}

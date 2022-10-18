@@ -12,7 +12,7 @@ export class ReservationListComponent implements OnInit {
   reservationList?: AdminReservation[];
   confirmDelete: boolean = false;
   selectedReservation!: number;
-
+  userId?: number;
   constructor(
     private userService: UserService,
     private reservationService: ReservationService

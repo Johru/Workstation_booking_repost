@@ -44,6 +44,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { MyBookingsComponent } from './components/my-bookings/my-bookings.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { MatSelectModule } from '@angular/material/select';
     ReservationListComponent,
     DeleteModalComponent,
     BuildingEditComponent,
+    MyBookingsComponent,
   ],
   imports: [
     BrowserModule,

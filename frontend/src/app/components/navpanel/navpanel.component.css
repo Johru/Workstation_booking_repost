@@ -28,6 +28,11 @@ nav {
   gap: 15px;
 }
 
+.logged-in-wrapper {
+  display: flex;
+  gap: 3em;
+}
+
 .nav-link {
   background-color: #ef2c1e;
   color: #fdeae9;
@@ -51,14 +56,21 @@ nav {
   background-color: #00611e;
 }
 
-.container {
-  margin-top: 20px;
-  padding-top: 75px;
-  max-width: 1250px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+.link-button {
+  border: none;
+  border-radius: 15px;
+  padding: auto;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+.link-button:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
 }
 
 workstation-form {
