@@ -12,7 +12,6 @@ export class FloorNewComponent {
   @Output() newFloorEvent = new EventEmitter<AddFloor>();
   buildingId!: number;
   newFloorForm = new FormGroup({
-    building_id: new FormControl(),
     floor_name: new FormControl(),
   });
 

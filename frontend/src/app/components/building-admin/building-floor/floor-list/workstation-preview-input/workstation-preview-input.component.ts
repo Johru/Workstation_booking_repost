@@ -13,7 +13,6 @@ export class WorkstationPreviewInputComponent implements OnInit {
   @Output() showManagementEmitter = new EventEmitter();
   @Output() newWorkstationEvent = new EventEmitter<WorkstationInterface>();
   newWorkstationForm = new FormGroup({
-    workstation_id: new FormControl(),
     workstation_name: new FormControl(),
     allSeats: new FormControl(),
   });
