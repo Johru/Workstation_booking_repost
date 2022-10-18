@@ -1,5 +1,5 @@
 import sgMail = require('@sendgrid/mail');
-import { UserEntity } from 'db';
+import { ReservationEntity, UserEntity } from 'db';
 import { config } from 'dotenv';
 import logger from '../../logger';
 
@@ -13,7 +13,7 @@ const mail = process.env.MAIL!;
 export class EmailService {
   constructor() {}
 
-  sendMail(user: UserEntity) {
+  sendWelcomeMail(user: UserEntity) {
     const msg = {
       to: user.user_email,
       from: mail,
@@ -28,6 +28,28 @@ export class EmailService {
       .send(msg)
       .then(() => {
         logger.info(`Email to ${user.user_email} sent.`);
+      })
+      .catch((error: Error) => {
+        logger.error(error);
+      });
+  }
+
+  sendSuccessfullReservation(reservation: ReservationEntity) {
+    const msg = {
+      to: reservation.user!.user_email,
+      from: mail,
+      templateId: 'd-f19a565bef2447e68b3d43ca33a0e2f3',
+      dynamicTemplateData: {
+        name: reservation.user!.user_name,
+        login: reservation.user!.user_login,
+      },
+    };
+    sgMail
+      .send(msg)
+      .then(() => {
+        logger.info(
+          `Confirmed reservation email sent to ${reservation.user!.user_email}.`
+        );
       })
       .catch((error: Error) => {
         logger.error(error);

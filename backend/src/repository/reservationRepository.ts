@@ -64,7 +64,27 @@ export class ReservationRepository implements IReservationRepository {
       const addition = await appDataSource
         .getRepository(ReservationEntity)
         .save(resSave);
-      return logErrorAndReturnYesOrNo(addition, 'Reservation');
+      const output = await appDataSource
+        .getRepository(ReservationEntity)
+        .createQueryBuilder('reservation')
+        .where('reservation.reservation_id = :id', {
+          id: addition.reservation_id,
+        })
+        .leftJoin('reservation.seat', 'seat')
+        .addSelect(['seat.seat_id'])
+        .leftJoin('seat.workstation', 'workstation')
+        .addSelect(['workstation.workstation_name'])
+        .leftJoin('workstation.floor', 'floor')
+        .addSelect(['floor.floor_name'])
+        .leftJoin('floor.building', 'building')
+        .addSelect([
+          'building.building_name',
+          'building.building_address',
+          'building.building_city',
+        ])
+        .getMany();
+      //this.emailService.sendWelcomeMail(resSave)
+      return logErrorAndReturnYesOrNo(addition, 'Reservation', output);
     } catch (error) {
       logger.error(error);
       return { success: 'no' };
