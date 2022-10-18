@@ -25,22 +25,38 @@
     </span>
   </div>
 </div>
-<button (click)="showPreviewPanel()">Add New Workstation</button>
-<button (click)="showEditPanel()" [disabled]="selected == '0'">
-  Edit Workstation
-</button>
-<button [disabled]="selected == '0'" (click)="deleteSelected()">Delete</button>
-<button
-  *ngIf="!isSelectedDisabled()"
-  [disabled]="selected == '0'"
-  (click)="disableSelected()"
->
-  Disable
-</button>
-<button
-  *ngIf="isSelectedDisabled()"
-  [disabled]="selected == '0'"
-  (click)="disableSelected()"
->
-  Activate
-</button>
+<div class="buttons">
+  <button mat-raised-button (click)="showPreviewPanel()">
+    Add New Workstation
+  </button>
+  <button
+    mat-raised-button
+    (click)="showEditPanel()"
+    [disabled]="selected == '0'"
+  >
+    Edit Workstation
+  </button>
+  <button
+    mat-raised-button
+    [disabled]="selected == '0'"
+    (click)="deleteSelected()"
+  >
+    Delete
+  </button>
+  <button
+    mat-raised-button
+    *ngIf="!isSelectedDisabled()"
+    [disabled]="selected == '0'"
+    (click)="disableSelected()"
+  >
+    Disable
+  </button>
+  <button
+    mat-raised-button
+    *ngIf="isSelectedDisabled()"
+    [disabled]="selected == '0'"
+    (click)="disableSelected()"
+  >
+    Activate
+  </button>
+</div>

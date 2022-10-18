@@ -1,4 +1,4 @@
-<div>
+<div class="wrapper">
   <form [formGroup]="newWorkstationForm" (ngSubmit)="onSubmit()">
     <div class="input-container">
       <label for="workstationName">Name:</label>
@@ -20,14 +20,21 @@
         required
       />
     </div>
-    <input
+    <button
+      mat-raised-button
       type="submit"
       name="addButton"
       id="addButton"
       value="Add workstation"
       [disabled]="!newWorkstationForm.valid"
-    />
+    >
+      Add workstation
+    </button>
   </form>
-  <button (click)="goToWorkstationManagement()">Go Back</button>
-  <button (click)="clickToClosePanel()">Cancel</button>
+  <div class="buttons">
+    <button mat-raised-button (click)="goToWorkstationManagement()">
+      Go Back
+    </button>
+    <button mat-raised-button (click)="clickToClosePanel()">Cancel</button>
+  </div>
 </div>

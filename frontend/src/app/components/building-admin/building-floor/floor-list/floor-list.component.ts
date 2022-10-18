@@ -67,7 +67,6 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   cancel(event: boolean) {
     if (event) {
       this.toggleConfirmModal();
-      this.successfullConfirm = event;
     }
   }
 

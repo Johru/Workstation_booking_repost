@@ -26,7 +26,7 @@ import { UserService } from 'src/app/services/user.service';
 export class UserTabComponent implements OnInit {
   @Input() user!: User;
   @Output() deleteUserEmitter = new EventEmitter<number>();
-  color: string = 'primary';
+  color: string = 'warn';
   blockTitle?: string;
   promoteTitle?: string;
   displayUserInfo: boolean = false;
