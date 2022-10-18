@@ -12,7 +12,7 @@ export class AdminBuildingComponent implements OnInit {
   buildingList?: Building[] = [];
   seatCount?: number = 0;
   selectedCityValue?: string;
-  cityList?: any[] = [];
+  cityList?: { building_city: string }[] = [];
   @ViewChild('cardContent', { read: ElementRef })
   cardContent!: ElementRef<any>;
 
