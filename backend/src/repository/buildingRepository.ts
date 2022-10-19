@@ -27,29 +27,26 @@ export class BuildingRepository implements IBuildingRepository {
   }
 
   async listBuildings(): Promise<BuildingEntity[]> {
-    return (
-      appDataSource
-        .getRepository(BuildingEntity)
-        .createQueryBuilder('building')
-        .leftJoin('building.floor', 'floor')
-        .loadRelationCountAndMap('floor.floorCount', 'building.floor')
-        .leftJoin('floor.workstation', 'workstation')
-        .leftJoin('workstation.seat', 'seat')
-        .addSelect(['floor.floor_id'])
-        .addSelect(['workstation.workstation_id'])
-        .loadRelationCountAndMap(
-          'workstation.WCount',
-          'floor.workstation',
-          'WCount'
-        )
-        .loadRelationCountAndMap(
-          'workstation.SCount',
-          'workstation.seat',
-          'SeatCOUnt'
-        )
-        // .addSelect('COUNT(workstation.workstation_id)', 'workstationCOunt')
-        .getMany()
-    );
+    return appDataSource
+      .getRepository(BuildingEntity)
+      .createQueryBuilder('building')
+      .leftJoin('building.floor', 'floor')
+      .loadRelationCountAndMap('floor.floorCount', 'building.floor')
+      .leftJoin('floor.workstation', 'workstation')
+      .leftJoin('workstation.seat', 'seat')
+      .addSelect(['floor.floor_id'])
+      .addSelect(['workstation.workstation_id'])
+      .loadRelationCountAndMap(
+        'workstation.WCount',
+        'floor.workstation',
+        'WCount'
+      )
+      .loadRelationCountAndMap(
+        'workstation.SCount',
+        'workstation.seat',
+        'SeatCOUnt'
+      )
+      .getMany();
   }
 
   async getSingleBuilding(buildingId: number): Promise<BuildingEntity | null> {

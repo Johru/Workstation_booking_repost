@@ -20,7 +20,7 @@ export class AdminBuildingComponent implements OnInit {
 
   ngOnInit() {
     this.pushCitiesToLocalArrays();
-    this.pushBuildingsToLocalArrays();
+    // this.pushBuildingsToLocalArrays();
   }
 
   pushCitiesToLocalArrays() {
@@ -29,6 +29,7 @@ export class AdminBuildingComponent implements OnInit {
         this.cityList?.push(item);
       }
       this.selectedCityValue = data[0].building_city;
+      this.pushBuildingsToLocalArrays();
     });
   }
 

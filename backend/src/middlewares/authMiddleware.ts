@@ -82,8 +82,6 @@ export class AuthMiddleware {
   isAdmin = async (req: Request, res: Response, next: NextFunction) => {
     const id = req.id;
     const user = await this.userService.findUserById(id);
-    console.log(user);
-    console.log(user?.user_isadmin);
 
     if (user != null) {
       if (user.user_isadmin === false) {

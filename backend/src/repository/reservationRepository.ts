@@ -3,7 +3,6 @@ import { appDataSource } from '../db';
 import { ReservationEntity, SeatEntity } from '../db';
 import { logErrorAndReturnYesOrNo } from './logErrorAndReturnYesOrNo';
 import { Success } from './success';
-import { seatRouter } from 'route/workstationSeatRoute';
 
 export interface IReservationRepository {
   showReservationForGivenDate(
