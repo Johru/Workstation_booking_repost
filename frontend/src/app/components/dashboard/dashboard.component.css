@@ -3,7 +3,7 @@ section {
   align-items: center;
   justify-content: center;
   max-width: 1250px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 }
 
 .content-containers {
@@ -48,4 +48,8 @@ section {
 .join:hover {
   cursor: pointer;
   background-color: #b41b10;
+}
+
+.dashboard-cities {
+  max-width: 1250px;
 }

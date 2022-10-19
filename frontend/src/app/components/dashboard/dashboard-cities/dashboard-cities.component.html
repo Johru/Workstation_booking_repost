@@ -13,21 +13,14 @@
       {{ city.city }}
     </option>
   </select>
-  <button
-    class="create-building-button"
-    mat-raised-button
-    routerLink="/admin/edit/building"
-  >
-    Create Building
-  </button>
 </div>
 <div class="building-selector">
   <button (click)="scrollLeft()">&#60;</button>
   <div #cardContent class="cards">
-    <building-card
+    <dashboard-card
       *ngFor="let building of buildingList"
       [building]="building!"
-    ></building-card>
+    ></dashboard-card>
   </div>
   <button (click)="scrollRight()">&#62;</button>
 </div>
