@@ -1,0 +1,33 @@
+<div class="building-header">
+  <h2>Choose another city</h2>
+  <select
+    class="select-city"
+    (change)="onChange()"
+    [(ngModel)]="selectedCityValue"
+  >
+    <option
+      class="city"
+      *ngFor="let city of cityList; let i = index"
+      [value]="city.city"
+    >
+      {{ city.city }}
+    </option>
+  </select>
+  <button
+    class="create-building-button"
+    mat-raised-button
+    routerLink="/admin/edit/building"
+  >
+    Create Building
+  </button>
+</div>
+<div class="building-selector">
+  <button (click)="scrollLeft()">&#60;</button>
+  <div #cardContent class="cards">
+    <building-card
+      *ngFor="let building of buildingList"
+      [building]="building!"
+    ></building-card>
+  </div>
+  <button (click)="scrollRight()">&#62;</button>
+</div>

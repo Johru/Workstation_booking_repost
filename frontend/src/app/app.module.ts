@@ -46,6 +46,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { DashboardCitiesComponent } from './components/dashboard/dashboard-cities/dashboard-cities.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { MatSelectModule } from '@angular/material/select';
     DashboardComponent,
     FooterPanelComponent,
     BuildingEditComponent,
+    DashboardCitiesComponent,
   ],
   imports: [
     BrowserModule,
