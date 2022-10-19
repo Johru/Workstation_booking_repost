@@ -7,11 +7,10 @@ import { reservationRouter } from './route/reservationRoute';
 import { buildingRouter } from './route/buildingRoute';
 import { userRouter } from './route/userRoute';
 import { authRouter } from './route/userRoute';
-import { workstationRouter } from './route/workstationSeatRoute';
-import { seatRouter } from './route/workstationSeatRoute';
+import { workstationRouter, seatRouter } from './route/workstationSeatRoute';
 import cors from 'cors';
 
-const allowedDomains = ['http://localhost:4200'];
+const allowedDomains = ['http://localhost:4200', 'http://localhost:8080'];
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));

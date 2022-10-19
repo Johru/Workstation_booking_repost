@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Building } from 'src/app/help-files/building-interface';
-import { BuildingService } from 'src/app/services/building-new.service';
+import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({
   selector: 'building-dashboard',
@@ -13,7 +13,7 @@ export class BuildingDashboardComponent implements OnInit {
   buildingId: number = 0;
 
   constructor(
-    private buildingService: BuildingService,
+    private buildingService: BuildingNewService,
     private route: ActivatedRoute
   ) {}
 

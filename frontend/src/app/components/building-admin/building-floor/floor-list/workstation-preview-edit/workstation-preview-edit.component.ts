@@ -31,7 +31,7 @@ export class WorkstationPreviewEditComponent implements OnInit {
       workstation_id: this.newWorkstationForm.value.workstation_id,
       workstation_name: this.newWorkstationForm.value.workstation_name,
     };
-    this.floorService.editWorkstation(workstation as WorkstationInterface);
+    this.floorService.editWorkstation(workstation as EditWorkstationInterface);
     this.goToWorkstationManagement();
   }
 

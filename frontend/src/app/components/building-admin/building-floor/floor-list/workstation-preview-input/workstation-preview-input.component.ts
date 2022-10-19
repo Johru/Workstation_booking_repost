@@ -13,9 +13,8 @@ export class WorkstationPreviewInputComponent implements OnInit {
   @Output() showManagementEmitter = new EventEmitter();
   @Output() newWorkstationEvent = new EventEmitter<WorkstationInterface>();
   newWorkstationForm = new FormGroup({
-    workstation_id: new FormControl(),
     workstation_name: new FormControl(),
-    seats: new FormControl(),
+    allSeats: new FormControl(),
   });
 
   constructor(private workstationId: FloorService) {}
@@ -28,7 +27,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
     const workstation: WorkstationInterface = {
       workstation_id: this.workstationId.workstationId(),
       workstation_name: this.newWorkstationForm.value.workstation_name,
-      seats: Number(this.newWorkstationForm.value.seats),
+      allSeats: Number(this.newWorkstationForm.value.allSeats),
       workstation_isActive: true,
     };
     this.newWorkstationEvent.emit(workstation);
