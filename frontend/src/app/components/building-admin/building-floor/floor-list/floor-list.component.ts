@@ -130,7 +130,6 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     this.toggleConfirmModal();
     this.status = 'Delete';
     this.selectedWorkstation = selectedWorkstation;
-    console.log(this.floor);
   }
 
   successfullConfirmOnManagement(switchConfirm: boolean) {
@@ -143,8 +142,6 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     } else {
       this.addWorkstationPanel = !this.addWorkstationPanel;
     }
-    console.log(this.addWorkstationPanel);
-    console.log(this.addWorkstationPanel);
   }
 
   showManagementPanel() {
@@ -164,16 +161,12 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   }
 
   updateWorkstationList(event: { update: AddWorkstationI; id: number }) {
-    console.log('floorlist');
-    console.log(event.update);
     const workstation = this.floor.workstation.find(
-      (ws) => (ws.workstation_id = event.id)
+      (ws) => ws.workstation_id == event.id
     );
     const index = this.floor.workstation.indexOf(workstation!);
     workstation!.workstation_name = event.update.workstation_name;
-    console.log(this.floor);
     this.floor.workstation[index] = workstation!;
-    console.log(this.floor);
   }
 
   countSeatsAndCheckLength() {

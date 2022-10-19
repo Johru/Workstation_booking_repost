@@ -1,9 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import {
-  AddWorkstationI,
-  WorkstationInterface,
-} from 'src/app/help-files/workstation-interface';
 import { FloorService } from 'src/app/services/floor.service';
 
 @Component({

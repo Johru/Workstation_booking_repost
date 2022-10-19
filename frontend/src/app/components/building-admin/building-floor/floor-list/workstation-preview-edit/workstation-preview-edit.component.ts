@@ -30,7 +30,6 @@ export class WorkstationPreviewEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.setInitialValue(this.selectedWorkstationToEdit!);
-    console.log(this.selectedWorkstationToEdit);
   }
 
   onSubmit() {
@@ -55,16 +54,17 @@ export class WorkstationPreviewEditComponent implements OnInit {
   ) {
     res.subscribe({
       next: (data) => {
-        if (data.status == 'OK') {
-          this.updateEmitter.emit({ update: update, id: id });
-        } else {
+        if (data.status != 'OK') {
           alert('Something went wrong. Workstation was not updated.');
+          return;
         }
       },
       error(err: Error) {
         console.error(err);
+        return;
       },
     });
+    this.updateEmitter.emit({ update: update, id: id });
   }
 
   setInitialValue(initialWorkstation: WorkstationInterface) {
