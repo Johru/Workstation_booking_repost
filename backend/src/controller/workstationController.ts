@@ -1,20 +1,25 @@
 import { Router, Response, Request } from 'express';
 import { IWorkstationService } from '../service';
 import { WorkstationEntity } from '../db';
+import { AuthMiddleware } from 'middlewares';
 
 export class WorkstationController {
   private readonly _router: Router = Router();
 
-  constructor(private workstationService: IWorkstationService) {
+  constructor(private workstationService: IWorkstationService,
+    private authMiddleware: AuthMiddleware) {
+
+    const verifyJWT = this.authMiddleware.verifyJWT;
+
     this._router.get(
-      '/workstation/showall',
+      '/workstation/showall',verifyJWT,
       async (req: Request, res: Response) => {
         res.status(200).json(await this.workstationService.getWorkstations());
       }
     );
 
     this._router.get(
-      '/workstation/:floorId/showonfloor',
+      '/workstation/:floorId/showonfloor',verifyJWT,
       async (req: Request, res: Response) => {
         const floorId = parseInt(req.params.floorId, 10);
         res
@@ -24,7 +29,7 @@ export class WorkstationController {
     );
 
     this._router.post(
-      '/workstation/create/:seats',
+      '/workstation/create/:seats',verifyJWT,
       async (req: Request, res: Response) => {
         const workstation: WorkstationEntity = req.body as WorkstationEntity;
         let seatsNumber = parseInt(req.params.seats, 10);
@@ -44,7 +49,7 @@ export class WorkstationController {
     );
 
     this._router.put(
-      '/workstation/:workstationId/update',
+      '/workstation/:workstationId/update',verifyJWT,
       async (req: Request, res: Response) => {
         const workstationId = parseInt(req.params.workstationId, 10);
         const workstation: WorkstationEntity = req.body as WorkstationEntity;
@@ -60,7 +65,7 @@ export class WorkstationController {
     );
 
     this._router.put(
-      '/workstation/:workstationId/active',
+      '/workstation/:workstationId/active',verifyJWT,
       async (req: Request, res: Response) => {
         const workstationId = parseInt(req.params.workstationId, 10);
         res
@@ -72,7 +77,7 @@ export class WorkstationController {
     );
 
     this._router.put(
-      '/workstation/:workstationId/notactive',
+      '/workstation/:workstationId/notactive',verifyJWT,
       async (req: Request, res: Response) => {
         const workstationId = parseInt(req.params.workstationId, 10);
         res
@@ -86,8 +91,8 @@ export class WorkstationController {
     );
 
     this._router.delete(
-      '/workstation/:workstationId/delete',
-      async (req, res) => {
+      '/workstation/:workstationId/delete',verifyJWT,
+      async (req: Request, res: Response) => {
         const workstationId = parseInt(req.params.workstationId, 10);
         res
           .status(200)
