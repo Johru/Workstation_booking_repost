@@ -33,7 +33,12 @@
       [@fadeInOut]
       class="action"
     >
-      <button mat-raised-button>Select Building</button>
+      <button
+        mat-raised-button
+        routerLink="/building/{{ building.building_id }}/floors"
+      >
+        Select Building
+      </button>
     </div>
   </div>
 </div>

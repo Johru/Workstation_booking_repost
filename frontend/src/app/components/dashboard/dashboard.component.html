@@ -5,7 +5,9 @@
         Working with us and you will feel like you are working from home.
       </p>
       <div class="join-container">
-        <a class="join" routerLink="/register"> Join today </a>
+        <a *ngIf="!loggedIn" class="join" routerLink="/register">
+          Join today
+        </a>
       </div>
     </div>
     <div class="content-containers">
@@ -14,7 +16,7 @@
   </section>
   <div class="select-wrapper">
     <div *ngIf="loggedIn">
-      <admin-building class="dashboard-cities"></admin-building>
+      <admin-building></admin-building>
     </div>
     <div *ngIf="!loggedIn" class="default-wrapper">
       <div class="list">

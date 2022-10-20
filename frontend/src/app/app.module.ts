@@ -36,6 +36,7 @@ import { BuildingEditComponent } from './components/building-admin/building-dash
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavpanelComponent } from './components/navpanel/navpanel.component';
+import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -46,9 +47,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
-import { DashboardCitiesComponent } from './components/dashboard/dashboard-cities/dashboard-cities.component';
-import { DashboardCardComponent } from './components/dashboard/dashboard-cities/dashboard-card/dashboard-card.component';
-import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 
 @NgModule({
   declarations: [
@@ -81,8 +79,6 @@ import { UserFloorsAccordionComponent } from './components/user-floors-accordion
     DashboardComponent,
     FooterPanelComponent,
     BuildingEditComponent,
-    DashboardCitiesComponent,
-    DashboardCardComponent,
     UserFloorsAccordionComponent,
   ],
   imports: [

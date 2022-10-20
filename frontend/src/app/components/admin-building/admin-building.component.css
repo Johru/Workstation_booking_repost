@@ -48,9 +48,10 @@
 }
 
 .building-selector button {
-  width: 3%;
+  width: 3.5%;
   font-size: 40px;
   font-weight: 100;
+  border: none;
 }
 
 .building-selector button:hover {
