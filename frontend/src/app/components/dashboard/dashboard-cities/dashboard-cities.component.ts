@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
 import { BuildingService } from 'src/app/services/building.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'dashboard-cities',
@@ -13,10 +14,14 @@ export class DashboardCitiesComponent implements OnInit {
   cityList?: any;
   @ViewChild('cardContent', { read: ElementRef })
   cardContent!: ElementRef<any>;
+  loggedIn: boolean = false;
 
-  constructor(private bs: BuildingService) {}
+  constructor(private bs: BuildingService, private authService: AuthService) {}
 
   ngOnInit(): void {
+    if (this.authService.isAuthenticated()) {
+      this.loggedIn = true;
+    }
     this.getCities();
     this.selectedCityValue = this.cityList[0].city;
     this.getBuildings();

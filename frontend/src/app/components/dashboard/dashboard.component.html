@@ -12,7 +12,11 @@
       <img class="main-picture" src="../assets/main.png" alt="" />
     </div>
   </section>
-  <section>
+  <section *ngIf="loggedIn">
+    <dashboard-cities class="dashboard-cities"></dashboard-cities>
+  </section>
+  <section *ngIf="!loggedIn">
+    <dashboard-cities class="dashboard-cities"></dashboard-cities>
     <dashboard-cities class="dashboard-cities"></dashboard-cities>
   </section>
 </div>
