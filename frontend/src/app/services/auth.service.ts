@@ -5,6 +5,7 @@ import { Login, TokenResponse } from '../helpingHand/login';
 import { Register } from '../helpingHand/register';
 import { environment } from 'src/environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root',
@@ -49,5 +50,17 @@ export class AuthService {
       localStorage.removeItem('token');
     }
     return !this.jwtHelper.isTokenExpired(token);
+  }
+
+  isAdmin(): boolean {
+    const expectedRole = true;
+    const token = localStorage.getItem('token');
+    if (this.isAuthenticated()) {
+      const decodedToken = decode(token!) as TokenResponse;
+      if (decodedToken.isAdmin == expectedRole) {
+        return true;
+      }
+    }
+    return false;
   }
 }

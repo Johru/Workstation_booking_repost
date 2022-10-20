@@ -1,10 +1,6 @@
 <div *ngIf="loggedIn" class="building-header">
   <h2>Choose another city</h2>
-  <select
-    class="select-city"
-    (change)="onChange()"
-    [(ngModel)]="selectedCityValue"
-  >
+  <select class="select-city" [(ngModel)]="selectedCityValue">
     <option
       class="city"
       *ngFor="let city of cityList; let i = index"

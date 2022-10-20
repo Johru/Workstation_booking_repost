@@ -24,20 +24,20 @@ export class DashboardCitiesComponent implements OnInit {
     }
     this.getCities();
     this.selectedCityValue = this.cityList[0].city;
-    this.getBuildings();
+    //this.getBuildings();
   }
 
   getCities() {
     this.cityList = this.bs.getCityList();
   }
-
+  /*
   getBuildings() {
     this.buildingList = this.bs.getBuildings();
-  }
-
+  }*/
+  /*
   onChange() {
     this.getBuildings();
-  }
+  }*/
 
   public scrollRight(): void {
     this.cardContent.nativeElement.scrollTo({

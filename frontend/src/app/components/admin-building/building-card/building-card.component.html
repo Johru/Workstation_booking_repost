@@ -14,7 +14,7 @@
         Seats: {{ building.seatCount }}
       </div>
     </div>
-    <div *ngIf="mouseOverCard" [@fadeInOut] class="action">
+    <div *ngIf="mouseOverCard && isAdmin" [@fadeInOut] class="action">
       <button
         mat-raised-button
         routerLink="/admin/edit/building/{{ building.building_id }}/floor"
@@ -27,6 +27,9 @@
       >
         Edit Building
       </button>
+    </div>
+    <div *ngIf="mouseOverCard && !isAdmin" [@fadeInOut] class="action">
+      <button mat-raised-button>Select Building</button>
     </div>
   </div>
 </div>

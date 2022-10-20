@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
 import { BuildingService } from 'src/app/services/building.service';
 import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'admin-building',
@@ -15,12 +16,16 @@ export class AdminBuildingComponent implements OnInit {
   cityList?: { building_city: string }[] = [];
   @ViewChild('cardContent', { read: ElementRef })
   cardContent!: ElementRef<any>;
+  isAdmin: boolean = false;
 
-  constructor(private bs: BuildingService) {}
+  constructor(private bs: BuildingService, private authService: AuthService) {}
 
   ngOnInit() {
     this.pushCitiesToLocalArrays();
     this.pushBuildingsToLocalArrays();
+    if (this.authService.isAdmin()) {
+      this.isAdmin = true;
+    }
   }
 
   pushCitiesToLocalArrays() {

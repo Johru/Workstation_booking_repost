@@ -13,6 +13,7 @@ section {
 
 .dashboard-container {
   margin-bottom: 100px;
+  width: 100%;
 }
 
 .main-picture {
@@ -51,6 +52,62 @@ section {
   background-color: #b41b10;
 }
 
-.dashboard-cities {
-  max-width: 1250px;
+.select-wrapper {
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+
+.select-wrapper section {
+  margin: 0;
+  min-width: 80%;
+  flex-grow: 1;
+}
+
+.select-wrapper section admin-building {
+  width: 100%;
+}
+
+.default-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.building-selector {
+  height: 350px;
+  margin-top: 5%;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.building-selector button {
+  width: 3%;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.building-selector button:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  cursor: pointer;
+}
+
+.cards {
+  padding: 0px 1%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1%;
+  overflow: hidden;
+  align-items: center;
+}
+
+building-card {
+  width: 19.2%;
+  height: 98%;
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
 }

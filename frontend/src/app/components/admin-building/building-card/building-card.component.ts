@@ -18,6 +18,7 @@ import { Building } from 'src/app/helpingHand/buidling';
 })
 export class BuildingCardComponent {
   @Input() building!: Building;
+  @Input() isAdmin!: boolean;
   mouseOverCard: boolean = false;
 
   constructor() {}
