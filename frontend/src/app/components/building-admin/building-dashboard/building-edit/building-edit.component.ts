@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
 import { BuildingService } from 'src/app/services/building-new.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'building-edit',
@@ -10,12 +11,11 @@ import { BuildingService } from 'src/app/services/building-new.service';
   styleUrls: ['./building-edit.component.css'],
 })
 export class BuildingEditComponent implements OnInit {
-  @Input() actualBuilding?: Building;
+  buildingId?: number;
   editBuildingForm = new FormGroup({
-    building_id: new FormControl(),
     building_name: new FormControl(),
     building_address: new FormControl(),
-    building_state: new FormControl(),
+    building_country: new FormControl(),
     building_zip: new FormControl(),
     building_city: new FormControl(),
     building_image: new FormControl(),
@@ -23,29 +23,39 @@ export class BuildingEditComponent implements OnInit {
 
   constructor(
     private buildingService: BuildingService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    this.setInitialValues(this.actualBuilding!);
+    const nr: number = Number(this.route.snapshot.params['id']);
+    if (!nr) {
+      this.buildingId = 0;
+    } else {
+      this.buildingId = nr;
+      this.getBuilding(this.buildingId);
+    }
   }
 
-  onSubmit(): void {
-    this.buildingService.editBuilding(this.editBuildingForm.value as Building);
+  onSubmit(values: Building): void {
+    this.buildingService.editBuilding(this.buildingId!, values);
     this.router.navigate([`${this.router.url}/floor`]);
   }
 
   setInitialValues(initialBuilding: Building) {
-    const building = {
-      building_id: initialBuilding.building_id,
+    this.editBuildingForm.patchValue({
       building_name: initialBuilding.building_name,
       building_address: initialBuilding.building_address,
-      building_state: initialBuilding.building_state,
       building_zip: initialBuilding.building_zip,
+      building_country: initialBuilding.building_country,
       building_city: initialBuilding.building_city,
       building_image: initialBuilding.building_image,
-    };
+    });
+  }
 
-    this.editBuildingForm.setValue(building);
+  getBuilding(id: number): void {
+    this.buildingService.getBuilding(id).subscribe((data: Building) => {
+      this.setInitialValues(data);
+    });
   }
 }

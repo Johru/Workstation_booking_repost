@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BUILDINGLIST, CITYLIST } from '../helpingHand/building-data';
 
@@ -5,7 +6,7 @@ import { BUILDINGLIST, CITYLIST } from '../helpingHand/building-data';
   providedIn: 'root',
 })
 export class BuildingService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   getCityList() {
     return CITYLIST;

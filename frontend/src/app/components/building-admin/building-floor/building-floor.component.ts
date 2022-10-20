@@ -23,7 +23,7 @@ export class BuildingFloorComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildingId = Number(this.route.snapshot.params['id']);
-    this.getBuilding();
+    // this.getBuilding();
     this.getFloor();
   }
 
@@ -31,9 +31,9 @@ export class BuildingFloorComponent implements OnInit {
     this.floors = this.floorService.getFloor();
   }
 
-  getBuilding(): void {
-    this.building = this.buildingService.getBuilding(this.buildingId);
-  }
+  // getBuilding(): void {
+  //   this.building = this.buildingService.getBuilding(this.buildingId);
+  // }
 
   addFloor(newFloor: Floor) {
     this.floorService.addFloor(newFloor);
