@@ -16,6 +16,7 @@ import { UserFloorsAccordionComponent } from './components/user-floors-accordion
 const routes: Routes = [
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
   { path: 'admin', redirectTo: '/admin/buildings', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: '',
     component: NavpanelComponent,

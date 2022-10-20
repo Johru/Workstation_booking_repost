@@ -1,6 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, Input } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'building-card',
@@ -21,9 +22,13 @@ export class BuildingCardComponent {
   @Input() isAdmin!: boolean;
   mouseOverCard: boolean = false;
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   toggleCardInfo() {
     this.mouseOverCard = !this.mouseOverCard;
+  }
+
+  checkIfLoggedIn(): boolean {
+    return this.authService.isAuthenticated();
   }
 }

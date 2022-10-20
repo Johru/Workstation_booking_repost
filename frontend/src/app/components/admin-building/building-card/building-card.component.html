@@ -28,7 +28,11 @@
         Edit Building
       </button>
     </div>
-    <div *ngIf="mouseOverCard && !isAdmin" [@fadeInOut] class="action">
+    <div
+      *ngIf="mouseOverCard && !isAdmin && checkIfLoggedIn()"
+      [@fadeInOut]
+      class="action"
+    >
       <button mat-raised-button>Select Building</button>
     </div>
   </div>

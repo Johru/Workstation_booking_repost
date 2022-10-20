@@ -13,35 +13,36 @@
     </div>
   </section>
   <div class="select-wrapper">
-    <section *ngIf="loggedIn">
+    <div *ngIf="loggedIn">
       <admin-building class="dashboard-cities"></admin-building>
-    </section>
+    </div>
     <div *ngIf="!loggedIn" class="default-wrapper">
-      <h2>{{ cityOne }}</h2>
-      <div class="building-selector">
-        <button (click)="scrollLeft()">&#60;</button>
-        <div #cardContent class="cards">
-          <building-card
-            *ngFor="let building of buildingListOne"
-            [building]="building!"
-          ></building-card>
+      <div class="list">
+        <h2>{{ cityOne }}</h2>
+        <div class="building-selector">
+          <button (click)="scrollLeft($event)">&#60;</button>
+          <div #cardContentOne class="card">
+            <building-card
+              *ngFor="let building of buildingListOne"
+              [building]="building!"
+            ></building-card>
+          </div>
+          <button (click)="scrollRight($event)">&#62;</button>
         </div>
-        <button (click)="scrollRight()">&#62;</button>
       </div>
-      <div>
+      <div class="list">
         <h2>{{ cityTwo }}</h2>
         <div class="building-selector">
-          <button (click)="scrollLeft()">&#60;</button>
-          <div #cardContent class="cards">
+          <button (click)="scrollLeft($event)">&#60;</button>
+          <div #cardContentTwo class="card">
             <building-card
               *ngFor="let building of buildingListTwo"
               [building]="building!"
             ></building-card>
           </div>
-          <button (click)="scrollRight()">&#62;</button>
+          <button (click)="scrollRight($event)">&#62;</button>
         </div>
       </div>
     </div>
   </div>
-  <footer-panel></footer-panel>
 </div>
