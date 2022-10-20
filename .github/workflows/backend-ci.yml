@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Dependencies
-        run: yarn install
+        run: npm install
         working-directory: ./backend
-      - name: Run Tests
-        run: yarn test:ci
+      - name: Run Linter
+        run: npm run lint
         working-directory: ./backend
