@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class ReservationListComponent implements OnInit {
   @Input() userId!: number;
   reservationList?: AdminReservation[] = [];
-  confirmDelete: boolean = false;
+  confirmDelete = false;
   selectedReservation!: number;
 
   constructor(
@@ -25,9 +25,9 @@ export class ReservationListComponent implements OnInit {
   }
 
   pushReservationsToLocalArray() {
-    this.getReservationList().subscribe((data) => {
-      for (let item of data) {
-        let reservation = {
+    this.getReservationList().subscribe(data => {
+      for (const item of data) {
+        const reservation = {
           reservation_id: item.reservation_id,
           user_id: item.user_id,
           seat_id: item.seat_id,
@@ -48,11 +48,11 @@ export class ReservationListComponent implements OnInit {
   }
 
   deleteReservation(id: number) {
-    this.reservationService.deleteReservation(id).subscribe((data) => {
+    this.reservationService.deleteReservation(id).subscribe(data => {
       if (data.success == 'yes') {
         this.toggleDeleteModal();
         this.reservationList = this.reservationList?.filter(
-          (res) => res.reservation_id != id
+          res => res.reservation_id != id
         );
         return;
       }

@@ -6,14 +6,12 @@ import { BUILDINGS } from '../help-files/building-data';
   providedIn: 'root',
 })
 export class BuildingNewService {
-  constructor() {}
-
   addBuilding(building: Building): void {
     BUILDINGS.push(building);
   }
 
   getBuilding(id: number) {
-    return BUILDINGS.find((building) => building.building_id === id);
+    return BUILDINGS.find(building => building.building_id === id);
   }
 
   buildingId(): number {
@@ -23,7 +21,7 @@ export class BuildingNewService {
 
   editBuilding(updatedBuilding: Building) {
     const buildingIndex = BUILDINGS.findIndex(
-      (building) => building.building_id === updatedBuilding.building_id
+      building => building.building_id === updatedBuilding.building_id
     );
     BUILDINGS[buildingIndex] = updatedBuilding;
   }

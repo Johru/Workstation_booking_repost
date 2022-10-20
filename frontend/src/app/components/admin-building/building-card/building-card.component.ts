@@ -18,9 +18,7 @@ import { Building } from 'src/app/helpingHand/buidling';
 })
 export class BuildingCardComponent {
   @Input() building!: Building;
-  mouseOverCard: boolean = false;
-
-  constructor() {}
+  mouseOverCard = false;
 
   toggleCardInfo() {
     this.mouseOverCard = !this.mouseOverCard;

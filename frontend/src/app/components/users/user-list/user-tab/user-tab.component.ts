@@ -27,14 +27,14 @@ import { UserService } from 'src/app/services/user.service';
 export class UserTabComponent implements OnInit {
   @Input() user!: User;
   @Output() deleteUserEmitter = new EventEmitter<number>();
-  color: string = 'warn';
+  color = 'warn';
   blockTitle?: string;
   promoteTitle?: string;
-  displayUserInfo: boolean = false;
+  displayUserInfo = false;
   iconClass: string = 'material-icons';
-  displayUserReservations: boolean = false;
+  displayUserReservations = false;
   isCollapsed: string = 'close';
-  confirmDelete: boolean = false;
+  confirmDelete = false;
   isBlocked?: boolean;
   isAdmin?: boolean;
   reservationList: AdminReservation[] = [];
@@ -80,7 +80,7 @@ export class UserTabComponent implements OnInit {
   }
 
   rotateIcon(e: Event, displayValue: boolean) {
-    let target = e.target as HTMLElement;
+    const target = e.target as HTMLElement;
     if (!displayValue) {
       target.style.transform = 'rotate(180deg)';
     } else {
@@ -107,12 +107,12 @@ export class UserTabComponent implements OnInit {
   //second for successfull response or error
   blockUnblockUser() {
     if (this.isBlocked) {
-      this.userService.unBlockUser(this.user.user_id).subscribe((data) => {
+      this.userService.unBlockUser(this.user.user_id).subscribe(data => {
         this.resolveBlockUnblockUser(data.success, 'unblocked');
       });
       return;
     } else {
-      this.userService.blockUser(this.user.user_id).subscribe((data) => {
+      this.userService.blockUser(this.user.user_id).subscribe(data => {
         this.resolveBlockUnblockUser(data.success, 'blocked');
       });
     }
@@ -137,14 +137,14 @@ export class UserTabComponent implements OnInit {
     if (this.isAdmin) {
       this.userService
         .demoteUserFromAdmin(this.user.user_id)
-        .subscribe((data) => {
+        .subscribe(data => {
           this.resolvePromoteDemoteUser(data.success, 'demoted');
           return;
         });
     } else {
       const promoteResult = this.userService
         .promoteUserToAdmin(this.user.user_id)
-        .subscribe((data) => {
+        .subscribe(data => {
           this.resolvePromoteDemoteUser(data.success, 'promoted');
         });
     }

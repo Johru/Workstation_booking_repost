@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Reservation } from 'src/app/helpingHand/reservation';
 import { Seat } from 'src/app/helpingHand/seat';
 import { WorkstationService } from 'src/app/services/workstation.service';
@@ -8,7 +8,7 @@ import { WorkstationService } from 'src/app/services/workstation.service';
   templateUrl: './workstation-form.component.html',
   styleUrls: ['./workstation-form.component.css'],
 })
-export class WorkstationFormComponent implements OnInit {
+export class WorkstationFormComponent {
   @Input() seatListFromParent?: Seat[];
   @Input() selectedWorkstation?: number;
   @Output() reservation = new EventEmitter<Reservation>();
@@ -18,13 +18,11 @@ export class WorkstationFormComponent implements OnInit {
   seatList?: Seat[];
   planModel: any = { start_time: new Date() };
   selectedDate?: Date = new Date();
-  confirmed: boolean = false;
-  disabledButton: boolean = true;
+  confirmed = false;
+  disabledButton = true;
   minDate: Date = new Date();
 
   constructor(private workstationService: WorkstationService) {}
-
-  ngOnInit(): void {}
 
   onChange(e: any) {
     this.selectedDate = e.target.value;
@@ -44,7 +42,7 @@ export class WorkstationFormComponent implements OnInit {
       .split('T')[0];
     this.workstationService
       .locateWorkstation(this.selectedWorkstation!)
-      .subscribe((data) => {
+      .subscribe(data => {
         this.reservation!.emit({
           seat_id: this.selectedSeat!,
           reservation_date: date,

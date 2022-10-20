@@ -22,10 +22,8 @@ export class WorkstationManagementComponent implements OnChanges {
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
   selectedWorkstation?: WorkstationInterface;
-  defaultText: string = 'Select a workstation';
-  selected: string = '0';
-
-  constructor() {}
+  defaultText = 'Select a workstation';
+  selected = '0';
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.successfullConfirmOnManagement) {

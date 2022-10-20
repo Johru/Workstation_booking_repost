@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ReservationService {
   constructor(private http: HttpClient) {}
 
-  addReservation(resData: Reservation): Observable<any> {
+  addReservation(resData: Reservation): Observable<Reservation> {
     const path = `http://localhost:8080/api/reservation/new`;
     return this.http.post<Reservation>(path, {
       user_id: resData.user_id,
@@ -18,8 +18,7 @@ export class ReservationService {
     });
   }
 
-  deleteReservation(resId: number): Observable<any> {
-    console.log(`service called, id ${resId}`);
+  deleteReservation(resId: number): Observable<Reservation> {
     const path = `http://localhost:8080/api/reservation/${resId}/delete`;
     return this.http.delete<any>(path);
   }

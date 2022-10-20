@@ -16,13 +16,13 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   @Input() floor!: Floor;
   selectedWorkstationToEdit?: WorkstationInterface;
   panelOpenState?: boolean;
-  confirmDeleteValue: boolean = false;
+  confirmDeleteValue = false;
   status?: string;
   selectedWorkstation?: WorkstationInterface;
   allSeats?: number;
-  successfullConfirm: boolean = false;
-  addWorkstationPanel: boolean = false;
-  editWorkstationPanel: boolean = false;
+  successfullConfirm = false;
+  addWorkstationPanel = false;
+  editWorkstationPanel = false;
 
   constructor(private cd: ChangeDetectorRef) {}
 
@@ -51,7 +51,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   }
 
   numberOfSeats(): void {
-    let stations = this.floor.workstation.length;
+    const stations = this.floor.workstation.length;
     let number = 0;
     for (let i = 0; i < stations; i++) {
       if (this.floor.workstation[i].allSeats)

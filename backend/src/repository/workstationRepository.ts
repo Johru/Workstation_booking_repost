@@ -1,4 +1,4 @@
-import { appDataSource, BoolBitTransformer } from '../db';
+import { appDataSource } from '../db';
 import { WorkstationEntity } from '../db';
 import { SeatEntity } from '../db';
 import { Success } from './success';

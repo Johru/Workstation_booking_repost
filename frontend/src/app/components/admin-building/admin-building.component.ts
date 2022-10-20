@@ -22,8 +22,8 @@ export class AdminBuildingComponent implements OnInit {
   }
 
   pushCitiesToLocalArrays() {
-    this.bs.getCityList().subscribe((data) => {
-      for (let item of Object.entries(data)) {
+    this.bs.getCityList().subscribe(data => {
+      for (const item of Object.entries(data)) {
         this.cityList?.push(item[1]);
       }
       this.selectedCityValue = Object.entries(data)[0][1].building_city;
@@ -32,8 +32,8 @@ export class AdminBuildingComponent implements OnInit {
   }
 
   pushBuildingsToLocalArrays() {
-    this.bs.getBuildings().subscribe((data) => {
-      for (let item of Object.entries(data)) {
+    this.bs.getBuildings().subscribe(data => {
+      for (const item of Object.entries(data)) {
         if (
           item[1].building_city.toLowerCase() ==
           this.selectedCityValue!.toLowerCase()
@@ -41,7 +41,7 @@ export class AdminBuildingComponent implements OnInit {
           this.buildingList?.push(item[1]);
           for (let i = 0; i < item[1].floor.length; i++) {
             for (let j = 0; j < item[1].floor[i].workstation.length; j++) {
-              let seats = item[1].floor[i].workstation[j].SCount;
+              const seats = item[1].floor[i].workstation[j].SCount;
               this.seatCount += seats;
             }
           }

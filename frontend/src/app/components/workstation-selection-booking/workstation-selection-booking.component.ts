@@ -18,16 +18,16 @@ export class WorkstationSelectionBookingComponent
   implements OnInit, AfterContentChecked
 {
   workstations?: any[] = [];
-  selectedWorkstation: number = 0;
-  modalVisibility: boolean = false;
+  selectedWorkstation = 0;
+  modalVisibility = false;
   confirmed?: boolean;
-  canceled: boolean = false;
+  canceled = false;
   workstationIdAndName?: { id: number | string; name: string };
   reservationData?: Reservation;
   selectedDate?: Date = new Date();
   seatListToSend: Seat[] = [];
   floorId = 5;
-  closed: boolean = true;
+  closed = true;
   success?: boolean;
 
   constructor(
@@ -43,8 +43,8 @@ export class WorkstationSelectionBookingComponent
     this.cd.detectChanges();
   }
   pushWorkstationsToLocalArray() {
-    this.getWsList().subscribe((data) => {
-      for (let item of data) {
+    this.getWsList().subscribe(data => {
+      for (const item of data) {
         this.workstations?.push(item);
       }
     });
@@ -69,8 +69,8 @@ export class WorkstationSelectionBookingComponent
       .split('T')[0];
 
     this.getSeats(this.selectedWorkstation, reservationDate!).subscribe(
-      (data) => {
-        for (let item of data) {
+      data => {
+        for (const item of data) {
           let date: string | null = '';
           let name: string | null = '';
           if (!item.reservation[0]) {
@@ -81,7 +81,7 @@ export class WorkstationSelectionBookingComponent
             name = item.reservation[0].user.user_name;
           }
 
-          let seatToPush = {
+          const seatToPush = {
             seat_id: item.seat_id,
             workstation_id: item.workstation_id,
             reservation_date: date!,

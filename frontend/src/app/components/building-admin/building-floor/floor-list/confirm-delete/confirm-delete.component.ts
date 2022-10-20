@@ -12,8 +12,8 @@ export class ConfirmDeleteComponent implements OnInit {
   @Output() confirmEmitter = new EventEmitter<boolean>();
   @Input() status?: string;
   @Input() selectedWorkstation?: WorkstationInterface;
-  confirmValue: boolean = true;
-  cancelValue: boolean = true;
+  confirmValue = true;
+  cancelValue = true;
 
   constructor(private floorService: FloorService) {}
 

@@ -12,7 +12,6 @@ export class UserController {
   ) {
     const verifyJWT = this.authMiddleware.verifyJWT;
     const isAdmin = this.authMiddleware.isAdmin;
-    const isBlocked = this.authMiddleware.isBlocked;
 
     this._router.get(
       '/user',

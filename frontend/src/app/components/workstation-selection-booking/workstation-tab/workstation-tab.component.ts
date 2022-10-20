@@ -24,11 +24,9 @@ export class WorkstationTabComponent implements OnChanges {
   @Output() canceledOnTabChange = new EventEmitter<boolean>();
   @Output() seats = new EventEmitter<void>();
 
-  selectedValue: number = 0;
-  defaultSelectionText: string = 'Select a workstation';
+  selectedValue = 0;
+  defaultSelectionText = 'Select a workstation';
   workstationName?: string;
-
-  constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.canceledOnTab) {
@@ -53,7 +51,7 @@ export class WorkstationTabComponent implements OnChanges {
 
   getWorkstationName(id: number): string | undefined {
     return this.workstationList?.find(
-      (workstation) => workstation.workstation_id == id
+      workstation => workstation.workstation_id == id
     )?.workstation_name;
   }
 

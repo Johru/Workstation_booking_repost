@@ -56,7 +56,7 @@ export class WorkstationService implements IWorkstationService {
     seatsNumber: number
   ): Promise<{ status: string; message: string[] }> {
     try {
-      const value = await workstationSchema.validateAsync(workstation);
+      await workstationSchema.validateAsync(workstation);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);
@@ -84,7 +84,7 @@ export class WorkstationService implements IWorkstationService {
     workstation: WorkstationEntity
   ): Promise<{ status: string; message: string[] }> {
     try {
-      const value = await workstationSchema.validateAsync(workstation);
+      await workstationSchema.validateAsync(workstation);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Router, Response, Request } from 'express';
 import { UserService } from '../service';
 import logger from '../logger';

@@ -18,21 +18,21 @@ export class UsersComponent implements OnInit {
   }
 
   pushUsersToLocalArray() {
-    this.getUserList().subscribe((data) => {
-      for (let item of data) {
-        this.userList?.push(item);
+    this.getUserList().subscribe(data => {
+      for (const item of Object.entries(data)) {
+        this.userList?.push(item[1]);
       }
     });
   }
 
-  getUserList(): Observable<any> {
+  getUserList(): Observable<User> {
     return this.userService.getUsers();
   }
 
   onDeleteUser(id: number) {
-    this.userService.deleteUser(id).subscribe((data) => {
+    this.userService.deleteUser(id).subscribe(data => {
       if (data.success == 'yes') {
-        this.userList = this.userList?.filter((user) => user.user_id != id);
+        this.userList = this.userList?.filter(user => user.user_id != id);
         return;
       }
       alert('Something is wrong, deletion of user was unsuccessfull.');
