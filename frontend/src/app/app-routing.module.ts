@@ -11,6 +11,7 @@ import { RoleGuardService } from './services/role-guard.service';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 
 const routes: Routes = [
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent },
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'building/:id/floors', component: UserFloorsAccordionComponent },
     ],
   },
   {

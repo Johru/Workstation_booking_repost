@@ -48,6 +48,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { DashboardCitiesComponent } from './components/dashboard/dashboard-cities/dashboard-cities.component';
 import { DashboardCardComponent } from './components/dashboard/dashboard-cities/dashboard-card/dashboard-card.component';
+import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { DashboardCardComponent } from './components/dashboard/dashboard-cities/
     BuildingEditComponent,
     DashboardCitiesComponent,
     DashboardCardComponent,
+    UserFloorsAccordionComponent,
   ],
   imports: [
     BrowserModule,
