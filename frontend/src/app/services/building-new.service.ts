@@ -7,7 +7,7 @@ import { BUILDINGS } from '../help-files/building-data';
 @Injectable({
   providedIn: 'root',
 })
-export class BuildingService {
+export class BuildingNewService {
   constructor(private http: HttpClient) {}
 
   addBuilding(newBuilding: Building): any {

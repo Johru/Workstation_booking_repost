@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BUILDINGLIST, CITYLIST } from '../helpingHand/building-data';
+import { Observable } from 'rxjs';
+import { Building } from '../helpingHand/buidling';
 
 @Injectable({
   providedIn: 'root',
@@ -8,11 +9,11 @@ import { BUILDINGLIST, CITYLIST } from '../helpingHand/building-data';
 export class BuildingService {
   constructor(private http: HttpClient) {}
 
-  getCityList() {
-    return CITYLIST;
+  getCityList(): Observable<Building> {
+    return this.http.get<Building>(`http://localhost:8080/api/building/cities`);
   }
 
-  getBuildings() {
-    return BUILDINGLIST;
+  getBuildings(): Observable<Building> {
+    return this.http.get<Building>(`http://localhost:8080/api/building`);
   }
 }

@@ -2,7 +2,7 @@ import { Building } from './buildind-interface';
 
 export const BUILDINGS: Building[] = [
   {
-    building_id: 1,
+    building_id: 10,
     building_name: 'Alfa',
     building_address: 'Uhli 123',
     building_country: 'CZE',

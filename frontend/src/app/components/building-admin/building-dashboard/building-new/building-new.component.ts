@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
-import { BuildingService } from 'src/app/services/building-new.service';
+import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({
   selector: 'building-new',
@@ -23,7 +23,7 @@ export class BuildingNewComponent {
   });
 
   constructor(
-    private buildingService: BuildingService,
+    private buildingService: BuildingNewService,
     private router: Router
   ) {}
 

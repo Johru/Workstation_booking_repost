@@ -6,24 +6,24 @@
   <div class="card">
     <div class="info">
       <div>
-        <p>{{ building.name }}</p>
-        <p>{{ building.address }}</p>
+        <p>{{ building.building_name }}</p>
+        <p>{{ building.building_address }}</p>
       </div>
       <div *ngIf="mouseOverCard" [@fadeInOut]>
-        <p>{{ building.levels }} floors</p>
-        <p>{{ building.seats }} seats</p>
+        Floors: {{ building.floorCount }} <br />
+        Seats: {{ building.seatCount }}
       </div>
     </div>
     <div *ngIf="mouseOverCard" [@fadeInOut] class="action">
       <button
         mat-raised-button
-        routerLink="/admin/edit/building/{{ building.id }}/floor"
+        routerLink="/admin/edit/building/{{ building.building_id }}/floor"
       >
         Manage Floors and Workstations
       </button>
       <button
         mat-raised-button
-        routerLink="/admin/edit/building/{{ building.id }}"
+        routerLink="/admin/edit/building/{{ building.building_id }}"
       >
         Edit Building
       </button>
