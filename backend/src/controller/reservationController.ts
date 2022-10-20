@@ -3,13 +3,15 @@ import logger from '../logger';
 import { ReservationService } from '../service';
 import { EmailService } from 'service/e-mail/emailService';
 import { ReservationEntity } from 'db';
+import { GoogleCalendarService } from 'service/google-calendar/google-calendarService';
 
 export class ReservationController {
   private readonly _router: Router = Router();
 
   constructor(
     private reservationService: ReservationService,
-    private emailService: EmailService
+    private emailService: EmailService,
+    private googleCalendarService: GoogleCalendarService
   ) {
     this._router.get(
       '/reservation/:id/date',
@@ -45,6 +47,7 @@ export class ReservationController {
         const response = await this.reservationService.addNewReservation(body);
         if (response.data) {
           this.emailService.sendSuccessfullReservation(response.data[0]);
+          this.googleCalendarService.insertEvent(response.data[0]);
         }
         res.json(response);
       }

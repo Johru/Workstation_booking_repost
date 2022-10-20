@@ -1144,3 +1144,18 @@
 2022-10-13 08:56:30:5630 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-13 09:00:19:019 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-13 09:00:57:057 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 21:53:39:5339 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 21:53:42:5342 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-20 21:53:43:5343 [31merror[39m: [31mError Occured on creating Google Calendar Event. Error: Start and end times must either both be date or both be dateTime.[39m
+2022-10-20 21:53:43:5343 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
+2022-10-20 21:54:29:5429 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 21:54:33:5433 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-20 21:54:33:5433 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
+2022-10-20 21:54:37:5437 [32minfo[39m: [32mOK[39m
+2022-10-20 22:01:51:151 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-20 22:01:51:151 [32minfo[39m: [32mOK[39m
+2022-10-20 22:01:52:152 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
+2022-10-20 22:05:37:537 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 22:05:51:551 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
+2022-10-20 22:05:52:552 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
+2022-10-20 22:05:52:552 [32minfo[39m: [32mOK[39m

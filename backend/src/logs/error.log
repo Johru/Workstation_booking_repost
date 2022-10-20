@@ -69,3 +69,4 @@
 2022-10-11 10:30:59:3059 [31merror[39m: [31m"floor_id" is required[39m
 2022-10-13 08:23:23:2323 [31merror[39m: [31m"building_id" is required[39m
 2022-10-13 08:28:39:2839 [31merror[39m: [31m"building_id" is required[39m
+2022-10-20 21:53:43:5343 [31merror[39m: [31mError Occured on creating Google Calendar Event. Error: Start and end times must either both be date or both be dateTime.[39m

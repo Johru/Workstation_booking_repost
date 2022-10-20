@@ -71,7 +71,7 @@ export class ReservationRepository implements IReservationRepository {
           id: addition.reservation_id,
         })
         .leftJoin('reservation.user', 'user')
-        .addSelect(['user.user_name', 'user.user_email'])
+        .addSelect(['user.user_name', 'user.user_email', 'user.user_id'])
         .leftJoin('reservation.seat', 'seat')
         .addSelect(['seat.seat_id'])
         .leftJoin('seat.workstation', 'workstation')
@@ -83,6 +83,7 @@ export class ReservationRepository implements IReservationRepository {
           'building.building_name',
           'building.building_address',
           'building.building_city',
+          'building.building_country',
         ])
         .getMany();
       return logErrorAndReturnYesOrNo(addition, 'Reservation', output);
