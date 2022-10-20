@@ -51,7 +51,7 @@ export class FloorService {
       );
       const index = FLOORS[i].workstation.indexOf(ws!);
       if (index != -1) {
-        let status = FLOORS[i].workstation[index].workstation_isActive;
+        const status = FLOORS[i].workstation[index].workstation_isActive;
         if (status) {
           FLOORS[i].workstation[index].workstation_isActive = false;
         } else {
@@ -63,8 +63,8 @@ export class FloorService {
 
   editWorkstation(workstation: EditWorkstationInterface) {
     const id = workstation.workstation_id;
-    for (let i: number = 0; i < FLOORS.length; i++) {
-      let ws = FLOORS[i].workstation.find(
+    for (let i = 0; i < FLOORS.length; i++) {
+      const ws = FLOORS[i].workstation.find(
         workstation => workstation.workstation_id == id
       );
       const index = FLOORS[i].workstation.indexOf(ws!);

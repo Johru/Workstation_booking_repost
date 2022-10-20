@@ -31,9 +31,9 @@ export class UserTabComponent implements OnInit {
   blockTitle?: string;
   promoteTitle?: string;
   displayUserInfo = false;
-  iconClass: string = 'material-icons';
+  iconClass = 'material-icons';
   displayUserReservations = false;
-  isCollapsed: string = 'close';
+  isCollapsed = 'close';
   confirmDelete = false;
   isBlocked?: boolean;
   isAdmin?: boolean;
