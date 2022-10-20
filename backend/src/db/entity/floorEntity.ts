@@ -14,9 +14,6 @@ export class FloorEntity {
   floor_id?: number;
 
   @Column()
-  building_id?: number;
-
-  @Column()
   floor_name?: string;
   // @Column()
   // floor_capacity?: number;
