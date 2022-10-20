@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Building } from 'src/app/help-files/building-interface';
+import { Building } from '../../../helpingHand/buidling';
 import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({

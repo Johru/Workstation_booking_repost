@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Reservation } from 'src/app/helpingHand/reservation';
 import { Seat } from 'src/app/helpingHand/seat';
 import { WorkstationService } from 'src/app/services/workstation.service';
@@ -11,6 +10,7 @@ import { WorkstationService } from 'src/app/services/workstation.service';
 })
 export class WorkstationFormComponent implements OnInit {
   @Input() seatListFromParent?: Seat[];
+  @Input() selectedWorkstation?: number;
   @Output() reservation = new EventEmitter<Reservation>();
   @Output() dateToRequestSeats = new EventEmitter<any>();
 
@@ -22,7 +22,7 @@ export class WorkstationFormComponent implements OnInit {
   disabledButton: boolean = true;
   minDate: Date = new Date();
 
-  constructor() {}
+  constructor(private workstationService: WorkstationService) {}
 
   ngOnInit(): void {}
 
@@ -42,11 +42,19 @@ export class WorkstationFormComponent implements OnInit {
     )
       .toISOString()
       .split('T')[0];
-    this.reservation!.emit({
-      seat_id: this.selectedSeat!,
-      reservation_date: date,
-      user_id: 1, //change when user will be set up
-    });
+    this.workstationService
+      .locateWorkstation(this.selectedWorkstation!)
+      .subscribe((data) => {
+        this.reservation!.emit({
+          seat_id: this.selectedSeat!,
+          reservation_date: date,
+          user_id: data[0], //change when user will be set up
+          workstation_name: data[1][0].workstation_name,
+          floor_name: data[1][0].floor.floor_name,
+          building_address: data[1][0].floor.building.building_address,
+          building_name: data[1][0].floor.building.building_name,
+        });
+      });
   }
 
   onSelect(selected: number) {

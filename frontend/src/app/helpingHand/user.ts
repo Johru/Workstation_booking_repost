@@ -5,5 +5,4 @@ export interface User {
   user_isadmin: boolean;
   user_isblocked: boolean;
   reservationCount: number;
-  id: number;
 }

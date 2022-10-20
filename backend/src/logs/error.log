@@ -84,3 +84,6 @@
 2022-10-14 17:11:10:1110 [31merror[39m: [31m"user_id" is required[39m
 2022-10-13 13:17:36:1736 [31merror[39m: [31m"building_id" is required[39m
 2022-10-13 13:17:55:1755 [31merror[39m: [31m"floor_id" is not allowed[39m
+2022-10-20 12:06:42:642 [31merror[39m: [31m"value" must be of type object[39m
+2022-10-20 12:19:10:1910 [31merror[39m: [31m"value" must be a number[39m
+2022-10-20 12:21:01:211 [31merror[39m: [31m"value" must be a number[39m

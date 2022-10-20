@@ -3,12 +3,10 @@ import {
   ChangeDetectorRef,
   Component,
   OnInit,
-  Input,
 } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Reservation } from 'src/app/helpingHand/reservation';
 import { Seat } from 'src/app/helpingHand/seat';
-import { ReservationService } from 'src/app/services/reservation.service';
 import { WorkstationService } from 'src/app/services/workstation.service';
 
 @Component({
@@ -30,10 +28,10 @@ export class WorkstationSelectionBookingComponent
   seatListToSend: Seat[] = [];
   floorId = 5;
   closed: boolean = true;
+  success?: boolean;
 
   constructor(
     private wsService: WorkstationService,
-    private resService: ReservationService,
     private cd: ChangeDetectorRef
   ) {}
 
@@ -122,10 +120,6 @@ export class WorkstationSelectionBookingComponent
 
   onBookClick(e: Reservation) {
     this.reservationData = e;
-    this.reservationData.place = 'Inherit';
-    this.reservationData.building = 'Inherit';
-    this.reservationData.floor = 'Inherit';
-    this.reservationData.workstation = this.workstationIdAndName?.name;
     this.showReservation();
   }
 
@@ -142,9 +136,10 @@ export class WorkstationSelectionBookingComponent
     }
   }
 
-  onConfirm(e: boolean) {
+  onConfirm(e: boolean[]) {
     if (e) {
-      this.confirmed = e;
+      this.confirmed = e[0];
+      this.success = e[1];
     }
     this.closed = false;
   }

@@ -7,6 +7,7 @@
 <div *ngIf="showForm()">
   <workstation-form
     [seatListFromParent]="seatListToSend"
+    [selectedWorkstation]="selectedWorkstation"
     (reservation)="onBookClick($event)"
     (dateToRequestSeats)="receiveDateToPushSeats($event)"
   ></workstation-form>
@@ -19,11 +20,12 @@
       (cancelEmitter)="onCancel($event)"
       (confirmEmitter)="onConfirm($event)"
       [resData]="reservationData"
+      [selectedWorkstation]="selectedWorkstation"
     ></confirm-modal>
     <div class="confirmed" *ngIf="!closed">
-      <h2>Reservation Confirmed</h2>
-      <!--ADD ROUTE TO SOME COMPONENT-->
-      <!-- <a routerLink="/">Go Home</a> -->
+      <h2 *ngIf="success">Reservation Confirmed</h2>
+      <h2 *ngIf="!success">Reservation could not be completed</h2>
+
       <button (click)="closeModal()">Close</button>
     </div>
   </div>

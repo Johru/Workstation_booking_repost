@@ -1,17 +1,37 @@
 import { Router, Response, Request } from 'express';
 import { IWorkstationService } from '../service';
 import { WorkstationEntity } from '../db';
+import { AuthMiddleware } from '../middlewares';
 import logger from '../logger';
 
 export class WorkstationController {
   private readonly _router: Router = Router();
 
-  constructor(private workstationService: IWorkstationService) {
+  constructor(
+    private workstationService: IWorkstationService,
+    private authMiddleware: AuthMiddleware
+  ) {
+    const verifyJWT = this.authMiddleware.verifyJWT;
+
     this._router.get(
       '/workstation/showall',
       async (req: Request, res: Response) => {
         logger.info('/workstation/showall endpoint accessed');
         res.status(200).json(await this.workstationService.getWorkstations());
+      }
+    );
+
+    this._router.get(
+      '/workstation/:id/locate',
+      verifyJWT,
+      async (req: Request, res: Response) => {
+        logger.info('decoded user_id: ' + req.id);
+        const workstationId: number = req.params.id as unknown as number;
+        logger.info('/workstation/locate endpoint accessed');
+        const result = await this.workstationService.findLocationByWorkstation(
+          workstationId
+        );
+        res.status(200).json([req.id, result]);
       }
     );
 

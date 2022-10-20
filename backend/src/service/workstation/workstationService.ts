@@ -4,8 +4,13 @@ import { workstationSchema } from './workstationschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 import { Success } from '../../repository';
+import { validateInput } from '../validateInput';
+import { idSchema } from '../idSchema';
 
 export interface IWorkstationService {
+  findLocationByWorkstation(
+    workstationId: number
+  ): Promise<WorkstationEntity[]>;
   getWorkstations(): Promise<WorkstationEntity[]>;
   showWorkstationOnFloor(floorId: number): Promise<WorkstationEntity[]>;
   createWorkstation(
@@ -30,6 +35,16 @@ export class WorkstationService implements IWorkstationService {
 
   async getWorkstations(): Promise<WorkstationEntity[]> {
     return await this.workstationRepository.findAllWorkstations();
+  }
+
+  async findLocationByWorkstation(
+    workstationId: number
+  ): Promise<WorkstationEntity[]> {
+    const validation = await validateInput(idSchema, workstationId);
+    if (!validation) return [];
+    return await this.workstationRepository.findLocationByWorkstation(
+      workstationId
+    );
   }
 
   async showWorkstationOnFloor(floorId: number): Promise<WorkstationEntity[]> {

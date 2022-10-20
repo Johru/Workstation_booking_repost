@@ -4,6 +4,9 @@ import { SeatEntity } from '../db';
 import { Success } from './success';
 
 export interface IWorkstationRepository {
+  findLocationByWorkstation(
+    workstationId: number
+  ): Promise<WorkstationEntity[]>;
   findAllWorkstations(): Promise<WorkstationEntity[]>;
   findAllWorkstationsOnFloor(floorId: number): Promise<WorkstationEntity[]>;
   saveWorkstation(
@@ -21,6 +24,21 @@ export interface IWorkstationRepository {
 }
 
 export class WorkstationRepository implements IWorkstationRepository {
+  findLocationByWorkstation(
+    workstationId: number
+  ): Promise<WorkstationEntity[]> {
+    return appDataSource
+      .getRepository(WorkstationEntity)
+      .createQueryBuilder('workstation')
+      .select('workstation.workstation_name')
+      .leftJoin('workstation.floor', 'floor')
+      .addSelect(['floor.floor_name'])
+      .leftJoin('floor.building', 'building')
+      .addSelect(['building.building_name', 'building.building_address'])
+      .where('workstation.workstation_id = :id', { id: workstationId })
+      .getMany();
+  }
+
   async findAllWorkstations(): Promise<WorkstationEntity[]> {
     return appDataSource.getRepository(WorkstationEntity).find({
       relations: {

@@ -7,7 +7,6 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs';
 import { AdminReservation } from 'src/app/helpingHand/admin-reservation';
 import { User } from 'src/app/helpingHand/user';
 import { UserService } from 'src/app/services/user.service';
