@@ -5,7 +5,7 @@ export interface Login {
 }
 
 export interface TokenResponse {
-  user_id: number;
+  id: number;
   isAdmin: boolean;
   token: string;
   error?: string;

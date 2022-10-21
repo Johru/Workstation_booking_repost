@@ -5,12 +5,14 @@ import { Login, TokenResponse } from '../helpingHand/login';
 import { Register } from '../helpingHand/register';
 import { environment } from 'src/environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   logIn = new Subject();
+  admin = new Subject();
   jwtHelper = new JwtHelperService();
 
   constructor(private http: HttpClient) {}
@@ -40,6 +42,10 @@ export class AuthService {
     return this.logIn.asObservable();
   }
 
+  isAdminSubscription() {
+    return this.logIn.asObservable();
+  }
+
   isAuthenticated(): boolean {
     const token: string | null | undefined = localStorage.getItem('token');
     if (token == null) {
@@ -53,5 +59,17 @@ export class AuthService {
 
   getToken() {
     return localStorage.getItem('token');
+  }
+
+  isAdmin(): boolean {
+    const expectedRole = true;
+    const token = localStorage.getItem('token');
+    if (this.isAuthenticated()) {
+      const decodedToken = decode(token!) as TokenResponse;
+      if (decodedToken.isAdmin == expectedRole) {
+        return true;
+      }
+    }
+    return false;
   }
 }

@@ -7,6 +7,14 @@
     </div>
     <div *ngIf="loggedIn" class="logged-in-wrapper">
       <div class="links">
+        <button
+          *ngIf="isAdmin"
+          class="link-button"
+          mat-button
+          routerLink="/admin"
+        >
+          Admin
+        </button>
         <button class="link-button" mat-button routerLink="/my-bookings">
           My bookings
         </button>
