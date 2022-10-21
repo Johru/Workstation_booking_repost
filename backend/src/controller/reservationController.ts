@@ -47,7 +47,7 @@ export class ReservationController {
         const response = await this.reservationService.addNewReservation(body);
         if (response.data) {
           this.emailService.sendSuccessfullReservation(response.data[0]);
-          this.googleCalendarService.insertEvent(response.data[0]);
+          //this.googleCalendarService.insertEvent(response.data[0]); not working bcs of paid google cloud platform
         }
         res.json(response);
       }

@@ -15,8 +15,6 @@ const AUTH = new google.auth.JWT(
   SCOPES
 );
 
-const TIMEOFFSET = '+02:00';
-
 export class GoogleCalendarService {
   constructor() {}
 
@@ -53,10 +51,12 @@ export class GoogleCalendarService {
       },
       sendUpdates: 'all',
       sendNotifications: true,
-      attendees: {
-        email: `${reservation.user?.user_email}`,
-        displayName: `${reservation.user?.user_name}`,
-      },
+      attendees: [
+        {
+          email: `${reservation.user?.user_email}`,
+          displayName: `${reservation.user?.user_name}`,
+        },
+      ],
       reminders: {
         useDefault: false,
         overrides: [
@@ -72,8 +72,8 @@ export class GoogleCalendarService {
         calendarId: CALENDAR_ID!,
         requestBody: event,
       })
-      .then(event => logger.info(`${event.statusText}`))
-      .catch(err =>
+      .then((event: any) => logger.info(`${event.statusText}`))
+      .catch((err: any) =>
         logger.error(`Error Occured on creating Google Calendar Event. ${err}`)
       );
   }
@@ -118,7 +118,7 @@ export class GoogleCalendarService {
           logger.error('Error in deleting event');
           return;
         }
-      } catch (err) {
+      } catch (err: any) {
         logger.error(`Error at deleteEvent ===> ${err}`);
         return;
       }
