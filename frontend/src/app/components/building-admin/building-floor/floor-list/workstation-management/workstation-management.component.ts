@@ -20,7 +20,10 @@ export class WorkstationManagementComponent implements OnChanges {
   @Output() showEditEmitter = new EventEmitter<WorkstationInterface>();
   @Input() workstationList?: WorkstationInterface[];
   @Output() disableEmitter = new EventEmitter<WorkstationInterface>();
+  @Output() activateEmitter = new EventEmitter<WorkstationInterface>();
   @Output() deleteEmitter = new EventEmitter<WorkstationInterface>();
+  @Output() confirmEmitter = new EventEmitter<boolean>();
+  @Input() status?: string;
   selectedWorkstation?: WorkstationInterface;
   defaultText: string = 'Select a workstation';
   selected: string = '0';
@@ -44,23 +47,57 @@ export class WorkstationManagementComponent implements OnChanges {
     return 'yes';
   }
 
+  activateSelected(): string {
+    this.activateEmitter.emit(this.selectedWorkstation);
+    return 'yes';
+  }
+
   deleteSelected(): string {
     this.deleteEmitter.emit(this.selectedWorkstation);
     return 'yes';
   }
 
-  isSelectedDisabled(): boolean {
-    if (this.selectedWorkstation?.workstation_isActive) return false;
-    return true;
+  isSelectedActive(): boolean {
+    if (this.selectedWorkstation?.workstation_isactive) return true;
+    return false;
   }
 
   successFullConfirm(confirm: boolean): void {
     if (confirm) {
-      this.selected = '0';
+      switch (this.status) {
+        case 'Delete':
+          this.deleteConfirm();
+          break;
+        case 'Activate':
+          this.switchStatusConfirm();
+          break;
+        case 'Disable':
+          this.switchStatusConfirm();
+          break;
+      }
+      this.successfullConfirmOnManagement = false;
+      this.successfullConfirmOnManagementChange.emit(
+        this.successfullConfirmOnManagement
+      );
+      this.confirmEmitter.emit(true);
     }
-    this.successfullConfirmOnManagement = false;
-    this.successfullConfirmOnManagementChange.emit(
-      this.successfullConfirmOnManagement
+  }
+
+  deleteConfirm() {
+    let index = this.findWorkstationIndex(this.workstationList!);
+    this.workstationList?.splice(index, 1);
+    this.selected = '0';
+  }
+
+  switchStatusConfirm() {
+    let index = this.findWorkstationIndex(this.workstationList!);
+    this.workstationList![index].workstation_isactive =
+      !this.workstationList![index].workstation_isactive;
+  }
+
+  findWorkstationIndex(workstation: WorkstationInterface[]): number {
+    return workstation.indexOf(
+      workstation.find(ws => ws.workstation_id == parseInt(this.selected))!
     );
   }
 
