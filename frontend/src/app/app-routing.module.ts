@@ -10,16 +10,26 @@ import { WorkstationSelectionBookingComponent } from './components/workstation-s
 import { RoleGuardService } from './services/role-guard.service';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
+import { MyBookingsComponent } from './components/my-bookings/my-bookings.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
   { path: 'admin', redirectTo: '/admin/buildings', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: '',
     component: NavpanelComponent,
     children: [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent },
+      {
+        path: 'my-bookings',
+        component: MyBookingsComponent,
+        canActivate: [AuthGuardService],
+      },
+      { path: 'dashboard', component: DashboardComponent },
     ],
   },
   {
@@ -35,8 +45,7 @@ const routes: Routes = [
         component: BuildingFloorComponent,
       },
     ],
-    //roleguard commented in developer mode, but working
-    //canActivate: [RoleGuardService],
+    canActivate: [RoleGuardService],
   },
 ];
 

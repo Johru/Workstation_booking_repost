@@ -14,19 +14,12 @@ export class FloorEntity {
   floor_id?: number;
 
   @Column()
-  building_id?: number;
-
-  @Column()
   floor_name?: string;
-  // @Column()
-  // floor_capacity?: number;
-  // @Column()
-  // floor_plan?: string;
 
   @ManyToOne(() => BuildingEntity, building => building.floor, {
     onDelete: 'CASCADE',
   })
-  @JoinColumn({ name: 'building_id' })
+  @JoinColumn({ name: 'building_thingy' })
   building?: BuildingEntity;
 
   @OneToMany(() => WorkstationEntity, workstation => workstation.floor)

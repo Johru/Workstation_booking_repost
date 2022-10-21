@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Router, Response, Request } from 'express';
-import { idSchema, UserService } from '../service';
+import { UserService } from '../service';
 import logger from '../logger';
 import { UserEntity } from 'db';
 import { AuthMiddleware } from '../middlewares';

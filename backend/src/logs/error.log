@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 2022-10-04 11:19:06:196 [31merror[39m: [31m"workstation_id" is not allowed[39m
 2022-10-04 11:20:30:2030 [31merror[39m: [31m"value" must be of type object[39m
 2022-10-04 11:24:51:2451 [31merror[39m: [31m"workstation_id" is not allowed[39m
@@ -7,7 +6,6 @@
 2022-10-07 08:48:31:4831 [31merror[39m: [31m"floor_id" is required[39m
 2022-10-07 08:48:59:4859 [31merror[39m: [31m"workstation_name" is required[39m
 2022-10-07 08:50:29:5029 [31merror[39m: [31m"workstation_isactive" is not allowed[39m
-=======
 2022-09-30 16:45:18:4518 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
 2022-10-03 17:32:58:3258 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
 2022-10-03 17:37:09:379 [31merror[39m: [31m"building_zip" length must be at least 2 characters long[39m
@@ -65,8 +63,44 @@
 2022-10-04 13:59:03:593 [31merror[39m: [31m"value" must be a number[39m
 2022-10-04 13:59:09:599 [31merror[39m: [31m"value" must be a number[39m
 2022-10-04 13:59:25:5925 [31merror[39m: [31mUser with this id doesn't exist[39m
->>>>>>> 69d59899f0239c76fec98217be33d5b40676c092
 2022-10-11 10:30:59:3059 [31merror[39m: [31m"floor_id" is required[39m
 2022-10-13 08:23:23:2323 [31merror[39m: [31m"building_id" is required[39m
 2022-10-13 08:28:39:2839 [31merror[39m: [31m"building_id" is required[39m
-2022-10-20 21:53:43:5343 [31merror[39m: [31mError Occured on creating Google Calendar Event. Error: Start and end times must either both be date or both be dateTime.[39m
+<<<<<<< HEAD
+2022-10-20 12:00:20:020 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:00:57:057 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:01:52:152 [31merror[39m: [31m"building_name" is required[39m
+2022-10-20 12:01:58:158 [31merror[39m: [31m"building_name" is required[39m
+2022-10-20 12:02:14:214 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:13:41:1341 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:14:01:141 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:14:44:1444 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:15:19:1519 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:16:28:1628 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:26:08:268 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:26:24:2624 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:27:20:2720 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:27:34:2734 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:27:54:2754 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 13:11:20:1120 [31merror[39m: [31m"building_image" must be a string[39m
+=======
+2022-10-12 13:50:08:508 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:50:38:5038 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:50:42:5042 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:50:44:5044 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:54:17:5417 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:54:21:5421 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:54:24:5424 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:54:25:5425 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-12 13:54:29:5429 [31merror[39m: [31mUser with this id doesn't exist[39m
+2022-10-13 13:28:56:2856 [31merror[39m: [31m"value" is required[39m
+2022-10-13 19:45:51:4551 [31merror[39m: [31m"value" must be in ISO 8601 date format[39m
+2022-10-14 17:04:22:422 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:05:15:515 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:06:27:627 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:09:27:927 [31merror[39m: [31m"user_id" is required[39m
+2022-10-14 17:11:10:1110 [31merror[39m: [31m"user_id" is required[39m
+2022-10-13 13:17:36:1736 [31merror[39m: [31m"building_id" is required[39m
+2022-10-13 13:17:55:1755 [31merror[39m: [31m"floor_id" is not allowed[39m
+>>>>>>> development
+2022-10-21 14:49:22:4922 [31merror[39m: [31mUnauthorized[39m

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 2022-10-04 11:19:06:196 [31merror[39m: [31m"workstation_id" is not allowed[39m
 2022-10-04 11:20:30:2030 [31merror[39m: [31m"value" must be of type object[39m
 2022-10-04 11:24:51:2451 [31merror[39m: [31m"workstation_id" is not allowed[39m
@@ -7,7 +6,6 @@
 2022-10-07 08:48:31:4831 [31merror[39m: [31m"floor_id" is required[39m
 2022-10-07 08:48:59:4859 [31merror[39m: [31m"workstation_name" is required[39m
 2022-10-07 08:50:29:5029 [31merror[39m: [31m"workstation_isactive" is not allowed[39m
-=======
 2022-09-27 16:30:15:3015 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
 2022-09-27 16:43:54:4354 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
 2022-09-27 16:44:22:4422 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
@@ -1058,7 +1056,1646 @@
 2022-10-06 16:13:57:1357 [32minfo[39m: [32mlogin endpoint accessed[39m
 2022-10-06 16:40:10:4010 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-06 16:40:12:4012 [32minfo[39m: [32mlogin-email endpoint accessed[39m
->>>>>>> 69d59899f0239c76fec98217be33d5b40676c092
+2022-10-07 17:37:03:373 [32minfo[39m: [32mError during Data Source initialization: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client[39m
+2022-10-07 17:38:27:3827 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 13:49:20:4920 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 14:48:12:4812 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 14:49:53:4953 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 15:35:10:3510 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 16:23:02:232 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 16:23:13:2313 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 16:23:13:2313 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 16:24:20:2420 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 16:24:20:2420 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 16:26:35:2635 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 16:26:35:2635 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 16:26:57:2657 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 16:26:57:2657 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 16:27:40:2740 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 16:27:40:2740 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:13:48:1348 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:13:48:1348 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:14:35:1435 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:14:35:1435 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:15:58:1558 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:15:58:1558 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:16:50:1650 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:16:50:1650 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:17:06:176 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:17:06:176 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:17:45:1745 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:17:45:1745 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:17:49:1749 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:17:49:1749 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:23:39:2339 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:23:39:2339 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:24:01:241 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:24:01:241 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:25:20:2520 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:25:20:2520 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:25:53:2553 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:25:53:2553 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:27:38:2738 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:27:38:2738 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:32:29:3229 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:32:29:3229 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 17:32:51:3251 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 17:32:51:3251 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:11:17:1117 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:11:17:1117 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:25:02:252 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:25:02:252 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:27:26:2726 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:27:26:2726 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:28:53:2853 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:28:53:2853 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:29:14:2914 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:29:14:2914 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:29:59:2959 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:29:59:2959 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:32:20:3220 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:32:20:3220 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:37:13:3713 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:37:13:3713 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:39:09:399 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:39:09:399 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 18:42:25:4225 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 18:42:25:4225 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:07:25:725 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:07:31:731 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:07:31:731 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { BuildingEntity_building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { BuildingEntity_building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { BuildingEntity_building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:07:52:752 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-10 19:07:53:753 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:07:53:753 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:08:59:859 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:08:59:859 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:09:18:918 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:09:18:918 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:10:27:1027 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:10:27:1027 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:12:38:1238 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:12:38:1238 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:14:50:1450 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:14:50:1450 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:15:41:1541 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:15:41:1541 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:16:11:1611 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:16:11:1611 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:18:54:1854 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:18:54:1854 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:21:04:214 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:21:04:214 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:22:08:228 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:22:08:228 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:23:04:234 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:23:04:234 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:34:04:344 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:34:04:344 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:37:21:3721 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:37:21:3721 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:41:59:4159 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:41:59:4159 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:43:47:4347 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:43:47:4347 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:45:32:4532 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:45:32:4532 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:45:40:4540 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:45:40:4540 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:45:55:4555 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:45:55:4555 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:46:23:4623 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:46:23:4623 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:46:50:4650 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:46:50:4650 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:47:17:4717 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:47:17:4717 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:48:22:4822 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:48:22:4822 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:49:20:4920 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:49:20:4920 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:49:39:4939 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:49:39:4939 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:50:18:5018 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:50:18:5018 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:51:37:5137 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:51:37:5137 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:52:58:5258 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:52:58:5258 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:53:50:5350 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:53:50:5350 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 19:53:58:5358 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 19:53:58:5358 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:00:50:050 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:00:50:050 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:02:01:21 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:02:01:21 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:02:46:246 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:02:46:246 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:02:46:246 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:02:46:246 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:03:21:321 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:03:21:321 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:03:21:321 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-10 20:03:50:350 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:03:50:350 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:03:50:350 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-10 20:05:22:522 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:05:22:522 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:05:22:522 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-10 20:05:45:545 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-10 20:05:45:545 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-10 20:05:45:545 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:27:34:2734 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:27:34:2734 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:27:34:2734 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:29:55:2955 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:29:55:2955 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:29:55:2955 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:30:22:3022 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:30:22:3022 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:30:22:3022 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:31:15:3115 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:31:15:3115 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:31:15:3115 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:31:29:3129 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:31:29:3129 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:31:29:3129 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:32:36:3236 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:32:36:3236 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:32:37:3237 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:32:39:3239 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:32:39:3239 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:32:39:3239 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:33:13:3313 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:33:13:3313 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:33:14:3314 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:33:45:3345 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:33:45:3345 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:33:45:3345 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:34:01:341 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:34:01:341 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:34:01:341 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:34:45:3445 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:34:45:3445 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:34:45:3445 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:42:44:4244 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:42:44:4244 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:42:44:4244 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:50:55:5055 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:50:55:5055 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:51:42:5142 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:51:42:5142 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:51:54:5154 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:51:54:5154 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:51:54:5154 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:54:05:545 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:54:05:545 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:54:05:545 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:55:24:5524 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:55:24:5524 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:55:24:5524 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:58:17:5817 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:58:17:5817 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:58:17:5817 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 10:58:52:5852 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 10:58:52:5852 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 10:58:52:5852 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:02:07:27 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:02:07:27 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:02:07:27 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:02:20:220 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:02:20:220 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:02:20:220 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:06:24:624 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:06:24:624 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:06:24:624 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:11:26:1126 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:11:26:1126 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:11:26:1126 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:11:47:1147 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:11:47:1147 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:11:47:1147 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:32:21:3221 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:32:21:3221 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:32:21:3221 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:32:33:3233 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:32:33:3233 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:32:33:3233 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:32:36:3236 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:32:36:3236 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:32:36:3236 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:35:10:3510 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:35:10:3510 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:35:10:3510 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:35:40:3540 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:35:58:3558 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:36:08:368 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:36:08:368 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:36:08:368 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:36:08:368 [32minfo[39m: [32m<ref *2> ServerResponse {[39m
+[32m  _events: [Object: null prototype] { finish: [Function: bound resOnFinish] },[39m
+[32m  _eventsCount: 1,[39m
+[32m  _maxListeners: undefined,[39m
+[32m  outputData: [],[39m
+[32m  outputSize: 0,[39m
+[32m  writable: true,[39m
+[32m  destroyed: false,[39m
+[32m  _last: false,[39m
+[32m  chunkedEncoding: false,[39m
+[32m  shouldKeepAlive: true,[39m
+[32m  maxRequestsOnConnectionReached: false,[39m
+[32m  _defaultKeepAlive: true,[39m
+[32m  useChunkedEncodingByDefault: true,[39m
+[32m  sendDate: true,[39m
+[32m  _removedConnection: false,[39m
+[32m  _removedContLen: false,[39m
+[32m  _removedTE: false,[39m
+[32m  _contentLength: 2745,[39m
+[32m  _hasBody: true,[39m
+[32m  _trailer: '',[39m
+[32m  finished: true,[39m
+[32m  _headerSent: true,[39m
+[32m  _closed: false,[39m
+[32m  socket: <ref *1> Socket {[39m
+[32m    connecting: false,[39m
+[32m    _hadError: false,[39m
+[32m    _parent: null,[39m
+[32m    _host: null,[39m
+[32m    _readableState: ReadableState {[39m
+[32m      objectMode: false,[39m
+[32m      highWaterMark: 16384,[39m
+[32m      buffer: BufferList { head: null, tail: null, length: 0 },[39m
+[32m      length: 0,[39m
+[32m      pipes: [],[39m
+[32m      flowing: true,[39m
+[32m      ended: false,[39m
+[32m      endEmitted: false,[39m
+[32m      reading: true,[39m
+[32m      constructed: true,[39m
+[32m      sync: false,[39m
+[32m      needReadable: true,[39m
+[32m      emittedReadable: false,[39m
+[32m      readableListening: false,[39m
+[32m      resumeScheduled: false,[39m
+[32m      errorEmitted: false,[39m
+[32m      emitClose: false,[39m
+[32m      autoDestroy: true,[39m
+[32m      destroyed: false,[39m
+[32m      errored: null,[39m
+[32m      closed: false,[39m
+[32m      closeEmitted: false,[39m
+[32m      defaultEncoding: 'utf8',[39m
+[32m      awaitDrainWriters: null,[39m
+[32m      multiAwaitDrain: false,[39m
+[32m      readingMore: false,[39m
+[32m      dataEmitted: false,[39m
+[32m      decoder: null,[39m
+[32m      encoding: null,[39m
+[32m      [Symbol(kPaused)]: false[39m
+[32m    },[39m
+[32m    _events: [Object: null prototype] {[39m
+[32m      end: [Array],[39m
+[32m      timeout: [Function: socketOnTimeout],[39m
+[32m      data: [Function: bound socketOnData],[39m
+[32m      error: [Function: socketOnError],[39m
+[32m      close: [Array],[39m
+[32m      drain: [Function: bound socketOnDrain],[39m
+[32m      resume: [Function: onSocketResume],[39m
+[32m      pause: [Function: onSocketPause][39m
+[32m    },[39m
+[32m    _eventsCount: 8,[39m
+[32m    _maxListeners: undefined,[39m
+[32m    _writableState: WritableState {[39m
+[32m      objectMode: false,[39m
+[32m      highWaterMark: 16384,[39m
+[32m      finalCalled: false,[39m
+[32m      needDrain: false,[39m
+[32m      ending: false,[39m
+[32m      ended: false,[39m
+[32m      finished: false,[39m
+[32m      destroyed: false,[39m
+[32m      decodeStrings: false,[39m
+[32m      defaultEncoding: 'utf8',[39m
+[32m      length: 0,[39m
+[32m      writing: false,[39m
+[32m      corked: 0,[39m
+[32m      sync: false,[39m
+[32m      bufferProcessing: false,[39m
+[32m      onwrite: [Function: bound onwrite],[39m
+[32m      writecb: null,[39m
+[32m      writelen: 0,[39m
+[32m      afterWriteTickInfo: [Object],[39m
+[32m      buffered: [],[39m
+[32m      bufferedIndex: 0,[39m
+[32m      allBuffers: true,[39m
+[32m      allNoop: true,[39m
+[32m      pendingcb: 1,[39m
+[32m      constructed: true,[39m
+[32m      prefinished: false,[39m
+[32m      errorEmitted: false,[39m
+[32m      emitClose: false,[39m
+[32m      autoDestroy: true,[39m
+[32m      errored: null,[39m
+[32m      closed: false,[39m
+[32m      closeEmitted: false,[39m
+[32m      [Symbol(kOnFinished)]: [][39m
+[32m    },[39m
+[32m    allowHalfOpen: true,[39m
+[32m    _sockname: null,[39m
+[32m    _pendingData: null,[39m
+[32m    _pendingEncoding: '',[39m
+[32m    server: Server {[39m
+[32m      maxHeaderSize: undefined,[39m
+[32m      insecureHTTPParser: undefined,[39m
+[32m      _events: [Object: null prototype],[39m
+[32m      _eventsCount: 2,[39m
+[32m      _maxListeners: undefined,[39m
+[32m      _connections: 2,[39m
+[32m      _handle: [TCP],[39m
+[32m      _usingWorkers: false,[39m
+[32m      _workers: [],[39m
+[32m      _unref: false,[39m
+[32m      allowHalfOpen: true,[39m
+[32m      pauseOnConnect: false,[39m
+[32m      noDelay: false,[39m
+[32m      keepAlive: false,[39m
+[32m      keepAliveInitialDelay: 0,[39m
+[32m      httpAllowHalfOpen: false,[39m
+[32m      timeout: 0,[39m
+[32m      keepAliveTimeout: 5000,[39m
+[32m      maxHeadersCount: null,[39m
+[32m      maxRequestsPerSocket: 0,[39m
+[32m      headersTimeout: 60000,[39m
+[32m      requestTimeout: 0,[39m
+[32m      _connectionKey: '6::::8080',[39m
+[32m      [Symbol(IncomingMessage)]: [Function: IncomingMessage],[39m
+[32m      [Symbol(ServerResponse)]: [Function: ServerResponse],[39m
+[32m      [Symbol(kCapture)]: false,[39m
+[32m      [Symbol(async_id_symbol)]: 17,[39m
+[32m      [Symbol(kUniqueHeaders)]: null[39m
+[32m    },[39m
+[32m    _server: Server {[39m
+[32m      maxHeaderSize: undefined,[39m
+[32m      insecureHTTPParser: undefined,[39m
+[32m      _events: [Object: null prototype],[39m
+[32m      _eventsCount: 2,[39m
+[32m      _maxListeners: undefined,[39m
+[32m      _connections: 2,[39m
+[32m      _handle: [TCP],[39m
+[32m      _usingWorkers: false,[39m
+[32m      _workers: [],[39m
+[32m      _unref: false,[39m
+[32m      allowHalfOpen: true,[39m
+[32m      pauseOnConnect: false,[39m
+[32m      noDelay: false,[39m
+[32m      keepAlive: false,[39m
+[32m      keepAliveInitialDelay: 0,[39m
+[32m      httpAllowHalfOpen: false,[39m
+[32m      timeout: 0,[39m
+[32m      keepAliveTimeout: 5000,[39m
+[32m      maxHeadersCount: null,[39m
+[32m      maxRequestsPerSocket: 0,[39m
+[32m      headersTimeout: 60000,[39m
+[32m      requestTimeout: 0,[39m
+[32m      _connectionKey: '6::::8080',[39m
+[32m      [Symbol(IncomingMessage)]: [Function: IncomingMessage],[39m
+[32m      [Symbol(ServerResponse)]: [Function: ServerResponse],[39m
+[32m      [Symbol(kCapture)]: false,[39m
+[32m      [Symbol(async_id_symbol)]: 17,[39m
+[32m      [Symbol(kUniqueHeaders)]: null[39m
+[32m    },[39m
+[32m    parser: HTTPParser {[39m
+[32m      '0': [Function: bound setRequestTimeout],[39m
+[32m      '1': [Function: parserOnHeaders],[39m
+[32m      '2': [Function: parserOnHeadersComplete],[39m
+[32m      '3': [Function: parserOnBody],[39m
+[32m      '4': [Function: parserOnMessageComplete],[39m
+[32m      '5': [Function: bound onParserExecute],[39m
+[32m      '6': [Function: bound onParserTimeout],[39m
+[32m      _headers: [],[39m
+[32m      _url: '',[39m
+[32m      socket: [Circular *1],[39m
+[32m      incoming: [IncomingMessage],[39m
+[32m      outgoing: null,[39m
+[32m      maxHeaderPairs: 2000,[39m
+[32m      _consumed: true,[39m
+[32m      onIncoming: [Function: bound parserOnIncoming],[39m
+[32m      [Symbol(resource_symbol)]: [HTTPServerAsyncResource][39m
+[32m    },[39m
+[32m    on: [Function: socketListenerWrap],[39m
+[32m    addListener: [Function: socketListenerWrap],[39m
+[32m    prependListener: [Function: socketListenerWrap],[39m
+[32m    setEncoding: [Function: socketSetEncoding],[39m
+[32m    _paused: false,[39m
+[32m    _httpMessage: [Circular *2],[39m
+[32m    [Symbol(async_id_symbol)]: 89,[39m
+[32m    [Symbol(kHandle)]: TCP {[39m
+[32m      reading: true,[39m
+[32m      onconnection: null,[39m
+[32m      _consumed: true,[39m
+[32m      [Symbol(owner_symbol)]: [Circular *1][39m
+[32m    },[39m
+[32m    [Symbol(lastWriteQueueSize)]: 0,[39m
+[32m    [Symbol(timeout)]: null,[39m
+[32m    [Symbol(kBuffer)]: null,[39m
+[32m    [Symbol(kBufferCb)]: null,[39m
+[32m    [Symbol(kBufferGen)]: null,[39m
+[32m    [Symbol(kCapture)]: false,[39m
+[32m    [Symbol(kSetNoDelay)]: false,[39m
+[32m    [Symbol(kSetKeepAlive)]: false,[39m
+[32m    [Symbol(kSetKeepAliveInitialDelay)]: 0,[39m
+[32m    [Symbol(kBytesRead)]: 0,[39m
+[32m    [Symbol(kBytesWritten)]: 0,[39m
+[32m    [Symbol(RequestTimeout)]: undefined[39m
+[32m  },[39m
+[32m  _header: 'HTTP/1.1 200 OK\r\n' +[39m
+[32m    'X-Powered-By: Express\r\n' +[39m
+[32m    'Access-Control-Allow-Origin: http://localhost:4200\r\n' +[39m
+[32m    'Vary: Origin\r\n' +[39m
+[32m    'Content-Type: application/json; charset=utf-8\r\n' +[39m
+[32m    'Content-Length: 2745\r\n' +[39m
+[32m    'ETag: W/"ab9-8JHifXFP60yQ+GQPwA79zYfWwVU"\r\n' +[39m
+[32m    'Date: Tue, 11 Oct 2022 09:36:08 GMT\r\n' +[39m
+[32m    'Connection: keep-alive\r\n' +[39m
+[32m    'Keep-Alive: timeout=5\r\n' +[39m
+[32m    '\r\n',[39m
+[32m  _keepAliveTimeout: 5000,[39m
+[32m  _onPendingData: [Function: bound updateOutgoingData],[39m
+[32m  req: IncomingMessage {[39m
+[32m    _readableState: ReadableState {[39m
+[32m      objectMode: false,[39m
+[32m      highWaterMark: 16384,[39m
+[32m      buffer: BufferList { head: null, tail: null, length: 0 },[39m
+[32m      length: 0,[39m
+[32m      pipes: [],[39m
+[32m      flowing: null,[39m
+[32m      ended: true,[39m
+[32m      endEmitted: false,[39m
+[32m      reading: false,[39m
+[32m      constructed: true,[39m
+[32m      sync: true,[39m
+[32m      needReadable: false,[39m
+[32m      emittedReadable: false,[39m
+[32m      readableListening: false,[39m
+[32m      resumeScheduled: false,[39m
+[32m      errorEmitted: false,[39m
+[32m      emitClose: true,[39m
+[32m      autoDestroy: true,[39m
+[32m      destroyed: false,[39m
+[32m      errored: null,[39m
+[32m      closed: false,[39m
+[32m      closeEmitted: false,[39m
+[32m      defaultEncoding: 'utf8',[39m
+[32m      awaitDrainWriters: null,[39m
+[32m      multiAwaitDrain: false,[39m
+[32m      readingMore: true,[39m
+[32m      dataEmitted: false,[39m
+[32m      decoder: null,[39m
+[32m      encoding: null,[39m
+[32m      [Symbol(kPaused)]: null[39m
+[32m    },[39m
+[32m    _events: [Object: null prototype] { end: [Function: clearRequestTimeout] },[39m
+[32m    _eventsCount: 1,[39m
+[32m    _maxListeners: undefined,[39m
+[32m    socket: <ref *1> Socket {[39m
+[32m      connecting: false,[39m
+[32m      _hadError: false,[39m
+[32m      _parent: null,[39m
+[32m      _host: null,[39m
+[32m      _readableState: [ReadableState],[39m
+[32m      _events: [Object: null prototype],[39m
+[32m      _eventsCount: 8,[39m
+[32m      _maxListeners: undefined,[39m
+[32m      _writableState: [WritableState],[39m
+[32m      allowHalfOpen: true,[39m
+[32m      _sockname: null,[39m
+[32m      _pendingData: null,[39m
+[32m      _pendingEncoding: '',[39m
+[32m      server: [Server],[39m
+[32m      _server: [Server],[39m
+[32m      parser: [HTTPParser],[39m
+[32m      on: [Function: socketListenerWrap],[39m
+[32m      addListener: [Function: socketListenerWrap],[39m
+[32m      prependListener: [Function: socketListenerWrap],[39m
+[32m      setEncoding: [Function: socketSetEncoding],[39m
+[32m      _paused: false,[39m
+[32m      _httpMessage: [Circular *2],[39m
+[32m      [Symbol(async_id_symbol)]: 89,[39m
+[32m      [Symbol(kHandle)]: [TCP],[39m
+[32m      [Symbol(lastWriteQueueSize)]: 0,[39m
+[32m      [Symbol(timeout)]: null,[39m
+[32m      [Symbol(kBuffer)]: null,[39m
+[32m      [Symbol(kBufferCb)]: null,[39m
+[32m      [Symbol(kBufferGen)]: null,[39m
+[32m      [Symbol(kCapture)]: false,[39m
+[32m      [Symbol(kSetNoDelay)]: false,[39m
+[32m      [Symbol(kSetKeepAlive)]: false,[39m
+[32m      [Symbol(kSetKeepAliveInitialDelay)]: 0,[39m
+[32m      [Symbol(kBytesRead)]: 0,[39m
+[32m      [Symbol(kBytesWritten)]: 0,[39m
+[32m      [Symbol(RequestTimeout)]: undefined[39m
+[32m    },[39m
+[32m    httpVersionMajor: 1,[39m
+[32m    httpVersionMinor: 1,[39m
+[32m    httpVersion: '1.1',[39m
+[32m    complete: true,[39m
+[32m    rawHeaders: [[39m
+[32m      'Host',[39m
+[32m      'localhost:8080',[39m
+[32m      'Connection',[39m
+[32m      'keep-alive',[39m
+[32m      'Pragma',[39m
+[32m      'no-cache',[39m
+[32m      'Cache-Control',[39m
+[32m      'no-cache',[39m
+[32m      'Accept',[39m
+[32m      'application/json, text/plain, */*',[39m
+[32m      'User-Agent',[39m
+[32m      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',[39m
+[32m      'Sec-GPC',[39m
+[32m      '1',[39m
+[32m      'Accept-Language',[39m
+[32m      'en-GB,en',[39m
+[32m      'Origin',[39m
+[32m      'http://localhost:4200',[39m
+[32m      'Sec-Fetch-Site',[39m
+[32m      'same-site',[39m
+[32m      'Sec-Fetch-Mode',[39m
+[32m      'cors',[39m
+[32m      'Sec-Fetch-Dest',[39m
+[32m      'empty',[39m
+[32m      'Referer',[39m
+[32m      'http://localhost:4200/',[39m
+[32m      'Accept-Encoding',[39m
+[32m      'gzip, deflate, br'[39m
+[32m    ],[39m
+[32m    rawTrailers: [],[39m
+[32m    aborted: false,[39m
+[32m    upgrade: false,[39m
+[32m    url: '/api/building',[39m
+[32m    method: 'GET',[39m
+[32m    statusCode: null,[39m
+[32m    statusMessage: null,[39m
+[32m    client: <ref *1> Socket {[39m
+[32m      connecting: false,[39m
+[32m      _hadError: false,[39m
+[32m      _parent: null,[39m
+[32m      _host: null,[39m
+[32m      _readableState: [ReadableState],[39m
+[32m      _events: [Object: null prototype],[39m
+[32m      _eventsCount: 8,[39m
+[32m      _maxListeners: undefined,[39m
+[32m      _writableState: [WritableState],[39m
+[32m      allowHalfOpen: true,[39m
+[32m      _sockname: null,[39m
+[32m      _pendingData: null,[39m
+[32m      _pendingEncoding: '',[39m
+[32m      server: [Server],[39m
+[32m      _server: [Server],[39m
+[32m      parser: [HTTPParser],[39m
+[32m      on: [Function: socketListenerWrap],[39m
+[32m      addListener: [Function: socketListenerWrap],[39m
+[32m      prependListener: [Function: socketListenerWrap],[39m
+[32m      setEncoding: [Function: socketSetEncoding],[39m
+[32m      _paused: false,[39m
+[32m      _httpMessage: [Circular *2],[39m
+[32m      [Symbol(async_id_symbol)]: 89,[39m
+[32m      [Symbol(kHandle)]: [TCP],[39m
+[32m      [Symbol(lastWriteQueueSize)]: 0,[39m
+[32m      [Symbol(timeout)]: null,[39m
+[32m      [Symbol(kBuffer)]: null,[39m
+[32m      [Symbol(kBufferCb)]: null,[39m
+[32m      [Symbol(kBufferGen)]: null,[39m
+[32m      [Symbol(kCapture)]: false,[39m
+[32m      [Symbol(kSetNoDelay)]: false,[39m
+[32m      [Symbol(kSetKeepAlive)]: false,[39m
+[32m      [Symbol(kSetKeepAliveInitialDelay)]: 0,[39m
+[32m      [Symbol(kBytesRead)]: 0,[39m
+[32m      [Symbol(kBytesWritten)]: 0,[39m
+[32m      [Symbol(RequestTimeout)]: undefined[39m
+[32m    },[39m
+[32m    _consuming: false,[39m
+[32m    _dumped: false,[39m
+[32m    next: [Function: next],[39m
+[32m    baseUrl: '/api',[39m
+[32m    originalUrl: '/api/building',[39m
+[32m    _parsedUrl: Url {[39m
+[32m      protocol: null,[39m
+[32m      slashes: null,[39m
+[32m      auth: null,[39m
+[32m      host: null,[39m
+[32m      port: null,[39m
+[32m      hostname: null,[39m
+[32m      hash: null,[39m
+[32m      search: null,[39m
+[32m      query: null,[39m
+[32m      pathname: '/building',[39m
+[32m      path: '/building',[39m
+[32m      href: '/building',[39m
+[32m      _raw: '/building'[39m
+[32m    },[39m
+[32m    params: {},[39m
+[32m    query: {},[39m
+[32m    res: [Circular *2],[39m
+[32m    _startTime: 2022-10-11T09:36:08.110Z,[39m
+[32m    _routeWhitelists: { req: [], res: [], body: [] },[39m
+[32m    _routeBlacklists: { body: [] },[39m
+[32m    body: {},[39m
+[32m    route: Route { path: '/building', stack: [Array], methods: [Object] },[39m
+[32m    [Symbol(kCapture)]: false,[39m
+[32m    [Symbol(kHeaders)]: {[39m
+[32m      host: 'localhost:8080',[39m
+[32m      connection: 'keep-alive',[39m
+[32m      pragma: 'no-cache',[39m
+[32m      'cache-control': 'no-cache',[39m
+[32m      accept: 'application/json, text/plain, */*',[39m
+[32m      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',[39m
+[32m      'sec-gpc': '1',[39m
+[32m      'accept-language': 'en-GB,en',[39m
+[32m      origin: 'http://localhost:4200',[39m
+[32m      'sec-fetch-site': 'same-site',[39m
+[32m      'sec-fetch-mode': 'cors',[39m
+[32m      'sec-fetch-dest': 'empty',[39m
+[32m      referer: 'http://localhost:4200/',[39m
+[32m      'accept-encoding': 'gzip, deflate, br'[39m
+[32m    },[39m
+[32m    [Symbol(kHeadersCount)]: 28,[39m
+[32m    [Symbol(kTrailers)]: null,[39m
+[32m    [Symbol(kTrailersCount)]: 0,[39m
+[32m    [Symbol(RequestTimeout)]: undefined[39m
+[32m  },[39m
+[32m  _sent100: false,[39m
+[32m  _expect_continue: false,[39m
+[32m  locals: [Object: null prototype] {},[39m
+[32m  end: [Function: end],[39m
+[32m  responseTime: 38,[39m
+[32m  statusMessage: 'OK',[39m
+[32m  statusCode: 200,[39m
+[32m  [Symbol(kCapture)]: false,[39m
+[32m  [Symbol(kNeedDrain)]: false,[39m
+[32m  [Symbol(corked)]: 0,[39m
+[32m  [Symbol(kOutHeaders)]: [Object: null prototype] {[39m
+[32m    'x-powered-by': [ 'X-Powered-By', 'Express' ],[39m
+[32m    'access-control-allow-origin': [ 'Access-Control-Allow-Origin', 'http://localhost:4200' ],[39m
+[32m    vary: [ 'Vary', 'Origin' ],[39m
+[32m    'content-type': [ 'Content-Type', 'application/json; charset=utf-8' ],[39m
+[32m    'content-length': [ 'Content-Length', '2745' ],[39m
+[32m    etag: [ 'ETag', 'W/"ab9-8JHifXFP60yQ+GQPwA79zYfWwVU"' ][39m
+[32m  },[39m
+[32m  [Symbol(kUniqueHeaders)]: null[39m
+[32m}[39m
+2022-10-11 11:38:24:3824 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:38:43:3843 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:38:43:3843 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:38:43:3843 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:39:59:3959 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:40:02:402 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:40:02:402 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:40:02:402 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:41:18:4118 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:41:26:4126 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:41:26:4126 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:41:26:4126 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:41:26:4126 [32minfo[39m: [32m[{"building_id":8,"building_name":"Hightower","building_address":"Atacliff 99","building_zip":"g45","building_city":"Oldtown","building_country":"Westeros","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":9,"building_name":"Barrow Hall","building_address":"Rockbottom 99","building_zip":"changet","building_city":"Barrowton","building_country":"Westeros","building_image":"../frontend/src/fake/path.png","floorCount":2},{"building_id":11,"building_name":"123","building_address":"Rockbottom 99","building_zip":"123","building_city":"Barrowton","building_country":"Westeros","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":12,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Barrowton","building_country":"Westeros","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":14,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"PRague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":15,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Prague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":16,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Prague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":17,"building_name":"Barrow Hall","building_address":"Rockbottom 99","building_zip":"changet","building_city":"Barrowton","building_country":"Westeros","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":18,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Prague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":19,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Prague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":21,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Prague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":22,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Prague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0},{"building_id":23,"building_name":"123","building_address":"kkk 99","building_zip":"123","building_city":"Prague","building_country":"mmm","building_image":"../frontend/src/fake/path.png","floorCount":0}][39m
+2022-10-11 11:42:50:4250 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:42:51:4251 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:42:51:4251 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:42:51:4251 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:44:10:4410 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:44:12:4412 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:44:12:4412 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:44:12:4412 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:44:54:4454 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:44:57:4457 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:44:57:4457 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:44:57:4457 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:46:24:4624 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:46:27:4627 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:46:27:4627 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:46:27:4627 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:47:15:4715 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:47:19:4719 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:47:19:4719 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:47:19:4719 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:56:28:5628 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 11:56:41:5641 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:56:41:5641 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:56:41:5641 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:56:57:5657 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:56:57:5657 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:56:57:5657 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:59:28:5928 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:59:28:5928 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:59:28:5928 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:59:36:5936 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:59:36:5936 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:59:36:5936 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 11:59:52:5952 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 11:59:52:5952 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 11:59:52:5952 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:20:37:2037 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:20:41:2041 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 12:20:41:2041 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:20:41:2041 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:29:05:295 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:29:10:2910 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 12:29:10:2910 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:29:10:2910 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:29:55:2955 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 12:29:55:2955 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:29:55:2955 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:30:52:3052 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:30:57:3057 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 12:30:57:3057 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:30:57:3057 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:45:31:4531 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:45:35:4535 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 12:45:35:4535 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:45:35:4535 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:46:03:463 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:46:06:466 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 12:46:06:466 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:46:06:466 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:47:30:4730 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:47:31:4731 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 12:47:31:4731 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:47:31:4731 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 12:50:27:5027 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:50:28:5028 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:50:46:5046 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:50:47:5047 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:52:08:528 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:52:10:5210 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:53:20:5320 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:53:21:5321 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:56:18:5618 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:56:22:5622 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:56:43:5643 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:56:44:5644 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:58:03:583 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:58:04:584 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:59:03:593 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:59:11:5911 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 12:59:46:5946 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 12:59:46:5946 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:00:22:022 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:00:23:023 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:00:42:042 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:00:43:043 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:02:49:249 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:02:50:250 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:03:13:313 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:03:15:315 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:23:23:2323 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:23:24:2324 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:24:27:2427 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:24:30:2430 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:25:32:2532 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:25:35:2535 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:26:01:261 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:26:03:263 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:28:01:281 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:28:02:282 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:31:37:3137 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:31:42:3142 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:31:57:3157 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:31:59:3159 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:33:04:334 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:33:06:336 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:33:34:3334 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:33:35:3335 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:33:55:3355 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:33:57:3357 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:34:23:3423 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:34:25:3425 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:34:46:3446 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:34:50:3450 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:36:42:3642 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-11 13:36:43:3643 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:37:46:3746 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:37:46:3746 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:37:46:3746 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:39:46:3946 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:39:46:3946 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:39:46:3946 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:41:13:4113 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:41:13:4113 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:41:13:4113 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:43:33:4333 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:43:33:4333 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:43:33:4333 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:44:12:4412 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:44:12:4412 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:44:12:4412 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:45:28:4528 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:45:28:4528 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:45:28:4528 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:49:16:4916 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:49:16:4916 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:49:16:4916 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:50:32:5032 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:50:32:5032 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:50:32:5032 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:51:08:518 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:51:08:518 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:51:08:518 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:51:18:5118 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:51:18:5118 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:51:18:5118 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:51:54:5154 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:51:54:5154 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:51:54:5154 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:52:04:524 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:52:04:524 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:52:04:524 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:54:08:548 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:54:08:548 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:54:08:548 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:54:59:5459 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:54:59:5459 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:54:59:5459 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:55:53:5553 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:55:53:5553 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:55:53:5553 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:56:03:563 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:56:03:563 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:56:03:563 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:56:12:5612 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:56:12:5612 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:56:12:5612 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:56:37:5637 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:56:37:5637 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:56:37:5637 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:59:33:5933 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:59:33:5933 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:59:33:5933 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 13:59:53:5953 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 13:59:53:5953 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 13:59:53:5953 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:00:04:04 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:00:04:04 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:00:04:04 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:01:10:110 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:01:10:110 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:01:10:110 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:01:26:126 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:01:26:126 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:01:26:126 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:01:43:143 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:01:43:143 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:01:43:143 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:02:58:258 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:02:58:258 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:02:58:258 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:03:18:318 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:03:18:318 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:03:18:318 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:04:19:419 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:04:19:419 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:04:19:419 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:05:05:55 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:05:05:55 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:05:05:55 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:05:50:550 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:05:50:550 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:05:50:550 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:06:16:616 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:06:16:616 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:06:16:616 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:06:40:640 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:06:40:640 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:06:40:640 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:07:00:70 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:07:00:70 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:07:00:70 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:11:06:116 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:11:06:116 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:11:06:116 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:12:05:125 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:12:05:125 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:12:05:125 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:18:13:1813 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:18:13:1813 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:18:13:1813 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:18:17:1817 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:18:17:1817 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:18:17:1817 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:18:21:1821 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:18:21:1821 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:18:21:1821 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:18:40:1840 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:18:40:1840 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:18:40:1840 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:28:07:287 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:28:07:287 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:28:07:287 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:38:25:3825 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:38:25:3825 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:38:25:3825 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:38:35:3835 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:38:35:3835 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:38:35:3835 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:38:49:3849 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:38:49:3849 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:38:49:3849 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:39:05:395 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:39:05:395 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:39:05:395 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:39:16:3916 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:39:16:3916 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:39:16:3916 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:43:10:4310 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:43:10:4310 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:43:10:4310 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:46:57:4657 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:46:57:4657 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:46:57:4657 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:47:00:470 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:01:471 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:03:473 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:05:475 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:06:476 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:07:477 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:29:4729 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:36:4736 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:47:52:4752 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:49:39:4939 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:02:522 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:52:02:522 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:02:522 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:52:04:524 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:11:5211 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:12:5212 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:14:5214 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:15:5215 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:17:5217 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:18:5218 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:31:5231 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-11 14:52:31:5231 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:31:5231 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-11 14:52:39:5239 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:40:5240 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-11 14:52:43:5243 [32minfo[39m: [32m/building endpoint accessed[39m
 2022-10-11 10:08:35:835 [32minfo[39m: [32mError during Data Source initialization: Error: connect EHOSTUNREACH 192.168.1.16:3306[39m
 2022-10-11 10:19:43:1943 [32minfo[39m: [32mError during Data Source initialization: Error: connect ECONNREFUSED 172.21.141.107:3306[39m
 2022-10-11 10:20:36:2036 [32minfo[39m: [32mData source has been initialized.[39m
@@ -1144,18 +2781,1517 @@
 2022-10-13 08:56:30:5630 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-13 09:00:19:019 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-13 09:00:57:057 [32minfo[39m: [32mData source has been initialized.[39m
-2022-10-20 21:53:39:5339 [32minfo[39m: [32mData source has been initialized.[39m
-2022-10-20 21:53:42:5342 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
-2022-10-20 21:53:43:5343 [31merror[39m: [31mError Occured on creating Google Calendar Event. Error: Start and end times must either both be date or both be dateTime.[39m
-2022-10-20 21:53:43:5343 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
-2022-10-20 21:54:29:5429 [32minfo[39m: [32mData source has been initialized.[39m
-2022-10-20 21:54:33:5433 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
-2022-10-20 21:54:33:5433 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
-2022-10-20 21:54:37:5437 [32minfo[39m: [32mOK[39m
-2022-10-20 22:01:51:151 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
-2022-10-20 22:01:51:151 [32minfo[39m: [32mOK[39m
-2022-10-20 22:01:52:152 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
-2022-10-20 22:05:37:537 [32minfo[39m: [32mData source has been initialized.[39m
-2022-10-20 22:05:51:551 [32minfo[39m: [32m/reservation/new endpoint accessed[39m
-2022-10-20 22:05:52:552 [32minfo[39m: [32mConfirmed reservation email sent to tomasmax92@gmail.com.[39m
-2022-10-20 22:05:52:552 [32minfo[39m: [32mOK[39m
+<<<<<<< HEAD
+2022-10-18 09:37:47:3747 [32minfo[39m: [32mError during Data Source initialization: Error: Access denied for user ''@'localhost' (using password: NO)[39m
+2022-10-18 09:41:33:4133 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-19 12:26:23:2623 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-19 14:27:17:2717 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:36:28:3628 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:41:07:417 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:41:09:419 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:41:11:4111 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:41:18:4118 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:41:27:4127 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:42:04:424 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:42:05:425 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:42:08:428 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:42:18:4218 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:42:19:4219 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:42:23:4223 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:43:26:4326 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-19 14:44:39:4439 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:47:31:4731 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:47:47:4747 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:51:41:5141 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-19 14:52:08:528 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:52:45:5245 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-19 14:55:58:5558 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:55:59:5559 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 14:58:52:5852 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:00:23:023 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:00:26:026 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:00:27:027 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:02:42:242 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:03:33:333 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:04:44:444 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:06:14:614 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-19 15:07:17:717 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:09:25:925 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-19 15:09:27:927 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-19 15:09:28:928 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-19 15:10:16:1016 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:10:17:1017 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:10:31:1031 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:12:30:1230 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:12:41:1241 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:12:54:1254 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:13:36:1336 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:14:07:147 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:14:17:1417 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:14:19:1419 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:15:27:1527 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:16:16:1616 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:16:17:1617 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:16:18:1618 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:16:48:1648 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:16:50:1650 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:17:38:1738 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:18:11:1811 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:18:17:1817 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:18:18:1818 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:22:35:2235 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:23:31:2331 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:23:32:2332 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:24:21:2421 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:30:47:3047 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:31:26:3126 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:31:29:3129 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:37:3237 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:39:3239 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:40:3240 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:40:3240 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:40:3240 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:54:3254 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:56:3256 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:57:3257 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:32:58:3258 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:33:00:330 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:33:20:3320 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:33:22:3322 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:35:10:3510 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:35:16:3516 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:36:00:360 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:36:01:361 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:36:02:362 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:36:02:362 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:36:02:362 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:36:45:3645 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:09:379 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:13:3713 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:21:3721 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:36:3736 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:37:3737 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:47:3747 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:51:3751 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:37:55:3755 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:38:02:382 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:38:10:3810 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:38:50:3850 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:40:20:4020 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:40:50:4050 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:40:52:4052 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:44:42:4442 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:44:48:4448 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:45:06:456 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:47:08:478 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:47:16:4716 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:47:19:4719 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:47:26:4726 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:47:27:4727 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:48:02:482 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:48:06:486 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:48:24:4824 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:48:41:4841 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:48:45:4845 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:48:48:4848 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:59:47:5947 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 15:59:52:5952 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:00:12:012 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:00:27:027 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:00:27:027 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:01:18:118 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:02:16:216 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:02:39:239 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:03:32:332 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:07:50:750 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:07:54:754 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:08:50:850 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:17:00:170 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:17:11:1711 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:17:14:1714 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:17:30:1730 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:18:55:1855 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:18:57:1857 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:21:41:2141 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:21:42:2142 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:29:33:2933 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:29:34:2934 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:29:36:2936 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:30:02:302 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:30:44:3044 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:30:45:3045 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:30:59:3059 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:31:01:311 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:31:12:3112 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:31:55:3155 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:32:19:3219 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:33:43:3343 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:33:59:3359 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:38:45:3845 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:39:03:393 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:39:24:3924 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:39:33:3933 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:39:54:3954 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:07:407 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:10:4010 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:20:4020 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:31:4031 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:35:4035 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:39:4039 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:48:4048 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:40:58:4058 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:41:20:4120 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:41:30:4130 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:42:58:4258 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:43:01:431 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:44:33:4433 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:44:55:4455 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:47:01:471 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:47:12:4712 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:47:22:4722 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:47:35:4735 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:47:59:4759 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:49:19:4919 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:49:23:4923 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:49:31:4931 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:49:32:4932 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:51:03:513 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:51:12:5112 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:51:25:5125 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:51:44:5144 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:51:51:5151 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:52:08:528 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:52:26:5226 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:55:14:5514 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:55:50:5550 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:55:52:5552 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:57:00:570 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 16:57:16:5716 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:01:31:131 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:01:45:145 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:01:47:147 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:01:56:156 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:02:30:230 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:04:23:423 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:04:25:425 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:04:30:430 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:04:38:438 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:05:28:528 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:05:40:540 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:05:41:541 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:05:50:550 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:09:26:926 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:09:28:928 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:09:46:946 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:10:02:102 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:10:50:1050 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:10:53:1053 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:11:43:1143 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:13:27:1327 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:13:29:1329 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:13:34:1334 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:14:10:1410 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:14:11:1411 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:14:23:1423 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:14:31:1431 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:14:38:1438 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:14:50:1450 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:15:37:1537 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:15:39:1539 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:15:53:1553 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:17:11:1711 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:17:39:1739 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:17:41:1741 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:17:42:1742 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:18:38:1838 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:19:39:1939 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:20:36:2036 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:20:3620 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:20:3620 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:22:3622 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:22:3622 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:45:3645 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:46:3646 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:54:3654 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:36:54:3654 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:37:03:373 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:37:10:3710 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:37:20:3720 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:37:43:3743 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:37:44:3744 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:45:37:4537 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:49:20:4920 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-19 17:53:47:5347 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:53:52:5352 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:59:01:591 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:59:06:596 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 17:59:39:5939 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:00:11:011 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:00:15:015 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:00:27:027 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:00:30:030 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:00:37:037 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:00:46:046 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:01:17:117 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:01:53:153 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:03:34:334 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:04:11:411 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:06:38:638 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:06:41:641 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:06:49:649 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:07:01:71 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:07:10:710 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:08:10:810 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:08:20:820 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:08:55:855 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:08:57:857 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:09:18:918 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:09:27:927 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:10:36:1036 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:10:41:1041 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:10:43:1043 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:11:40:1140 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:11:42:1142 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:12:06:126 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:13:08:138 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:13:11:1311 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:15:11:1511 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:15:17:1517 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:17:31:1731 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:19:02:192 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:23:05:235 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:23:07:237 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:23:58:2358 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:24:34:2434 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:24:41:2441 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:24:48:2448 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:24:50:2450 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:25:07:257 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:25:37:2537 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:25:41:2541 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:25:50:2550 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:27:57:2757 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:28:05:285 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:28:11:2811 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:28:20:2820 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:28:56:2856 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:29:06:296 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:29:07:297 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:29:11:2911 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:29:29:2929 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:32:13:3213 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-19 18:32:15:3215 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:38:59:3859 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:39:04:394 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:43:39:4339 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:43:40:4340 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:43:45:4345 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:44:37:4437 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:44:43:4443 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:45:01:451 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:45:03:453 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:45:03:453 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:45:04:454 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:45:04:454 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:50:04:504 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:50:06:506 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:50:22:5022 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:50:23:5023 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:51:00:510 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:51:01:511 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:51:27:5127 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:51:29:5129 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:52:13:5213 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:52:14:5214 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:52:15:5215 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:52:15:5215 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:52:15:5215 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:52:27:5227 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:52:44:5244 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:53:12:5312 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:53:14:5314 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:53:18:5318 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:53:22:5322 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:53:29:5329 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:53:33:5333 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:53:39:5339 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:12:5412 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:16:5416 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:29:5429 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:30:5430 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:31:5431 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:41:5441 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:48:5448 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:49:5449 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:54:56:5456 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:55:03:553 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:55:51:5551 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:55:59:5559 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:56:50:5650 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:57:11:5711 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:57:48:5748 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:57:50:5750 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:57:58:5758 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:57:59:5759 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:57:59:5759 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:58:25:5825 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:58:39:5839 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:02:592 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:03:593 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:25:5925 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:27:5927 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:31:5931 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:40:5940 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:46:5946 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-19 18:59:52:5952 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:28:52:2852 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 09:29:32:2932 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:29:46:2946 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:30:29:3029 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:30:30:3030 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:30:53:3053 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:31:51:3151 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:32:23:3223 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:34:29:3429 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:34:48:3448 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:35:04:354 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:36:28:3628 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:36:33:3633 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:36:35:3635 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:36:49:3649 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:37:08:378 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:37:09:379 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:38:08:388 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:38:10:3810 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:43:24:4324 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:43:27:4327 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:43:31:4331 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:44:46:4446 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:44:59:4459 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:45:06:456 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:45:18:4518 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:46:18:4618 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:48:01:481 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:48:12:4812 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:48:14:4814 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:49:07:497 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:49:20:4920 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:49:32:4932 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:49:56:4956 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:49:57:4957 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:52:00:520 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:54:08:548 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:57:51:5751 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:59:50:5950 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 09:59:55:5955 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:00:29:029 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:00:53:053 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:00:57:057 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:01:28:128 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:01:30:130 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:01:34:134 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:01:42:142 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:01:49:149 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:01:59:159 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:02:23:223 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:02:36:236 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:02:51:251 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:10:59:1059 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:11:08:118 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:15:24:1524 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:15:28:1528 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:15:53:1553 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:15:55:1555 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:16:04:164 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:16:19:1619 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:16:35:1635 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:16:38:1638 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:16:55:1655 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:17:05:175 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:18:28:1828 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:18:31:1831 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:19:25:1925 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:20:19:2019 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:21:55:2155 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:22:05:225 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:22:35:2235 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:22:37:2237 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:24:25:2425 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:24:42:2442 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:24:53:2453 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:24:55:2455 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:25:21:2521 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:26:21:2621 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:26:47:2647 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:27:23:2723 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:27:25:2725 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:29:37:2937 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:29:45:2945 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:32:50:3250 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:33:33:3333 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:33:50:3350 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:39:39:3939 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:39:41:3941 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:40:11:4011 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:40:14:4014 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:40:33:4033 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:40:34:4034 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:40:40:4040 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:43:29:4329 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:43:57:4357 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:44:26:4426 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:44:31:4431 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:44:35:4435 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:44:39:4439 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:44:42:4442 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:45:21:4521 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:45:26:4526 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:47:43:4743 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:47:45:4745 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:48:17:4817 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:49:21:4921 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:49:23:4923 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:50:01:501 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:50:03:503 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:54:37:5437 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:54:40:5440 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 10:54:42:5442 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:00:38:038 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:00:45:045 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:01:38:138 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:01:40:140 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:02:21:221 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:02:37:237 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:05:06:56 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:05:12:512 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:10:21:1021 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:10:23:1023 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:10:31:1031 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:10:37:1037 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:10:58:1058 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:11:01:111 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:11:17:1117 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:11:35:1135 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:11:37:1137 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:11:41:1141 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:14:58:1458 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:32:31:3231 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 11:34:25:3425 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:34:27:3427 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:34:28:3428 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:34:31:3431 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:36:05:365 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 11:36:09:369 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:42:02:422 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:42:39:4239 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:42:44:4244 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:42:45:4245 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:42:49:4249 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:42:55:4255 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:43:52:4352 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:44:05:445 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:44:44:4444 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:44:48:4448 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:59:23:5923 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:59:26:5926 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 11:59:35:5935 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:00:11:011 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:00:13:013 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:00:20:020 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:00:20:020 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:00:23:023 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:00:39:039 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:00:52:052 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:00:57:057 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:00:57:057 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:01:01:11 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:01:09:19 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:01:12:112 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:01:46:146 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:01:51:151 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:01:52:152 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:01:52:152 [31merror[39m: [31m"building_name" is required[39m
+2022-10-20 12:01:55:155 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:01:58:158 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:01:58:158 [31merror[39m: [31m"building_name" is required[39m
+2022-10-20 12:02:11:211 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:02:14:214 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:02:14:214 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:02:16:216 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:03:03:33 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:03:42:342 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:03:53:353 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:04:53:453 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:04:55:455 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:05:02:52 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:05:11:511 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:06:25:625 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:06:30:630 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:06:31:631 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:07:49:749 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:07:52:752 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:07:57:757 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:07:59:759 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:12:04:124 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:13:36:1336 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:13:41:1341 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:13:41:1341 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:13:46:1346 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:13:57:1357 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:14:01:141 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:14:01:141 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:14:38:1438 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:14:44:1444 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:14:44:1444 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:15:19:1519 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:15:19:1519 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:15:24:1524 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:15:34:1534 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:16:25:1625 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:16:28:1628 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:16:28:1628 [31merror[39m: [31m"building_id" is not allowed[39m
+2022-10-20 12:16:45:1645 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:16:48:1648 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:16:50:1650 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:16:56:1656 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:16:58:1658 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:17:26:1726 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:17:29:1729 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:17:30:1730 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:26:08:268 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:26:08:268 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:26:13:2613 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:26:14:2614 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:26:24:2624 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:26:24:2624 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:27:20:2720 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:27:20:2720 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:27:34:2734 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:27:34:2734 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:27:54:2754 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:27:54:2754 [31merror[39m: [31m"building_country" is required[39m
+2022-10-20 12:29:28:2928 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:29:36:2936 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:29:52:2952 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:30:43:3043 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:31:02:312 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 12:34:20:3420 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:34:36:3436 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:34:49:3449 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:36:07:367 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:36:14:3614 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:36:16:3616 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:36:18:3618 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:39:30:3930 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:43:38:4338 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:43:44:4344 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:43:47:4347 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:43:50:4350 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:43:51:4351 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:44:01:441 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 12:44:34:4434 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:44:39:4439 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:44:46:4446 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 12:45:57:4557 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:04:32:432 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:04:38:438 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 13:04:51:451 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:04:53:453 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:04:59:459 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:05:32:532 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:08:09:89 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 13:08:15:815 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:08:57:857 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 13:09:34:934 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:10:59:1059 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 13:11:20:1120 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:11:20:1120 [31merror[39m: [31m"building_image" must be a string[39m
+2022-10-20 13:11:27:1127 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:12:12:1212 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 13:12:20:1220 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:12:59:1259 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 13:13:05:135 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:13:22:1322 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:23:01:231 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:23:31:2331 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:23:58:2358 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:24:20:2420 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:25:28:2528 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:25:59:2559 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 13:26:56:2656 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:27:51:2751 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:27:54:2754 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:27:56:2756 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:27:59:2759 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:28:01:281 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 13:28:09:289 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 13:28:14:2814 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+=======
+2022-10-13 11:52:49:5249 [32minfo[39m: [32mError during Data Source initialization: Error: Access denied for user ''@'localhost' (using password: NO)[39m
+2022-10-13 11:56:07:567 [32minfo[39m: [32mError during Data Source initialization: Error: Access denied for user ''@'localhost' (using password: NO)[39m
+2022-10-13 11:57:15:5715 [32minfo[39m: [32mError during Data Source initialization: Error: Access denied for user ''@'localhost' (using password: NO)[39m
+2022-10-13 12:02:31:231 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 12:02:54:254 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-13 12:02:54:254 [32minfo[39m: [32m[[39m
+[32m  { building_building_city: 'Ostrava' },[39m
+[32m  { building_building_city: 'Bratislava' },[39m
+[32m  { building_building_city: 'Brno' }[39m
+[32m][39m
+2022-10-13 12:36:32:3632 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 12:37:27:3727 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 13:17:36:1736 [31merror[39m: [31m"building_id" is required[39m
+2022-10-13 13:17:55:1755 [31merror[39m: [31m"floor_id" is not allowed[39m
+2022-10-13 15:12:50:1250 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 17:19:35:1935 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-13 17:21:46:2146 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-17 14:00:41:041 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-17 16:19:26:1926 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-17 16:20:31:2031 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-17 16:20:43:2043 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-18 10:40:42:4042 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-18 17:18:24:1824 [32minfo[39m: [32mData source has been initialized.[39m
+>>>>>>> development
+2022-10-20 14:45:34:4534 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-20 14:46:39:4639 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 14:46:42:4642 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-20 14:46:52:4652 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-20 14:46:52:4652 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-20 14:46:52:4652 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:46:54:4654 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:46:56:4656 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:46:57:4657 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:12:4712 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-20 14:47:15:4715 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-20 14:47:15:4715 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:15:4715 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-20 14:47:17:4717 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:20:4720 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 14:47:21:4721 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-20 14:47:21:4721 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-20 14:47:21:4721 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:29:4729 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-20 14:47:29:4729 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:29:4729 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-20 14:47:30:4730 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-20 14:47:31:4731 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-20 14:47:31:4731 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:31:4731 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-20 14:47:33:4733 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-20 14:47:33:4733 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:33:4733 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-20 14:47:36:4736 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-20 14:47:36:4736 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-20 14:47:36:4736 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 08:21:03:213 [32minfo[39m: [32mError during Data Source initialization: QueryFailedError: ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`booking`.`#sql-1310_1b`, CONSTRAINT `FK_1565850c51d1cc30e896101fa77` FOREIGN KEY (`building_id`) REFERENCES `building` (`building_id`) ON DELETE CASCADE)[39m
+2022-10-21 08:22:17:2217 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 08:29:35:2935 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 08:29:41:2941 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-21 08:32:16:3216 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 08:32:16:3216 [32minfo[39m: [32m[ RowDataPacket { building_city: '' } ][39m
+
+
+2022-10-21 08:50:36:5036 [32minfo[39m: [32mData source has been initialized.[39m
+
+2022-10-21 09:00:08:08 [32minfo[39m: [32mData source has been initialized.[39m
+
+2022-10-21 12:09:24:924 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 12:09:26:926 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 12:09:26:926 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-21 12:09:26:926 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:09:29:929 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 12:09:29:929 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-21 12:09:29:929 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:12:16:1216 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 12:12:20:1220 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 12:12:20:1220 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-21 12:12:20:1220 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:12:32:1232 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 12:12:32:1232 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-21 12:12:32:1232 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:12:35:1235 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:12:36:1236 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:12:48:1248 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 12:13:19:1319 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 12:13:41:1341 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 12:13:48:1348 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-21 12:13:58:1358 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 12:13:58:1358 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-21 12:13:58:1358 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:14:01:141 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:14:05:145 [32minfo[39m: [32m/reservation/user/:id endpoint accessed[39m
+2022-10-21 12:14:09:149 [32minfo[39m: [32m/reservation/delete endpoint accessed[39m
+2022-10-21 12:14:17:1417 [32minfo[39m: [32mapi/user/:id/demote endpoint accessed[39m
+2022-10-21 12:14:18:1418 [32minfo[39m: [32mapi/user/:id/promote endpoint accessed[39m
+2022-10-21 12:14:21:1421 [32minfo[39m: [32mapi/user/:id/block endpoint accessed[39m
+2022-10-21 12:14:21:1421 [32minfo[39m: [32mapi/user/:id/unblock endpoint accessed[39m
+2022-10-21 12:14:36:1436 [32minfo[39m: [32m/api/user/:id/delete endpoint accessed[39m
+2022-10-21 12:15:24:1524 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 12:15:24:1524 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-21 12:15:24:1524 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:16:05:165 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 12:16:05:165 [32minfo[39m: [32m[[39m
+[32m  RowDataPacket { building_city: 'Oldtown' },[39m
+[32m  RowDataPacket { building_city: 'Barrowton' },[39m
+[32m  RowDataPacket { building_city: 'PRague' }[39m
+[32m][39m
+2022-10-21 12:16:05:165 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 12:17:11:1711 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 12:17:50:1750 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 12:18:27:1827 [32minfo[39m: [32m/workstation/:workstationId/update endpoint accessed[39m
+2022-10-21 12:18:39:1839 [32minfo[39m: [32m/workstation/:workstationId/notactive endpoint accessed[39m
+2022-10-21 12:20:34:2034 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 12:20:48:2048 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 12:20:55:2055 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 12:21:05:215 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 12:21:13:2113 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:21:14:2114 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:21:15:2115 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:21:15:2115 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:21:15:2115 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:21:15:2115 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:41:41:4141 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:41:41:4141 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:41:41:4141 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:41:42:4142 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:41:42:4142 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:41:42:4142 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:44:52:4452 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:44:57:4457 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:44:57:4457 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:44:57:4457 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:44:57:4457 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:44:58:4458 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:44:58:4458 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:46:15:4615 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:46:16:4616 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:47:18:4718 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:47:27:4727 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:47:28:4728 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:47:28:4728 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:47:29:4729 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:47:29:4729 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:47:29:4729 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:47:56:4756 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:48:03:483 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:48:04:484 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:48:04:484 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:48:04:484 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:48:04:484 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:48:04:484 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:48:51:4851 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:49:04:494 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:49:05:495 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:49:05:495 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:49:05:495 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:49:05:495 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:50:15:5015 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:50:23:5023 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:50:23:5023 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:50:24:5024 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:50:24:5024 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:50:24:5024 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:50:46:5046 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:50:59:5059 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:51:23:5123 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:52:07:527 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:52:12:5212 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:54:05:545 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:54:11:5411 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:55:09:559 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:55:17:5517 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:55:24:5524 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:55:36:5536 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 12:56:03:563 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 12:56:11:5611 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:56:12:5612 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:56:12:5612 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:56:12:5612 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:56:12:5612 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:56:13:5613 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 12:57:38:5738 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 13:00:20:020 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:00:37:037 [32minfo[39m: [32m/workstation/:workstationId/active endpoint accessed[39m
+2022-10-21 13:00:52:052 [32minfo[39m: [32m/workstation/:workstationId/notactive endpoint accessed[39m
+2022-10-21 13:01:02:12 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:01:02:12 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:01:03:13 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:01:03:13 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:01:03:13 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:04:09:49 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 13:04:23:423 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:04:24:424 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:04:25:425 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:04:25:425 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:04:25:425 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:04:25:425 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:23:623 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 13:06:24:624 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:24:624 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:24:624 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:24:624 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:24:624 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:24:624 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:41:641 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:06:46:646 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+2022-10-21 13:07:17:717 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 13:07:26:726 [32minfo[39m: [32m/workstation/:workstationId/delete endpoint accessed[39m
+
+2022-10-21 14:43:08:438 [32minfo[39m: [32mError during Data Source initialization: Error: Access denied for user ''@'localhost' (using password: NO)[39m
+2022-10-21 14:43:24:4324 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 14:45:10:4510 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:45:10:4510 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:45:10:4510 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:46:29:4629 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:46:29:4629 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:46:29:4629 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:46:50:4650 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 14:47:06:476 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:47:06:476 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:47:06:476 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:47:16:4716 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:47:16:4716 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:47:16:4716 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:49:22:4922 [32minfo[39m: [32mnew user endpoint accessed[39m
+2022-10-21 14:49:22:4922 [31merror[39m: [31mUnauthorized[39m
+2022-10-21 14:50:26:5026 [32minfo[39m: [32mlogin-login endpoint accessed[39m
+2022-10-21 14:50:31:5031 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 14:50:33:5033 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 14:50:35:5035 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:50:35:5035 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:50:35:5035 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:50:37:5037 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 14:50:38:5038 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:50:38:5038 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:50:38:5038 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:50:39:5039 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:50:39:5039 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:50:39:5039 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:50:43:5043 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:50:43:5043 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:50:43:5043 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:50:45:5045 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:50:45:5045 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:50:45:5045 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:50:47:5047 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:51:08:518 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-21 14:51:08:518 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 14:51:24:5124 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 14:51:29:5129 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:51:29:5129 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:51:29:5129 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:51:30:5130 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:51:33:5133 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 14:51:34:5134 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 14:51:34:5134 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 14:51:34:5134 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:51:35:5135 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 14:51:36:5136 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 14:51:39:5139 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 15:28:33:2833 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 15:30:28:3028 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:30:29:3029 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:30:29:3029 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:30:29:3029 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:33:3033 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:30:33:3033 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:30:33:3033 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:34:3034 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:37:3037 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:30:43:3043 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-21 15:30:43:3043 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:30:45:3045 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:30:45:3045 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:30:45:3045 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:51:3051 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:40:12:4012 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 15:46:47:4647 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:46:50:4650 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-21 15:46:50:4650 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:46:52:4652 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:46:52:4652 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:46:52:4652 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:46:54:4654 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:46:56:4656 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:46:56:4656 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:46:56:4656 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:46:58:4658 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:47:05:475 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:47:05:475 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:47:05:475 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:47:36:4736 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-21 15:47:36:4736 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:47:51:4751 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 15:47:54:4754 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:47:58:4758 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:47:59:4759 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:48:19:4819 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:48:19:4819 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:19:4819 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:48:22:4822 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:48:25:4825 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-21 15:48:25:4825 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:48:32:4832 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m

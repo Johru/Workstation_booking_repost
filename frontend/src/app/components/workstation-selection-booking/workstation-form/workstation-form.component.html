@@ -21,8 +21,11 @@
       </mat-form-field>
     </div>
   </div>
-  <div class="right" *ngIf="seatList">
-    <seats (selectedSeat)="onSelect($event)" [seats]="seatList"></seats>
+  <div class="right" *ngIf="seatListFromParent">
+    <seats
+      (selectedSeat)="onSelect($event)"
+      [seats]="seatListFromParent"
+    ></seats>
   </div>
 </div>
 <button

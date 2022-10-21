@@ -10,17 +10,15 @@ export class SeatsComponent {
   @Input() seats?: Seat[];
   @Output() selectedSeat = new EventEmitter<number>();
 
-  constructor() {}
-
-  isItTaken(seat: string | null): string {
-    if (seat == null) {
+  isItTaken(userName: string | null): string {
+    if (userName == null) {
       return '';
     }
-    return `Booked by ${seat}`;
+    return `Booked by ${userName}`;
   }
 
-  disableSeat(seat: string | null): boolean {
-    if (seat == null) {
+  disableSeat(userName: string | null): boolean {
+    if (userName == null) {
       return false;
     } else {
       return true;
@@ -28,9 +26,10 @@ export class SeatsComponent {
   }
 
   emitCheckedSeat(e: Event) {
-    let target: HTMLInputElement = this.setTheTargetToParentIfClickedOnTheChild(
-      e.target as HTMLInputElement
-    );
+    const target: HTMLInputElement =
+      this.setTheTargetToParentIfClickedOnTheChild(
+        e.target as HTMLInputElement
+      );
     this.checkOnlyOneSeat(target);
     if (target.classList.contains('checked')) {
       this.selectedSeat.emit(parseInt(target.value));

@@ -8,12 +8,13 @@
     <option
       class="city"
       *ngFor="let city of cityList; let i = index"
-      [value]="city.city"
+      [value]="city.building_city"
     >
-      {{ city.city }}
+      {{ city.building_city }}
     </option>
   </select>
   <button
+    *ngIf="isAdmin"
     class="create-building-button"
     mat-raised-button
     routerLink="/admin/edit/building"
@@ -27,6 +28,7 @@
     <building-card
       *ngFor="let building of buildingList"
       [building]="building!"
+      [isAdmin]="isAdmin"
     ></building-card>
   </div>
   <button (click)="scrollRight()">&#62;</button>

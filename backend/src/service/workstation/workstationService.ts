@@ -4,8 +4,13 @@ import { workstationSchema } from './workstationschema';
 import { ValidationError } from 'joi';
 import logger from '../../logger';
 import { Success } from '../../repository';
+import { validateInput } from '../validateInput';
+import { idSchema } from '../idSchema';
 
 export interface IWorkstationService {
+  findLocationByWorkstation(
+    workstationId: number
+  ): Promise<WorkstationEntity[]>;
   getWorkstations(): Promise<WorkstationEntity[]>;
   showWorkstationOnFloor(floorId: number): Promise<WorkstationEntity[]>;
   createWorkstation(
@@ -32,6 +37,16 @@ export class WorkstationService implements IWorkstationService {
     return await this.workstationRepository.findAllWorkstations();
   }
 
+  async findLocationByWorkstation(
+    workstationId: number
+  ): Promise<WorkstationEntity[]> {
+    const validation = await validateInput(idSchema, workstationId);
+    if (!validation) return [];
+    return await this.workstationRepository.findLocationByWorkstation(
+      workstationId
+    );
+  }
+
   async showWorkstationOnFloor(floorId: number): Promise<WorkstationEntity[]> {
     return await this.workstationRepository.findAllWorkstationsOnFloor(floorId);
   }
@@ -39,9 +54,13 @@ export class WorkstationService implements IWorkstationService {
   async createWorkstation(
     workstation: WorkstationEntity,
     seatsNumber: number
-  ): Promise<{ status: string; message: string[] }> {
+  ): Promise<{
+    status: string;
+    message: string[];
+    workstation?: WorkstationEntity;
+  }> {
     try {
-      const value = await workstationSchema.validateAsync(workstation);
+      await workstationSchema.validateAsync(workstation);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);
@@ -61,6 +80,7 @@ export class WorkstationService implements IWorkstationService {
       message: [
         `Workstation is succesfully saved with id: ${newWorkstation.workstation_id}`,
       ],
+      workstation: newWorkstation,
     };
   }
 
@@ -69,7 +89,7 @@ export class WorkstationService implements IWorkstationService {
     workstation: WorkstationEntity
   ): Promise<{ status: string; message: string[] }> {
     try {
-      const value = await workstationSchema.validateAsync(workstation);
+      await workstationSchema.validateAsync(workstation);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);

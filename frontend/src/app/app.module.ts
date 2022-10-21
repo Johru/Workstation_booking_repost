@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 //components
 import { AppComponent } from './app.component';
@@ -21,6 +21,8 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { UserTabComponent } from './components/users/user-list/user-tab/user-tab.component';
 import { ReservationListComponent } from './components/users/user-list/reservation-list/reservation-list.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FooterPanelComponent } from './components/footer-panel/footer-panel.component';
 import { BuildingNewComponent } from './components/building-admin/building-dashboard/building-new/building-new.component';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
@@ -44,6 +46,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { MyBookingsComponent } from './components/my-bookings/my-bookings.component';
+//services to differentiate from material.io modules
+import { AuthInterceptor } from './services/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -74,6 +79,10 @@ import { MatSelectModule } from '@angular/material/select';
     ReservationListComponent,
     DeleteModalComponent,
     BuildingEditComponent,
+    MyBookingsComponent,
+    DashboardComponent,
+    FooterPanelComponent,
+    BuildingEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,7 +107,14 @@ import { MatSelectModule } from '@angular/material/select';
     HttpClientModule,
     JwtModule,
   ],
-  providers: [MatDatepickerModule],
+  providers: [
+    MatDatepickerModule,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -21,7 +21,7 @@ export class SeatController {
     this._router.delete(
       '/seat/:seatId/delete',
       async (req: Request, res: Response) => {
-        var seatId = parseInt(req.params.seatId, 10);
+        const seatId = parseInt(req.params.seatId, 10);
         res.status(200).json(await this.seatService.deletedSeat(seatId));
       }
     );

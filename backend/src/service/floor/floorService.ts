@@ -31,8 +31,11 @@ export class FloorService implements IFloorService {
   }
 
   async showFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
-    const floors = await this.floorRepository.findAllFloorInBuilding(
+    const building = await this.buildingRepository.getSingleBuilding(
       buildingId
+    );
+    const floors = await this.floorRepository.findAllFloorInBuilding(
+      building as BuildingEntity
     );
 
     for (const floor of floors) {
@@ -49,9 +52,9 @@ export class FloorService implements IFloorService {
   async createFloor(
     floor: FloorEntity,
     buildingId: number
-  ): Promise<{ status: string; message: string[] }> {
+  ): Promise<{ status: string; message: string[]; floor?: FloorEntity }> {
     try {
-      const value = await floorSchema.validateAsync(floor);
+      await floorSchema.validateAsync(floor);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);
@@ -64,11 +67,14 @@ export class FloorService implements IFloorService {
     const building = await this.buildingRepository.getSingleBuilding(
       buildingId
     );
+
     const newFloor = await this.floorRepository.saveFloor(floor, building);
+    newFloor.workstation = [];
 
     return {
       status: 'OK',
       message: [`Floor is succesfully saved with id: ${newFloor.floor_id}`],
+      floor: newFloor,
     };
   }
 
@@ -77,7 +83,7 @@ export class FloorService implements IFloorService {
     floor: FloorEntity
   ): Promise<{ status: string; message: string[] }> {
     try {
-      const value = await floorSchema.validateAsync(floor);
+      await floorSchema.validateAsync(floor);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);

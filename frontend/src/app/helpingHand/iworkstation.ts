@@ -1,5 +1,5 @@
 export interface IWorkstation {
-  id: number;
-  name: string;
-  status: boolean;
+  workstation_id: number;
+  workstation_name: string;
+  workstation_isactive: boolean;
 }

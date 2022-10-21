@@ -1,4 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  Output,
+  EventEmitter,
+} from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -9,9 +16,12 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavpanelComponent implements OnInit, OnDestroy {
   loggedIn?: boolean;
+  isAdmin?: boolean;
   loginSubscription?: Subscription;
+  isAdminSubscription?: Subscription;
+  @Output() logoutEmitter = new EventEmitter<boolean>();
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     this.loggedIn = this.authService.isAuthenticated();
@@ -20,14 +30,27 @@ export class NavpanelComponent implements OnInit, OnDestroy {
       .subscribe(() => {
         this.loggedIn = true;
       });
+    this.isAdmin = this.authService.isAdmin();
+    this.isAdminSubscription = this.authService
+      .isAdminSubscription()
+      .subscribe(() => {
+        if (this.authService.isAdmin()) {
+          this.isAdmin = true;
+          return;
+        }
+        this.isAdmin = false;
+      });
   }
 
   ngOnDestroy(): void {
     this.loginSubscription?.unsubscribe();
+    this.isAdminSubscription?.unsubscribe();
   }
 
   logOut() {
     localStorage.removeItem('token');
     this.loggedIn = false;
+    this.router.navigate(['/dashboard']);
+    window.location.reload();
   }
 }

@@ -10,8 +10,6 @@ export class UserListComponent {
   @Input() userList?: User[];
   @Output() deleteUserEmitter = new EventEmitter<number>();
 
-  constructor() {}
-
   onDeleteUser(id: number) {
     this.deleteUserEmitter.emit(id);
   }
