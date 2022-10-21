@@ -1,7 +1,7 @@
 import { Router, Response, Request } from 'express';
 import { BuildingService } from '../service';
 import logger from '../logger';
-import { AuthMiddleware } from 'middlewares';
+import { AuthMiddleware } from '../middlewares';
 
 export class BuildingController {
   private readonly _router: Router = Router();
