@@ -2,7 +2,7 @@
   <div class="left">
     <div class="panel">
       <p class="panel-label"><b>Date:</b></p>
-      <p class="panel-value">{{ reservation.res_date }}</p>
+      <p class="panel-value">{{ reservation.reservation_date }}</p>
     </div>
     <div class="panel">
       <p class="panel-label"><b>Place:</b></p>
@@ -31,7 +31,9 @@
     <button
       mat-button
       class
-      (click)="[toggleDeleteModal(), setTheReservationId(reservation.id)]"
+      (click)="
+        [toggleDeleteModal(), setTheReservationId(reservation.reservation_id)]
+      "
     >
       Delete
     </button>

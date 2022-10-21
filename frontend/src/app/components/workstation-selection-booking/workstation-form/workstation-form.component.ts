@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Reservation } from 'src/app/helpingHand/reservation';
 import { Seat } from 'src/app/helpingHand/seat';
 import { WorkstationService } from 'src/app/services/workstation.service';
@@ -8,33 +8,29 @@ import { WorkstationService } from 'src/app/services/workstation.service';
   templateUrl: './workstation-form.component.html',
   styleUrls: ['./workstation-form.component.css'],
 })
-export class WorkstationFormComponent implements OnInit {
-  @Input() selectedWorkstationOnTab?: number | string;
-  @Input() seatList?: Seat[];
-  @Input() selectedSeat?: number;
-  @Input() wsIdAndName?: { id: string | number; name: string };
-
+export class WorkstationFormComponent {
+  @Input() seatListFromParent?: Seat[];
+  @Input() selectedWorkstation?: number;
   @Output() reservation = new EventEmitter<Reservation>();
+  @Output() dateToRequestSeats = new EventEmitter<any>();
 
+  selectedSeat?: number;
+  seatList?: Seat[];
   planModel: any = { start_time: new Date() };
-  selectedDate?: Date;
-  confirmed: boolean = false;
-  disabledButton: boolean = true;
+  selectedDate?: Date = new Date();
+  confirmed = false;
+  disabledButton = true;
   minDate: Date = new Date();
 
-  constructor(private wsService: WorkstationService) {}
-
-  ngOnInit(): void {
-    this.getSeats();
-  }
-
-  getSeats(): void {
-    this.seatList = this.wsService.getSeats();
-  }
+  constructor(private workstationService: WorkstationService) {}
 
   onChange(e: any) {
-    this.getSeats();
     this.selectedDate = e.target.value;
+    this.requestSeats();
+  }
+
+  requestSeats() {
+    this.dateToRequestSeats.emit(this.selectedDate);
   }
 
   makeReservation() {
@@ -44,11 +40,19 @@ export class WorkstationFormComponent implements OnInit {
     )
       .toISOString()
       .split('T')[0];
-    this.reservation!.emit({
-      seat_id: this.selectedSeat!,
-      res_date: date,
-      user_id: 1, //change when user will be set up
-    });
+    this.workstationService
+      .locateWorkstation(this.selectedWorkstation!)
+      .subscribe(data => {
+        this.reservation!.emit({
+          seat_id: this.selectedSeat!,
+          reservation_date: date,
+          user_id: data[0], //change when user will be set up
+          workstation_name: data[1][0].workstation_name,
+          floor_name: data[1][0].floor.floor_name,
+          building_address: data[1][0].floor.building.building_address,
+          building_name: data[1][0].floor.building.building_name,
+        });
+      });
   }
 
   onSelect(selected: number) {

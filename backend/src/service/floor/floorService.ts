@@ -54,7 +54,7 @@ export class FloorService implements IFloorService {
     buildingId: number
   ): Promise<{ status: string; message: string[]; floor?: FloorEntity }> {
     try {
-      const value = await floorSchema.validateAsync(floor);
+      await floorSchema.validateAsync(floor);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);
@@ -83,7 +83,7 @@ export class FloorService implements IFloorService {
     floor: FloorEntity
   ): Promise<{ status: string; message: string[] }> {
     try {
-      const value = await floorSchema.validateAsync(floor);
+      await floorSchema.validateAsync(floor);
     } catch (error) {
       if (error instanceof ValidationError) {
         logger.error(error);
