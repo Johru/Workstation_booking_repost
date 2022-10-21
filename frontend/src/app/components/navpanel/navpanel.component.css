@@ -50,16 +50,6 @@ nav {
 .nav-link:nth-child(2):hover {
   background-color: #00611e;
 }
-
-.container {
-  margin-top: 20px;
-  padding-top: 75px;
-  max-width: 1250px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
 workstation-form {
   display: flex;
   flex-direction: row;

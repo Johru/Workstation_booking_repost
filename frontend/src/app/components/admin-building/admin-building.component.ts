@@ -3,6 +3,7 @@ import { Building } from 'src/app/helpingHand/buidling';
 import { BuildingService } from 'src/app/services/building.service';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'admin-building',
@@ -18,7 +19,11 @@ export class AdminBuildingComponent implements OnInit {
   cardContent!: ElementRef<any>;
   isAdmin: boolean = false;
 
-  constructor(private bs: BuildingService, private authService: AuthService) {}
+  constructor(
+    private bs: BuildingService,
+    private authService: AuthService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.pushCitiesToLocalArrays();

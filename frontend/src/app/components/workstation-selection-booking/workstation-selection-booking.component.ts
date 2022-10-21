@@ -3,11 +3,13 @@ import {
   ChangeDetectorRef,
   Component,
   OnInit,
+  Input,
 } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Reservation } from 'src/app/helpingHand/reservation';
 import { Seat } from 'src/app/helpingHand/seat';
 import { WorkstationService } from 'src/app/services/workstation.service';
+import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
 
 @Component({
   selector: 'workstation-selection-book',
@@ -17,7 +19,8 @@ import { WorkstationService } from 'src/app/services/workstation.service';
 export class WorkstationSelectionBookingComponent
   implements OnInit, AfterContentChecked
 {
-  workstations?: any[] = [];
+  @Input() workstationList?: WorkstationInterface[];
+  workstations?: WorkstationInterface[] = [];
   selectedWorkstation = 0;
   modalVisibility = false;
   confirmed?: boolean;
@@ -36,22 +39,11 @@ export class WorkstationSelectionBookingComponent
   ) {}
 
   ngOnInit(): void {
-    this.pushWorkstationsToLocalArray();
+    this.workstations = this.workstationList;
   }
 
   ngAfterContentChecked(): void {
     this.cd.detectChanges();
-  }
-  pushWorkstationsToLocalArray() {
-    this.getWsList().subscribe(data => {
-      for (const item of data) {
-        this.workstations?.push(item);
-      }
-    });
-  }
-
-  getWsList(): Observable<any> {
-    return this.wsService.getWorkstations(this.floorId);
   }
 
   receiveDateToPushSeats(requestedDate: Date) {

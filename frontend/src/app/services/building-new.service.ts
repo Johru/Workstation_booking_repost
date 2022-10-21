@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Building } from '../helpingHand/buidling';
 import { BUILDINGS } from '../help-files/building-data';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BuildingNewService {
+  constructor(private http: HttpClient) {}
+
   addBuilding(building: Building): void {
     BUILDINGS.push(building);
   }
 
-  getBuilding(id: number) {
-    return BUILDINGS.find(building => building.building_id === id);
+  getBuilding(id: number): Observable<Building> {
+    return this.http.get<Building>(`http://localhost:8080/api/building/${id}`);
   }
 
   buildingId(): number {

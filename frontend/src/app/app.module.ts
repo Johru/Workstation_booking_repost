@@ -49,6 +49,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 //services to differentiate from material.io modules
 import { AuthInterceptor } from './services/auth.interceptor';
+import { UserFloorListComponent } from './components/user-floor-list/user-floor-list.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
     FooterPanelComponent,
     BuildingEditComponent,
     UserFloorsAccordionComponent,
+    UserFloorListComponent,
   ],
   imports: [
     BrowserModule,

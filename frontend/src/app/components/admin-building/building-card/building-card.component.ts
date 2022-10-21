@@ -2,6 +2,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, Input } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
 import { AuthService } from 'src/app/services/auth.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'building-card',
@@ -22,7 +23,10 @@ export class BuildingCardComponent {
   @Input() isAdmin!: boolean;
   mouseOverCard: boolean = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private route: ActivatedRoute
+  ) {}
 
   toggleCardInfo() {
     this.mouseOverCard = !this.mouseOverCard;
@@ -30,5 +34,12 @@ export class BuildingCardComponent {
 
   checkIfLoggedIn(): boolean {
     return this.authService.isAuthenticated();
+  }
+
+  viewForDashboard(): boolean {
+    if (this.route.snapshot.routeConfig?.path == 'dashboard') {
+      return true;
+    }
+    return false;
   }
 }

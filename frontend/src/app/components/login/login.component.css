@@ -8,6 +8,15 @@
   padding: 32px 102px;
 }
 
+.container {
+  margin-top: 20px;
+  padding-top: 75px;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
 form {
   display: flex;
   text-transform: uppercase;
@@ -55,7 +64,7 @@ form .invalid-input {
   top: -42px;
   right: -380px;
   cursor: pointer;
-  background-image: url("../../../assets/pass_hidden.png");
+  background-image: url('../../../assets/pass_hidden.png');
   background-repeat: no-repeat;
 }
 
@@ -66,7 +75,7 @@ form .invalid-input {
   top: -42px;
   right: -380px;
   cursor: pointer;
-  background-image: url("../../../assets/pass_visible.png");
+  background-image: url('../../../assets/pass_visible.png');
   background-repeat: no-repeat;
 }
 

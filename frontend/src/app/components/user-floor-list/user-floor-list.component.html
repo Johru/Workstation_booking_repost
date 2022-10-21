@@ -1,0 +1,20 @@
+<div>
+  <mat-expansion-panel [expanded]="panelOpenState">
+    <mat-expansion-panel-header (click)="toggleExpand()">
+      <mat-panel-title>
+        <span class="floor-name"> {{ floor.floor_name }} </span>
+      </mat-panel-title>
+      <mat-panel-description>
+        <span class="preview-numbers"
+          >{{ floor.workstation.length }} workstations
+        </span>
+        <span class="preview-numbers">/ {{ allSeats }} seats</span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div *ngIf="panelOpenState">
+      <workstation-selection-book
+        [workstationList]="floor.workstation"
+      ></workstation-selection-book>
+    </div>
+  </mat-expansion-panel>
+</div>

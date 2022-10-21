@@ -23,7 +23,7 @@ export class BuildingDashboardComponent implements OnInit {
       this.buildingId = 0;
     } else {
       this.buildingId = nr;
-      this.getBuilding();
+      this.getBuilding(this.buildingId);
     }
   }
 
@@ -31,7 +31,14 @@ export class BuildingDashboardComponent implements OnInit {
     this.buildingService.addBuilding(newBuilding);
   }
 
-  getBuilding(): void {
-    this.actualBuilding = this.buildingService.getBuilding(this.buildingId);
+  getBuilding(buildingId: number) {
+    this.buildingService.getBuilding(buildingId!).subscribe({
+      next: data => {
+        this.actualBuilding = data;
+      },
+      error: error => {
+        console.error(error);
+      },
+    });
   }
 }

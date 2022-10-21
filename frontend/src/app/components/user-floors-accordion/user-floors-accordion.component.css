@@ -1,3 +1,12 @@
-.accordion-container {
-  min-width: 1000px;
+.whole-container {
+  min-width: 80%;
+  flex-grow: 1;
+  margin: 0 10%;
+}
+.floor-name-container {
+  margin: 50px 0;
+}
+h2 {
+  font-size: 2em;
+  font-weight: bold;
 }

@@ -1,3 +1,16 @@
-<div class="accordion-container">
-  <building-floor></building-floor>
+<div class="whole-container">
+  <div class="floor-name-container">
+    <div class="name-of-building">
+      <h1>{{ buildingName }}</h1>
+    </div>
+  </div>
+  <user-floor-list
+    [floor]="floor"
+    *ngFor="let floor of floors; let i = index"
+  ></user-floor-list>
+  <div *ngIf="!floors.length">
+    <p class="no-floors-sign">
+      There are currently no floors in this buidilng.
+    </p>
+  </div>
 </div>
