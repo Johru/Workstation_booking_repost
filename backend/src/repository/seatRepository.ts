@@ -19,7 +19,7 @@ export class SeatRepository implements ISeatRepository {
   }
 
   async deleteSeat(seatId: number): Promise<Success> {
-    var seatRemove = await appDataSource
+    const seatRemove = await appDataSource
       .createQueryBuilder()
       .delete()
       .from(SeatEntity)

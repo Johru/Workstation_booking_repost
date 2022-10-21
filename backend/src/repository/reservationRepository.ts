@@ -31,9 +31,10 @@ export class ReservationRepository implements IReservationRepository {
         }
       )
       .addSelect(['reservation.reservation_date'])
-      .where('seat.workstation_id = :id', { id: workstationId })
+
       .leftJoin('reservation.user', 'user')
       .addSelect(['user.user_name'])
+      .where('seat.workstation_id = :id', { id: workstationId })
       .getMany();
   }
 
@@ -51,7 +52,7 @@ export class ReservationRepository implements IReservationRepository {
       .leftJoin('workstation.floor', 'floor')
       .addSelect(['floor.floor_name'])
       .leftJoin('floor.building', 'building')
-      .addSelect(['building.building_name'])
+      .addSelect(['building.building_name', 'building.building_address'])
       .getMany();
   }
 

@@ -6,7 +6,7 @@
       </mat-panel-title>
       <mat-panel-description>
         <span class="preview-numbers"
-          >{{ floor.workstations.length }} workstations
+          >{{ floor.workstation.length }} workstations
         </span>
         <span class="preview-numbers">/ {{ allSeats }} seats</span>
       </mat-panel-description>
@@ -15,22 +15,26 @@
       <workstation-management
         (deleteEmitter)="onDeleteClick($event)"
         (disableEmitter)="onDisableClick($event)"
-        [workstationList]="floor.workstations"
+        (activateEmitter)="onActivateClick($event)"
+        [workstationList]="floor.workstation"
         [(successfullConfirmOnManagement)]="successfullConfirm"
+        (confirmEmitter)="numberOfSeats()"
+        [status]="confirmStatus"
         (showPreviewEmitter)="switchPanels()"
         (showEditEmitter)="showEditPanel($event)"
-        *ngIf="!addWorkstationPanel && floor.workstations.length != 0"
+        *ngIf="!addWorkstationPanel && floor.workstation.length > 0"
       >
       </workstation-management>
       <workstation-preview-input
-        (closePanel)="closePanelFromChild($event)"
+        (closePanel)="closePanelFromChild()"
         (showManagementEmitter)="switchPanels()"
         (newWorkstationEvent)="addWorkstation($event)"
-        *ngIf="isEditVisible() || floor.workstations.length == 0"
+        *ngIf="isEditVisible() || floor.workstation.length == 0"
       ></workstation-preview-input>
       <workstation-preview-edit
-        (closePanel)="closePanelFromChild($event)"
+        (closePanel)="closePanelFromChild()"
         (showManagementEmitter)="showManagementPanel()"
+        (updateEmitter)="updateWorkstationList($event)"
         *ngIf="editWorkstationPanel"
         [selectedWorkstationToEdit]="selectedWorkstationToEdit"
       ></workstation-preview-edit>

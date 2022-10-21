@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Building } from 'src/app/help-files/buildind-interface';
-import { BuildingService } from 'src/app/services/building-new.service';
+import { Building } from '../../../../helpingHand/buidling';
+import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({
   selector: 'building-edit',
@@ -15,14 +15,14 @@ export class BuildingEditComponent implements OnInit {
     building_id: new FormControl(),
     building_name: new FormControl(),
     building_address: new FormControl(),
-    building_state: new FormControl(),
+    building_country: new FormControl(),
     building_zip: new FormControl(),
     building_city: new FormControl(),
     building_image: new FormControl(),
   });
 
   constructor(
-    private buildingService: BuildingService,
+    private buildingService: BuildingNewService,
     private router: Router
   ) {}
 
@@ -40,7 +40,7 @@ export class BuildingEditComponent implements OnInit {
       building_id: initialBuilding.building_id,
       building_name: initialBuilding.building_name,
       building_address: initialBuilding.building_address,
-      building_state: initialBuilding.building_state,
+      building_country: initialBuilding.building_country,
       building_zip: initialBuilding.building_zip,
       building_city: initialBuilding.building_city,
       building_image: initialBuilding.building_image,

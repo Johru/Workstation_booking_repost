@@ -17,10 +17,8 @@ export class BuildingRepository implements IBuildingRepository {
   async listCities(): Promise<BuildingEntity[]> {
     const searchForDistinctCity = await appDataSource
       .getRepository(BuildingEntity)
-      .createQueryBuilder('building')
-      .select(['building.building_city'])
-      // .createQueryBuilder()
-      // .select(['BuildingEntity.building_city'])
+      .createQueryBuilder()
+      .select(['building_city'])
       .distinct(true)
       .getRawMany();
 
@@ -32,6 +30,22 @@ export class BuildingRepository implements IBuildingRepository {
     return appDataSource
       .getRepository(BuildingEntity)
       .createQueryBuilder('building')
+      .leftJoin('building.floor', 'floor')
+      .loadRelationCountAndMap('floor.floorCount', 'building.floor')
+      .leftJoin('floor.workstation', 'workstation')
+      .leftJoin('workstation.seat', 'seat')
+      .addSelect(['floor.floor_id'])
+      .addSelect(['workstation.workstation_id'])
+      .loadRelationCountAndMap(
+        'workstation.WCount',
+        'floor.workstation',
+        'WCount'
+      )
+      .loadRelationCountAndMap(
+        'workstation.SCount',
+        'workstation.seat',
+        'SeatCOUnt'
+      )
       .getMany();
   }
 

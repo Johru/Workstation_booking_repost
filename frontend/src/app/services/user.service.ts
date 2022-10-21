@@ -1,54 +1,56 @@
 import { Injectable } from '@angular/core';
-import { ADMINRESERVATIONLIST } from '../helpingHand/admin-reservation';
-import { USERS } from '../helpingHand/user-data';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { User } from '../helpingHand/user';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getUsers() {
-    return USERS;
+  getUsers(): Observable<User> {
+    return this.http.get<User>(environment.rootPath + `/api/user`);
   }
 
-  getReservations() {
-    return ADMINRESERVATIONLIST;
+  getReservations(userId: number) {
+    return this.http.get<User>(
+      environment.rootPath + `/api/reservation/user/${userId}`
+    );
   }
 
-  //userId on these methods is not used but needed to make a req to BE
   promoteUserToAdmin(userId: number) {
-    const message = {
-      success: 'yes',
-    };
-    return message;
+    return this.http.patch<any>(
+      environment.rootPath + `/api/user/${userId}/promote`,
+      {}
+    );
   }
 
   demoteUserFromAdmin(userId: number) {
-    const message = {
-      success: 'yes',
-    };
-    return message;
+    return this.http.patch<any>(
+      environment.rootPath + `/api/user/${userId}/demote`,
+      {}
+    );
   }
 
   blockUser(userId: number) {
-    const message = {
-      success: 'yes',
-    };
-    return message;
+    return this.http.patch<any>(
+      environment.rootPath + `/api/user/${userId}/block`,
+      {}
+    );
   }
 
   unBlockUser(userId: number) {
-    const message = {
-      success: 'yes',
-    };
-    return message;
+    return this.http.patch<any>(
+      environment.rootPath + `/api/user/${userId}/unblock`,
+      {}
+    );
   }
 
   deleteUser(userId: number) {
-    const message = {
-      success: 'yes',
-    };
-    return message;
+    return this.http.delete<any>(
+      environment.rootPath + `/api/user/${userId}/delete`
+    );
   }
 }

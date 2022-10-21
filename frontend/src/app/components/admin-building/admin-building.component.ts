@@ -8,30 +8,53 @@ import { BuildingService } from 'src/app/services/building.service';
   styleUrls: ['./admin-building.component.css'],
 })
 export class AdminBuildingComponent implements OnInit {
-  buildingList?: Building[];
+  buildingList?: Building[] = [];
+  seatCount?: number = 0;
   selectedCityValue?: string;
-  cityList?: any;
+  cityList?: { building_city: string }[] = [];
   @ViewChild('cardContent', { read: ElementRef })
   cardContent!: ElementRef<any>;
 
   constructor(private bs: BuildingService) {}
 
-  ngOnInit(): void {
-    this.getCities();
-    this.selectedCityValue = this.cityList[0].city;
-    this.getBuildings();
+  ngOnInit() {
+    this.pushCitiesToLocalArrays();
   }
 
-  getCities() {
-    this.cityList = this.bs.getCityList();
+  pushCitiesToLocalArrays() {
+    this.bs.getCityList().subscribe(data => {
+      for (const item of Object.entries(data)) {
+        this.cityList?.push(item[1]);
+      }
+      this.selectedCityValue = Object.entries(data)[0][1].building_city;
+      this.pushBuildingsToLocalArrays();
+    });
   }
 
-  getBuildings() {
-    this.buildingList = this.bs.getBuildings();
+  pushBuildingsToLocalArrays() {
+    this.bs.getBuildings().subscribe(data => {
+      for (const item of Object.entries(data)) {
+        if (
+          item[1].building_city.toLowerCase() ==
+          this.selectedCityValue!.toLowerCase()
+        ) {
+          this.buildingList?.push(item[1]);
+          for (let i = 0; i < item[1].floor.length; i++) {
+            for (let j = 0; j < item[1].floor[i].workstation.length; j++) {
+              const seats = item[1].floor[i].workstation[j].SCount;
+              this.seatCount += seats;
+            }
+          }
+          item[1].seatCount = this.seatCount;
+          this.seatCount = 0;
+        }
+      }
+    });
   }
 
   onChange() {
-    this.getBuildings();
+    this.buildingList = [];
+    this.pushBuildingsToLocalArrays();
   }
 
   public scrollRight(): void {

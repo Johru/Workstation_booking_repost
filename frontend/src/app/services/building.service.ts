@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
-import { BUILDINGLIST, CITYLIST } from '../helpingHand/building-data';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Building } from '../helpingHand/buidling';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BuildingService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getCityList() {
-    return CITYLIST;
+  getCityList(): Observable<Building> {
+    return this.http.get<Building>(
+      environment.rootPath + `/api/building/cities`
+    );
   }
 
-  getBuildings() {
-    return BUILDINGLIST;
+  getBuildings(): Observable<Building> {
+    return this.http.get<Building>(environment.rootPath + `/api/building`);
   }
 }

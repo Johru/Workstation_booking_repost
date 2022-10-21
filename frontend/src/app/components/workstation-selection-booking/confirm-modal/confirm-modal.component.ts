@@ -8,14 +8,30 @@ import { ReservationService } from 'src/app/services/reservation.service';
   styleUrls: ['./confirm-modal.component.css'],
 })
 export class ConfirmModalComponent {
-  @Input() resData: any;
+  @Input() resData?: Reservation = {
+    user_id: 0,
+    seat_id: 0,
+    reservation_date: '',
+    workstation_name: '',
+    building_address: '',
+    building_name: '',
+  };
+  @Input() selectedWorkstation?: number;
   @Output() editEmitter = new EventEmitter<boolean>();
   @Output() cancelEmitter = new EventEmitter<boolean>();
-  @Output() confirmEmitter = new EventEmitter<boolean>();
-  edit: boolean = true;
-  cancel: boolean = true;
-  confirm: boolean = true;
-  reservation?: Reservation = { seat_id: 0, res_date: '', user_id: 0 };
+  @Output() confirmEmitter = new EventEmitter<boolean[]>();
+  edit = true;
+  cancel = true;
+  confirm = true;
+  success = false;
+  reservation?: Reservation = {
+    user_id: 0,
+    seat_id: 0,
+    reservation_date: '',
+    workstation_name: '',
+    building_address: '',
+    building_name: '',
+  };
 
   constructor(private reservationService: ReservationService) {}
 
@@ -24,11 +40,16 @@ export class ConfirmModalComponent {
   }
 
   confirmReservation() {
-    this.reservation!.seat_id = this.resData.seat_id;
-    this.reservation!.res_date = this.resData.res_date;
-    this.reservation!.user_id = this.resData.user_id;
-    this.reservationService.addReservation(this.reservation!);
-    this.confirmEmitter.emit(this.confirm);
+    this.reservation = this.resData;
+    this.reservationService
+      .addReservation(this.reservation!)
+      .subscribe(data => {
+        if (data.success === 'yes') this.success = true;
+        else this.success = false;
+
+        this.confirmEmitter.emit([this.confirm, this.success]);
+        this.confirm = !this.confirm;
+      });
   }
 
   cancelReservation() {
