@@ -11,14 +11,14 @@ export class BuildingController {
   const verifyJWT = this.authMiddleware.verifyJWT;
 
     this._router.get(
-      '/building/cities',verifyJWT,
+      '/building/cities',
       async (req: Request, res: Response) => {
         logger.info('/building/cities endpoint accessed');
         res.json(await this.buildingService.listCities());
       }
     );
 
-    this._router.get('/building',verifyJWT, async (req: Request, res: Response) => {
+    this._router.get('/building', async (req: Request, res: Response) => {
       logger.info('/building endpoint accessed');
       res.json(await this.buildingService.listBuildings());
     });
