@@ -15,6 +15,7 @@ export class UserFloorsAccordionComponent implements OnInit {
   buildingId!: number;
   building!: Building;
   buildingName?: string;
+
   constructor(
     private floorService: FloorService,
     private buildingService: BuildingNewService,

@@ -25,8 +25,7 @@
     <div class="confirmed" *ngIf="!closed">
       <h2 *ngIf="success">Reservation Confirmed</h2>
       <h2 *ngIf="!success">Reservation could not be completed</h2>
-
-      <button (click)="closeModal()">Close</button>
+      <button mat-raised-button (click)="closeModal()">Close</button>
     </div>
   </div>
 </div>

@@ -3,10 +3,24 @@
   flex-grow: 1;
   margin: 0 10%;
 }
+
 .floor-name-container {
-  margin: 50px 0;
+  margin: 50px 0 30px 0;
 }
+
 h2 {
   font-size: 2em;
   font-weight: bold;
+  margin: 0;
+}
+
+.name-of-building {
+  align-items: center;
+  text-align: center;
+}
+
+.no-floors-sign {
+  text-align: center;
+  font-size: 2em;
+  margin: 60px 0 0 0;
 }

@@ -13,9 +13,21 @@ export class UserFloorListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.numberOfSeats();
+  }
 
   toggleExpand() {
     this.panelOpenState = !this.panelOpenState;
+  }
+
+  numberOfSeats(): void {
+    const stations = this.floor.workstation.length;
+    let number = 0;
+    for (let i = 0; i < stations; i++) {
+      if (this.floor.workstation[i].allSeats)
+        number += this.floor.workstation[i].allSeats;
+    }
+    this.allSeats = number;
   }
 }

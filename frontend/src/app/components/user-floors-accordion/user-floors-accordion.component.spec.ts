@@ -8,9 +8,8 @@ describe('UserFloorsAccordionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserFloorsAccordionComponent ]
-    })
-    .compileComponents();
+      declarations: [UserFloorsAccordionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(UserFloorsAccordionComponent);
     component = fixture.componentInstance;

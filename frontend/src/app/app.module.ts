@@ -36,6 +36,7 @@ import { BuildingEditComponent } from './components/building-admin/building-dash
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavpanelComponent } from './components/navpanel/navpanel.component';
+import { UserFloorListComponent } from './components/user-floor-list/user-floor-list.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -49,7 +50,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 //services to differentiate from material.io modules
 import { AuthInterceptor } from './services/auth.interceptor';
-import { UserFloorListComponent } from './components/user-floor-list/user-floor-list.component';
 
 @NgModule({
   declarations: [

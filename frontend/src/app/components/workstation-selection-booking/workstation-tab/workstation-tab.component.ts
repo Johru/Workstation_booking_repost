@@ -19,11 +19,9 @@ export class WorkstationTabComponent implements OnChanges {
     id: number;
     name: string;
   }>();
-
   @Input() canceledOnTab?: boolean;
   @Output() canceledOnTabChange = new EventEmitter<boolean>();
   @Output() seats = new EventEmitter<void>();
-
   selectedValue = 0;
   defaultSelectionText = 'Select a workstation';
   workstationName?: string;

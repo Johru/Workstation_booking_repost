@@ -1,6 +1,8 @@
 workstation-tab {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 9%;
 }
 
 confirm-modal {
@@ -52,4 +54,14 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+button {
+  height: 40px;
+  font-size: 1.3em;
+}
+
+button:not([disabled]):hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
 }

@@ -29,7 +29,6 @@ export class WorkstationSelectionBookingComponent
   reservationData?: Reservation;
   selectedDate?: Date = new Date();
   seatListToSend: Seat[] = [];
-  floorId = 5;
   closed = true;
   success?: boolean;
 
