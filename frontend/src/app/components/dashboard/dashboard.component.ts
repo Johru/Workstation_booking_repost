@@ -28,21 +28,21 @@ export class DashboardComponent implements OnInit {
 
   getTwoRandomCities() {
     this.getCities().subscribe({
-      next: (data) => {
-        let cities = data;
+      next: data => {
+        const cities = data;
         this.cityOne =
           cities[Math.floor(Math.random() * cities.length)].building_city;
-        let block = cities.find(
+        const block = cities.find(
           (city: any) => city.building_city == this.cityOne
         );
-        let index = cities.indexOf(block);
+        const index = cities.indexOf(block);
         cities.splice(index, 1);
         this.pushBuildingsToLocalArrays(this.cityOne!, this.buildingListOne!);
         this.cityTwo =
           cities[Math.floor(Math.random() * cities.length)].building_city;
         this.pushBuildingsToLocalArrays(this.cityTwo!, this.buildingListTwo!);
       },
-      error: (err) => {
+      error: err => {
         console.error(err);
       },
     });
@@ -53,13 +53,13 @@ export class DashboardComponent implements OnInit {
   }
 
   pushBuildingsToLocalArrays(city: string, building: Building[]) {
-    this.getBuildings().subscribe((data) => {
-      for (let item of data) {
+    this.getBuildings().subscribe(data => {
+      for (const item of data) {
         if (item.building_city == city) {
           building.push(item);
           for (let i = 0; i < item.floor.length; i++) {
             for (let j = 0; j < item.floor[i].workstation.length; j++) {
-              let seats = item.floor[i].workstation[j].SCount;
+              const seats = item.floor[i].workstation[j].SCount;
               this.seatCount += seats;
             }
           }
