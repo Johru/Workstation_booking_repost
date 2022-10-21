@@ -6,7 +6,12 @@ import {
   AfterContentChecked,
 } from '@angular/core';
 import { Floor } from 'src/app/help-files/floor-interface';
-import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
+import {
+  AddWorkstationI,
+  WorkstationInterface,
+} from 'src/app/help-files/workstation-interface';
+import { ResponseI } from 'src/app/helpingHand/response';
+import { WorkstationService } from 'src/app/services/workstation.service';
 @Component({
   selector: 'floor-list',
   templateUrl: './floor-list.component.html',
@@ -16,19 +21,26 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   @Input() floor!: Floor;
   selectedWorkstationToEdit?: WorkstationInterface;
   panelOpenState?: boolean;
-  confirmDeleteValue: boolean = false;
+  confirmDeleteValue = false;
   status?: string;
   selectedWorkstation?: WorkstationInterface;
   allSeats?: number;
-  successfullConfirm: boolean = false;
-  addWorkstationPanel: boolean = false;
-  editWorkstationPanel: boolean = false;
+  successfullConfirm = false;
+  addWorkstationPanel = false;
+  editWorkstationPanel = false;
+  confirmStatus?: string;
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(
+    private cd: ChangeDetectorRef,
+    private workstationService: WorkstationService
+  ) {}
 
   ngOnInit(): void {
     this.panelOpenState = false;
     this.numberOfSeats();
+    if (this.floor.workstation.length == 0) {
+      this.addWorkstationPanel = true;
+    }
   }
 
   ngAfterContentChecked(): void {
@@ -45,13 +57,32 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     }
   }
 
-  addWorkstation(newWorkstation: WorkstationInterface): void {
-    this.floor.workstation.push(newWorkstation);
-    this.numberOfSeats();
+  addWorkstation(e: { name: string; seats: number }): void {
+    const newWorkstation: AddWorkstationI = {
+      workstation_name: e.name,
+      floor_id: this.floor.floor_id,
+    };
+    this.workstationService.addWorkstation(newWorkstation, e.seats).subscribe({
+      next: (res: ResponseI) => {
+        if (res.status == 'OK') {
+          const workstation = res.workstation;
+          workstation!.allSeats = e.seats;
+          this.floor.workstation.push(workstation!);
+          this.numberOfSeats();
+        } else {
+          alert(
+            'Something went wrong. Adding of new workstation was not successfull'
+          );
+        }
+      },
+      error: (e: Error) => {
+        console.error(e);
+      },
+    });
   }
 
   numberOfSeats(): void {
-    let stations = this.floor.workstation.length;
+    const stations = this.floor.workstation.length;
     let number = 0;
     for (let i = 0; i < stations; i++) {
       if (this.floor.workstation[i].allSeats)
@@ -60,7 +91,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     this.allSeats = number;
   }
 
-  closePanelFromChild(event: boolean) {
+  closePanelFromChild() {
     this.toggleExpand();
   }
 
@@ -70,14 +101,13 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     }
   }
 
-  confirm(event: boolean) {
-    if (event) {
-      this.toggleConfirmModal();
-      if (this.floor.workstation.length == 0) {
-        this.addWorkstationPanel = !this.addWorkstationPanel;
-      }
+  confirm(status: string) {
+    this.toggleConfirmModal();
+    if (this.floor.workstation.length == 0) {
+      this.addWorkstationPanel = !this.addWorkstationPanel;
     }
-    this.successfullConfirm = event;
+    this.successfullConfirm = true;
+    this.confirmStatus = status;
   }
 
   toggleConfirmModal() {
@@ -88,6 +118,12 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   onDisableClick(selectedWorkstation: WorkstationInterface) {
     this.toggleConfirmModal();
     this.status = 'Disable';
+    this.selectedWorkstation = selectedWorkstation;
+  }
+
+  onActivateClick(selectedWorkstation: WorkstationInterface) {
+    this.toggleConfirmModal();
+    this.status = 'Activate';
     this.selectedWorkstation = selectedWorkstation;
   }
 
@@ -102,7 +138,11 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
   }
 
   switchPanels() {
-    this.addWorkstationPanel = !this.addWorkstationPanel;
+    if (this.floor.workstation.length == 0) {
+      this.addWorkstationPanel = false;
+    } else {
+      this.addWorkstationPanel = !this.addWorkstationPanel;
+    }
   }
 
   showManagementPanel() {
@@ -119,5 +159,18 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     this.selectedWorkstationToEdit = selectedWorkstation;
     this.switchPanels();
     this.editWorkstationPanel = !this.editWorkstationPanel;
+  }
+
+  updateWorkstationList(event: { update: AddWorkstationI; id: number }) {
+    const workstation = this.floor.workstation.find(
+      ws => ws.workstation_id == event.id
+    );
+    const index = this.floor.workstation.indexOf(workstation!);
+    workstation!.workstation_name = event.update.workstation_name;
+    this.floor.workstation[index] = workstation!;
+  }
+
+  countSeatsAndCheckLength() {
+    this.numberOfSeats();
   }
 }

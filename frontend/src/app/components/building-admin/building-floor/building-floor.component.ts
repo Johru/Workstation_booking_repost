@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Building } from 'src/app/help-files/buildind-interface';
+import { Building } from 'src/app/helpingHand/buidling';
 import { AddFloor, Floor } from 'src/app/help-files/floor-interface';
 import { FloorService } from 'src/app/services/floor.service';
 import { BuildingNewService } from 'src/app/services/building-new.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'building-floor',
@@ -24,7 +23,7 @@ export class BuildingFloorComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildingId = Number(this.route.snapshot.params['id']);
-    // this.getBuilding(this.buildingId);
+    this.getBuilding(this.buildingId);
     this.getFloor(this.buildingId);
   }
 
@@ -39,9 +38,16 @@ export class BuildingFloorComponent implements OnInit {
     });
   }
 
-  // getBuilding(buildingId: number): Observable<any> {
-  //  this.building = this.buildingService.getBuilding(buildingId);
-  // }
+  getBuilding(buildingId: number) {
+    this.buildingService.getBuilding(buildingId).subscribe({
+      next: data => {
+        this.building = data;
+      },
+      error: error => {
+        console.error(error);
+      },
+    });
+  }
 
   addFloor(newFloor: AddFloor) {
     this.floorService.addFloor(newFloor, this.buildingId).subscribe({

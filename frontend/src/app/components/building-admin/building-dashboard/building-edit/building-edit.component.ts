@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Building } from 'src/app/help-files/buildind-interface';
+import { Building } from '../../../../helpingHand/buidling';
 import { BuildingNewService } from 'src/app/services/building-new.service';
 import { ActivatedRoute } from '@angular/router';
 

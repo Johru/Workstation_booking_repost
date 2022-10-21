@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/helpingHand/user';
 import { UserService } from 'src/app/services/user.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'users',
@@ -8,24 +9,33 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent implements OnInit {
-  userList?: User[];
+  userList?: User[] = [];
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.getUserList();
+    this.pushUsersToLocalArray();
   }
 
-  getUserList() {
-    this.userList = this.userService.getUsers();
+  pushUsersToLocalArray() {
+    this.getUserList().subscribe(data => {
+      for (const item of Object.entries(data)) {
+        this.userList?.push(item[1]);
+      }
+    });
+  }
+
+  getUserList(): Observable<User> {
+    return this.userService.getUsers();
   }
 
   onDeleteUser(id: number) {
-    let result = this.userService.deleteUser(id);
-    if (result.success == 'yes') {
-      this.userList = this.userList?.filter((user) => user.id != id);
-      return;
-    }
-    alert('Something is wrong, deletion of user was unsuccessfull.');
+    this.userService.deleteUser(id).subscribe(data => {
+      if (data.success == 'yes') {
+        this.userList = this.userList?.filter(user => user.user_id != id);
+        return;
+      }
+      alert('Something is wrong, deletion of user was unsuccessfull.');
+    });
   }
 }

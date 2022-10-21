@@ -12,8 +12,6 @@ CREATE TABLE `User` (
 	PRIMARY KEY (`user_id`)
 );
 
-select * from floor;
-
 CREATE TABLE `Building` (
 	`building_id` INT NOT NULL AUTO_INCREMENT,
 	`building_name` varchar(255) NOT NULL,

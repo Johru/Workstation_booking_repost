@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Building } from 'src/app/help-files/buildind-interface';
+import { Building } from '../../../helpingHand/buidling';
 import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({
@@ -24,9 +24,5 @@ export class BuildingDashboardComponent implements OnInit {
   ngOnInit() {
     let nr: number = Number(this.route.snapshot.params['id']);
     this.buildingId = nr;
-  }
-
-  getIdHander($event: any) {
-    this.buildingId = $event;
   }
 }

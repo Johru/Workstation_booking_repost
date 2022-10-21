@@ -2,11 +2,14 @@
   (selectedWorkstation)="onSelection($event)"
   [(canceledOnTab)]="canceled"
   [workstationList]="workstations"
+  (seats)="pushSeatsToLocalArray()"
 ></workstation-tab>
 <div *ngIf="showForm()">
   <workstation-form
-    [selectedWorkstationOnTab]="selectedWorkstation"
+    [seatListFromParent]="seatListToSend"
+    [selectedWorkstation]="selectedWorkstation"
     (reservation)="onBookClick($event)"
+    (dateToRequestSeats)="receiveDateToPushSeats($event)"
   ></workstation-form>
 </div>
 <div *ngIf="modalVisibility">
@@ -17,11 +20,13 @@
       (cancelEmitter)="onCancel($event)"
       (confirmEmitter)="onConfirm($event)"
       [resData]="reservationData"
+      [selectedWorkstation]="selectedWorkstation"
     ></confirm-modal>
-    <div class="confirmed" *ngIf="confirmed">
-      <h2>Reservation Confirmed</h2>
-      <!--ADD ROUTE TO SOME COMPONENT-->
-      <a routerLink="/">Go Home</a>
+    <div class="confirmed" *ngIf="!closed">
+      <h2 *ngIf="success">Reservation Confirmed</h2>
+      <h2 *ngIf="!success">Reservation could not be completed</h2>
+
+      <button (click)="closeModal()">Close</button>
     </div>
   </div>
 </div>

@@ -41,7 +41,7 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    let token: string | null | undefined = localStorage.getItem('token');
+    const token: string | null | undefined = localStorage.getItem('token');
     if (token == null) {
       return false;
     }
@@ -49,5 +49,9 @@ export class AuthService {
       localStorage.removeItem('token');
     }
     return !this.jwtHelper.isTokenExpired(token);
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
   }
 }

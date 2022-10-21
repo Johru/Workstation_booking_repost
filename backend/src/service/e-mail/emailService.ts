@@ -11,8 +11,6 @@ sgMail.setSubstitutionWrappers('{{', '}}');
 const mail = process.env.MAIL!;
 
 export class EmailService {
-  constructor() {}
-
   sendMail(user: UserEntity) {
     const msg = {
       to: user.user_email,

@@ -1,4 +1,4 @@
-import { Building } from './buildind-interface';
+import { Building } from '../helpingHand/buidling';
 
 export const BUILDINGS: Building[] = [
   {

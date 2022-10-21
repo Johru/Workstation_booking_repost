@@ -11,10 +11,10 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  show: boolean = false;
-  visibility: string = 'password-hidden';
-  attribute: string = 'password';
-  invalidInput: boolean = false;
+  show = false;
+  visibility = 'password-hidden';
+  attribute = 'password';
+  invalidInput = false;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -27,16 +27,16 @@ export class LoginComponent {
   }
 
   signIn(form: NgForm) {
-    let emailRegex =
+    const emailRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (form.value.email.match(emailRegex)) {
-      let user: Login = {
+      const user: Login = {
         user_email: form.value.email,
         user_password: form.value.password,
       };
       this.signInByMail(user);
     } else {
-      let user: Login = {
+      const user: Login = {
         user_login: form.value.email,
         user_password: form.value.password,
       };
@@ -45,20 +45,20 @@ export class LoginComponent {
   }
 
   signInByMail(user: Login) {
-    let response: Observable<TokenResponse> =
+    const response: Observable<TokenResponse> =
       this.authService.loginByMail(user);
     this.handleResponse(response);
   }
 
   signInByLogin(user: Login) {
-    let response: Observable<TokenResponse> =
+    const response: Observable<TokenResponse> =
       this.authService.loginByLogin(user);
     this.handleResponse(response);
   }
 
   handleResponse(response: Observable<TokenResponse>) {
     response.subscribe({
-      next: (data) => {
+      next: data => {
         if (data.error) {
           this.invalidInput = true;
         } else {
@@ -68,7 +68,7 @@ export class LoginComponent {
           this.authService.logIn.next(true);
         }
       },
-      error: (e) => {
+      error: e => {
         console.error(e);
       },
     });
