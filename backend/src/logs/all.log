@@ -4126,3 +4126,172 @@
 [32m][39m
 2022-10-21 15:30:45:3045 [32minfo[39m: [32m/building endpoint accessed[39m
 2022-10-21 15:30:51:3051 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:40:12:4012 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 15:46:47:4647 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:46:50:4650 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-21 15:46:50:4650 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:46:52:4652 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:46:52:4652 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:46:52:4652 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:46:54:4654 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:46:56:4656 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:46:56:4656 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:46:56:4656 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:46:58:4658 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:47:05:475 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:47:05:475 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:47:05:475 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:47:36:4736 [32minfo[39m: [32m/building/new endpoint accessed[39m
+2022-10-21 15:47:36:4736 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:47:51:4751 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m
+2022-10-21 15:47:54:4754 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:47:58:4758 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:47:59:4759 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:10:4810 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:48:19:4819 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:48:19:4819 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' },[39m
+[32m  { building_city: 'Komárno' }[39m
+[32m][39m
+2022-10-21 15:48:19:4819 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:48:22:4822 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:48:25:4825 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-21 15:48:25:4825 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:48:32:4832 [32minfo[39m: [32m/workstation/create/:seats endpoint accessed[39m

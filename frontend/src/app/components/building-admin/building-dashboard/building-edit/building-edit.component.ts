@@ -38,8 +38,18 @@ export class BuildingEditComponent implements OnInit {
   }
 
   onSubmit(values: Building): void {
-    this.buildingService.editBuilding(this.buildingId!, values);
-    this.router.navigate([`${this.router.url}/floor`]);
+    this.buildingService.editBuilding(this.buildingId!, values).subscribe({
+      next: data => {
+        if (data.success == 'yes') {
+          this.router.navigate([`${this.router.url}/floor`]);
+        } else {
+          alert('Something went wrong, building was not edited');
+        }
+      },
+      error: error => {
+        console.error(error);
+      },
+    });
   }
 
   setInitialValues(initialBuilding: Building) {

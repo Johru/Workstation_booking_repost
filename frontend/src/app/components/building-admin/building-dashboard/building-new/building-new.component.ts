@@ -30,7 +30,9 @@ export class BuildingNewComponent {
   onSubmit(newBuilding: Building): void {
     this.buildingService.addBuilding(newBuilding).subscribe({
       next: (res: any) => {
-        this.router.navigate([`${this.router.url}/${res.data}/floor`]);
+        if (res.success == 'yes') {
+          this.router.navigate([`${this.router.url}/${res.data}/floor`]);
+        }
       },
       error: (error: any) => {
         console.error(error);
