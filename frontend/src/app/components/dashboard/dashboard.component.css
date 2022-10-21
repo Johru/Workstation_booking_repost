@@ -10,7 +10,8 @@ section {
 }
 
 .dashboard-container {
-  width: 100%;
+  min-width: 95%;
+  margin: 0 !important;
 }
 
 .main-picture {

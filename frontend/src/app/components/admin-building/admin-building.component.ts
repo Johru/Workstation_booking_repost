@@ -22,23 +22,23 @@ export class AdminBuildingComponent implements OnInit {
 
   ngOnInit() {
     this.pushCitiesToLocalArrays();
-    this.pushBuildingsToLocalArrays();
     if (this.authService.isAdmin()) {
       this.isAdmin = true;
     }
   }
 
   pushCitiesToLocalArrays() {
-    this.getCities().subscribe((data) => {
+    this.getCities().subscribe(data => {
       for (let item of data) {
         this.cityList?.push(item);
       }
       this.selectedCityValue = data[0].building_city;
+      this.pushBuildingsToLocalArrays();
     });
   }
 
   pushBuildingsToLocalArrays() {
-    this.getBuildings().subscribe((data) => {
+    this.getBuildings().subscribe(data => {
       for (let item of data) {
         if (
           item.building_city.toLowerCase() ==
