@@ -21,6 +21,8 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { UserTabComponent } from './components/users/user-list/user-tab/user-tab.component';
 import { ReservationListComponent } from './components/users/user-list/reservation-list/reservation-list.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FooterPanelComponent } from './components/footer-panel/footer-panel.component';
 import { BuildingNewComponent } from './components/building-admin/building-dashboard/building-new/building-new.component';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
@@ -78,6 +80,9 @@ import { AuthInterceptor } from './services/auth.interceptor';
     DeleteModalComponent,
     BuildingEditComponent,
     MyBookingsComponent,
+    DashboardComponent,
+    FooterPanelComponent,
+    BuildingEditComponent,
   ],
   imports: [
     BrowserModule,

@@ -75,6 +75,6 @@ export class LoginComponent {
   }
 
   rerouteHome() {
-    this.router.navigate(['']);
+    this.router.navigate(['/dashboard']);
   }
 }

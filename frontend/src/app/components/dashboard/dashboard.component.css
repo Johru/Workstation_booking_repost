@@ -1,0 +1,123 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+}
+
+.content-containers {
+  width: 50%;
+}
+
+.dashboard-container {
+  min-width: 95%;
+  margin: 0 !important;
+}
+
+.main-picture {
+  max-width: 100%;
+  height: auto;
+}
+
+.invite-text {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 26px;
+  margin: 0 25%;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.join {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border: none;
+  padding: 12px 24px;
+  background-color: #ef2c1e;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.join:hover {
+  cursor: pointer;
+  background-color: #b41b10;
+}
+
+.select-wrapper {
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+
+.select-wrapper div {
+  margin: 0;
+  min-width: 80%;
+  flex-grow: 1;
+}
+
+.select-wrapper section admin-building {
+  width: 100%;
+}
+
+.default-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.building-selector {
+  height: 350px;
+  margin-top: 5%;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.building-selector button {
+  width: 3.5%;
+  font-size: 40px;
+  font-weight: 100;
+  border: none;
+}
+
+.building-selector button:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  cursor: pointer;
+}
+
+.card {
+  padding: 0px 1%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1%;
+  overflow-x: scroll;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+building-card {
+  width: 19.2%;
+  height: 98%;
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.list {
+  width: 100%;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 60px;
+}

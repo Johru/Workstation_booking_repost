@@ -1,4 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
@@ -13,6 +19,7 @@ export class NavpanelComponent implements OnInit, OnDestroy {
   isAdmin?: boolean;
   loginSubscription?: Subscription;
   isAdminSubscription?: Subscription;
+  @Output() logoutEmitter = new EventEmitter<boolean>();
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -43,6 +50,7 @@ export class NavpanelComponent implements OnInit, OnDestroy {
   logOut() {
     localStorage.removeItem('token');
     this.loggedIn = false;
-    this.router.navigate(['']);
+    this.router.navigate(['/dashboard']);
+    window.location.reload();
   }
 }

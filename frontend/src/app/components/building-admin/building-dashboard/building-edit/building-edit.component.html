@@ -1,74 +1,35 @@
 <div class="main-container">
-  <form [formGroup]="editBuildingForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="editBuildingForm" #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)">
     <div>
       <h1>Edit Building</h1>
       <div class="input-container">
         <label for="nameOfBuilding">Name: </label>
-        <input
-          type="text"
-          name="nameOfBuilding"
-          id="nameOfBuilding"
-          formControlName="building_name"
-          value="Edit workstation"
-          required
-        />
+        <input type="text" name="nameOfBuilding" id="nameOfBuilding" formControlName="building_name"
+          value="Edit workstation" required />
       </div>
       <div class="input-container">
         <label for="zipCode">ZIP Code:</label>
-        <input
-          type="text"
-          name="zipCode"
-          id="zipCode"
-          formControlName="building_zip"
-          required
-        />
+        <input type="text" name="zipCode" id="zipCode" formControlName="building_zip" required />
       </div>
       <div class="input-container">
-        <label for="state">State:</label>
-        <input
-          type="text"
-          name="state"
-          id="state"
-          formControlName="building_country"
-          required
-        />
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country" formControlName="building_country" required />
       </div>
       <div class="input-container">
         <label for="city">City:</label>
-        <input
-          type="text"
-          name="city"
-          id="city"
-          formControlName="building_city"
-          required
-        />
+        <input type="text" name="city" id="city" formControlName="building_city" required />
       </div>
       <div class="input-container">
         <label for="adress">Adress:</label>
-        <input
-          type="text"
-          name="adress"
-          id="adress"
-          formControlName="building_address"
-          required
-        />
+        <input type="text" name="adress" id="adress" formControlName="building_address" required />
       </div>
       <div class="input-container">
         <label for="buildingImage">Image:</label>
         <!-- TEMPORARY INPUT FOR IMAGE -->
-        <input
-          type="text"
-          name="buildingImage"
-          id="buildingImage"
-          formControlName="building_image"
-        />
+        <input type="text" name="buildingImage" id="buildingImage" formControlName="building_image" />
       </div>
       <div class="buttons">
-        <button
-          mat-raised-button
-          type="submit"
-          [disabled]="!editBuildingForm.valid"
-        >
+        <button mat-raised-button type="submit" [disabled]="!editBuildingForm.valid">
           Edit
         </button>
         <button mat-raised-button type="button" routerLink="/admin/buildings">
