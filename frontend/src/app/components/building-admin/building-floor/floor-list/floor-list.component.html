@@ -23,13 +23,13 @@
       >
       </workstation-management>
       <workstation-preview-input
-        (closePanel)="closePanelFromChild($event)"
+        (closePanel)="closePanelFromChild()"
         (showManagementEmitter)="switchPanels()"
         (newWorkstationEvent)="addWorkstation($event)"
         *ngIf="isEditVisible() || floor.workstation.length == 0"
       ></workstation-preview-input>
       <workstation-preview-edit
-        (closePanel)="closePanelFromChild($event)"
+        (closePanel)="closePanelFromChild()"
         (showManagementEmitter)="showManagementPanel()"
         *ngIf="editWorkstationPanel"
         [selectedWorkstationToEdit]="selectedWorkstationToEdit"
