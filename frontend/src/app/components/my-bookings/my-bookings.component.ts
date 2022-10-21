@@ -9,11 +9,9 @@ import { TokenResponse } from 'src/app/helpingHand/login';
 })
 export class MyBookingsComponent implements OnInit {
   userId!: number;
-  constructor() {}
 
   ngOnInit(): void {
     this.getUserId();
-    console.log(this.userId);
   }
 
   getUserId() {

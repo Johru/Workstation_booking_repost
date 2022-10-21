@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnChanges,
-  OnDestroy,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
@@ -14,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './navpanel.component.html',
   styleUrls: ['./navpanel.component.css'],
 })
-export class NavpanelComponent implements OnInit, OnDestroy, OnChanges {
+export class NavpanelComponent implements OnInit, OnDestroy {
   loggedIn?: boolean;
   isAdmin?: boolean;
   loginSubscription?: Subscription;
@@ -44,10 +38,6 @@ export class NavpanelComponent implements OnInit, OnDestroy, OnChanges {
   ngOnDestroy(): void {
     this.loginSubscription?.unsubscribe();
     this.isAdminSubscription?.unsubscribe();
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    this.isAdmin = this.authService.isAdmin();
   }
 
   logOut() {
