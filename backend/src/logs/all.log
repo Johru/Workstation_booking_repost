@@ -2807,7 +2807,17 @@
 2022-10-18 10:40:42:4042 [32minfo[39m: [32mData source has been initialized.[39m
 2022-10-18 17:18:24:1824 [32minfo[39m: [32mData source has been initialized.[39m
 <<<<<<< HEAD
+
+2022-10-21 08:21:03:213 [32minfo[39m: [32mError during Data Source initialization: QueryFailedError: ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`booking`.`#sql-1310_1b`, CONSTRAINT `FK_1565850c51d1cc30e896101fa77` FOREIGN KEY (`building_id`) REFERENCES `building` (`building_id`) ON DELETE CASCADE)[39m
+2022-10-21 08:22:17:2217 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 08:29:35:2935 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 08:29:41:2941 [32minfo[39m: [32mlogin-email endpoint accessed[39m
+2022-10-21 08:32:16:3216 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 08:32:16:3216 [32minfo[39m: [32m[ RowDataPacket { building_city: '' } ][39m
+=======
+<<<<<<< HEAD
 2022-10-21 08:50:36:5036 [32minfo[39m: [32mData source has been initialized.[39m
 =======
 2022-10-21 09:00:08:08 [32minfo[39m: [32mData source has been initialized.[39m
 >>>>>>> 0bfc81067315a89df008d26a247ee9dd0e73944e
+>>>>>>> 51a9f2d3741d19db3e3b47448a7737a02fade65a
