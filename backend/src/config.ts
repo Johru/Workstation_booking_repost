@@ -1,9 +1,6 @@
 import { config } from 'dotenv';
-import { join } from 'path';
 
-const envPath = join(__dirname, '../.env');
-
-config({ path: envPath });
+config({ path: '../.env' });
 
 export default {
   port: process.env.SERVER_PORT,

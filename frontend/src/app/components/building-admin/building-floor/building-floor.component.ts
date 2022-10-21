@@ -29,28 +29,35 @@ export class BuildingFloorComponent implements OnInit {
 
   getFloor(buildingId: number): void {
     this.floorService.getFloor(buildingId).subscribe({
-      next: (floors) => {
+      next: floors => {
         this.floors = floors;
       },
-      error: (error) => {
+      error: error => {
         console.error(error);
       },
     });
   }
 
-  getBuilding(buildingId: number): void {
-    this.building = this.buildingService.getBuilding(buildingId);
+  getBuilding(buildingId: number) {
+    this.buildingService.getBuilding(buildingId).subscribe({
+      next: data => {
+        this.building = data;
+      },
+      error: error => {
+        console.error(error);
+      },
+    });
   }
 
   addFloor(newFloor: AddFloor) {
     this.floorService.addFloor(newFloor, this.buildingId).subscribe({
-      next: (response) => {
+      next: response => {
         if (response.status == 'OK') {
           this.floors.push(response.floor!);
           this.getFloor(this.buildingId);
         }
       },
-      error: (error) => {
+      error: error => {
         console.error(error);
       },
     });

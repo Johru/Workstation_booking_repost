@@ -10,9 +10,10 @@ import { BuildingNewService } from 'src/app/services/building-new.service';
   styleUrls: ['./building-new.component.css'],
 })
 export class BuildingNewComponent {
+  building_id?: number;
+
   @Output() newBuildingEvent = new EventEmitter<Building>();
   newBuildingForm = new FormGroup({
-    building_id: new FormControl(),
     building_name: new FormControl(),
     building_address: new FormControl(),
     building_country: new FormControl(),
@@ -26,12 +27,16 @@ export class BuildingNewComponent {
     private router: Router
   ) {}
 
-  onSubmit(): void {
-    this.newBuildingForm.value.building_id = this.buildingService.buildingId();
-    this.newBuildingEvent.emit(this.newBuildingForm.value as Building);
-    this.router.navigate([
-      `${this.router.url}/${this.newBuildingForm.value.building_id}/floor`,
-    ]);
-    this.newBuildingForm.reset();
+  onSubmit(newBuilding: Building): void {
+    this.buildingService.addBuilding(newBuilding).subscribe({
+      next: (res: any) => {
+        if (res.success == 'yes') {
+          this.router.navigate([`${this.router.url}/${res.data}/floor`]);
+        }
+      },
+      error: (error: any) => {
+        console.error(error);
+      },
+    });
   }
 }
