@@ -18,7 +18,6 @@ export class MyBookingsComponent implements OnInit {
     const token = localStorage.getItem('token');
     if (token) {
       const decodedToken = decode(token!) as TokenResponse;
-      console.log(decodedToken);
       const id = decodedToken.id;
       this.userId = id;
     } else {
