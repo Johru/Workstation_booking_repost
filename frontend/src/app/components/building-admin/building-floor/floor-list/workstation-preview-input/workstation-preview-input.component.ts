@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { FloorService } from 'src/app/services/floor.service';
 
 @Component({
   selector: 'workstation-preview-input',
@@ -18,8 +17,6 @@ export class WorkstationPreviewInputComponent implements OnInit {
     workstation_name: new FormControl(),
     seats: new FormControl(),
   });
-
-  constructor(private workstationId: FloorService) {}
 
   ngOnInit(): void {
     this.newWorkstationForm.reset();

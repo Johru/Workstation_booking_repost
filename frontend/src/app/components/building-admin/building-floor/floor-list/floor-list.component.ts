@@ -91,7 +91,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
     this.allSeats = number;
   }
 
-  closePanelFromChild(event: boolean) {
+  closePanelFromChild() {
     this.toggleExpand();
   }
 
