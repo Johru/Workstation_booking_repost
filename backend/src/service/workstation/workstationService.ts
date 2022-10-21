@@ -39,7 +39,11 @@ export class WorkstationService implements IWorkstationService {
   async createWorkstation(
     workstation: WorkstationEntity,
     seatsNumber: number
-  ): Promise<{ status: string; message: string[] }> {
+  ): Promise<{
+    status: string;
+    message: string[];
+    workstation?: WorkstationEntity;
+  }> {
     try {
       const value = await workstationSchema.validateAsync(workstation);
     } catch (error) {
@@ -61,6 +65,7 @@ export class WorkstationService implements IWorkstationService {
       message: [
         `Workstation is succesfully saved with id: ${newWorkstation.workstation_id}`,
       ],
+      workstation: newWorkstation,
     };
   }
 
