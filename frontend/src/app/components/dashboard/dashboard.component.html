@@ -1,0 +1,50 @@
+<div class="dashboard-container">
+  <section>
+    <div class="content-containers">
+      <p class="invite-text">
+        Work with us and you will feel like you are working from home.
+      </p>
+      <div class="join-container">
+        <a *ngIf="!loggedIn" class="join" routerLink="/register">
+          Join today
+        </a>
+      </div>
+    </div>
+    <div class="content-containers">
+      <img class="main-picture" src="../assets/main.png" alt="" />
+    </div>
+  </section>
+  <div class="select-wrapper">
+    <div *ngIf="loggedIn">
+      <admin-building></admin-building>
+    </div>
+    <div *ngIf="!loggedIn" class="default-wrapper">
+      <div class="list">
+        <h2>{{ cityOne }}</h2>
+        <div class="building-selector">
+          <button (click)="scrollLeft($event)">&#60;</button>
+          <div #cardContentOne class="card">
+            <building-card
+              *ngFor="let building of buildingListOne"
+              [building]="building!"
+            ></building-card>
+          </div>
+          <button (click)="scrollRight($event)">&#62;</button>
+        </div>
+      </div>
+      <div class="list">
+        <h2>{{ cityTwo }}</h2>
+        <div class="building-selector">
+          <button (click)="scrollLeft($event)">&#60;</button>
+          <div #cardContentTwo class="card">
+            <building-card
+              *ngFor="let building of buildingListTwo"
+              [building]="building!"
+            ></building-card>
+          </div>
+          <button (click)="scrollRight($event)">&#62;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

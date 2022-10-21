@@ -10,16 +10,19 @@ import { WorkstationSelectionBookingComponent } from './components/workstation-s
 // import { RoleGuardService } from './services/role-guard.service';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'wstation', component: WorkstationSelectionBookingComponent },
   { path: 'admin', redirectTo: '/admin/buildings', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: '',
     component: NavpanelComponent,
     children: [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'dashboard', component: DashboardComponent },
     ],
   },
   {
