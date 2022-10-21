@@ -15,6 +15,7 @@ export class WorkstationController {
 
     this._router.get(
       '/workstation/showall',
+      verifyJWT,
       async (req: Request, res: Response) => {
         logger.info('/workstation/showall endpoint accessed');
         res.status(200).json(await this.workstationService.getWorkstations());
@@ -37,6 +38,7 @@ export class WorkstationController {
 
     this._router.get(
       '/workstation/:floorId/showonfloor',
+      verifyJWT,
       async (req: Request, res: Response) => {
         const floorId = parseInt(req.params.floorId, 10);
         logger.info('/workstation/:floorId/showonfloor endpoint accessed');
@@ -48,6 +50,7 @@ export class WorkstationController {
 
     this._router.post(
       '/workstation/create/:seats',
+      verifyJWT,
       async (req: Request, res: Response) => {
         logger.info('/workstation/create/:seats endpoint accessed');
         const workstation: WorkstationEntity = req.body as WorkstationEntity;
@@ -69,6 +72,7 @@ export class WorkstationController {
 
     this._router.put(
       '/workstation/:workstationId/update',
+      verifyJWT,
       async (req: Request, res: Response) => {
         logger.info('/workstation/:workstationId/update endpoint accessed');
         const workstationId = parseInt(req.params.workstationId, 10);
@@ -86,6 +90,7 @@ export class WorkstationController {
 
     this._router.put(
       '/workstation/:workstationId/active',
+      verifyJWT,
       async (req: Request, res: Response) => {
         logger.info('/workstation/:workstationId/active endpoint accessed');
         const workstationId = parseInt(req.params.workstationId, 10);
@@ -99,6 +104,7 @@ export class WorkstationController {
 
     this._router.put(
       '/workstation/:workstationId/notactive',
+      verifyJWT,
       async (req: Request, res: Response) => {
         logger.info('/workstation/:workstationId/notactive endpoint accessed');
         const workstationId = parseInt(req.params.workstationId, 10);
@@ -114,9 +120,12 @@ export class WorkstationController {
 
     this._router.delete(
       '/workstation/:workstationId/delete',
-      async (req, res) => {
+      verifyJWT,
+
+      async (req: Request, res: Response) => {
         logger.info('/workstation/:workstationId/delete endpoint accessed');
         const workstationId = parseInt(req.params.workstationId, 10);
+
         res
           .status(200)
           .json(await this.workstationService.deleteWorkstation(workstationId));

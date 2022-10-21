@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { WorkstationInterface } from 'src/app/help-files/workstation-interface';
-import { FloorService } from 'src/app/services/floor.service';
+import { Success } from 'src/app/helpingHand/response';
+import { WorkstationService } from 'src/app/services/workstation.service';
 
 @Component({
   selector: 'confirm-delete',
@@ -9,33 +10,85 @@ import { FloorService } from 'src/app/services/floor.service';
 })
 export class ConfirmDeleteComponent implements OnInit {
   @Output() cancelEmitter = new EventEmitter<boolean>();
-  @Output() confirmEmitter = new EventEmitter<boolean>();
+  @Output() confirmEmitter = new EventEmitter<string>();
+  @Output() successEmitter = new EventEmitter<number>();
   @Input() status?: string;
   @Input() selectedWorkstation?: WorkstationInterface;
   confirmValue = true;
   cancelValue = true;
 
-  constructor(private floorService: FloorService) {}
+  constructor(private workstationService: WorkstationService) {}
 
   ngOnInit(): void {
-    if (this.status == 'Disable') {
-      if (!this.selectedWorkstation?.workstation_isActive) {
-        this.status = 'Activate';
-      }
+    if (
+      this.status == 'Disable' &&
+      !this.selectedWorkstation?.workstation_isactive
+    ) {
+      this.status = 'Activate';
     }
   }
 
   confirm(): void {
-    if (this.status == 'Disable' || this.status == 'Activate') {
-      this.floorService.disableWorkstation(
-        this.selectedWorkstation!.workstation_id
-      );
-    } else if (this.status == 'Delete') {
-      this.floorService.deleteWorkstation(
-        this.selectedWorkstation!.workstation_id
-      );
+    switch (this.status) {
+      case 'Delete':
+        this.deleteWorkstation(this.selectedWorkstation!.workstation_id!);
+        break;
+      case 'Disable':
+        this.disableWorkstation(this.selectedWorkstation!.workstation_id);
+        break;
+      case 'Activate':
+        this.activateWorkstation(this.selectedWorkstation!.workstation_id);
+        break;
     }
-    this.confirmEmitter.emit(this.confirmValue);
+  }
+
+  deleteWorkstation(id: number) {
+    this.workstationService.deleteWorkstation(id).subscribe({
+      next: (data: Success) => {
+        if (data.success == 'yes') {
+          this.confirmEmitter.emit(this.status);
+        } else {
+          alert('Something went wrong. Deletion was not successfull.');
+        }
+      },
+      error: (e: Error) => {
+        console.error(e);
+      },
+    });
+  }
+
+  disableWorkstation(id: number) {
+    this.workstationService.disableWorkstation(id).subscribe({
+      next: data => {
+        if (data.status == 'OK') {
+          this.confirmEmitter.emit(this.status);
+        } else {
+          alert(
+            'Something went wrong. Disabling the workstation was not successfull.'
+          );
+        }
+      },
+      error: err => {
+        console.error(err);
+      },
+    });
+  }
+
+  activateWorkstation(id: number) {
+    this.workstationService.activateWorkstation(id).subscribe({
+      next: data => {
+        if (data.status == 'OK') {
+          this.confirmEmitter.emit(this.status);
+        } else {
+          alert(
+            'Something went wrong. Activating the workstation was not successfull.'
+          );
+        }
+      },
+      error: err => {
+        console.error(err);
+      },
+    });
   }
 
   cancel(): void {
