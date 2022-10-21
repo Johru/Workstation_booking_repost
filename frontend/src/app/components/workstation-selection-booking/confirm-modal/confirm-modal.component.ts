@@ -8,7 +8,14 @@ import { ReservationService } from 'src/app/services/reservation.service';
   styleUrls: ['./confirm-modal.component.css'],
 })
 export class ConfirmModalComponent {
-  @Input() resData?: Reservation;
+  @Input() resData?: Reservation = {
+    user_id: 0,
+    seat_id: 0,
+    reservation_date: '',
+    workstation_name: '',
+    building_address: '',
+    building_name: '',
+  };
   @Input() selectedWorkstation?: number;
   @Output() editEmitter = new EventEmitter<boolean>();
   @Output() cancelEmitter = new EventEmitter<boolean>();
@@ -17,7 +24,14 @@ export class ConfirmModalComponent {
   cancel = true;
   confirm = true;
   success = false;
-  reservation?: Reservation = { user_id: 0, seat_id: 0, reservation_date: '' };
+  reservation?: Reservation = {
+    user_id: 0,
+    seat_id: 0,
+    reservation_date: '',
+    workstation_name: '',
+    building_address: '',
+    building_name: '',
+  };
 
   constructor(private reservationService: ReservationService) {}
 
