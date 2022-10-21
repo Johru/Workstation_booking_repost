@@ -37,7 +37,7 @@ export class WorkstationPreviewEditComponent implements OnInit {
       floor_id: this.selectedWorkstationToEdit!.floor_id,
       workstation_name: this.newWorkstationForm.value.workstation_name,
     };
-    let obs = this.workstationService.editWorkstation(
+    const obs = this.workstationService.editWorkstation(
       workstation,
       this.selectedWorkstationToEdit!.workstation_id
     );
@@ -53,7 +53,7 @@ export class WorkstationPreviewEditComponent implements OnInit {
     id: number
   ) {
     res.subscribe({
-      next: (data) => {
+      next: data => {
         if (data.status != 'OK') {
           alert('Something went wrong. Workstation was not updated.');
           return;

@@ -82,13 +82,13 @@ export class WorkstationManagementComponent implements OnChanges {
   }
 
   deleteConfirm() {
-    let index = this.findWorkstationIndex(this.workstationList!);
+    const index = this.findWorkstationIndex(this.workstationList!);
     this.workstationList?.splice(index, 1);
     this.selected = '0';
   }
 
   switchStatusConfirm() {
-    let index = this.findWorkstationIndex(this.workstationList!);
+    const index = this.findWorkstationIndex(this.workstationList!);
     this.workstationList![index].workstation_isactive =
       !this.workstationList![index].workstation_isactive;
   }
