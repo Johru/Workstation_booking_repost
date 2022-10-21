@@ -54,8 +54,13 @@ export class BuildingEditComponent implements OnInit {
   }
 
   getBuilding(id: number): void {
-    this.buildingService.getBuilding(id).subscribe((data: Building) => {
-      this.setInitialValues(data);
+    this.buildingService.getBuilding(id).subscribe({
+      next: (data: Building) => {
+        this.setInitialValues(data);
+      },
+      error: (error: any) => {
+        console.error(error);
+      },
     });
   }
 }

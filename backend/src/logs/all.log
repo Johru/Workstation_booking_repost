@@ -4053,3 +4053,76 @@
 2022-10-21 14:51:35:5135 [32minfo[39m: [32m/building endpoint accessed[39m
 2022-10-21 14:51:36:5136 [32minfo[39m: [32m/building/:id endpoint accessed[39m
 2022-10-21 14:51:39:5139 [32minfo[39m: [32m/user endpoint accessed[39m
+2022-10-21 15:28:33:2833 [32minfo[39m: [32mData source has been initialized.[39m
+2022-10-21 15:30:28:3028 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:30:29:3029 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:30:29:3029 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:30:29:3029 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:33:3033 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:30:33:3033 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:30:33:3033 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:34:3034 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:37:3037 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:30:43:3043 [32minfo[39m: [32m//building/:id/edit endpoint accessed[39m
+2022-10-21 15:30:43:3043 [32minfo[39m: [32m/building/:id endpoint accessed[39m
+2022-10-21 15:30:45:3045 [32minfo[39m: [32m/building/cities endpoint accessed[39m
+2022-10-21 15:30:45:3045 [32minfo[39m: [32m[[39m
+[32m  { building_city: 'asdasd' },[39m
+[32m  { building_city: 'Bratislava' },[39m
+[32m  { building_city: 'Prague' },[39m
+[32m  { building_city: 'TEST' },[39m
+[32m  { building_city: 'asdasdas' },[39m
+[32m  { building_city: 'asdasdasdas' },[39m
+[32m  { building_city: '13' },[39m
+[32m  { building_city: 'qweqweq' },[39m
+[32m  { building_city: 'ghjghjghj' },[39m
+[32m  { building_city: 'asdadsd' },[39m
+[32m  { building_city: 'qweqwe' },[39m
+[32m  { building_city: 'Nitra' },[39m
+[32m  { building_city: 'dasdasdasd' },[39m
+[32m  { building_city: 'qweqw' },[39m
+[32m  { building_city: 'eqeqwe' },[39m
+[32m  { building_city: 'eqweqwe' },[39m
+[32m  { building_city: 'as' },[39m
+[32m  { building_city: 'Mars' }[39m
+[32m][39m
+2022-10-21 15:30:45:3045 [32minfo[39m: [32m/building endpoint accessed[39m
+2022-10-21 15:30:51:3051 [32minfo[39m: [32m/building/:id endpoint accessed[39m

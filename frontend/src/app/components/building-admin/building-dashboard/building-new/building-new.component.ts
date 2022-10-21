@@ -28,10 +28,13 @@ export class BuildingNewComponent {
   ) {}
 
   onSubmit(newBuilding: Building): void {
-    this.buildingService
-      .addBuilding(newBuilding)
-      .subscribe((res: any) =>
-        this.router.navigate([`${this.router.url}/${res.data}/floor`])
-      );
+    this.buildingService.addBuilding(newBuilding).subscribe({
+      next: (res: any) => {
+        this.router.navigate([`${this.router.url}/${res.data}/floor`]);
+      },
+      error: (error: any) => {
+        console.error(error);
+      },
+    });
   }
 }
