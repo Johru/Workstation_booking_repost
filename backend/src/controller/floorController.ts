@@ -1,7 +1,7 @@
 import { FloorEntity } from 'db';
 import { IFloorService } from '../service';
 import { Router, Response, Request } from 'express';
-import { AuthMiddleware } from 'middlewares';
+import { AuthMiddleware } from '../middlewares';
 
 export class FloorController {
   private readonly _router: Router = Router();
