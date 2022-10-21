@@ -6,6 +6,6 @@ export interface Building {
   building_zip: string;
   building_country: string;
   building_image: string;
-  floorCount: number;
-  seatCount: number;
+  floorCount?: number;
+  seatCount?: number;
 }

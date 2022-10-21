@@ -15,11 +15,14 @@
       <workstation-management
         (deleteEmitter)="onDeleteClick($event)"
         (disableEmitter)="onDisableClick($event)"
+        (activateEmitter)="onActivateClick($event)"
         [workstationList]="floor.workstation"
         [(successfullConfirmOnManagement)]="successfullConfirm"
+        (confirmEmitter)="numberOfSeats()"
+        [status]="confirmStatus"
         (showPreviewEmitter)="switchPanels()"
         (showEditEmitter)="showEditPanel($event)"
-        *ngIf="!addWorkstationPanel && floor.workstation.length != 0"
+        *ngIf="!addWorkstationPanel && floor.workstation.length > 0"
       >
       </workstation-management>
       <workstation-preview-input
@@ -31,6 +34,7 @@
       <workstation-preview-edit
         (closePanel)="closePanelFromChild()"
         (showManagementEmitter)="showManagementPanel()"
+        (updateEmitter)="updateWorkstationList($event)"
         *ngIf="editWorkstationPanel"
         [selectedWorkstationToEdit]="selectedWorkstationToEdit"
       ></workstation-preview-edit>

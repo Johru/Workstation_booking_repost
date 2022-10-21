@@ -9,9 +9,12 @@ export class ReservationController {
     this._router.get(
       '/reservation/:id/date',
       async (req: Request, res: Response) => {
-        logger.info('/reservation/date endpoint accessed');
         const workstationId: number = req.params.id as unknown as number;
         const reservationDate: string = req.query.reservation_date as string;
+        logger.info(
+          '/reservation/date endpoint accessed, date requested: ' +
+            reservationDate
+        );
         res.json(
           await this.reservationService.showReservationForGivenDate(
             workstationId,

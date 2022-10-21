@@ -7,6 +7,7 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AdminReservation } from 'src/app/helpingHand/admin-reservation';
 import { User } from 'src/app/helpingHand/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -26,22 +27,23 @@ import { UserService } from 'src/app/services/user.service';
 export class UserTabComponent implements OnInit {
   @Input() user!: User;
   @Output() deleteUserEmitter = new EventEmitter<number>();
-  color: string = 'warn';
+  color = 'warn';
   blockTitle?: string;
   promoteTitle?: string;
-  displayUserInfo: boolean = false;
-  iconClass: string = 'material-icons';
-  displayUserReservations: boolean = false;
-  isCollapsed: string = 'close';
-  confirmDelete: boolean = false;
+  displayUserInfo = false;
+  iconClass = 'material-icons';
+  displayUserReservations = false;
+  isCollapsed = 'close';
+  confirmDelete = false;
   isBlocked?: boolean;
   isAdmin?: boolean;
+  reservationList: AdminReservation[] = [];
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.isBlocked = this.user.user_isBlocked;
-    this.isAdmin = this.user.user_isAdmin;
+    this.isBlocked = this.user.user_isblocked;
+    this.isAdmin = this.user.user_isadmin;
     this.setTheBlockTitle();
     this.setThePromoteTitle();
   }
@@ -55,7 +57,7 @@ export class UserTabComponent implements OnInit {
   }
 
   setTheBlockTitle() {
-    if (this.user.user_isBlocked) {
+    if (this.user.user_isblocked) {
       this.blockTitle = 'Unblock User';
       return;
     } else {
@@ -64,7 +66,7 @@ export class UserTabComponent implements OnInit {
   }
 
   setThePromoteTitle() {
-    if (this.user.user_isAdmin) {
+    if (this.user.user_isadmin) {
       this.promoteTitle = 'Demote User from Admin';
       return;
     } else {
@@ -78,7 +80,7 @@ export class UserTabComponent implements OnInit {
   }
 
   rotateIcon(e: Event, displayValue: boolean) {
-    let target = e.target as HTMLElement;
+    const target = e.target as HTMLElement;
     if (!displayValue) {
       target.style.transform = 'rotate(180deg)';
     } else {
@@ -105,25 +107,27 @@ export class UserTabComponent implements OnInit {
   //second for successfull response or error
   blockUnblockUser() {
     if (this.isBlocked) {
-      const unblockResult = this.userService.unBlockUser(this.user.id);
-      this.resolveBlockUnblockUser(unblockResult.success, 'unblocked');
+      this.userService.unBlockUser(this.user.user_id).subscribe(data => {
+        this.resolveBlockUnblockUser(data.success, 'unblocked');
+      });
       return;
     } else {
-      const blockResult = this.userService.blockUser(this.user.id);
-      this.resolveBlockUnblockUser(blockResult.success, 'blocked');
+      this.userService.blockUser(this.user.user_id).subscribe(data => {
+        this.resolveBlockUnblockUser(data.success, 'blocked');
+      });
     }
   }
 
   resolveBlockUnblockUser(switchBlockResult: string, status: string) {
     switch (switchBlockResult) {
       case 'yes':
-        this.user.user_isBlocked = !this.user.user_isBlocked;
-        this.isBlocked = !this.user.user_isBlocked;
-        //leaving the console log for easier testing, for now
-        console.log(`User ${this.user.user_name} ${status}.`);
+        this.isBlocked = !this.user.user_isblocked;
+        this.user.user_isblocked = !this.user.user_isblocked;
+        this.setTheBlockTitle();
         break;
       case 'no':
-        this.isBlocked = !this.user.user_isBlocked;
+        this.isBlocked = !this.user.user_isblocked;
+        this.setTheBlockTitle();
         alert(`Something is wrong user was not ${status}.`);
         break;
     }
@@ -131,25 +135,31 @@ export class UserTabComponent implements OnInit {
 
   promoteDemoteUser() {
     if (this.isAdmin) {
-      const demoteResult = this.userService.demoteUserFromAdmin(this.user.id);
-      this.resolvePromoteDemoteUser(demoteResult.success, 'demoted');
-      return;
+      this.userService
+        .demoteUserFromAdmin(this.user.user_id)
+        .subscribe(data => {
+          this.resolvePromoteDemoteUser(data.success, 'demoted');
+          return;
+        });
     } else {
-      const promoteResult = this.userService.promoteUserToAdmin(this.user.id);
-      this.resolvePromoteDemoteUser(promoteResult.success, 'promoted');
+      const promoteResult = this.userService
+        .promoteUserToAdmin(this.user.user_id)
+        .subscribe(data => {
+          this.resolvePromoteDemoteUser(data.success, 'promoted');
+        });
     }
   }
 
   resolvePromoteDemoteUser(switchPromoteResult: string, status: string) {
     switch (switchPromoteResult) {
       case 'yes':
-        this.user.user_isAdmin = !this.user.user_isAdmin;
-        this.isAdmin = !this.user.user_isAdmin;
-        //leaving the console log for easier testing, for now
-        console.log(`User ${this.user.user_name} ${status} to Admin`);
+        this.isAdmin = !this.user.user_isadmin;
+        this.user.user_isadmin = !this.user.user_isadmin;
+        this.setThePromoteTitle();
         break;
       case 'no':
-        this.isAdmin = !this.user.user_isAdmin;
+        this.isAdmin = !this.user.user_isadmin;
+        this.setThePromoteTitle();
         alert(`Something is wrong user was not ${status}.`);
         break;
     }

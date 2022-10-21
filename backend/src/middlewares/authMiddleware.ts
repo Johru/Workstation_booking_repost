@@ -5,6 +5,7 @@ import { Secret, verify } from 'jsonwebtoken';
 import { UserEntity } from '../db';
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Express {
     export interface Request {
       user: UserEntity;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Building } from 'src/app/help-files/buildind-interface';
+import { Building } from '../../../helpingHand/buidling';
 import { BuildingNewService } from 'src/app/services/building-new.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { BuildingNewService } from 'src/app/services/building-new.service';
 })
 export class BuildingDashboardComponent implements OnInit {
   actualBuilding?: Building;
-  buildingId: number = 0;
+  buildingId = 0;
 
   constructor(
     private buildingService: BuildingNewService,
@@ -18,7 +18,7 @@ export class BuildingDashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const nr: number = Number(this.route.snapshot.params['id']);
+    const nr = Number(this.route.snapshot.params['id']);
     if (!nr) {
       this.buildingId = 0;
     } else {
