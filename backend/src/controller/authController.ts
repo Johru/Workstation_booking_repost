@@ -6,6 +6,7 @@ import { AuthMiddleware } from '../middlewares';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import config from '../config';
+import { EmailService } from 'service/e-mail/emailService';
 
 export class AuthController {
   private readonly _router: Router = Router();
@@ -41,7 +42,8 @@ export class AuthController {
 
   constructor(
     private userService: UserService,
-    private authMiddleware: AuthMiddleware
+    private authMiddleware: AuthMiddleware,
+    private emailService: EmailService
   ) {
     this._router.post(
       '/registration',
@@ -50,6 +52,7 @@ export class AuthController {
         logger.info('new user endpoint accessed');
         const user: UserEntity = req.body as UserEntity;
         res.json(await this.userService.createUser(user));
+        this.emailService.sendMail(user);
       }
     );
 

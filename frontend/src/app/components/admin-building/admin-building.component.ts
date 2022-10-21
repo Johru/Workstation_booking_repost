@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Building } from 'src/app/helpingHand/buidling';
 import { BuildingService } from 'src/app/services/building.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'admin-building',
@@ -8,30 +9,61 @@ import { BuildingService } from 'src/app/services/building.service';
   styleUrls: ['./admin-building.component.css'],
 })
 export class AdminBuildingComponent implements OnInit {
-  buildingList?: Building[];
+  buildingList?: Building[] = [];
+  seatCount?: number = 0;
   selectedCityValue?: string;
-  cityList?: any;
+  cityList?: { building_city: string }[] = [];
   @ViewChild('cardContent', { read: ElementRef })
   cardContent!: ElementRef<any>;
 
   constructor(private bs: BuildingService) {}
 
-  ngOnInit(): void {
-    this.getCities();
-    this.selectedCityValue = this.cityList[0].city;
-    this.getBuildings();
+  ngOnInit() {
+    this.pushCitiesToLocalArrays();
+    this.pushBuildingsToLocalArrays();
   }
 
-  getCities() {
-    this.cityList = this.bs.getCityList();
+  pushCitiesToLocalArrays() {
+    this.getCities().subscribe((data) => {
+      for (let item of data) {
+        this.cityList?.push(item);
+      }
+      this.selectedCityValue = data[0].building_city;
+    });
   }
 
-  getBuildings() {
-    this.buildingList = this.bs.getBuildings();
+  pushBuildingsToLocalArrays() {
+    this.getBuildings().subscribe((data) => {
+      for (let item of data) {
+        if (
+          item.building_city.toLowerCase() ==
+          this.selectedCityValue!.toLowerCase()
+        ) {
+          this.buildingList?.push(item);
+          for (let i = 0; i < item.floor.length; i++) {
+            for (let j = 0; j < item.floor[i].workstation.length; j++) {
+              let seats = item.floor[i].workstation[j].SCount;
+              this.seatCount += seats;
+            }
+          }
+          item.seatCount = this.seatCount;
+          this.seatCount = 0;
+        }
+      }
+    });
+  }
+
+  getCities(): Observable<any> {
+    return this.bs.getCityList();
+  }
+
+  getBuildings(): Observable<any> {
+    return this.bs.getBuildings();
   }
 
   onChange() {
-    this.getBuildings();
+    this.buildingList = [];
+    this.pushBuildingsToLocalArrays();
   }
 
   public scrollRight(): void {

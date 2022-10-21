@@ -9,11 +9,13 @@
   transform: translate(-50%, -50%);
   border: 5px solid red;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
   text-align: center;
-  margin-top: 40px;
 }
 
 .confirmation {
