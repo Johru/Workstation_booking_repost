@@ -1,7 +1,7 @@
 import { Router, Response, Request } from 'express';
 import { IWorkstationService } from '../service';
 import { WorkstationEntity } from '../db';
-import { AuthMiddleware } from 'middlewares';
+import { AuthMiddleware } from '../middlewares';
 
 export class WorkstationController {
   private readonly _router: Router = Router();
