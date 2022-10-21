@@ -7,7 +7,7 @@
         <mat-option value="0">{{ defaultText }}</mat-option>
         <mat-option
           *ngFor="let workstation of workstationList"
-          value="{{ workstation.workstation_name }}"
+          value="{{ workstation.workstation_id }}"
         >
           <div (click)="onSelect(workstation)">
             {{ workstation.workstation_name }}
@@ -45,7 +45,7 @@
   </button>
   <button
     mat-raised-button
-    *ngIf="!isSelectedDisabled()"
+    *ngIf="isSelectedActive()"
     [disabled]="selected == '0'"
     (click)="disableSelected()"
   >
@@ -53,9 +53,9 @@
   </button>
   <button
     mat-raised-button
-    *ngIf="isSelectedDisabled()"
+    *ngIf="!isSelectedActive()"
     [disabled]="selected == '0'"
-    (click)="disableSelected()"
+    (click)="activateSelected()"
   >
     Activate
   </button>
