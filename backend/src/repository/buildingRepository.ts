@@ -21,8 +21,6 @@ export class BuildingRepository implements IBuildingRepository {
       .select(['building_city'])
       .distinct(true)
       .getRawMany();
-
-    logger.info(searchForDistinctCity);
     return searchForDistinctCity;
   }
 
