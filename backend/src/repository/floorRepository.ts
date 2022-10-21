@@ -4,7 +4,7 @@ import { Success } from './success';
 
 export interface IFloorRepository {
   findAllFloors(): Promise<FloorEntity[]>;
-  findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]>;
+  findAllFloorInBuilding(building: BuildingEntity): Promise<FloorEntity[]>;
   saveFloor(
     floor: FloorEntity,
     building: BuildingEntity | null
@@ -18,10 +18,12 @@ export class FloorRepository implements IFloorRepository {
     return appDataSource.getRepository(FloorEntity).find();
   }
 
-  async findAllFloorInBuilding(buildingId: number): Promise<FloorEntity[]> {
+  async findAllFloorInBuilding(
+    building: BuildingEntity
+  ): Promise<FloorEntity[]> {
     return appDataSource.getRepository(FloorEntity).find({
       relations: { workstation: { seat: true } },
-      where: { building_id: buildingId },
+      where: { building: building },
     });
   }
 

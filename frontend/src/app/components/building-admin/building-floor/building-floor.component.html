@@ -4,7 +4,9 @@
       {{ building?.building_name }}
     </div>
     <floor-new (newFloorEvent)="addFloor($event)"></floor-new>
-    <button type="button" routerLink="/admin/buildings">Cancel</button>
+    <button mat-raised-button type="button" routerLink="/admin/buildings">
+      Cancel
+    </button>
   </div>
   <floor-list
     [floor]="floor"

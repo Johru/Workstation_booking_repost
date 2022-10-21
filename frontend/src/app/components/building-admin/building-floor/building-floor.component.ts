@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Building } from 'src/app/help-files/buildind-interface';
-import { Floor } from 'src/app/help-files/floor-interface';
+import { AddFloor, Floor } from 'src/app/help-files/floor-interface';
 import { FloorService } from 'src/app/services/floor.service';
 import { BuildingNewService } from 'src/app/services/building-new.service';
 
@@ -12,7 +12,7 @@ import { BuildingNewService } from 'src/app/services/building-new.service';
 })
 export class BuildingFloorComponent implements OnInit {
   floors: Floor[] = [];
-  buildingId: number = 0;
+  buildingId!: number;
   building?: Building;
 
   constructor(
@@ -42,10 +42,13 @@ export class BuildingFloorComponent implements OnInit {
     this.building = this.buildingService.getBuilding(buildingId);
   }
 
-  addFloor(newFloor: Floor) {
-    this.floorService.addFloor(newFloor).subscribe({
-      next: (floor) => {
-        this.floors.push(floor);
+  addFloor(newFloor: AddFloor) {
+    this.floorService.addFloor(newFloor, this.buildingId).subscribe({
+      next: (response) => {
+        if (response.status == 'OK') {
+          this.floors.push(response.floor!);
+          this.getFloor(this.buildingId);
+        }
       },
       error: (error) => {
         console.error(error);

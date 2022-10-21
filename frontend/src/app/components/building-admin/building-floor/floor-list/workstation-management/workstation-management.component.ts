@@ -97,7 +97,7 @@ export class WorkstationManagementComponent implements OnChanges {
 
   findWorkstationIndex(workstation: WorkstationInterface[]): number {
     return workstation.indexOf(
-      workstation.find((ws) => ws.workstation_id == parseInt(this.selected))!
+      workstation.find(ws => ws.workstation_id == parseInt(this.selected))!
     );
   }
 

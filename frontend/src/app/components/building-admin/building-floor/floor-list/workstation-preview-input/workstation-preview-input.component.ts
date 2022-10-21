@@ -15,7 +15,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
   }>();
   newWorkstationForm = new FormGroup({
     workstation_name: new FormControl(),
-    seats: new FormControl(),
+    allSeats: new FormControl(),
   });
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class WorkstationPreviewInputComponent implements OnInit {
   onSubmit(): void {
     const workstationName: string =
       this.newWorkstationForm.value.workstation_name;
-    const seats: number = this.newWorkstationForm.value.seats;
+    const seats: number = this.newWorkstationForm.value.allSeats;
 
     this.newWorkstationEvent.emit({ name: workstationName, seats: seats });
     this.newWorkstationForm.reset();

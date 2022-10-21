@@ -112,6 +112,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
 
   toggleConfirmModal() {
     this.confirmDeleteValue = !this.confirmDeleteValue;
+    this.numberOfSeats();
   }
 
   onDisableClick(selectedWorkstation: WorkstationInterface) {
@@ -162,7 +163,7 @@ export class FloorListComponent implements OnInit, AfterContentChecked {
 
   updateWorkstationList(event: { update: AddWorkstationI; id: number }) {
     const workstation = this.floor.workstation.find(
-      (ws) => ws.workstation_id == event.id
+      ws => ws.workstation_id == event.id
     );
     const index = this.floor.workstation.indexOf(workstation!);
     workstation!.workstation_name = event.update.workstation_name;
