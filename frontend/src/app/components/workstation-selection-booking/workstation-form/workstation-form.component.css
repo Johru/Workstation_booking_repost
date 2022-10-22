@@ -28,7 +28,7 @@
 
 .right {
   width: 50%;
-  height: auto;
+  max-height: 20em;
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
@@ -38,7 +38,6 @@
 
 seats {
   width: 100%;
-  height: 382px;
 }
 
 .book-button {

@@ -1,7 +1,11 @@
 <h2>Workstation:</h2>
 <select (change)="onChangeSelection()" [(ngModel)]="selectedValue">
-  <option value="0">{{ defaultSelectionText }}</option>
-  <option *ngFor="let ws of workstationList" value="{{ ws.workstation_id }}">
+  <option class="ws-list" value="0">{{ defaultSelectionText }}</option>
+  <option
+    [disabled]="!ws.workstation_isactive"
+    *ngFor="let ws of workstationList"
+    value="{{ ws.workstation_id }}"
+  >
     {{ ws.workstation_name }}
   </option>
 </select>

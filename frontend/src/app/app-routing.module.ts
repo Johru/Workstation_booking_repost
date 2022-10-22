@@ -6,7 +6,6 @@ import { NavpanelComponent } from './components/navpanel/navpanel.component';
 import { AdminBuildingComponent } from './components/admin-building/admin-building.component';
 import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-panel.component';
 import { UsersComponent } from './components/users/users.component';
-import { WorkstationSelectionBookingComponent } from './components/workstation-selection-booking/workstation-selection-booking.component';
 import { RoleGuardService } from './services/role-guard.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';

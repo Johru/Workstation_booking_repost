@@ -31,7 +31,11 @@ export class UserFloorsAccordionComponent implements OnInit {
   getFloor(buildingId: number): void {
     this.floorService.getFloor(buildingId).subscribe({
       next: floors => {
-        this.floors = floors;
+        for (let floor of floors) {
+          if (floor.workstation.length > 0) {
+            this.floors.push(floor);
+          }
+        }
       },
       error: error => {
         console.error(error);

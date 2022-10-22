@@ -39,7 +39,7 @@ export class SeatsComponent {
   }
 
   setTheTargetToParentIfClickedOnTheChild(target: HTMLInputElement) {
-    const isItTaken = target.classList.contains('taken-seat');
+    const isItTaken = target.classList.contains('on-hover');
     let targetElement = target;
     if (isItTaken) {
       targetElement = target.parentElement as HTMLInputElement;

@@ -15,7 +15,7 @@ h1 {
   font-size: 25px;
   margin: 40px;
   margin-left: 150px;
-  border-right: 1px solid black;
+  border-right: 1px solid rgba(255, 0, 0, 0.6);
   display: flex;
 }
 
@@ -35,4 +35,9 @@ h1 {
   width: 120px;
   height: 40px;
   font-size: 20px;
+}
+
+button:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
 }

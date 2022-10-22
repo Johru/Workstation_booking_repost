@@ -3,6 +3,7 @@ workstation-tab {
   justify-content: flex-end;
   align-items: center;
   margin-right: 9%;
+  gap: 4em;
 }
 
 confirm-modal {
