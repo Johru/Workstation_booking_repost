@@ -5,7 +5,20 @@
       <a class="nav-link" routerLink="/register">Sign Up</a>
       <a class="nav-link" routerLink="/login">Login</a>
     </div>
-    <div *ngIf="loggedIn" class="link-wrapper">
+    <div *ngIf="loggedIn" class="logged-in-wrapper">
+      <div class="links">
+        <button
+          *ngIf="isAdmin"
+          class="link-button"
+          mat-button
+          routerLink="/admin"
+        >
+          Admin
+        </button>
+        <button class="link-button" mat-button routerLink="/my-bookings">
+          My bookings
+        </button>
+      </div>
       <a class="nav-link" (click)="logOut()">LogOut</a>
     </div>
   </nav>

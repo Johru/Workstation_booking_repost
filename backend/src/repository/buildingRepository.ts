@@ -63,7 +63,11 @@ export class BuildingRepository implements IBuildingRepository {
     resSave.building_image = body.building_image;
 
     const addition = appDataSource.getRepository(BuildingEntity).save(resSave);
-    return logErrorAndReturnYesOrNo(addition, 'Building');
+    return logErrorAndReturnYesOrNo(
+      addition,
+      'Building',
+      (await addition).building_id
+    );
   }
 
   async updateBuilding(body: BuildingEntity, id: number): Promise<Success> {

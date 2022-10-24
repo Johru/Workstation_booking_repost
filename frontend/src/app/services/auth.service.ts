@@ -12,6 +12,7 @@ import decode from 'jwt-decode';
 })
 export class AuthService {
   logIn = new Subject();
+  admin = new Subject();
   jwtHelper = new JwtHelperService();
 
   constructor(private http: HttpClient) {}
@@ -41,6 +42,10 @@ export class AuthService {
     return this.logIn.asObservable();
   }
 
+  isAdminSubscription() {
+    return this.logIn.asObservable();
+  }
+
   isAuthenticated(): boolean {
     const token: string | null | undefined = localStorage.getItem('token');
     if (token == null) {
@@ -50,6 +55,10 @@ export class AuthService {
       localStorage.removeItem('token');
     }
     return !this.jwtHelper.isTokenExpired(token);
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
   }
 
   isAdmin(): boolean {
@@ -62,9 +71,5 @@ export class AuthService {
       }
     }
     return false;
-  }
-
-  getToken() {
-    return localStorage.getItem('token');
   }
 }

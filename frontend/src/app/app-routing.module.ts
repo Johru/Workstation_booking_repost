@@ -7,11 +7,12 @@ import { AdminBuildingComponent } from './components/admin-building/admin-buildi
 import { AdminNavPanelComponent } from './components/admin-nav-panel/admin-nav-panel.component';
 import { UsersComponent } from './components/users/users.component';
 import { RoleGuardService } from './services/role-guard.service';
-import { AuthGuardService } from './services/auth-guard.service';
 import { BuildingDashboardComponent } from './components/building-admin/building-dashboard/building-dashboard.component';
 import { BuildingFloorComponent } from './components/building-admin/building-floor/building-floor.component';
+import { MyBookingsComponent } from './components/my-bookings/my-bookings.component';
 import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: 'admin', redirectTo: '/admin/buildings', pathMatch: 'full' },
@@ -22,6 +23,11 @@ const routes: Routes = [
     children: [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent },
+      {
+        path: 'my-bookings',
+        component: MyBookingsComponent,
+        canActivate: [AuthGuardService],
+      },
       {
         path: 'building/:id/floors',
         component: UserFloorsAccordionComponent,

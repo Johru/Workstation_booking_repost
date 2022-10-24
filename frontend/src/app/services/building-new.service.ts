@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Building } from '../helpingHand/buidling';
-import { BUILDINGS } from '../help-files/building-data';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Building } from '../help-files/building-interface';
+import { Success } from './success';
 
 @Injectable({
   providedIn: 'root',
@@ -10,23 +10,21 @@ import { Observable } from 'rxjs';
 export class BuildingNewService {
   constructor(private http: HttpClient) {}
 
-  addBuilding(building: Building): void {
-    BUILDINGS.push(building);
+  addBuilding(newBuilding: Building): Observable<Success> {
+    return this.http.post<Success>(
+      `http://localhost:8080/api/building/new`,
+      newBuilding
+    );
   }
 
   getBuilding(id: number): Observable<Building> {
     return this.http.get<Building>(`http://localhost:8080/api/building/${id}`);
   }
 
-  buildingId(): number {
-    const id = BUILDINGS[BUILDINGS.length - 1].building_id + 1;
-    return id;
-  }
-
-  editBuilding(updatedBuilding: Building) {
-    const buildingIndex = BUILDINGS.findIndex(
-      building => building.building_id === updatedBuilding.building_id
+  editBuilding(id: number, updatedValues: Building): Observable<Success> {
+    return this.http.put<Success>(
+      `http://localhost:8080/api/building/${id}/edit`,
+      updatedValues
     );
-    BUILDINGS[buildingIndex] = updatedBuilding;
   }
 }

@@ -16,7 +16,9 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavpanelComponent implements OnInit, OnDestroy {
   loggedIn?: boolean;
+  isAdmin?: boolean;
   loginSubscription?: Subscription;
+  isAdminSubscription?: Subscription;
   @Output() logoutEmitter = new EventEmitter<boolean>();
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -28,10 +30,21 @@ export class NavpanelComponent implements OnInit, OnDestroy {
       .subscribe(() => {
         this.loggedIn = true;
       });
+    this.isAdmin = this.authService.isAdmin();
+    this.isAdminSubscription = this.authService
+      .isAdminSubscription()
+      .subscribe(() => {
+        if (this.authService.isAdmin()) {
+          this.isAdmin = true;
+          return;
+        }
+        this.isAdmin = false;
+      });
   }
 
   ngOnDestroy(): void {
     this.loginSubscription?.unsubscribe();
+    this.isAdminSubscription?.unsubscribe();
   }
 
   logOut() {

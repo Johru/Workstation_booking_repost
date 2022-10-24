@@ -14,7 +14,6 @@ export class ReservationListComponent implements OnInit {
   reservationList?: AdminReservation[] = [];
   confirmDelete = false;
   selectedReservation!: number;
-
   constructor(
     private userService: UserService,
     private reservationService: ReservationService

@@ -39,7 +39,7 @@ export class BuildingFloorComponent implements OnInit {
   }
 
   getBuilding(buildingId: number) {
-    this.buildingService.getBuilding(buildingId!).subscribe({
+    this.buildingService.getBuilding(buildingId).subscribe({
       next: data => {
         this.building = data;
       },

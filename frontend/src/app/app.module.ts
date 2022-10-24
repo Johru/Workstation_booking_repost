@@ -37,6 +37,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavpanelComponent } from './components/navpanel/navpanel.component';
 import { UserFloorListComponent } from './components/user-floor-list/user-floor-list.component';
+import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
+import { MyBookingsComponent } from './components/my-bookings/my-bookings.component';
 //material.io modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -47,7 +49,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
-import { UserFloorsAccordionComponent } from './components/user-floors-accordion/user-floors-accordion.component';
 //services to differentiate from material.io modules
 import { AuthInterceptor } from './services/auth.interceptor';
 
@@ -79,6 +80,8 @@ import { AuthInterceptor } from './services/auth.interceptor';
     BuildingCardComponent,
     ReservationListComponent,
     DeleteModalComponent,
+    BuildingEditComponent,
+    MyBookingsComponent,
     DashboardComponent,
     FooterPanelComponent,
     BuildingEditComponent,

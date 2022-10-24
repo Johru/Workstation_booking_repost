@@ -53,7 +53,7 @@ export class AuthController {
         logger.info('new user endpoint accessed');
         const user: UserEntity = req.body as UserEntity;
         res.json(await this.userService.createUser(user));
-        this.emailService.sendMail(user);
+        this.emailService.sendWelcomeMail(user);
       }
     );
 

@@ -16,4 +16,6 @@ export default {
     database: process.env.DB_DATABASE,
     port: process.env.DB_PORT,
   },
+  credentials: process.env.CREDENTIALS,
+  calendarId: process.env.CALENDAR_ID,
 };
